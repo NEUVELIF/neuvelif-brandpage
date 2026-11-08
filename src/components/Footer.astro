@@ -1,0 +1,44 @@
+---
+import { COMPANY, BRAND, PATHS } from '../site';
+---
+<footer style="background: #12324F; color: #C9D6E2; padding: 56px 0 40px">
+<div style="max-width: 1240px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); box-sizing: border-box; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; flex-wrap: wrap; gap: 32px 48px">
+<div style="flex: 1 1 200px; display: flex; flex-direction: column; gap: 6px">
+<p style="margin: 0 0 4px; font-weight: 700; color: #FFFFFF">제품</p>
+<a href={PATHS.sunscreen} style="color: #C9D6E2; text-decoration: none; padding: 4px 0">백합 리커버리 선크림</a>
+<a href={PATHS.cleansing} style="color: #C9D6E2; text-decoration: none; padding: 4px 0">말차 디퍼핑 클렌징 밀크</a>
+</div>
+<div style="flex: 1 1 200px; display: flex; flex-direction: column; gap: 6px">
+<p style="margin: 0 0 4px; font-weight: 700; color: #FFFFFF">시술별 가이드</p>
+<a href="/#guide" style="color: #C9D6E2; text-decoration: none; padding: 4px 0">시술 그룹별 가이드</a>
+<a href={PATHS.guideLaser} style="color: #C9D6E2; text-decoration: none; padding: 4px 0">레이저 토닝·IPL·리프팅</a>
+</div>
+<div style="flex: 1 1 200px; display: flex; flex-direction: column; gap: 6px">
+<p style="margin: 0 0 4px; font-weight: 700; color: #FFFFFF">브랜드</p>
+<a href={PATHS.brand} style="color: #C9D6E2; text-decoration: none; padding: 4px 0">브랜드 이야기</a>
+<a href="/#research" style="color: #C9D6E2; text-decoration: none; padding: 4px 0">임상 연구</a>
+<a href="/#news" style="color: #C9D6E2; text-decoration: none; padding: 4px 0">소식</a>
+</div>
+<div id="contact" style="flex: 1 1 240px; display: flex; flex-direction: column; gap: 6px">
+<p style="margin: 0 0 4px; font-weight: 700; color: #FFFFFF">고객 지원</p>
+<a href="/#faq" style="color: #C9D6E2; text-decoration: none; padding: 4px 0">자주 묻는 질문</a>
+<a href="/#buy" style="color: #C9D6E2; text-decoration: none; padding: 4px 0">구매처</a>
+<a href={`mailto:${BRAND.email}`} style="color: #FFFFFF; padding: 4px 0">{BRAND.email}</a>
+</div>
+</div>
+<p style="margin: 0; font-size: 13px; color: #A9BACB; border-top: 1px solid #36506A; padding-top: 24px">뉴베리프 제품은 화장품이며 질병의 예방이나 치료를 위한 의약품이 아닙니다. 시술 후 관리는 시술한 의료기관의 안내를 먼저 따라 주세요.</p>
+<div style="display: flex; flex-direction: column; gap: 4px; font-size: 13px; color: #A9BACB">
+<p style="margin: 0; color: #FFFFFF; font-weight: 700">{COMPANY.name}</p>
+<p style="margin: 0">대표자 {COMPANY.ceo} · 사업자등록번호 {COMPANY.bizNo} · 통신판매업 신고번호 {COMPANY.mailOrderNo}</p>
+<p style="margin: 0">{COMPANY.address}</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px 24px; font-size: 13px">
+<img src="/images/logo/neuvelif-wordmark-white.svg" alt="NEUVELIF" width="98" height="14" style="height: 14px; width: auto; display: block">
+<div style="display: flex; flex-wrap: wrap; gap: 4px 20px">
+<a href={PATHS.privacy} style="color: #FFFFFF">개인정보처리방침</a>
+<p style="margin: 0">© 2026 {COMPANY.nameEn}</p>
+</div>
+</div>
+</div>
+</footer>

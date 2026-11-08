@@ -1,0 +1,57 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { STAGING, BRAND } from '../site';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  current?: 'brand' | 'products' | 'guide' | 'research' | 'news' | '';
+  buyHref?: string;
+  image?: string;          // 공유 미리보기 이미지 (사이트 안 경로)
+  ogType?: 'website' | 'article' | 'product';
+  jsonLd?: object[];       // 검색엔진·AI가 읽는 구조화 데이터
+}
+const { title, description, current = '', buyHref, image = '/images/products/backhap-recovery-sunscreen-1000.jpg', ogType = 'website', jsonLd = [] } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const ogImage = new URL(image, Astro.site).href;
+const fullTitle = title.includes(BRAND.name) ? title : `${title} | ${BRAND.name} NEUVELIF`;
+---
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{fullTitle}</title>
+<meta name="description" content={description}>
+<link rel="canonical" href={canonical}>
+{STAGING && <meta name="robots" content="noindex, nofollow">}
+<meta property="og:site_name" content="뉴베리프 NEUVELIF">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:type" content={ogType === 'product' ? 'website' : ogType}>
+<meta property="og:title" content={fullTitle}>
+<meta property="og:description" content={description}>
+<meta property="og:url" content={canonical}>
+<meta property="og:image" content={ogImage}>
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#12324F">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+{jsonLd.map((obj) => <script type="application/ld+json" set:html={JSON.stringify(obj)} />)}
+</head>
+<body>
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+<div style="width: 100%; background: #FFFFFF; color: #1A1F24; font-family: 'Noto Sans KR', system-ui, -apple-system, sans-serif; font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased">
+<Header current={current} buyHref={buyHref} />
+<main id="main">
+<slot />
+</main>
+<Footer />
+</div>
+</body>
+</html>

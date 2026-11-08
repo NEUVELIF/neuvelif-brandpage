@@ -1,0 +1,242 @@
+---
+import Base from '../layouts/Base.astro';
+import HeroSlider from '../components/HeroSlider.astro';
+import GroupPicker from '../components/GroupPicker.astro';
+import WhereToBuy from '../components/WhereToBuy.astro';
+import { org, website, founder, aboutPage, breadcrumbs, productLd, articleLd, faqLd as makeFaq } from '../schema';
+const title = "뉴베리프 NEUVELIF | 피부 시술 전후 더마 스킨케어";
+const description = "레이저·리프팅·주사 등 피부 시술 전후에 쓰는 더마 스킨케어 브랜드 뉴베리프. 시술별 선크림·세안 시점 가이드와 인체적용시험 결과를 조건과 함께 공개합니다.";
+const faqLd = makeFaq([["시술 후 선크림은 언제부터 바르나요?", "시술 종류에 따라 다릅니다. 레이저 토닝·IPL·리프팅은 보통 당일부터, 미세한 구멍이 남는 시술은 보통 24시간 뒤부터, 딱지가 생기는 시술은 상처가 아문 뒤부터 바릅니다. 시술한 병원의 안내가 다르면 병원 안내를 따르세요."], ["유기자차인가요, 무기자차인가요?", "유기자차입니다. 자외선 차단 성분 4종이 들어 있습니다."], ["클렌징 밀크는 몇 번 펌핑하나요?", "한 번에 3~4번 펌핑해 얼굴 전체에 펴 바르세요. 짙은 메이크업을 지울 때는 양을 조금 늘려도 됩니다."]]);
+const jsonLd = [org, website, ...faqLd];
+---
+<Base title={title} description={description} current="" jsonLd={jsonLd} buyHref="#buy">
+<HeroSlider />
+
+<section aria-label="뉴베리프의 기준" style="border-bottom: 1px solid #D5E0E8">
+<div style="max-width: 1240px; margin: 0 auto; padding: 28px clamp(20px, 4vw, 48px); box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 20px 24px">
+<div style="flex: 1 1 240px; display: flex; gap: 14px; align-items: center">
+<svg aria-hidden="true" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1170AE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="flex: none"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
+<p style="margin: 0; font-weight: 700; font-size: 15px; line-height: 1.45; color: #12324F">시술 전·후 사용 시점을<br>기준으로 설계</p>
+</div>
+<div style="flex: 1 1 240px; display: flex; gap: 14px; align-items: center">
+<svg aria-hidden="true" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1170AE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="flex: none"><path d="M9 3h6"></path><path d="M10 3v6l-5 9a2 2 0 0 0 1.7 3h10.6a2 2 0 0 0 1.7-3l-5-9V3"></path><path d="M7.5 15h9"></path></svg>
+<p style="margin: 0; font-weight: 700; font-size: 15px; line-height: 1.45; color: #12324F">인체적용시험 결과를<br>조건과 함께 공개</p>
+</div>
+<div style="flex: 1 1 240px; display: flex; gap: 14px; align-items: center">
+<svg aria-hidden="true" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1170AE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="flex: none"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="M4.9 4.9l1.4 1.4"></path><path d="M17.7 17.7l1.4 1.4"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="M4.9 19.1l1.4-1.4"></path><path d="M17.7 6.3l1.4-1.4"></path></svg>
+<p style="margin: 0; font-weight: 700; font-size: 15px; line-height: 1.45; color: #12324F">자외선 차단·미백·주름개선<br>3중 기능성 선크림</p>
+</div>
+<div style="flex: 1 1 240px; display: flex; gap: 14px; align-items: center">
+<svg aria-hidden="true" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1170AE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="flex: none"><path d="M4 10l8-6 8 6v10H4z"></path><path d="M10 20v-6h4v6"></path></svg>
+<p style="margin: 0; font-weight: 700; font-size: 15px; line-height: 1.45; color: #12324F">전국 제휴 약국<br>1,500여 곳</p>
+</div>
+</div>
+</section>
+
+<section id="brand" aria-labelledby="brand-title" style="padding: clamp(56px, 7vw, 104px) 0">
+<div style="max-width: 1240px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); box-sizing: border-box; display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 20px 48px">
+<div style="flex: 1 1 520px; display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0; font-family: 'Barlow Condensed', 'Noto Sans KR', sans-serif; font-size: 16px; font-weight: 600; letter-spacing: 0.12em; color: #1170AE">ABOUT NEUVELIF</p>
+<h2 id="brand-title" style="margin: 0; font-size: clamp(26px, 3vw, 38px); line-height: 1.3; letter-spacing: -0.01em; color: #12324F">나를 아끼는 마음은<br>피부에서 시작된다</h2>
+<p style="margin: 0; color: #3C4752; max-width: 640px">뉴베리프는 피부 시술 전·후 스킨케어에 집중하는 더마코스메틱 브랜드입니다. 2025년 7월 백합 리커버리 선크림을 처음 선보였습니다.</p>
+</div>
+<a href="/brand/" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 26px; border: 1px solid #12324F; color: #12324F; text-decoration: none; font-weight: 700; letter-spacing: 0.04em">브랜드 이야기</a>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 24px">
+<div style="flex: 1 1 300px; border-top: 3px solid #12324F; padding-top: 20px; display: flex; flex-direction: column; gap: 8px">
+<p style="margin: 0; font-family: 'Barlow Condensed', 'Noto Sans KR', sans-serif; font-size: 24px; font-weight: 600; letter-spacing: 0.06em; color: #12324F">DERMATOLOGY</p>
+<p style="margin: 0; color: #3C4752">피부 시술 전·후의 피부 상태 변화를 기준으로 사용 타이밍과 컨디션에 맞춰 설계합니다.</p>
+</div>
+<div style="flex: 1 1 300px; border-top: 3px solid #12324F; padding-top: 20px; display: flex; flex-direction: column; gap: 8px">
+<p style="margin: 0; font-family: 'Barlow Condensed', 'Noto Sans KR', sans-serif; font-size: 24px; font-weight: 600; letter-spacing: 0.06em; color: #12324F">INNOVATION</p>
+<p style="margin: 0; color: #3C4752">고객이 느끼는 불편을 집요하게 해결해 제품의 기준을 다시 만듭니다.</p>
+</div>
+<div style="flex: 1 1 300px; border-top: 3px solid #12324F; padding-top: 20px; display: flex; flex-direction: column; gap: 8px">
+<p style="margin: 0; font-family: 'Barlow Condensed', 'Noto Sans KR', sans-serif; font-size: 24px; font-weight: 600; letter-spacing: 0.06em; color: #12324F">A.I.</p>
+<p style="margin: 0; color: #3C4752">실사용 데이터를 A.I.로 분석해 문제를 해결하는 포뮬러를 만듭니다.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="products" aria-labelledby="products-title" style="border-top: 1px solid #D5E0E8; padding: clamp(56px, 7vw, 104px) 0">
+<div style="max-width: 1240px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); box-sizing: border-box; display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 12px 32px">
+<div style="display: flex; flex-direction: column; gap: 12px; max-width: 760px">
+<p style="margin: 0; font-family: 'Barlow Condensed', 'Noto Sans KR', sans-serif; font-size: 16px; font-weight: 600; letter-spacing: 0.12em; color: #1170AE">PRODUCTS</p>
+<h2 id="products-title" style="margin: 0; font-size: clamp(26px, 3vw, 38px); line-height: 1.3; letter-spacing: -0.01em; color: #12324F">자외선 차단과 순한 세안, 가장 기본부터</h2>
+<p style="margin: 0; color: #3C4752">모든 수치는 인체적용시험 결과이며, 시험 기관과 조건을 함께 적었습니다.</p>
+</div>
+
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 24px">
+
+<article style="flex: 1 1 460px; min-width: 0; border: 1px solid #D5E0E8; background: #FFFFFF; display: flex; flex-direction: column">
+<div style="display: flex; justify-content: center; padding: 28px 28px 0">
+<img src="/images/products/backhap-recovery-sunscreen-1000.webp" srcset="/images/products/backhap-recovery-sunscreen-600.webp 600w, /images/products/backhap-recovery-sunscreen-1000.webp 1000w" sizes="(max-width: 600px) 90vw, 520px" width="1000" height="1000" alt="백합 리커버리 선크림과 2025 하반기 화해 어워드 배지" style="width: 100%; max-width: 420px; height: auto; display: block">
+</div>
+<div style="padding: clamp(20px, 2.5vw, 32px); display: flex; flex-direction: column; gap: 20px; flex: 1 1 auto">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<p style="margin: 0; font-size: 14px; font-weight: 700; color: #1170AE">자외선 차단·미백·주름개선 3중 기능성</p>
+<h3 style="margin: 0; font-size: clamp(22px, 2.2vw, 28px); line-height: 1.3; color: #12324F">백합 리커버리 선크림</h3>
+<p style="margin: 0; color: #56626D">75mL · SPF50+ PA++++ · 유기자차</p>
+</div>
+<dl style="margin: 0; display: flex; flex-direction: column; border-top: 1px solid #D5E0E8">
+<div style="display: flex; gap: 16px; align-items: baseline; padding: 14px 0; border-bottom: 1px solid #D5E0E8">
+<dt style="flex: none; width: 108px; font-size: 24px; font-weight: 700; color: #12324F; font-variant-numeric: tabular-nums">−4.85℃</dt>
+<dd style="margin: 0; display: flex; flex-direction: column"><span style="font-weight: 500">바른 직후 피부 온도 변화</span><span style="font-size: 13px; color: #56626D">적외선으로 데운 피부, ㈜엘리드 인체적용시험, 여성 22명</span></dd>
+</div>
+<div style="display: flex; gap: 16px; align-items: baseline; padding: 14px 0; border-bottom: 1px solid #D5E0E8">
+<dt style="flex: none; width: 108px; font-size: 24px; font-weight: 700; color: #12324F; font-variant-numeric: tabular-nums">−80.27%</dt>
+<dd style="margin: 0; display: flex; flex-direction: column"><span style="font-weight: 500">2주 사용 후 눈시림 자가 평가 점수</span><span style="font-size: 13px; color: #56626D">눈시림을 느끼던 여성 21명, ㈜엘리드</span></dd>
+</div>
+<div style="display: flex; gap: 16px; align-items: baseline; padding: 14px 0; border-bottom: 1px solid #D5E0E8">
+<dt style="flex: none; width: 108px; font-size: 24px; font-weight: 700; color: #12324F; font-variant-numeric: tabular-nums">0.00</dt>
+<dd style="margin: 0; display: flex; flex-direction: column"><span style="font-weight: 500">24시간 첩포 시험 평균 피부자극도, 무자극 판정</span><span style="font-size: 13px; color: #56626D">㈜엘리드, 34명</span></dd>
+</div>
+</dl>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: auto">
+<a href="/products/backhap-recovery-sunscreen/" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; background: #12324F; color: #FFFFFF; text-decoration: none; font-weight: 700; letter-spacing: 0.04em">제품 보기</a>
+<a href="#buy" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; border: 1px solid #12324F; color: #12324F; text-decoration: none; font-weight: 700; letter-spacing: 0.04em">구매처</a>
+</div>
+</div>
+</article>
+
+<article style="flex: 1 1 460px; min-width: 0; border: 1px solid #D5E0E8; background: #FFFFFF; display: flex; flex-direction: column">
+<div style="display: flex; justify-content: center; padding: 28px 28px 0">
+<img src="/images/products/matcha-depuffing-cleansing-milk-1000.webp" srcset="/images/products/matcha-depuffing-cleansing-milk-600.webp 600w, /images/products/matcha-depuffing-cleansing-milk-1000.webp 1000w" sizes="(max-width: 600px) 90vw, 520px" width="1000" height="1000" alt="말차 디퍼핑 클렌징 밀크" style="width: 100%; max-width: 420px; height: auto; display: block">
+</div>
+<div style="padding: clamp(20px, 2.5vw, 32px); display: flex; flex-direction: column; gap: 20px; flex: 1 1 auto">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<p style="margin: 0; font-size: 14px; font-weight: 700; color: #2F5233">더마 클렌징</p>
+<h3 style="margin: 0; font-size: clamp(22px, 2.2vw, 28px); line-height: 1.3; color: #12324F">말차 디퍼핑 클렌징 밀크</h3>
+<p style="margin: 0; color: #56626D">300mL · 3~4번 펌핑, 롤링 마사지 후 헹굼</p>
+</div>
+<dl style="margin: 0; display: flex; flex-direction: column; border-top: 1px solid #D5E0E8">
+<div style="display: flex; gap: 16px; align-items: baseline; padding: 14px 0; border-bottom: 1px solid #D5E0E8">
+<dt style="flex: none; width: 108px; font-size: 24px; font-weight: 700; color: #2F5233; font-variant-numeric: tabular-nums">−0.47cc</dt>
+<dd style="margin: 0; display: flex; flex-direction: column"><span style="font-weight: 500">1회 사용 직후 얼굴 부피, 일시적 붓기 완화에 도움</span><span style="font-size: 13px; color: #56626D">한국피부과학연구원 인체적용시험, 여성 22명</span></dd>
+</div>
+<div style="display: flex; gap: 16px; align-items: baseline; padding: 14px 0; border-bottom: 1px solid #D5E0E8">
+<dt style="flex: none; width: 108px; font-size: 24px; font-weight: 700; color: #2F5233; font-variant-numeric: tabular-nums">96.68%</dt>
+<dd style="margin: 0; display: flex; flex-direction: column"><span style="font-weight: 500">메이크업 세정률</span><span style="font-size: 13px; color: #56626D">팔 안쪽에 바른 메이크업 기준, 같은 시험</span></dd>
+</div>
+<div style="display: flex; gap: 16px; align-items: baseline; padding: 14px 0; border-bottom: 1px solid #D5E0E8">
+<dt style="flex: none; width: 108px; font-size: 24px; font-weight: 700; color: #2F5233; font-variant-numeric: tabular-nums">−43.92%</dt>
+<dd style="margin: 0; display: flex; flex-direction: column"><span style="font-weight: 500">콧방울 블랙헤드 면적</span><span style="font-size: 13px; color: #56626D">같은 시험, 화이트헤드 면적은 −51.97%</span></dd>
+</div>
+</dl>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: auto">
+<a href="/products/matcha-depuffing-cleansing-milk/" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; background: #12324F; color: #FFFFFF; text-decoration: none; font-weight: 700; letter-spacing: 0.04em">제품 보기</a>
+<a href="#buy" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; border: 1px solid #12324F; color: #12324F; text-decoration: none; font-weight: 700; letter-spacing: 0.04em">구매처</a>
+</div>
+</div>
+</article>
+
+</div>
+<p style="margin: 0; font-size: 13px; color: #56626D">인체적용시험 결과는 시험 조건에서 얻은 값이며, 개인에 따라 차이가 있을 수 있습니다.</p>
+</div>
+</section>
+
+<section id="research" aria-labelledby="research-title" style="background: #12324F; color: #FFFFFF; padding: clamp(56px, 7vw, 96px) 0">
+<div style="max-width: 1240px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); box-sizing: border-box; display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 20px 48px">
+<div style="flex: 1 1 420px; display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0; font-family: 'Barlow Condensed', 'Noto Sans KR', sans-serif; font-size: 16px; font-weight: 600; letter-spacing: 0.12em; color: #8FD3F2">CLINICAL RESEARCH</p>
+<h2 id="research-title" style="margin: 0; font-size: clamp(26px, 3vw, 38px); line-height: 1.3; letter-spacing: -0.01em">시험 결과를 조건과 함께 공개합니다</h2>
+<p style="margin: 0; color: #C9D6E2">시험 기관, 인원, 측정 시점을 숫자 옆에 함께 적습니다. 인체적용시험과 비인체 시험, 사용감 설문은 서로 구분해 표시합니다.</p>
+</div>
+
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 16px">
+<div style="flex: 1 1 220px; border: 1px solid #36506A; padding: 24px; display: flex; flex-direction: column; gap: 4px">
+<p style="margin: 0; font-size: 40px; font-weight: 700; line-height: 1.2; font-variant-numeric: tabular-nums">7건</p>
+<p style="margin: 0; color: #C9D6E2">인체적용시험</p>
+</div>
+<div style="flex: 1 1 220px; border: 1px solid #36506A; padding: 24px; display: flex; flex-direction: column; gap: 4px">
+<p style="margin: 0; font-size: 40px; font-weight: 700; line-height: 1.2; font-variant-numeric: tabular-nums">1건</p>
+<p style="margin: 0; color: #C9D6E2">비인체 시험 (인공 각막 모델 안자극)</p>
+</div>
+<div style="flex: 1 1 220px; border: 1px solid #36506A; padding: 24px; display: flex; flex-direction: column; gap: 4px">
+<p style="margin: 0; font-size: 40px; font-weight: 700; line-height: 1.2; font-variant-numeric: tabular-nums">2곳</p>
+<p style="margin: 0; color: #C9D6E2">시험 기관: 한국피부과학연구원, ㈜엘리드</p>
+</div>
+<div style="flex: 1 1 220px; border: 1px solid #36506A; padding: 24px; display: flex; flex-direction: column; gap: 4px">
+<p style="margin: 0; font-size: 40px; font-weight: 700; line-height: 1.2; font-variant-numeric: tabular-nums">SPF 53.9</p>
+<p style="margin: 0; color: #C9D6E2">UVAPF 18.6 (PA++++), 한국피부과학연구원, 10명</p>
+</div>
+</div>
+</div>
+</section>
+
+<GroupPicker />
+
+<section aria-labelledby="story-title" style="background: #1170AE; color: #FFFFFF">
+<div style="max-width: 1240px; margin: 0 auto; padding: clamp(40px, 5vw, 64px) clamp(20px, 4vw, 48px); box-sizing: border-box; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px 48px">
+<div style="flex: 1 1 520px; display: flex; flex-direction: column; gap: 10px">
+<h2 id="story-title" style="margin: 0; font-size: clamp(22px, 2.4vw, 30px); line-height: 1.35">시술 뒤 자외선 차단, 왜 더 중요할까요?</h2>
+<p style="margin: 0; color: #E3F1F9">시술 뒤에는 피부가 평소보다 예민해질 수 있습니다. 시술 종류별로 자외선 차단을 언제부터, 어떻게 해야 하는지 정리했습니다.</p>
+</div>
+<a href="/guide/laser-ipl-lifting/" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 26px; border: 1px solid #FFFFFF; color: #FFFFFF; text-decoration: none; font-weight: 700; letter-spacing: 0.04em">가이드 읽기</a>
+</div>
+</section>
+
+
+
+<section id="news" aria-labelledby="news-title" style="background: #FFFFFF; border-top: 1px solid #D5E0E8; padding: clamp(56px, 7vw, 96px) 0">
+<div style="max-width: 1240px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); box-sizing: border-box; display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 12px 32px">
+<div style="display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0; font-family: 'Barlow Condensed', 'Noto Sans KR', sans-serif; font-size: 16px; font-weight: 600; letter-spacing: 0.12em; color: #1170AE">NEWS</p>
+<h2 id="news-title" style="margin: 0; font-size: clamp(26px, 3vw, 38px); line-height: 1.3; letter-spacing: -0.01em; color: #12324F">소식</h2>
+</div>
+
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 16px">
+<a href="https://www.datanet.co.kr/news/articleView.html?idxno=212180" style="flex: 1 1 300px; min-width: 0; background: #FFFFFF; border: 1px solid #D5E0E8; padding: 24px; display: flex; flex-direction: column; gap: 10px; color: #1A1F24; text-decoration: none">
+<p style="margin: 0; font-size: 13px; color: #56626D">데이터넷 · 2026.06.08</p>
+<p style="margin: 0; font-size: 17px; font-weight: 700; line-height: 1.5; color: #12324F">더마코스메틱 '뉴베리프', 피부시술 플랫폼 '여신티켓'과 마케팅 협력</p>
+</a>
+<a href="https://www.mydaily.co.kr/page/view/2026013009490418606" style="flex: 1 1 300px; min-width: 0; background: #FFFFFF; border: 1px solid #D5E0E8; padding: 24px; display: flex; flex-direction: column; gap: 10px; color: #1A1F24; text-decoration: none">
+<p style="margin: 0; font-size: 13px; color: #56626D">마이데일리 · 2026.01.30</p>
+<p style="margin: 0; font-size: 17px; font-weight: 700; line-height: 1.5; color: #12324F">뉴베리프, 네이버 패션뷰티에 공식 입점</p>
+</a>
+<a href="https://www.livesnews.com/news/article.html?no=52895" style="flex: 1 1 300px; min-width: 0; background: #FFFFFF; border: 1px solid #D5E0E8; padding: 24px; display: flex; flex-direction: column; gap: 10px; color: #1A1F24; text-decoration: none">
+<p style="margin: 0; font-size: 13px; color: #56626D">라이브뉴스 · 2025.07.31</p>
+<p style="margin: 0; font-size: 17px; font-weight: 700; line-height: 1.5; color: #12324F">웰니스의 시작을 알리는 뉴베리프 첫 백합 리커버리 선크림 런칭</p>
+</a>
+</div>
+</div>
+</section>
+
+<section id="faq" aria-labelledby="faq-title" style="background: #FFFFFF; border-top: 1px solid #D5E0E8; padding: clamp(56px, 7vw, 96px) 0">
+<div style="max-width: 1240px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 32px 64px">
+<div style="flex: 1 1 300px; display: flex; flex-direction: column; gap: 14px">
+<p style="margin: 0; font-family: 'Barlow Condensed', 'Noto Sans KR', sans-serif; font-size: 16px; font-weight: 600; letter-spacing: 0.12em; color: #1170AE">FAQ</p>
+<h2 id="faq-title" style="margin: 0; font-size: clamp(26px, 3vw, 38px); line-height: 1.3; letter-spacing: -0.01em; color: #12324F">궁금한 점이 있으신가요?</h2>
+<p style="margin: 0; color: #3C4752">시술 후 사용법부터 성분, 사용기한까지 자주 묻는 질문을 모았습니다.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px">
+
+<a href="#contact" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; border: 1px solid #12324F; color: #12324F; text-decoration: none; font-weight: 700; letter-spacing: 0.04em">문의하기</a>
+</div>
+</div>
+<div style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; border-top: 2px solid #12324F">
+<div style="padding: 22px 0; border-bottom: 1px solid #D5E0E8; display: flex; flex-direction: column; gap: 8px">
+<h3 style="margin: 0; font-size: 18px; color: #12324F">시술 후 선크림은 언제부터 바르나요?</h3>
+<p style="margin: 0; color: #3C4752">시술 종류에 따라 다릅니다. 레이저 토닝·IPL·리프팅은 보통 당일부터, 미세한 구멍이 남는 시술은 보통 24시간 뒤부터, 딱지가 생기는 시술은 상처가 아문 뒤부터 바릅니다. 시술한 병원의 안내가 다르면 병원 안내를 따르세요.</p>
+</div>
+<div style="padding: 22px 0; border-bottom: 1px solid #D5E0E8; display: flex; flex-direction: column; gap: 8px">
+<h3 style="margin: 0; font-size: 18px; color: #12324F">유기자차인가요, 무기자차인가요?</h3>
+<p style="margin: 0; color: #3C4752">유기자차입니다. 자외선 차단 성분 4종이 들어 있습니다.</p>
+</div>
+<div style="padding: 22px 0; border-bottom: 1px solid #D5E0E8; display: flex; flex-direction: column; gap: 8px">
+<h3 style="margin: 0; font-size: 18px; color: #12324F">클렌징 밀크는 몇 번 펌핑하나요?</h3>
+<p style="margin: 0; color: #3C4752">한 번에 3~4번 펌핑해 얼굴 전체에 펴 바르세요. 짙은 메이크업을 지울 때는 양을 조금 늘려도 됩니다.</p>
+</div>
+</div>
+</div>
+</section>
+
+<WhereToBuy />
+</Base>
