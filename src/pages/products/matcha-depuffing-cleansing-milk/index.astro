@@ -4,16 +4,16 @@ import WhereToBuy from '../../../components/WhereToBuy.astro';
 import { org, website, founder, aboutPage, breadcrumbs, productLd, articleLd, faqLd as makeFaq } from '../../../schema';
 const title = "말차 디퍼핑 클렌징 밀크 300mL";
 const description = "마른 얼굴에 바로 펴 바르는 300mL 밀크 클렌저. 인체적용시험 결과와 시험 조건, 피부 시술 뒤 사용 시점과 성분을 확인하세요.";
-const crumbs = breadcrumbs(Astro.site!, [["홈", "/"], ["제품", "/#products"], ["말차 디퍼핑 클렌징 밀크", "/products/matcha-depuffing-cleansing-milk/"]]);
+const crumbs = breadcrumbs(Astro.site!, [["홈", "/"], ["제품", "/products/"], ["말차 디퍼핑 클렌징 밀크", "/products/matcha-depuffing-cleansing-milk/"]]);
 const faqLd = makeFaq([["거품이 나지 않아요.", "정상입니다. 거품을 내지 않고 펴 발라 메이크업과 노폐물을 녹여 내는 밀크 타입입니다. 데실글루코사이드 같은 순한 세정 성분이 들어 있습니다."], ["이중 세안이 필요한가요?", "선크림과 가벼운 메이크업은 클렌징 밀크 한 번으로 지울 수 있습니다. 짙은 메이크업이나 워터프루프 제품을 썼다면 전용 리무버로 먼저 지우거나, 클렌징 밀크 뒤에 한 번 더 세안하세요."], ["워터프루프 마스카라도 지워지나요?", "한 번에 완전히 지우기는 어렵습니다. 눈과 입술의 워터프루프 메이크업은 포인트 리무버로 먼저 지우세요."], ["붓기 완화 효과가 잘 느껴지지 않아요.", "붓기 완화는 일시적인 효과이고, 느끼는 정도는 사람마다 다릅니다. 한국피부과학연구원 시험에서 여성 22명이 1회 사용한 직후 얼굴 부피가 평균 0.47cc 줄었습니다(3D 촬영 측정). 마지막에 찬물로 헹구는 방법을 함께 써 보세요."], ["민감한 피부도 쓸 수 있나요?", "24시간 첩포 시험(31명)에서 피부 반응도 0.00으로 무자극 판정을 받았습니다. 피부 질환이 있다면 작은 부위에 먼저 써 보고, 증상이 있으면 전문의와 상담하세요."], ["눈에 들어가면 따가운가요?", "눈에 직접 들어가면 따가울 수 있으니 바로 물로 헹구세요. 사람 각막을 본뜬 세포 모델로 한 안자극 시험(in vitro)에서는 비자극 판정을 받았습니다."]]);
 const product = productLd(Astro.site!, {"name": "말차 디퍼핑 클렌징 밀크", "alt": "NEUVELIF Matcha Depuffing Cleansing Milk", "img": "/images/products/matcha-depuffing-cleansing-milk-1000.jpg", "desc": "마른 얼굴에 바로 펴 바르는 300mL 밀크 클렌저. 피부 시술 전후의 예민한 피부를 기준으로 만들었습니다.", "award": "", "size": "300mL", "cat": "클렌징 밀크"});
 const jsonLd = [product, crumbs, ...faqLd];
 ---
-<Base title={title} description={description} current="products" jsonLd={jsonLd} image="/images/products/matcha-depuffing-cleansing-milk-1000.jpg" buyHref="#buy">
+<Base title={title} description={description} current="products" jsonLd={jsonLd} image="/images/products/matcha-depuffing-cleansing-milk-1000.jpg">
 <nav aria-label="현재 위치" style="max-width: 1240px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); box-sizing: border-box; padding-top: 16px; font-size: 13px; color: #56626D">
 <a href="/" style="color: #56626D; text-decoration: none; padding: 8px 0">홈</a>
 <span aria-hidden="true" style="padding: 0 8px">›</span>
-<a href="/#products" style="color: #56626D; text-decoration: none; padding: 8px 0">제품</a>
+<a href="/products/" style="color: #56626D; text-decoration: none; padding: 8px 0">제품</a>
 <span aria-hidden="true" style="padding: 0 8px">›</span>
 <span aria-current="page" style="color: #12324F; font-weight: 500">말차 디퍼핑 클렌징 밀크</span>
 </nav>
@@ -390,6 +390,7 @@ const jsonLd = [product, crumbs, ...faqLd];
 <div style="flex: 1 1 300px; display: flex; flex-direction: column; gap: 12px">
 <p style="margin: 0; font-family: 'Barlow Condensed', 'Noto Sans KR', sans-serif; font-size: 16px; font-weight: 600; letter-spacing: 0.12em; color: #2F5233">FAQ</p>
 <h2 id="faq-title" style="margin: 0; font-size: clamp(24px, 2.6vw, 34px); line-height: 1.3; color: #12324F">클렌징 밀크에 대해 자주 묻는 질문</h2>
+<a href="/faq/#cleansing" style="display: inline-flex; align-items: center; min-height: 44px; color: #1170AE; font-weight: 700; text-decoration: none; letter-spacing: 0.04em">질문 전체 보기 →</a>
 
 </div>
 <div style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; border-top: 2px solid #12324F"><div style="padding: 20px 0; border-bottom: 1px solid #D5E0E8; display: flex; flex-direction: column; gap: 6px">

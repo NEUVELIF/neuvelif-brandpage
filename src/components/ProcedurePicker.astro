@@ -1,11 +1,13 @@
 ---
 // 시술별 가이드 페이지의 '받으신 시술을 골라 보세요' — 시술 7개 상세
-import procs from '../data/procedures-laser.json';
+import type { Proc } from '../data/guides';
+interface Props { procs: Proc[] }
+const { procs } = Astro.props;
 const chip = 'min-height: 44px; padding: 8px 18px; border-radius: 999px; font-family: inherit; font-size: 15px; cursor: pointer';
 const listStyle = 'margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 6px; color: #3C4752';
 ---
 <div data-picker data-param="p" style="display: flex; flex-direction: column; gap: 24px">
-<div role="group" aria-label="시술 선택" style="display: flex; flex-wrap: wrap; gap: 10px">
+<div role="group" aria-label="시술 선택" hidden={procs.length < 2} style="display: flex; flex-wrap: wrap; gap: 10px">
 {procs.map((p, i) => (
   <button type="button" data-pick={i} data-base={chip} aria-pressed={i === 0 ? 'true' : 'false'} aria-controls={`proc-${i}`}
     style={`${chip}; ${i === 0 ? 'border: 1px solid #12324F; background: #12324F; color: #FFFFFF; font-weight: 700' : 'border: 1px solid #B9C9D6; background: #FFFFFF; color: #12324F; font-weight: 500'}`}>{p.name}</button>

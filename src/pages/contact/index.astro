@@ -1,0 +1,80 @@
+---
+import Base from '../../layouts/Base.astro';
+import { breadcrumbs } from '../../schema';
+import { PATHS, BRAND, COMPANY } from '../../site';
+
+const title = '문의';
+const description = `뉴베리프 문의: ${BRAND.email}로 이메일을 보내 주시면 신속하게 답변을 드리겠습니다.`;
+const jsonLd = [
+  breadcrumbs(Astro.site!, [['홈', '/'], ['문의', PATHS.contact]]),
+  { '@context': 'https://schema.org', '@type': 'ContactPage', name: '뉴베리프 문의', about: { '@type': 'Organization', name: BRAND.name, email: BRAND.email, contactPoint: { '@type': 'ContactPoint', contactType: 'customer support', email: BRAND.email, availableLanguage: ['Korean'] } } },
+];
+const LBL = "margin: 0; font-family: 'Barlow Condensed', 'Noto Sans KR', sans-serif; font-size: 16px; font-weight: 600; letter-spacing: 0.12em; color: #1170AE";
+const WRAP = 'max-width: 1240px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); box-sizing: border-box';
+const tips = [
+  ['제품에 관한 문의', '제품 이름과 궁금한 점을 적어 주세요. 사용 중 불편한 점이 있다면 사용한 기간과 증상을 함께 알려 주시면 더 정확하게 답변드릴 수 있습니다.'],
+  ['피부 시술 후 사용에 관한 문의', '받으신 시술 이름과 시술 날짜를 함께 알려 주세요. 시술 부위의 상처나 증상에 관한 의학적인 판단은 시술한 병원에 먼저 문의해 주세요.'],
+  ['입점·제휴 문의', '회사 이름, 담당자 연락처, 제안 내용을 적어 주세요.'],
+];
+---
+<Base title={title} description={description} jsonLd={jsonLd}>
+<nav aria-label="현재 위치" style="max-width: 1240px; margin: 0 auto; padding: 16px clamp(20px, 4vw, 48px) 0; box-sizing: border-box; font-size: 13px; color: #56626D">
+<a href="/" style="color: #56626D; text-decoration: none; padding: 8px 0">홈</a>
+<span aria-hidden="true" style="padding: 0 8px">›</span>
+<span aria-current="page" style="color: #12324F; font-weight: 500">문의</span>
+</nav>
+
+<section aria-labelledby="contact-title" style="padding: clamp(24px, 3vw, 40px) 0 clamp(48px, 6vw, 88px)">
+<div style={`${WRAP}; display: flex; flex-wrap: wrap; gap: 32px 64px; align-items: stretch`}>
+<div style="flex: 1 1 420px; display: flex; flex-direction: column; gap: 16px">
+<p style={LBL}>CONTACT</p>
+<h1 id="contact-title" style="margin: 0; font-size: clamp(30px, 3.4vw, 44px); line-height: 1.25; letter-spacing: -0.02em; color: #12324F">문의</h1>
+<p style="margin: 0; font-size: 19px; line-height: 1.75; color: #1A1F24"><a href={`mailto:${BRAND.email}`} style="color: #1170AE; font-weight: 700">{BRAND.email}</a>로 이메일을 보내 주시면<br>신속하게 답변을 드리겠습니다.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px">
+<a href={`mailto:${BRAND.email}`} style="display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 26px; background: #12324F; color: #FFFFFF; text-decoration: none; font-weight: 700">
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="1"></rect><path d="M3 7l9 6 9-6"></path></svg>
+이메일 보내기</a>
+<button type="button" data-copy={BRAND.email} style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 22px; border: 1px solid #12324F; background: #FFFFFF; color: #12324F; font-family: inherit; font-size: 16px; font-weight: 700; cursor: pointer">주소 복사</button>
+</div>
+<p data-copied role="status" style="margin: 0; min-height: 22px; font-size: 14px; color: #2F5233"></p>
+</div>
+<div style="flex: 1 1 420px; background: #F4F7FA; padding: clamp(24px, 3vw, 36px); display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 20px; color: #12324F">문의 전에 확인해 보세요</h2>
+<p style="margin: 0; color: #3C4752">시술 후 사용 시점, 성분, 사용기한처럼 자주 묻는 질문은 바로 답을 보실 수 있습니다.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 10px">
+<a href={PATHS.faq} style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 20px; background: #FFFFFF; border: 1px solid #12324F; color: #12324F; text-decoration: none; font-weight: 700">자주 묻는 질문</a>
+<a href={PATHS.guide} style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 20px; background: #FFFFFF; border: 1px solid #12324F; color: #12324F; text-decoration: none; font-weight: 700">시술별 가이드</a>
+</div>
+</div>
+</div>
+</section>
+
+<section aria-labelledby="contact-tips-title" style="border-top: 1px solid #D5E0E8; padding: clamp(48px, 6vw, 80px) 0">
+<div style={`${WRAP}; display: flex; flex-direction: column; gap: 24px`}>
+<h2 id="contact-tips-title" style="margin: 0; font-size: clamp(22px, 2.4vw, 28px); color: #12324F">이렇게 보내 주시면 더 빨리 도와드릴 수 있습니다</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 16px">
+{tips.map(([h, t], i) => (
+  <div style="border: 1px solid #D5E0E8; border-top: 3px solid #12324F; padding: 22px; display: flex; flex-direction: column; gap: 8px">
+  <span aria-hidden="true" style="font-family: 'Barlow Condensed', 'Noto Sans KR', sans-serif; font-size: 22px; font-weight: 600; color: #1170AE">0{i + 1}</span>
+  <h3 style="margin: 0; font-size: 18px; color: #12324F">{h}</h3>
+  <p style="margin: 0; color: #3C4752">{t}</p>
+  </div>
+))}
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px; font-size: 14px; color: #56626D; border-top: 1px solid #D5E0E8; padding-top: 20px">
+<p style="margin: 0; color: #12324F; font-weight: 700">{COMPANY.name}</p>
+<p style="margin: 0">대표자 {COMPANY.ceo} · 사업자등록번호 {COMPANY.bizNo}</p>
+<p style="margin: 0">{COMPANY.address}</p>
+</div>
+</div>
+</section>
+</Base>
+
+<script>
+  const b = document.querySelector<HTMLButtonElement>('[data-copy]');
+  const msg = document.querySelector('[data-copied]');
+  b?.addEventListener('click', async () => {
+    try { await navigator.clipboard.writeText(b.dataset.copy || ''); if (msg) msg.textContent = '이메일 주소를 복사했습니다.'; }
+    catch { if (msg) msg.textContent = b.dataset.copy || ''; }
+  });
+</script>

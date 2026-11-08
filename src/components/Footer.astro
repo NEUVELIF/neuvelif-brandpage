@@ -6,24 +6,25 @@ import { COMPANY, BRAND, PATHS } from '../site';
 <div style="display: flex; flex-wrap: wrap; gap: 32px 48px">
 <div style="flex: 1 1 200px; display: flex; flex-direction: column; gap: 6px">
 <p style="margin: 0 0 4px; font-weight: 700; color: #FFFFFF">제품</p>
+<a href={PATHS.products} style="color: #C9D6E2; text-decoration: none; padding: 4px 0">전체 제품</a>
 <a href={PATHS.sunscreen} style="color: #C9D6E2; text-decoration: none; padding: 4px 0">백합 리커버리 선크림</a>
 <a href={PATHS.cleansing} style="color: #C9D6E2; text-decoration: none; padding: 4px 0">말차 디퍼핑 클렌징 밀크</a>
 </div>
 <div style="flex: 1 1 200px; display: flex; flex-direction: column; gap: 6px">
 <p style="margin: 0 0 4px; font-weight: 700; color: #FFFFFF">시술별 가이드</p>
-<a href="/#guide" style="color: #C9D6E2; text-decoration: none; padding: 4px 0">시술 그룹별 가이드</a>
-<a href={PATHS.guideLaser} style="color: #C9D6E2; text-decoration: none; padding: 4px 0">레이저 토닝·IPL·리프팅</a>
+<a href={PATHS.guide} style="color: #C9D6E2; text-decoration: none; padding: 4px 0">시술 그룹별 가이드</a>
+<a href={`${PATHS.guide}#pre-care`} style="color: #C9D6E2; text-decoration: none; padding: 4px 0">시술 전 관리</a>
 </div>
 <div style="flex: 1 1 200px; display: flex; flex-direction: column; gap: 6px">
 <p style="margin: 0 0 4px; font-weight: 700; color: #FFFFFF">브랜드</p>
 <a href={PATHS.brand} style="color: #C9D6E2; text-decoration: none; padding: 4px 0">브랜드 이야기</a>
-<a href="/#research" style="color: #C9D6E2; text-decoration: none; padding: 4px 0">임상 연구</a>
-<a href="/#news" style="color: #C9D6E2; text-decoration: none; padding: 4px 0">소식</a>
+<a href={PATHS.research} style="color: #C9D6E2; text-decoration: none; padding: 4px 0">임상 연구</a>
+<a href={PATHS.news} style="color: #C9D6E2; text-decoration: none; padding: 4px 0">소식</a>
 </div>
 <div id="contact" style="flex: 1 1 240px; display: flex; flex-direction: column; gap: 6px">
 <p style="margin: 0 0 4px; font-weight: 700; color: #FFFFFF">고객 지원</p>
-<a href="/#faq" style="color: #C9D6E2; text-decoration: none; padding: 4px 0">자주 묻는 질문</a>
-<a href="/#buy" style="color: #C9D6E2; text-decoration: none; padding: 4px 0">구매처</a>
+<a href={PATHS.faq} style="color: #C9D6E2; text-decoration: none; padding: 4px 0">자주 묻는 질문</a>
+<a href={PATHS.contact} style="color: #C9D6E2; text-decoration: none; padding: 4px 0">문의</a>
 <a href={`mailto:${BRAND.email}`} style="color: #FFFFFF; padding: 4px 0">{BRAND.email}</a>
 </div>
 </div>

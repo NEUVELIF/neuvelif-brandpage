@@ -1,13 +1,14 @@
 ---
-// 사이트 맨 위 안내 줄 + 머리 부분 (로고, 메뉴, 언어 선택, 구매처)
-interface Props { current?: 'brand' | 'products' | 'guide' | 'research' | 'news' | ''; buyHref?: string }
-const { current = '', buyHref = '/#buy' } = Astro.props;
+// 사이트 맨 위 안내 줄 + 머리 부분 (로고, 메뉴, 언어 선택)
+import { PATHS } from '../site';
+interface Props { current?: 'brand' | 'products' | 'guide' | 'research' | 'news' | '' }
+const { current = '' } = Astro.props;
 const nav = [
-  { key: 'brand', label: '브랜드', href: '/brand/' },
-  { key: 'products', label: '제품', href: '/#products' },
-  { key: 'guide', label: '시술별 가이드', href: '/#guide' },
-  { key: 'research', label: '임상 연구', href: '/#research' },
-  { key: 'news', label: '소식', href: '/#news' },
+  { key: 'brand', label: '브랜드', href: PATHS.brand },
+  { key: 'products', label: '제품', href: PATHS.products },
+  { key: 'guide', label: '시술별 가이드', href: PATHS.guide },
+  { key: 'research', label: '임상 연구', href: PATHS.research },
+  { key: 'news', label: '소식', href: PATHS.news },
 ];
 const langs = [
   { code: 'ko', label: '한국어', region: '대한민국', href: '/', ready: true, note: '' },
@@ -18,14 +19,14 @@ const langs = [
 <div style="background: #12324F; color: #FFFFFF; font-size: 13px">
 <div style="max-width: 1240px; margin: 0 auto; padding: 10px clamp(20px, 4vw, 48px); box-sizing: border-box; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 4px 12px; text-align: center">
 <p style="margin: 0">내 시술에 맞는 선크림·세안 시점, 시술별 가이드에서 확인하세요</p>
-<a href="/#guide" style="color: #FFFFFF; font-weight: 700; text-underline-offset: 3px">가이드 보기</a>
+<a href={PATHS.guide} style="color: #FFFFFF; font-weight: 700; text-underline-offset: 3px">가이드 보기</a>
 </div>
 </div>
 
 <header style="background: #FFFFFF; border-bottom: 1px solid #D5E0E8; position: relative; z-index: 20">
 <div style="max-width: 1240px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); box-sizing: border-box; display: flex; justify-content: flex-end; align-items: center; gap: 4px; font-size: 13px; border-bottom: 1px solid #EEF2F5">
-<a href="#contact" style="color: #56626D; text-decoration: none; padding: 12px 8px">문의</a>
-<a href="/#faq" style="color: #56626D; text-decoration: none; padding: 12px 8px">자주 묻는 질문</a>
+<a href={PATHS.contact} style="color: #56626D; text-decoration: none; padding: 12px 8px">문의</a>
+<a href={PATHS.faq} style="color: #56626D; text-decoration: none; padding: 12px 8px">자주 묻는 질문</a>
 <span aria-hidden="true" style="color: #C5D1DA; padding: 0 4px">|</span>
 <details class="lang">
 <summary aria-label="언어 선택, 현재 한국어" title="언어 선택">
@@ -55,7 +56,8 @@ const langs = [
 <a href="/" style="display: flex; align-items: center; min-height: 64px">
 <img src="/images/logo/neuvelif-wordmark.svg" alt="NEUVELIF 홈" width="140" height="20" style="height: 20px; width: auto; display: block">
 </a>
-<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 4px clamp(16px, 2.4vw, 36px)">
+<button type="button" class="menu-btn" aria-expanded="false" aria-controls="mobile-menu" aria-label="메뉴 열기"><span></span><span></span><span></span></button>
+<div class="nav-desktop" style="display: flex; flex-wrap: wrap; align-items: center; gap: 4px clamp(16px, 2.4vw, 36px)">
 <nav aria-label="주 메뉴" style="display: flex; flex-wrap: wrap; gap: 0 clamp(14px, 2.2vw, 32px); font-size: 16px; font-weight: 500">
 {nav.map((n) => (
   current === n.key
@@ -63,12 +65,33 @@ const langs = [
     : <a href={n.href} style="color: #1A1F24; text-decoration: none; padding: 12px 0">{n.label}</a>
 ))}
 </nav>
-<a href={buyHref} style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; border: 1px solid #1170AE; color: #1170AE; text-decoration: none; font-size: 15px; font-weight: 700; letter-spacing: 0.04em">구매처</a>
 </div>
 </div>
+<nav id="mobile-menu" class="mobile-menu" aria-label="휴대폰 메뉴" hidden>
+<ul>
+{nav.map((n) => <li><a href={n.href} aria-current={current === n.key ? 'page' : undefined}>{n.label}</a></li>)}
+</ul>
+<div class="mobile-sub"><a href={PATHS.faq}>자주 묻는 질문</a><a href={PATHS.contact}>문의</a></div>
+</nav>
 </header>
 
 <style>
+  .menu-btn { display: none; width: 48px; height: 48px; border: 1px solid #D5E0E8; background: #FFFFFF; cursor: pointer; flex-direction: column; align-items: center; justify-content: center; gap: 5px; padding: 0; }
+  .menu-btn span { display: block; width: 20px; height: 2px; background: #12324F; transition: transform 0.2s, opacity 0.2s; }
+  .menu-btn[aria-expanded='true'] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .menu-btn[aria-expanded='true'] span:nth-child(2) { opacity: 0; }
+  .menu-btn[aria-expanded='true'] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .mobile-menu { border-top: 1px solid #D5E0E8; background: #FFFFFF; padding: 8px clamp(20px, 4vw, 48px) 20px; }
+  .mobile-menu ul { list-style: none; margin: 0; padding: 0; }
+  .mobile-menu li a { display: block; padding: 16px 0; border-bottom: 1px solid #EEF2F5; color: #12324F; text-decoration: none; font-size: 18px; font-weight: 700; }
+  .mobile-menu li a[aria-current='page'] { color: #1170AE; }
+  .mobile-sub { display: flex; gap: 20px; padding-top: 16px; }
+  .mobile-sub a { color: #56626D; text-decoration: none; font-size: 15px; }
+  @media (max-width: 860px) {
+    .menu-btn { display: inline-flex; }
+    .nav-desktop { display: none !important; }
+  }
+  @media (min-width: 861px) { .mobile-menu { display: none !important; } }
   .lang { position: relative; }
   .lang summary { list-style: none; display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; color: #3C4752; cursor: pointer; }
   .lang summary::-webkit-details-marker { display: none; }
@@ -87,6 +110,15 @@ const langs = [
 </style>
 
 <script>
+  // 휴대폰 메뉴 열고 닫기
+  const btn = document.querySelector<HTMLButtonElement>('.menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  btn?.addEventListener('click', () => {
+    const open = btn.getAttribute('aria-expanded') !== 'true';
+    btn.setAttribute('aria-expanded', String(open));
+    btn.setAttribute('aria-label', open ? '메뉴 닫기' : '메뉴 열기');
+    if (menu) menu.hidden = !open;
+  });
   // 바깥을 누르거나 Esc를 누르면 언어 창을 닫습니다.
   const d = document.querySelector<HTMLDetailsElement>('details.lang');
   if (d) {

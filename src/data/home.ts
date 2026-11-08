@@ -12,12 +12,13 @@ export const GROUPS: Group[] = [
       { label: '여드름 PDT', desc: '빛에 반응하는 약을 쓰는 여드름 치료로, 치료 뒤 약 48시간 동안 빛에 매우 예민합니다.', examples: '여드름 PDT(광역동치료)', sun: '48시간 뒤부터 매일', sunNote: '치료 뒤 48시간은 선크림만으로 부족합니다. 실내에 머물고 햇빛을 피합니다.', clean: '병원 안내에 따라', cleanNote: '48시간 이후에는 평소대로 씁니다.', avoid: '외출이 꼭 필요하면 모자와 옷으로 가리세요.' }
     ];
 
-// 자세한 가이드 페이지가 있는 그룹만 링크를 겁니다.
-GROUPS[0].href = '/guide/laser-ipl-lifting/';
+// 그룹마다 자세한 가이드 페이지로 연결합니다 (순서는 src/data/guides.ts 와 같음).
+const SLUGS = ['laser-ipl-lifting', 'laser-hair-removal', 'aquapeel-ldm-peeling', 'botox-filler-skinbooster', 'potenza-mts-fraxel', 'mole-removal-co2-laser', 'acne-pdt'];
+GROUPS.forEach((g, i) => { g.href = `/guide/${SLUGS[i]}/`; });
 
 export const SLIDES: Slide[] = [
-      { kind: '브랜드', date: '', title1: '시술 전후의 피부를 위한', title2: '더마 스킨케어', desc: '레이저, 리프팅, 주사 시술 뒤 언제 선크림을 바르고 언제 세안할지 시술별로 정리했습니다. 나를 아끼는 마음은 피부에서 시작됩니다.', note: '', cta1: '내 시술 가이드 찾기', href1: '#guide', cta2: '제품 보기', href2: '#products' },
-      { kind: '신제품', date: '2026.09', title1: '말차 디퍼핑 클렌징 밀크', title2: '출시', desc: '롤링 마사지로 쓰는 300mL 밀크 클렌저입니다. 인체적용시험에서 메이크업 세정률 96.68%를 확인했습니다.', note: '한국피부과학연구원 인체적용시험, 여성 22명, 팔 안쪽에 바른 메이크업 기준', cta1: '제품 보기', href1: '/products/matcha-depuffing-cleansing-milk/', cta2: '구매처', href2: '#buy' },
-      { kind: '수상', date: '2025.11', title1: '2025 하반기 화해 어워드', title2: '선케어 부문(선크림/로션) 진정 카테고리 1위', desc: '백합 리커버리 선크림이 화해 사용자의 리뷰와 평점을 바탕으로 선정되는 화해 어워드에서 수상했습니다.', note: '', cta1: '선크림 보기', href1: '#products', cta2: '소식 보기', href2: '#news' },
-      { kind: '협업', date: '2026.06', title1: '피부시술 플랫폼 여신티켓과', title2: '마케팅 협력', desc: '피부 시술을 찾는 분들이 시술 전후 관리 정보도 함께 만날 수 있도록 여신티켓과 협력합니다.', note: '', cta1: '시술별 가이드', href1: '#guide', cta2: '소식 보기', href2: '#news' }
+      { kind: '브랜드', date: '', title1: '시술 전후의 피부를 위한', title2: '더마 스킨케어', desc: '레이저, 리프팅, 주사 시술 뒤 언제 선크림을 바르고 언제 세안할지 시술별로 정리했습니다. 나를 아끼는 마음은 피부에서 시작됩니다.', note: '', cta1: '내 시술 가이드 찾기', href1: '#guide', cta2: '제품 보기', href2: '/products/' },
+      { kind: '신제품', date: '2026.09', title1: '말차 디퍼핑 클렌징 밀크', title2: '출시', desc: '롤링 마사지로 쓰는 300mL 밀크 클렌저입니다. 인체적용시험에서 메이크업 세정률 96.68%를 확인했습니다.', note: '한국피부과학연구원 인체적용시험, 여성 22명, 팔 안쪽에 바른 메이크업 기준', cta1: '제품 보기', href1: '/products/matcha-depuffing-cleansing-milk/', cta2: '구매처', href2: '/products/matcha-depuffing-cleansing-milk/#buy' },
+      { kind: '수상', date: '2025.11', title1: '2025 하반기 화해 어워드', title2: '선케어 부문(선크림/로션) 진정 카테고리 1위', desc: '백합 리커버리 선크림이 화해 사용자의 리뷰와 평점을 바탕으로 선정되는 화해 어워드에서 수상했습니다.', note: '', cta1: '선크림 보기', href1: '/products/backhap-recovery-sunscreen/', cta2: '소식 보기', href2: '/news/' },
+      { kind: '협업', date: '2026.06', title1: '피부시술 플랫폼 여신티켓과', title2: '마케팅 협력', desc: '피부 시술을 찾는 분들이 시술 전후 관리 정보도 함께 만날 수 있도록 여신티켓과 협력합니다.', note: '', cta1: '시술별 가이드', href1: '/guide/', cta2: '소식 보기', href2: '/news/' }
     ];

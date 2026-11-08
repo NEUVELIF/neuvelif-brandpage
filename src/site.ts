@@ -32,5 +32,11 @@ export const PATHS = {
   sunscreen: '/products/backhap-recovery-sunscreen/',
   cleansing: '/products/matcha-depuffing-cleansing-milk/',
   guideLaser: '/guide/laser-ipl-lifting/',
+  guide: '/guide/',
+  products: '/products/',
+  research: '/research/',
+  news: '/news/',
+  faq: '/faq/',
+  contact: '/contact/',
   privacy: '/privacy/',
 };
