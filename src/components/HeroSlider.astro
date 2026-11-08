@@ -9,12 +9,12 @@ const btn = 'width: 44px; height: 44px; border: 1px solid #5B7590; background: t
 <div style="position: relative; max-width: 1240px; margin: 0 auto; padding: clamp(48px, 7vw, 104px) clamp(20px, 4vw, 48px) clamp(28px, 3.5vw, 44px); box-sizing: border-box; min-height: clamp(480px, 40vw, 600px); display: flex; flex-direction: column; justify-content: space-between; gap: 40px">
 <div aria-live="polite">
 {SLIDES.map((s, i) => (
-  <div data-slide={i} role="group" aria-roledescription="slide" aria-label={`${i + 1} / ${n}: ${s.kind}`} hidden={i !== 0} style="max-width: 1080px; display: flex; flex-direction: column; gap: 22px">
+  <div data-slide={i} role="group" aria-roledescription="slide" aria-label={`${i + 1} / ${n}: ${s.kind}`} hidden={i !== 0} style="max-width: 100%; display: flex; flex-direction: column; gap: 22px">
   <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px">
   <span style="border: 1px solid #8FD3F2; color: #8FD3F2; padding: 4px 12px; font-size: 13px; font-weight: 700; letter-spacing: 0.06em">{s.kind}</span>
   {s.date && <span style="font-size: 14px; color: #C9D6E2; font-variant-numeric: tabular-nums">{s.date}</span>}
   </div>
-  <p style="margin: 0; font-size: clamp(32px, 4.4vw, 60px); line-height: 1.22; font-weight: 700; letter-spacing: -0.02em">{s.title1}<br>{s.title2}</p>
+  <p style="margin: 0; font-size: clamp(32px, 4.4vw, 60px); line-height: 1.22; font-weight: 700; letter-spacing: -0.02em">{s.title1}{s.title2 && <><br>{s.title2}</>}</p>
   <p style="margin: 0; font-size: clamp(16px, 1.4vw, 19px); color: #D5E3EE; max-width: 860px">{s.desc}</p>
   {s.note && <p style="margin: 0; font-size: 13px; color: #A9BACB">{s.note}</p>}
   <div style="display: flex; flex-wrap: wrap; gap: 12px">
