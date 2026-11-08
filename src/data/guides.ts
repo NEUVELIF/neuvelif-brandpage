@@ -1,5 +1,5 @@
 // 시술 그룹별 가이드 — 모든 그룹 페이지가 이 자료 하나로 만들어집니다.
-// 원고: content/05-procedure-guide.md (5-3, 5-8). 의사 감수 전 초안이며, 병원 안내가 항상 우선입니다.
+// 병원 안내가 항상 우선입니다.
 import laserProcs from './procedures-laser.json';
 
 export interface Proc { name: string; alias: string; skin: string; sunWhen: string; sunHow: string[]; cleanWhen: string; cleanHow: string[]; avoid: string[]; product: string[] }

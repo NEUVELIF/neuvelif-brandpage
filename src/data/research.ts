@@ -1,4 +1,4 @@
-// 시험 8건 — 값은 시험기관 결과보고서 기준 (content/03-evidence.md).
+// 시험 결과 요약
 export interface Test {
   product: 'sunscreen' | 'cleansing';
   name: string;        // 시험 이름
