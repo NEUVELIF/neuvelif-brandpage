@@ -1,12 +1,14 @@
 ---
 // 시술별 가이드 페이지의 '받으신 시술을 골라 보세요' — 시술 7개 상세
 import type { Proc } from '../data/guides';
+// 이 부품을 쓰는 페이지가 시술 목록(procs)을 넘겨줍니다. 예: <ProcedurePicker procs={g.procs} />
 interface Props { procs: Proc[] }
 const { procs } = Astro.props;
 const chip = 'min-height: 44px; padding: 8px 18px; border-radius: 999px; font-family: inherit; font-size: 15px; cursor: pointer';
 const listStyle = 'margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 6px; color: #3C4752';
 ---
 <div data-picker data-param="p" style="display: flex; flex-direction: column; gap: 24px">
+{/* 시술이 하나뿐이면 칩 줄을 숨깁니다 */}
 <div role="group" aria-label="시술 선택" hidden={procs.length < 2} style="display: flex; flex-wrap: wrap; gap: 10px">
 {procs.map((p, i) => (
   <button type="button" data-pick={i} data-base={chip} aria-pressed={i === 0 ? 'true' : 'false'} aria-controls={`proc-${i}`}

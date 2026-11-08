@@ -1,4 +1,5 @@
 ---
+// 자주 묻는 질문 (주소: /faq/)
 import Base from '../../layouts/Base.astro';
 import faq from '../../data/faq.json';
 import { breadcrumbs, faqLd } from '../../schema';
@@ -6,6 +7,8 @@ import { PATHS } from '../../site';
 
 const title = '자주 묻는 질문';
 const description = '피부 시술 후 선크림·세안 시점, 백합 리커버리 선크림과 말차 디퍼핑 클렌징 밀크의 성분·사용법·사용기한, 구매와 문의까지 뉴베리프에 자주 묻는 질문을 모았습니다.';
+// 질문 원본은 src/data/faq.json 에 있습니다. (JSON = 데이터를 적는 형식, 주석을 넣을 수 없음)
+// flatMap: 네 묶음의 질문을 한 줄 목록으로 펼칩니다 (구조화 데이터용).
 const all = faq.flatMap((c) => c.items.map((it) => [it.q, it.a] as [string, string]));
 const jsonLd = [breadcrumbs(Astro.site!, [['홈', '/'], ['자주 묻는 질문', PATHS.faq]]), ...faqLd(all)];
 const LBL = "margin: 0; font-family: 'Barlow Condensed', 'Noto Sans KR', sans-serif; font-size: 16px; font-weight: 600; letter-spacing: 0.12em; color: #1170AE";
@@ -19,6 +22,7 @@ const total = all.length;
 <span aria-current="page" style="color: #12324F; font-weight: 500">자주 묻는 질문</span>
 </nav>
 
+{/* ── 자주 묻는 질문 ── */}
 <section aria-labelledby="faq-page-title" style="padding: clamp(24px, 3vw, 40px) 0 clamp(24px, 3vw, 40px)">
 <div style={`${WRAP}; display: flex; flex-direction: column; gap: 20px`}>
 <div style="display: flex; flex-direction: column; gap: 14px; max-width: 820px">
@@ -53,6 +57,7 @@ const total = all.length;
 </section>
 ))}
 
+{/* ── 찾는 답이 없나요? ── */}
 <section aria-labelledby="faq-more-title" style="background: #12324F; color: #FFFFFF; padding: clamp(40px, 5vw, 64px) 0">
 <div style={`${WRAP}; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px 48px`}>
 <div style="display: flex; flex-direction: column; gap: 8px">

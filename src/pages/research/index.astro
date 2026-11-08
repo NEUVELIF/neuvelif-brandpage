@@ -1,4 +1,5 @@
 ---
+// 임상 연구 (주소: /research/) — 시험 내용은 src/data/research.ts 에서 가져옵니다.
 import Base from '../../layouts/Base.astro';
 import { TESTS } from '../../data/research';
 import { breadcrumbs } from '../../schema';
@@ -31,6 +32,7 @@ const surveys = {
 <span aria-current="page" style="color: #12324F; font-weight: 500">임상 연구</span>
 </nav>
 
+{/* ── 시험 결과를 조건과 함께 공개합니다 ── */}
 <section aria-labelledby="research-page-title" style="padding: clamp(24px, 3vw, 40px) 0 clamp(40px, 5vw, 64px)">
 <div style={`${WRAP}; display: flex; flex-direction: column; gap: 28px`}>
 <div style="display: flex; flex-direction: column; gap: 14px; max-width: 860px">
@@ -59,6 +61,7 @@ const surveys = {
 </div>
 </section>
 
+{/* ── 시험 건 한눈에 보기 ── */}
 <section aria-labelledby="summary-title" style="border-top: 1px solid #D5E0E8; padding: clamp(48px, 6vw, 80px) 0">
 <div style={`${WRAP}; display: flex; flex-direction: column; gap: 24px`}>
 <div style="display: flex; flex-direction: column; gap: 12px">
@@ -125,6 +128,7 @@ const surveys = {
 </section>
 ))}
 
+{/* ── 결과를 읽을 때 알아 두세요 ── */}
 <section aria-labelledby="note-title" style="background: #F4F7FA; padding: clamp(40px, 5vw, 64px) 0">
 <div style={`${WRAP}; display: flex; flex-direction: column; gap: 12px`}>
 <h2 id="note-title" style="margin: 0; font-size: 20px; color: #12324F">결과를 읽을 때 알아 두세요</h2>

@@ -2,8 +2,11 @@
 // 병원 안내가 항상 우선입니다.
 import laserProcs from './procedures-laser.json';
 
+// Proc: 시술 하나 (시술 뒤 피부, 선크림·클렌징 시작 시점과 방법, 피할 것, 제품 안내)
 export interface Proc { name: string; alias: string; skin: string; sunWhen: string; sunHow: string[]; cleanWhen: string; cleanHow: string[]; avoid: string[]; product: string[] }
 export interface Point { text: string; src?: string }
+// Guide: 시술 그룹 페이지 하나에 들어가는 내용 전체
+// 이 목록(GUIDES)에 그룹을 하나 추가하면 페이지가 자동으로 하나 더 생깁니다. (src/pages/guide/[slug]/index.astro)
 export interface Guide {
   slug: string;
   label: string;          // 그룹 이름
@@ -25,6 +28,7 @@ export interface Guide {
   modified: string;
 }
 
+// 여러 그룹에서 똑같이 쓰는 문장은 이름을 붙여 한 번만 적어 둡니다. (고칠 때 한 곳만 고치면 됨)
 const SPF: Point = { text: 'SPF50+ PA++++로 자외선 A와 B를 함께 차단합니다.', src: '인체적용시험 SPF 53.9, UVAPF 18.6 (한국피부과학연구원, 10명)' };
 const SUN_IRR: Point = { text: '24시간 첩포 시험에서 평균 피부자극도 0.00, 무자극 판정을 받았습니다.', src: '(㈜엘리드, 34명)' };
 const MILK_IRR: Point = { text: '24시간 첩포 시험에서 피부 자극도 0.00(무자극 판정)을 받았습니다.', src: '(한국피부과학연구원, 31명)' };
@@ -40,6 +44,7 @@ const SRC_LEE = { title: 'Lee KWA 외, Importance of Using Sunscreen After Light
 const SRC_KR = { title: '국내 의료기관이 공개한 시술 후 주의사항 (2026년 11월 확인)' };
 const FAQ_ORGANIC: [string, string] = ['피부과에서 무기자차를 쓰라고 했어요. 뉴베리프 선크림을 써도 되나요?', '의료진의 안내를 따르세요. 뉴베리프 백합 리커버리 선크림은 유기자차입니다. 일부 의료기관은 미세한 구멍이 남는 시술 뒤 일정 기간 무기자차를 권합니다.'];
 
+// 시술 그룹 7개. slug 는 주소에 쓰이는 이름입니다. (예: /guide/acne-pdt/)
 export const GUIDES: Guide[] = [
   {
     slug: 'laser-ipl-lifting',

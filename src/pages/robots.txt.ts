@@ -1,3 +1,5 @@
+// HTML이 아닌 파일(robots.txt)을 만드는 페이지입니다.
+// robots.txt = 검색엔진 로봇에게 '어디를 수집해도 되는지' 알려 주는 파일
 import type { APIRoute } from 'astro';
 import { STAGING } from '../site';
 

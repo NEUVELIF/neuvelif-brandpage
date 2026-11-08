@@ -1,13 +1,16 @@
 // 공식 구매처 — 입점처가 늘거나 바뀌면 이 파일만 고치면 됩니다.
 export type ProductKey = 'sunscreen' | 'cleansing';
 
+// interface: '판매처 하나는 이런 칸들로 이루어진다'는 약속(틀)입니다.
+// ? 가 붙은 칸은 없어도 됩니다.
 export interface Store {
   name: string;
   country: 'kr' | 'jp';
   brandUrl?: string; // 브랜드 전체 페이지 (있을 때)
-  products: Partial<Record<ProductKey, string>>; // 제품별 상품 페이지
+  products: Partial<Record<ProductKey, string>>; // { sunscreen: 주소, cleansing: 주소 } 모양. 둘 다 없어도 됨 // 제품별 상품 페이지
 }
 
+// 판매처 목록. 순서대로 화면에 보입니다. 새 판매처는 { ... }, 한 덩어리를 복사해 추가하세요.
 export const STORES: Store[] = [
   {
     name: '네이버 브랜드스토어',

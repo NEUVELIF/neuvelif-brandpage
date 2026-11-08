@@ -1,11 +1,16 @@
 ---
 // 공식 구매처 — 데이터는 src/data/stores.ts 한 곳에서 관리합니다.
 import { STORES, PRODUCT_LABEL, type ProductKey } from '../data/stores';
+// product: 'sunscreen'(선크림) / 'cleansing'(클렌징 밀크) / 'all'(전체)
+// compact: 제목을 작게 쓸 때 true
 interface Props { product?: ProductKey | 'all'; title?: string; compact?: boolean }
 const { product = 'all', title = '공식 구매처', compact = false } = Astro.props;
 const countries = [{ code: 'kr', label: '한국' }, { code: 'jp', label: '일본' }] as const;
 const tile = 'display: flex; justify-content: space-between; align-items: center; gap: 12px; min-height: 64px; padding: 0 20px; border: 1px solid #D5E0E8; background: #FFFFFF; color: #12324F; text-decoration: none; font-weight: 700';
 const arrow = '<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: none"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg>';
+// linksFor(판매처): 그 판매처에서 보여 줄 링크를 고릅니다.
+//  - 특정 제품 페이지라면 그 제품의 상품 페이지 (없으면 브랜드 매장)
+//  - 전체라면 브랜드 매장, 브랜드 매장이 없으면 제품별 링크 여러 개
 function linksFor(s: (typeof STORES)[number]) {
   if (product !== 'all') {
     const url = s.products[product] ?? s.brandUrl;

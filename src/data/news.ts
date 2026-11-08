@@ -1,4 +1,5 @@
 // 언론 보도 — 새 기사가 나오면 맨 위에 한 줄 추가하면 됩니다.
+// 기사 하나 = 날짜, 언론사, 제목, 주소
 export interface Press { date: string; outlet: string; title: string; url: string }
 
 export const PRESS: Press[] = [

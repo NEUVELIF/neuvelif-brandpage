@@ -1,6 +1,7 @@
 ---
 // 홈의 '어떤 시술을 받으셨나요?' — 시술 그룹 7개 요약
 import { GROUPS } from '../data/home';
+// 칩 버튼의 기본 모양. 선택 여부에 따라 색은 src/scripts/picker.ts 가 바꿉니다.
 const chip = 'min-height: 46px; padding: 10px 20px; border-radius: 999px; font-family: inherit; font-size: 15px; cursor: pointer';
 ---
 <section id="guide" aria-labelledby="guide-title" style="background: #FFFFFF; padding: clamp(56px, 7vw, 104px) 0">
@@ -49,6 +50,7 @@ const chip = 'min-height: 46px; padding: 10px 20px; border-radius: 999px; font-f
 </div>
 </section>
 
+{/* 칩 동작은 공통 파일(src/scripts/picker.ts)을 불러와 씁니다 */}
 <script>
   import { initPickers } from '../scripts/picker';
   initPickers();

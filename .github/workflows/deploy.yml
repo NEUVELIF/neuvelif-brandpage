@@ -1,10 +1,12 @@
 # main 브랜치에 올리면 자동으로 사이트를 만들어 GitHub Pages에 배포합니다.
+# GitHub Actions: GitHub이 대신 실행해 주는 자동 작업 설정 파일입니다.
+# 아래 순서: ① 코드 받기 → ② 사이트 만들기(build) → ③ GitHub Pages에 올리기(deploy)
 name: Deploy to GitHub Pages
 
 on:
   push:
     branches: [main]
-  workflow_dispatch:
+  workflow_dispatch:   # Actions 화면에서 직접 '다시 실행'도 할 수 있게 함
 
 permissions:
   contents: read
@@ -19,8 +21,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: withastro/action@v3
+      - uses: actions/checkout@v4      # ① 저장소의 코드를 내려받기
+      - uses: withastro/action@v3      # ② Astro로 사이트 만들기
         env:
           # 임시 주소 기간: 검색엔진 수집을 막아 둡니다. 정식 오픈 때 false로 바꿉니다.
           PUBLIC_STAGING: 'true'
@@ -36,4 +38,4 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v4  # ③ 만든 사이트를 인터넷에 올리기

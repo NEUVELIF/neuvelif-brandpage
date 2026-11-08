@@ -1,4 +1,5 @@
 ---
+// 시술 그룹 가이드 7개를 찍어 내는 틀 (주소: /guide/그룹이름/)
 // 시술 그룹 가이드 — src/data/guides.ts 의 그룹마다 페이지 하나씩 만들어집니다.
 import Base from '../../../layouts/Base.astro';
 import ProcedurePicker from '../../../components/ProcedurePicker.astro';
@@ -6,6 +7,10 @@ import { GUIDES, guideHref, type Guide } from '../../../data/guides';
 import { PATHS } from '../../../site';
 import { breadcrumbs, articleLd, faqLd } from '../../../schema';
 
+// [slug] 처럼 대괄호가 들어간 폴더 이름 = '여러 페이지를 찍어 내는 틀'
+// getStaticPaths() 가 돌려주는 목록만큼 페이지가 만들어집니다.
+//   GUIDES 에 그룹이 7개 → /guide/laser-ipl-lifting/ ... /guide/acne-pdt/ 7개 페이지
+// 각 페이지에는 props 로 그 그룹의 내용(g)이 전달됩니다.
 export function getStaticPaths() {
   return GUIDES.map((g) => ({ params: { slug: g.slug }, props: { g } }));
 }
@@ -19,7 +24,9 @@ const jsonLd = [
   breadcrumbs(Astro.site!, [['홈', '/'], ['시술별 가이드', PATHS.guide], [g.label, path]]),
   ...faqLd(g.faq),
 ];
+// 페이지 아래 '다른 시술 가이드'에 보여 줄, 지금 그룹을 뺀 나머지
 const others = GUIDES.filter((x) => x.slug !== g.slug);
+// 아래는 여러 번 쓰는 모양(스타일)을 이름으로 묶어 둔 것입니다.
 const LBL = "margin: 0; font-family: 'Barlow Condensed', 'Noto Sans KR', sans-serif; font-size: 16px; font-weight: 600; letter-spacing: 0.12em; color: #1170AE";
 const H2 = 'margin: 0; font-size: clamp(22px, 2.4vw, 30px); line-height: 1.3; color: #12324F';
 const WRAP = 'max-width: 1240px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); box-sizing: border-box';
@@ -46,6 +53,7 @@ const src = 'color: #56626D; font-size: 14px';
 <span aria-current="page" style="color: #12324F; font-weight: 500">{g.label}</span>
 </nav>
 
+{/* ── 후 선크림과 세안, 언제부터? ── */}
 <section aria-labelledby="guide-title" style="padding: clamp(24px, 3vw, 40px) 0 clamp(40px, 5vw, 64px)">
 <div style={`${WRAP}; display: flex; flex-direction: column; gap: 28px`}>
 <nav aria-label="시술 그룹" style="display: flex; flex-wrap: wrap; gap: 10px">
@@ -71,6 +79,7 @@ const src = 'color: #56626D; font-size: 14px';
 </div>
 </section>
 
+{/* ── 섹션 ── */}
 <section aria-labelledby="targets-title" style="border-top: 1px solid #D5E0E8; padding: clamp(48px, 6vw, 80px) 0">
 <div style={`${WRAP}; display: flex; flex-direction: column; gap: 24px`}>
 <div style="display: flex; flex-direction: column; gap: 12px; max-width: 820px">
@@ -83,6 +92,7 @@ const src = 'color: #56626D; font-size: 14px';
 </div>
 </section>
 
+{/* ── 시술 뒤 피부와 시기별 관리 ── */}
 <section aria-labelledby="timeline-title" style="border-top: 1px solid #D5E0E8; padding: clamp(48px, 6vw, 80px) 0">
 <div style={`${WRAP}; display: flex; flex-direction: column; gap: 28px`}>
 <div style="display: flex; flex-direction: column; gap: 12px; max-width: 820px">
@@ -124,6 +134,7 @@ const src = 'color: #56626D; font-size: 14px';
 </div>
 </section>
 
+{/* ── 뉴베리프 제품에서 알아둘 점 ── */}
 <section aria-labelledby="products-title" style="border-top: 1px solid #D5E0E8; padding: clamp(48px, 6vw, 80px) 0">
 <div style={`${WRAP}; display: flex; flex-direction: column; gap: 28px`}>
 <div style="display: flex; flex-direction: column; gap: 12px; max-width: 820px">
@@ -154,6 +165,7 @@ const src = 'color: #56626D; font-size: 14px';
 </div>
 </section>
 
+{/* ── 섹션 ── */}
 <section aria-labelledby="why-title" style="background: #12324F; color: #FFFFFF; padding: clamp(48px, 6vw, 80px) 0">
 <div style={`${WRAP}; display: flex; flex-wrap: wrap; gap: 28px 64px`}>
 <div style="flex: 1 1 320px; display: flex; flex-direction: column; gap: 12px">
@@ -166,6 +178,7 @@ const src = 'color: #56626D; font-size: 14px';
 </div>
 </section>
 
+{/* ── 자주 묻는 질문 ── */}
 <section id="faq" aria-labelledby="faq-title" style="padding: clamp(48px, 6vw, 80px) 0">
 <div style={`${WRAP}; display: flex; flex-wrap: wrap; gap: 32px 64px`}>
 <div style="flex: 1 1 300px; display: flex; flex-direction: column; gap: 12px">
@@ -183,6 +196,7 @@ const src = 'color: #56626D; font-size: 14px';
 </div>
 </section>
 
+{/* ── 참고 자료 ── */}
 <section aria-labelledby="sources-title" style="border-top: 1px solid #D5E0E8; padding: clamp(40px, 5vw, 64px) 0">
 <div style={`${WRAP}; display: flex; flex-direction: column; gap: 20px`}>
 <h2 id="sources-title" style="margin: 0; font-size: 18px; color: #12324F">참고 자료</h2>
@@ -193,6 +207,7 @@ const src = 'color: #56626D; font-size: 14px';
 </div>
 </section>
 
+{/* ── 다른 시술 가이드 ── */}
 <section aria-labelledby="more-title" style="border-top: 1px solid #D5E0E8; padding: clamp(40px, 5vw, 64px) 0">
 <div style={`${WRAP}; display: flex; flex-direction: column; gap: 20px`}>
 <h2 id="more-title" style="margin: 0; font-size: clamp(20px, 2vw, 24px); color: #12324F">다른 시술 가이드</h2>

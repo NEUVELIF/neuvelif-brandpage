@@ -1,4 +1,8 @@
 // 사이트 전체에서 쓰는 기본 정보
+// 여러 파일에서 같은 값을 쓰기 때문에 한곳에 모아 두었습니다.
+// export 는 '다른 파일에서 가져다 쓸 수 있게 내보낸다'는 뜻입니다. (가져올 때는 import)
+// import.meta.env.○○ 는 Astro가 읽는 환경 변수입니다.
+// PUBLIC_STAGING 이 'false'가 아니면 임시 주소 모드로 보고, 검색엔진 수집을 막습니다.
 export const STAGING = import.meta.env.PUBLIC_STAGING !== 'false';
 
 export const BRAND = {
@@ -26,6 +30,7 @@ export const SOCIAL = [
   'https://brand.naver.com/neuvelif',
 ];
 
+// 페이지 주소 모음. 주소를 바꿀 일이 생기면 여기만 고치면 됩니다.
 export const PATHS = {
   home: '/',
   brand: '/brand/',

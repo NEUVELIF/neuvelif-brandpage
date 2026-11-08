@@ -1,4 +1,5 @@
 ---
+// 시술별 가이드 목록 (주소: /guide/) — 그룹 내용은 src/data/guides.ts 에서 가져옵니다.
 import Base from '../../layouts/Base.astro';
 import { GUIDES, guideHref, PRE_CARE } from '../../data/guides';
 import { breadcrumbs } from '../../schema';
@@ -26,6 +27,7 @@ const th = 'text-align: left; padding: 16px 14px; border-bottom: 1px solid #D5E0
 <span aria-current="page" style="color: #12324F; font-weight: 500">시술별 가이드</span>
 </nav>
 
+{/* ── 어떤 시술을 받으셨나요? ── */}
 <section aria-labelledby="guide-hub-title" style="padding: clamp(24px, 3vw, 40px) 0 clamp(40px, 5vw, 64px)">
 <div style={`${WRAP}; display: flex; flex-direction: column; gap: 28px`}>
 <div style="display: flex; flex-direction: column; gap: 14px; max-width: 880px">
@@ -51,6 +53,7 @@ const th = 'text-align: left; padding: 16px 14px; border-bottom: 1px solid #D5E0
 </div>
 </section>
 
+{/* ── 시술 그룹별 시작 시점 한눈에 보기 ── */}
 <section aria-labelledby="table-title" style="border-top: 1px solid #D5E0E8; padding: clamp(48px, 6vw, 80px) 0">
 <div style={`${WRAP}; display: flex; flex-direction: column; gap: 24px`}>
 <div style="display: flex; flex-direction: column; gap: 12px">
@@ -82,6 +85,7 @@ const th = 'text-align: left; padding: 16px 14px; border-bottom: 1px solid #D5E0
 </div>
 </section>
 
+{/* ── 시술 전 관리 ── */}
 <section id="pre-care" aria-labelledby="pre-title" style="background: #F4F7FA; padding: clamp(48px, 6vw, 80px) 0">
 <div style={`${WRAP}; display: flex; flex-direction: column; gap: 24px`}>
 <div style="display: flex; flex-direction: column; gap: 12px; max-width: 820px">
@@ -101,6 +105,7 @@ const th = 'text-align: left; padding: 16px 14px; border-bottom: 1px solid #D5E0
 </div>
 </section>
 
+{/* ── 시술 뒤 자외선 차단, 왜 더 중요할까요? ── */}
 <section aria-labelledby="hub-why-title" style="background: #12324F; color: #FFFFFF; padding: clamp(48px, 6vw, 80px) 0">
 <div style={`${WRAP}; display: flex; flex-wrap: wrap; gap: 28px 64px`}>
 <div style="flex: 1 1 320px; display: flex; flex-direction: column; gap: 12px">
@@ -116,6 +121,7 @@ const th = 'text-align: left; padding: 16px 14px; border-bottom: 1px solid #D5E0
 </div>
 </section>
 
+{/* ── 안내 ── */}
 <section aria-labelledby="hub-note-title" style="padding: clamp(40px, 5vw, 64px) 0">
 <div style={`${WRAP}; display: flex; flex-direction: column; gap: 16px`}>
 <h2 id="hub-note-title" class="sr-only">안내</h2>

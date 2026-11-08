@@ -1,9 +1,13 @@
 // 검색엔진·AI가 읽는 구조화 데이터(schema.org JSON-LD) 모음
+// schema.org 는 구글 등이 함께 정한 '정보 이름표' 규칙입니다.
+// 예: '@type': 'Organization' = 이 정보는 회사에 대한 것, 'Product' = 제품에 대한 것
+// 각 페이지는 필요한 것만 골라 Base 틀의 jsonLd 로 넘깁니다.
 import { BRAND, COMPANY, SOCIAL } from './site';
 
 const SITE = import.meta.env.SITE ?? 'https://neuvelif.github.io';
 const BASE = (import.meta.env.BASE_URL ?? '/').replace(/\/$/, '');
 const abs = (p: string, site: URL | string = SITE) => new URL(BASE + p, site).href;
+// @id: 같은 대상을 여러 곳에서 가리킬 때 쓰는 고유 번호표 (회사·대표를 서로 연결)
 const ORG_ID = abs('/#organization');
 const PERSON_ID = abs('/brand/#founder');
 
@@ -53,6 +57,7 @@ export const aboutPage = {
   inLanguage: 'ko-KR',
 };
 
+// breadcrumbs: '홈 › 시술별 가이드 › 여드름 PDT' 같은 현재 위치 정보
 export function breadcrumbs(site: URL, items: [string, string][]) {
   return {
     '@context': 'https://schema.org',
@@ -91,6 +96,7 @@ export function articleLd(site: URL, a: { headline: string; description: string;
   };
 }
 
+// faqLd: 질문과 답 목록을 FAQ 이름표로 바꿉니다. 질문이 없으면 빈 목록을 돌려줍니다.
 export function faqLd(items: [string, string][]) {
   if (!items.length) return [];
   return [{

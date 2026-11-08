@@ -1,4 +1,5 @@
 // 시험 결과 요약
+// 시험 하나의 틀. human 이 false 이면 사람 대상이 아닌 시험(점선 카드)으로 표시합니다.
 export interface Test {
   product: 'sunscreen' | 'cleansing';
   name: string;        // 시험 이름

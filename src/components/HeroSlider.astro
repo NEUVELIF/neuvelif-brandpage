@@ -1,12 +1,14 @@
 ---
 // 홈 맨 위 소식 슬라이드. 모든 슬라이드 내용이 HTML에 들어 있어 검색엔진·AI도 읽을 수 있습니다.
 import { SLIDES } from '../data/home';
-const n = SLIDES.length;
+// 슬라이드 내용은 src/data/home.ts 의 SLIDES 에 있습니다. 문구를 바꾸려면 그 파일을 고치세요.
+const n = SLIDES.length;   // 슬라이드 개수
 const btn = 'width: 44px; height: 44px; border: 1px solid #5B7590; background: transparent; color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center; cursor: pointer';
 ---
 <section class="hero" aria-roledescription="carousel" aria-label="뉴베리프 업데이트 소식" style="position: relative; background: #12324F; color: #FFFFFF; overflow: hidden">
 <h1 class="sr-only">뉴베리프 NEUVELIF, 시술 전후의 피부를 위한 더마 스킨케어</h1>
 <div style="position: relative; max-width: 1240px; margin: 0 auto; padding: clamp(48px, 7vw, 104px) clamp(20px, 4vw, 48px) clamp(28px, 3.5vw, 44px); box-sizing: border-box; min-height: clamp(480px, 40vw, 600px); display: flex; flex-direction: column; justify-content: space-between; gap: 40px">
+{/* 슬라이드 4장을 모두 HTML로 만들고, 첫 장 말고는 hidden(숨김)으로 둡니다. */}
 <div aria-live="polite">
 {SLIDES.map((s, i) => (
   <div data-slide={i} role="group" aria-roledescription="slide" aria-label={`${i + 1} / ${n}: ${s.kind}`} hidden={i !== 0} style="max-width: 100%; display: flex; flex-direction: column; gap: 22px">
@@ -38,12 +40,16 @@ const btn = 'width: 44px; height: 44px; border: 1px solid #5B7590; background: t
 </section>
 
 <script>
+  // 이전·다음·점 버튼을 누르면 해당 슬라이드만 보이게 바꿉니다.
+  // cur = 지금 보이는 슬라이드 번호(0부터 시작)
   const root = document.querySelector<HTMLElement>('section.hero');
   if (root) {
     const slides = [...root.querySelectorAll<HTMLElement>('[data-slide]')];
     const dots = [...root.querySelectorAll<HTMLButtonElement>('[data-dot]')];
     const counter = root.querySelector('[data-counter]');
     let cur = 0;
+    // show(i): i번째 슬라이드만 보이게 하고, 점 표시와 '1 / 4' 숫자를 맞춥니다.
+    // (i + 개수) % 개수 → 마지막에서 '다음'을 누르면 처음으로 돌아가게 하는 계산
     const show = (i: number) => {
       cur = (i + slides.length) % slides.length;
       slides.forEach((s, k) => (s.hidden = k !== cur));

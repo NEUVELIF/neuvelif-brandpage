@@ -1,5 +1,7 @@
 // 홈 화면의 소식 슬라이드와 시술 그룹 요약
+// Group: 홈 '어떤 시술을 받으셨나요?'의 시술 그룹 하나
 export interface Group { label: string; desc: string; examples: string; sun: string; sunNote: string; clean: string; cleanNote: string; avoid: string; href?: string }
+// Slide: 홈 맨 위 소식 슬라이드 한 장 (kind=작은 꼬리표, title1·title2=두 줄 제목, href=버튼 주소)
 export interface Slide { kind: string; date: string; title1: string; title2: string; desc: string; note: string; cta1: string; href1: string; cta2: string; href2: string }
 
 export const GROUPS: Group[] = [
