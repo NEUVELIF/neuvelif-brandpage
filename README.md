@@ -15,8 +15,9 @@
 
 ## 임시 주소와 정식 오픈
 
-- 지금은 임시 주소(neuvelif.github.io) 기간이라 검색엔진 수집을 막아 두었습니다 (`PUBLIC_STAGING`).
-- 정식 오픈 때 `.github/workflows/deploy.yml`의 `PUBLIC_STAGING`을 `'false'`로, `SITE_URL`을 `https://neuvelif.com`으로 바꾸고 도메인을 연결합니다.
+- 지금은 임시 주소(https://neuvelif.github.io/neuvelif-brandpage/) 기간이라 검색엔진 수집을 막아 두었습니다 (`PUBLIC_STAGING`).
+- 정식 오픈 때 `.github/workflows/deploy.yml`에서 `PUBLIC_STAGING`은 `'false'`, `SITE_URL`은 `https://neuvelif.com`, `BASE_PATH`는 `/`로 바꾸고 도메인을 연결합니다.
+- 영상 파일이 있는 `neuvelif.github.io` 저장소는 따로 두고 건드리지 않습니다.
 
 ## 내 컴퓨터에서 미리 보기
 

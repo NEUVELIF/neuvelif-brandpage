@@ -2,7 +2,8 @@
 import { BRAND, COMPANY, SOCIAL } from './site';
 
 const SITE = import.meta.env.SITE ?? 'https://neuvelif.github.io';
-const abs = (p: string, site: URL | string = SITE) => new URL(p, site).href;
+const BASE = (import.meta.env.BASE_URL ?? '/').replace(/\/$/, '');
+const abs = (p: string, site: URL | string = SITE) => new URL(BASE + p, site).href;
 const ORG_ID = abs('/#organization');
 const PERSON_ID = abs('/brand/#founder');
 

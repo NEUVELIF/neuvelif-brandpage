@@ -24,6 +24,10 @@ jobs:
         env:
           # 임시 주소 기간: 검색엔진 수집을 막아 둡니다. 정식 오픈 때 false로 바꿉니다.
           PUBLIC_STAGING: 'true'
+          # 임시 주소 neuvelif.github.io/neuvelif-brandpage/
+          # 정식 오픈 때 SITE_URL은 https://neuvelif.com, BASE_PATH는 / 로 바꿉니다.
+          SITE_URL: 'https://neuvelif.github.io'
+          BASE_PATH: '/neuvelif-brandpage'
   deploy:
     needs: build
     runs-on: ubuntu-latest
