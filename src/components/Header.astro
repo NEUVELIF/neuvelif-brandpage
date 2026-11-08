@@ -24,10 +24,20 @@ const langs = [
 </div>
 
 <header style="background: #FFFFFF; border-bottom: 1px solid #D5E0E8; position: relative; z-index: 20">
-<div style="max-width: 1240px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); box-sizing: border-box; display: flex; justify-content: flex-end; align-items: center; gap: 4px; font-size: 13px; border-bottom: 1px solid #EEF2F5">
-<a href={PATHS.contact} style="color: #56626D; text-decoration: none; padding: 12px 8px">문의</a>
-<a href={PATHS.faq} style="color: #56626D; text-decoration: none; padding: 12px 8px">자주 묻는 질문</a>
-<span aria-hidden="true" style="color: #C5D1DA; padding: 0 4px">|</span>
+<div class="hdr" style="max-width: 1240px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); box-sizing: border-box; display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 0 24px; min-height: 76px">
+<a href="/" style="display: flex; align-items: center; min-height: 64px">
+<img src="/images/logo/neuvelif-wordmark.svg" alt="NEUVELIF 홈" width="140" height="20" style="height: 20px; width: auto; display: block">
+</a>
+<nav class="nav-desktop" aria-label="주 메뉴" style="justify-self: center; display: flex; gap: 0 clamp(16px, 2.4vw, 36px); font-size: 16px; font-weight: 500">
+{nav.map((n) => (
+  current === n.key
+    ? <a href={n.href} aria-current="page" style="color: #1170AE; text-decoration: none; padding: 12px 0; font-weight: 700; white-space: nowrap">{n.label}</a>
+    : <a href={n.href} style="color: #1A1F24; text-decoration: none; padding: 12px 0; white-space: nowrap">{n.label}</a>
+))}
+</nav>
+<div style="grid-column: 3; display: flex; align-items: center; justify-content: flex-end; gap: 2px; font-size: 14px">
+<a class="tool-link" href={PATHS.contact}>문의</a>
+<a class="tool-link" href={PATHS.faq}>자주 묻는 질문</a>
 <details class="lang">
 <summary aria-label="언어 선택, 현재 한국어" title="언어 선택">
 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18"></path><path d="M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"></path></svg>
@@ -51,20 +61,7 @@ const langs = [
 </ul>
 </div>
 </details>
-</div>
-<div style="max-width: 1240px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); box-sizing: border-box; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 4px 32px; min-height: 80px">
-<a href="/" style="display: flex; align-items: center; min-height: 64px">
-<img src="/images/logo/neuvelif-wordmark.svg" alt="NEUVELIF 홈" width="140" height="20" style="height: 20px; width: auto; display: block">
-</a>
 <button type="button" class="menu-btn" aria-expanded="false" aria-controls="mobile-menu" aria-label="메뉴 열기"><span></span><span></span><span></span></button>
-<div class="nav-desktop" style="display: flex; flex-wrap: wrap; align-items: center; gap: 4px clamp(16px, 2.4vw, 36px)">
-<nav aria-label="주 메뉴" style="display: flex; flex-wrap: wrap; gap: 0 clamp(14px, 2.2vw, 32px); font-size: 16px; font-weight: 500">
-{nav.map((n) => (
-  current === n.key
-    ? <a href={n.href} aria-current="page" style="color: #1170AE; text-decoration: none; padding: 12px 0; font-weight: 700">{n.label}</a>
-    : <a href={n.href} style="color: #1A1F24; text-decoration: none; padding: 12px 0">{n.label}</a>
-))}
-</nav>
 </div>
 </div>
 <nav id="mobile-menu" class="mobile-menu" aria-label="휴대폰 메뉴" hidden>
@@ -76,6 +73,8 @@ const langs = [
 </header>
 
 <style>
+  .tool-link { color: #56626D; text-decoration: none; padding: 10px 10px; white-space: nowrap; }
+  .tool-link:hover { color: #12324F; }
   .menu-btn { display: none; width: 48px; height: 48px; border: 1px solid #D5E0E8; background: #FFFFFF; cursor: pointer; flex-direction: column; align-items: center; justify-content: center; gap: 5px; padding: 0; }
   .menu-btn span { display: block; width: 20px; height: 2px; background: #12324F; transition: transform 0.2s, opacity 0.2s; }
   .menu-btn[aria-expanded='true'] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
@@ -87,11 +86,12 @@ const langs = [
   .mobile-menu li a[aria-current='page'] { color: #1170AE; }
   .mobile-sub { display: flex; gap: 20px; padding-top: 16px; }
   .mobile-sub a { color: #56626D; text-decoration: none; font-size: 15px; }
-  @media (max-width: 860px) {
-    .menu-btn { display: inline-flex; }
+  @media (max-width: 1000px) {
+    .tool-link { display: none; }
+    .menu-btn { display: inline-flex; margin-left: 6px; }
     .nav-desktop { display: none !important; }
   }
-  @media (min-width: 861px) { .mobile-menu { display: none !important; } }
+  @media (min-width: 1001px) { .mobile-menu { display: none !important; } }
   .lang { position: relative; }
   .lang summary { list-style: none; display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; color: #3C4752; cursor: pointer; }
   .lang summary::-webkit-details-marker { display: none; }
