@@ -5,6 +5,9 @@ import { SLIDES } from '../data/home';
 const n = SLIDES.length;   // 슬라이드 개수
 // 자동 넘김 간격(밀리초). 8000 = 8초. 이 숫자만 바꾸면 넘어가는 속도가 바뀝니다.
 const INTERVAL_MS = 8000;
+// keep(): 제목 속 '/' 바로 뒤에 보이지 않는 '줄바꿈 금지 표시(U+2060)'를 넣어,
+//         '선크림/' 과 '로션)' 처럼 빗금 뒤에서 줄이 끊기지 않게 합니다. 화면에는 아무것도 보이지 않습니다.
+const keep = (t: string) => t.replaceAll('/', '/\u2060');
 const NAVY = '#12324F';   // tone 이 없는 슬라이드의 기본 바탕색
 const btn = 'width: 44px; height: 44px; border: 1px solid rgba(255, 255, 255, 0.35); background: transparent; color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center; cursor: pointer';
 ---
@@ -22,7 +25,7 @@ const btn = 'width: 44px; height: 44px; border: 1px solid rgba(255, 255, 255, 0.
   <div data-slide={i} data-tone={s.tone ?? NAVY} role="group" aria-roledescription="slide" aria-label={`${i + 1} / ${n}: ${s.kind}`} data-active={i === 0 ? 'true' : undefined} class={s.img ? 'has-img' : undefined} style="max-width: 100%; display: flex; flex-direction: column; gap: 22px">
   {s.img && (
     <picture class="bg">
-      <source media="(max-width: 760px)" srcset={`/images/hero/${s.img}-mo-800.webp 800w, /images/hero/${s.img}-mo-1448.webp 1448w`} sizes="100vw" width="1448" height="1086" />
+      <source media="(max-width: 760px)" srcset={`/images/hero/${s.img}-mo-800.webp 800w, /images/hero/${s.img}-mo-1080.webp 1080w`} sizes="100vw" width="1080" height="810" />
       <img src={`/images/hero/${s.img}-pc-2048.webp`} srcset={`/images/hero/${s.img}-pc-1280.webp 1280w, /images/hero/${s.img}-pc-2048.webp 2048w`} sizes="100vw" width="2048" height="768" alt="" loading={i === 0 ? 'eager' : 'lazy'} fetchpriority={i === 0 ? 'high' : undefined} decoding="async" />
     </picture>
   )}
@@ -30,7 +33,7 @@ const btn = 'width: 44px; height: 44px; border: 1px solid rgba(255, 255, 255, 0.
   <span style="border: 1px solid #8FD3F2; color: #8FD3F2; padding: 4px 12px; font-size: 13px; font-weight: 700; letter-spacing: 0.06em">{s.kind}</span>
   {s.date && <span style="font-size: 14px; color: #C9D6E2; font-variant-numeric: tabular-nums">{s.date}</span>}
   </div>
-  <p style="margin: 0; font-size: clamp(32px, 4.4vw, 60px); line-height: 1.22; font-weight: 700; letter-spacing: -0.02em">{s.title1}{s.title2 && <><br>{s.title2}</>}</p>
+  <p class="title" style="margin: 0; font-size: clamp(32px, 4.4vw, 60px); line-height: 1.22; font-weight: 700; letter-spacing: -0.02em"><span>{keep(s.title1)}</span>{s.title2 && <> <span>{keep(s.title2)}</span></>}</p>
   <p class="desc" style="margin: 0; font-size: clamp(16px, 1.4vw, 19px); color: #D5E3EE">{s.desc}</p>
   {s.note && <p style="margin: 0; font-size: 13px; color: #A9BACB">{s.note}</p>}
   <div style="display: flex; flex-wrap: wrap; gap: 12px">
@@ -63,14 +66,24 @@ const btn = 'width: 44px; height: 44px; border: 1px solid rgba(255, 255, 255, 0.
   /* 배너 전체 틀. isolation: isolate → 아래 .bg 의 z-index: -1 이 배너 밖으로 새지 않고 '배너 바탕 바로 위'에 깔리게 함 */
   .hero { position: relative; isolation: isolate; overflow: hidden; background: var(--tone); color: #FFFFFF; transition: background-color 0.4s; }
   /* 글자가 들어가는 가운데 칸. --pt(위 여백)·--px(좌우 여백)는 휴대폰 이미지가 여백 밖까지 꽉 차게 할 때도 씁니다. */
-  .inner { --pt: clamp(48px, 7vw, 104px); --px: clamp(20px, 4vw, 48px); max-width: 1240px; margin: 0 auto; padding: var(--pt) var(--px) clamp(28px, 3.5vw, 44px); box-sizing: border-box; min-height: clamp(480px, 40vw, 600px); display: flex; flex-direction: column; justify-content: space-between; gap: 40px; }
+  .inner { --pt: clamp(48px, 7vw, 104px); --px: clamp(20px, 4vw, 48px); max-width: 1240px; margin: 0 auto; padding: var(--pt) var(--px) clamp(28px, 3.5vw, 44px); box-sizing: border-box; min-height: clamp(480px, 32vw, 840px); display: flex; flex-direction: column; justify-content: space-between; gap: 40px; }
   .desc { max-width: 860px; }
+  /* 제목이 여러 줄이 될 때 줄 길이를 고르게 나눠, 마지막 줄에 한두 단어만 남지 않게 함 */
+  .title { text-wrap: balance; }
+  /* 제목 1줄·2줄을 각각 블록으로 → 줄바꿈 균형이 줄마다 따로 맞춰짐 (사이 공백은 검색엔진이 두 줄을 붙여 읽지 않게 하는 용도) */
+  .title > span { display: block; }
   .bg { display: block; }
   .bg img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
   /* 넓은 화면(901px 이상): 이미지를 배너 전체에 깔고(position: absolute; inset: 0) 글자 뒤로 보냄(z-index: -1).
      이미지가 있는 슬라이드는 설명 글 폭을 62%까지로 줄여, 오른쪽에 있는 제품 사진과 겹치지 않게 함 */
   @media (min-width: 901px) {
     .bg { position: absolute; inset: 0; z-index: -1; }
+    /* object-position: right 35% → 화면 비율이 달라 잘라내야 할 때 글자 쪽(왼쪽)을 자르고,
+       위아래를 잘라야 할 때는 아래쪽을 더 잘라 오른쪽 위의 배지·제품을 지킴 */
+    .bg img { object-position: right 35%; }
+    /* 글자 쪽(왼쪽)만 살짝 어둡게 해 밝은 배경에서도 글자가 잘 읽히게 함. 제품이 있는 오른쪽은 그대로 */
+    .bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.25) 50%, rgba(0, 0, 0, 0) 80%); }
+    .has-img > .title { max-width: 70%; }
     .has-img > .desc { max-width: min(860px, 62%); }
   }
   /* 좁은 화면(900px 이하): 이미지를 글자 위에 따로 두고, 여백을 뚫고 화면 끝까지 꽉 채움(음수 margin).
@@ -78,7 +91,7 @@ const btn = 'width: 44px; height: 44px; border: 1px solid rgba(255, 255, 255, 0.
      ::after = 이미지 아래쪽을 바탕색(--tone)으로 서서히 물들여 글자 칸과 자연스럽게 이어 줌 */
   @media (max-width: 900px) {
     .bg { position: relative; aspect-ratio: 8 / 3; margin: calc(-1 * var(--pt)) calc(-1 * var(--px)) 4px; }
-    .bg::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 30%; background: linear-gradient(to bottom, transparent, var(--tone)); }
+    .bg::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 18%; background: linear-gradient(to bottom, transparent, var(--tone)); }
     .inner { gap: 28px; }
   }
   @media (max-width: 760px) {
