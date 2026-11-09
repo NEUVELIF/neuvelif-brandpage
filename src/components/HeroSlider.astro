@@ -11,7 +11,7 @@ const btn = 'width: 44px; height: 44px; border: 1px solid #5B7590; background: t
 <section class="hero" aria-roledescription="carousel" aria-label="뉴베리프 업데이트 소식" style={`--dur: ${INTERVAL_MS}ms; position: relative; background: #12324F; color: #FFFFFF; overflow: hidden`}>
 <h1 class="sr-only">뉴베리프 NEUVELIF, 시술 전후의 피부를 위한 더마 스킨케어</h1>
 <div style="position: relative; max-width: 1240px; margin: 0 auto; padding: clamp(48px, 7vw, 104px) clamp(20px, 4vw, 48px) clamp(28px, 3.5vw, 44px); box-sizing: border-box; min-height: clamp(480px, 40vw, 600px); display: flex; flex-direction: column; justify-content: space-between; gap: 40px">
-{/* ── 슬라이드 ── 4장을 모두 HTML로 만들고, 첫 장 말고는 hidden(숨김)으로 둡니다. */}
+{/* ── 슬라이드 ── 모든 장을 HTML로 만들고, 첫 장 말고는 hidden(숨김)으로 둡니다. */}
 <div data-slides aria-live="polite">
 {SLIDES.map((s, i) => (
   <div data-slide={i} role="group" aria-roledescription="slide" aria-label={`${i + 1} / ${n}: ${s.kind}`} hidden={i !== 0} style="max-width: 100%; display: flex; flex-direction: column; gap: 22px">
