@@ -5,7 +5,9 @@ export interface Group { label: string; desc: string; examples: string; sun: str
 // img: 배경 이미지 이름(선택). 'hero-brand' 라고 적으면 public/images/hero/ 폴더의
 //      hero-brand-pc-1280.webp · hero-brand-pc-2048.webp (PC용, 가로:세로 = 8:3)
 //      hero-brand-mo-800.webp  · hero-brand-mo-1448.webp (휴대폰용, 4:3) 을 찾아 씁니다. 없으면 남색 배경.
-export interface Slide { kind: string; date: string; title1: string; title2: string; desc: string; note: string; cta1: string; href1: string; cta2: string; href2: string; img?: string }
+// tone: 배너 바탕색(선택). 휴대폰에서 이미지 아래 글자 칸의 색이자, 이미지가 뜨기 전 잠깐 보이는 색입니다.
+//       이미지 아래쪽 가장자리 색에 맞추면 이미지와 글자 칸이 자연스럽게 이어집니다. 없으면 남색(#12324F).
+export interface Slide { kind: string; date: string; title1: string; title2: string; desc: string; note: string; cta1: string; href1: string; cta2: string; href2: string; img?: string; tone?: string }
 
 export const GROUPS: Group[] = [
       { label: '레이저 토닝·IPL·리프팅', desc: '피부 표면이 열리지 않는 레이저·빛·에너지 시술입니다. 열감과 붉은기가 생길 수 있습니다.', examples: '레이저 토닝, IPL, 울쎄라·슈링크, 써마지·인모드·올리지오, 티타늄 리프팅', sun: '시술 당일부터', sunNote: '열감이 가라앉은 뒤 얼굴 전체에 바르고 귀가합니다.', clean: '시술 당일 저녁부터', cleanNote: '미온수로 가볍게 세안합니다.', avoid: '사우나, 뜨거운 물, 격한 운동은 피하세요.' },
@@ -22,7 +24,7 @@ const SLUGS = ['laser-ipl-lifting', 'laser-hair-removal', 'aquapeel-ldm-peeling'
 GROUPS.forEach((g, i) => { g.href = `/guide/${SLUGS[i]}/`; });
 
 export const SLIDES: Slide[] = [
-      { kind: '브랜드', date: '', title1: '시술 전후의 피부를 위한', title2: '더마 스킨케어', desc: '레이저, 리프팅, 주사 시술 뒤 언제 선크림을 바르고 언제 세안할지 시술별로 정리했습니다. 나를 아끼는 마음은 피부에서 시작됩니다.', note: '', cta1: '내 시술 가이드 찾기', href1: '#guide', cta2: '제품 보기', href2: '/products/', img: 'hero-brand' },
-      { kind: '신제품', date: '2026.09', title1: '말차 디퍼핑 클렌징 밀크 출시', title2: '', desc: '롤링 마사지로 쓰는 300mL 밀크 클렌저입니다. 인체적용시험에서 메이크업 세정률 96.68%를 확인했습니다.', note: '한국피부과학연구원 인체적용시험, 여성 22명, 팔 안쪽에 바른 메이크업 기준', cta1: '제품 보기', href1: '/products/matcha-depuffing-cleansing-milk/', cta2: '구매처', href2: '/products/matcha-depuffing-cleansing-milk/#buy' },
+      { kind: '브랜드', date: '', title1: '시술 전후의 피부를 위한', title2: '더마 스킨케어', desc: '레이저, 리프팅, 주사 시술 뒤 언제 선크림을 바르고 언제 세안할지 시술별로 정리했습니다. 나를 아끼는 마음은 피부에서 시작됩니다.', note: '', cta1: '내 시술 가이드 찾기', href1: '#guide', cta2: '제품 보기', href2: '/products/', img: 'hero-brand', tone: '#313130' },
+      { kind: '신제품', date: '2026.09', title1: '말차 디퍼핑 클렌징 밀크 출시', title2: '', desc: '롤링 마사지로 쓰는 300mL 밀크 클렌저입니다. 인체적용시험에서 메이크업 세정률 96.68%를 확인했습니다.', note: '한국피부과학연구원 인체적용시험, 여성 22명, 팔 안쪽에 바른 메이크업 기준', cta1: '제품 보기', href1: '/products/matcha-depuffing-cleansing-milk/', cta2: '구매처', href2: '/products/matcha-depuffing-cleansing-milk/#buy', img: 'hero-matcha', tone: '#242a02' },
       { kind: '수상', date: '2025.11', title1: '2025 하반기 화해 어워드', title2: '선케어 부문(선크림/로션) 진정 카테고리 1위', desc: '백합 리커버리 선크림이 화해 사용자의 리뷰와 평점을 바탕으로 선정되는 화해 어워드에서 수상했습니다.', note: '', cta1: '선크림 보기', href1: '/products/backhap-recovery-sunscreen/', cta2: '소식 보기', href2: '/news/' }
     ];

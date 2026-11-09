@@ -5,32 +5,33 @@ import { SLIDES } from '../data/home';
 const n = SLIDES.length;   // 슬라이드 개수
 // 자동 넘김 간격(밀리초). 8000 = 8초. 이 숫자만 바꾸면 넘어가는 속도가 바뀝니다.
 const INTERVAL_MS = 8000;
-const btn = 'width: 44px; height: 44px; border: 1px solid #5B7590; background: transparent; color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center; cursor: pointer';
+const NAVY = '#12324F';   // tone 이 없는 슬라이드의 기본 바탕색
+const btn = 'width: 44px; height: 44px; border: 1px solid rgba(255, 255, 255, 0.35); background: transparent; color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center; cursor: pointer';
 ---
-{/* --dur 값을 CSS가 받아서 진행 막대가 채워지는 시간으로 씁니다. */}
-<section class="hero" aria-roledescription="carousel" aria-label="뉴베리프 업데이트 소식" style={`--dur: ${INTERVAL_MS}ms; position: relative; background: #12324F; color: #FFFFFF; overflow: hidden`}>
+{/* --dur: 진행 막대가 채워지는 시간 / --tone: 배너 바탕색(슬라이드가 바뀌면 자바스크립트가 바꿔 줌) */}
+<section class="hero" aria-roledescription="carousel" aria-label="뉴베리프 업데이트 소식" style={`--dur: ${INTERVAL_MS}ms; --tone: ${SLIDES[0].tone ?? NAVY}`}>
 <h1 class="sr-only">뉴베리프 NEUVELIF, 시술 전후의 피부를 위한 더마 스킨케어</h1>
-{/* ── 배경 이미지 ── 이미지가 있는 슬라이드만 만들고, 그 슬라이드가 보일 때만 함께 보입니다.
-     <picture>: 화면이 좁으면(760px 이하) 휴대폰용(-mo-), 넓으면 PC용(-pc-) 파일을 브라우저가 골라 받습니다.
+<div class="inner">
+{/* ── 슬라이드 ── 모든 장을 HTML로 만들어 같은 자리에 겹쳐 두고, data-active 가 붙은 장만 보이게 합니다.
+     배너 이미지는 각 슬라이드 안에 있어서 슬라이드와 함께 보였다 숨었다 합니다.
+     <picture>: 휴대폰 화면(760px 이하)이면 휴대폰용(-mo-), 그보다 넓으면 PC용(-pc-) 파일을 브라우저가 골라 받습니다.
      srcset의 1280w·2048w 처럼 크기를 여러 개 주면 화면에 맞는 크기만 내려받아 빠릅니다.
-     alt="" : 글자 없는 장식용 배경이라 화면낭독기가 읽지 않게 비워 둡니다. */}
-{SLIDES.map((s, i) => s.img && (
-  <picture class="bg" data-bg={i} hidden={i !== 0}>
-    <source media="(max-width: 760px)" srcset={`/images/hero/${s.img}-mo-800.webp 800w, /images/hero/${s.img}-mo-1448.webp 1448w`} sizes="100vw" width="1448" height="1086" />
-    <img src={`/images/hero/${s.img}-pc-2048.webp`} srcset={`/images/hero/${s.img}-pc-1280.webp 1280w, /images/hero/${s.img}-pc-2048.webp 2048w`} sizes="100vw" width="2048" height="768" alt="" loading={i === 0 ? 'eager' : 'lazy'} fetchpriority={i === 0 ? 'high' : undefined} decoding="async" />
-  </picture>
-))}
-<div style="position: relative; max-width: 1240px; margin: 0 auto; padding: clamp(48px, 7vw, 104px) clamp(20px, 4vw, 48px) clamp(28px, 3.5vw, 44px); box-sizing: border-box; min-height: clamp(480px, 40vw, 600px); display: flex; flex-direction: column; justify-content: space-between; gap: 40px">
-{/* ── 슬라이드 ── 모든 장을 HTML로 만들어 같은 자리에 겹쳐 두고, data-active 가 붙은 장만 보이게 합니다. */}
+     alt="" : 이미지 속 내용은 바로 아래 글자로 이미 전달되므로, 화면낭독기가 중복해서 읽지 않게 비워 둡니다. */}
 <div class="slides" data-slides aria-live="polite">
 {SLIDES.map((s, i) => (
-  <div data-slide={i} role="group" aria-roledescription="slide" aria-label={`${i + 1} / ${n}: ${s.kind}`} data-active={i === 0 ? 'true' : undefined} style="max-width: 100%; display: flex; flex-direction: column; gap: 22px">
+  <div data-slide={i} data-tone={s.tone ?? NAVY} role="group" aria-roledescription="slide" aria-label={`${i + 1} / ${n}: ${s.kind}`} data-active={i === 0 ? 'true' : undefined} class={s.img ? 'has-img' : undefined} style="max-width: 100%; display: flex; flex-direction: column; gap: 22px">
+  {s.img && (
+    <picture class="bg">
+      <source media="(max-width: 760px)" srcset={`/images/hero/${s.img}-mo-800.webp 800w, /images/hero/${s.img}-mo-1448.webp 1448w`} sizes="100vw" width="1448" height="1086" />
+      <img src={`/images/hero/${s.img}-pc-2048.webp`} srcset={`/images/hero/${s.img}-pc-1280.webp 1280w, /images/hero/${s.img}-pc-2048.webp 2048w`} sizes="100vw" width="2048" height="768" alt="" loading={i === 0 ? 'eager' : 'lazy'} fetchpriority={i === 0 ? 'high' : undefined} decoding="async" />
+    </picture>
+  )}
   <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px">
   <span style="border: 1px solid #8FD3F2; color: #8FD3F2; padding: 4px 12px; font-size: 13px; font-weight: 700; letter-spacing: 0.06em">{s.kind}</span>
   {s.date && <span style="font-size: 14px; color: #C9D6E2; font-variant-numeric: tabular-nums">{s.date}</span>}
   </div>
   <p style="margin: 0; font-size: clamp(32px, 4.4vw, 60px); line-height: 1.22; font-weight: 700; letter-spacing: -0.02em">{s.title1}{s.title2 && <><br>{s.title2}</>}</p>
-  <p style="margin: 0; font-size: clamp(16px, 1.4vw, 19px); color: #D5E3EE; max-width: 860px">{s.desc}</p>
+  <p class="desc" style="margin: 0; font-size: clamp(16px, 1.4vw, 19px); color: #D5E3EE">{s.desc}</p>
   {s.note && <p style="margin: 0; font-size: 13px; color: #A9BACB">{s.note}</p>}
   <div style="display: flex; flex-wrap: wrap; gap: 12px">
   <a href={s.href1} style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 26px; background: #FFFFFF; color: #12324F; text-decoration: none; font-weight: 700; letter-spacing: 0.04em">{s.cta1}</a>
@@ -59,10 +60,30 @@ const btn = 'width: 44px; height: 44px; border: 1px solid #5B7590; background: t
 </section>
 
 <style>
-  /* 배경 이미지: 배너 전체를 덮고(position: absolute; inset: 0) 글자 뒤에 깔립니다.
-     object-fit: cover → 화면 비율이 달라도 찌그러지지 않고, 넘치는 가장자리만 잘립니다. */
-  .bg { position: absolute; inset: 0; display: block; }
+  /* 배너 전체 틀. isolation: isolate → 아래 .bg 의 z-index: -1 이 배너 밖으로 새지 않고 '배너 바탕 바로 위'에 깔리게 함 */
+  .hero { position: relative; isolation: isolate; overflow: hidden; background: var(--tone); color: #FFFFFF; transition: background-color 0.4s; }
+  /* 글자가 들어가는 가운데 칸. --pt(위 여백)·--px(좌우 여백)는 휴대폰 이미지가 여백 밖까지 꽉 차게 할 때도 씁니다. */
+  .inner { --pt: clamp(48px, 7vw, 104px); --px: clamp(20px, 4vw, 48px); max-width: 1240px; margin: 0 auto; padding: var(--pt) var(--px) clamp(28px, 3.5vw, 44px); box-sizing: border-box; min-height: clamp(480px, 40vw, 600px); display: flex; flex-direction: column; justify-content: space-between; gap: 40px; }
+  .desc { max-width: 860px; }
+  .bg { display: block; }
   .bg img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+  /* 넓은 화면(901px 이상): 이미지를 배너 전체에 깔고(position: absolute; inset: 0) 글자 뒤로 보냄(z-index: -1).
+     이미지가 있는 슬라이드는 설명 글 폭을 62%까지로 줄여, 오른쪽에 있는 제품 사진과 겹치지 않게 함 */
+  @media (min-width: 901px) {
+    .bg { position: absolute; inset: 0; z-index: -1; }
+    .has-img > .desc { max-width: min(860px, 62%); }
+  }
+  /* 좁은 화면(900px 이하): 이미지를 글자 위에 따로 두고, 여백을 뚫고 화면 끝까지 꽉 채움(음수 margin).
+     태블릿(761~900px)은 PC용 이미지(8:3), 휴대폰(760px 이하)은 휴대폰용 이미지(4:3).
+     ::after = 이미지 아래쪽을 바탕색(--tone)으로 서서히 물들여 글자 칸과 자연스럽게 이어 줌 */
+  @media (max-width: 900px) {
+    .bg { position: relative; aspect-ratio: 8 / 3; margin: calc(-1 * var(--pt)) calc(-1 * var(--px)) 4px; }
+    .bg::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 30%; background: linear-gradient(to bottom, transparent, var(--tone)); }
+    .inner { gap: 28px; }
+  }
+  @media (max-width: 760px) {
+    .bg { aspect-ratio: 4 / 3; }
+  }
   /* 슬라이드를 모두 같은 칸(grid-area: 1 / 1)에 겹쳐 둡니다.
      그러면 배너 높이가 가장 긴 슬라이드에 맞춰 고정되어, 넘어갈 때 아래 내용이 들썩이지 않습니다.
      지금 장이 아닌 슬라이드는 visibility: hidden 으로 안 보이게(자리만 차지) 합니다. */
@@ -78,7 +99,7 @@ const btn = 'width: 44px; height: 44px; border: 1px solid #5B7590; background: t
     .dot .bar { width: 22px; }
   }
   /* 점 하나 = 회색 막대(.bar) 안에 흰 막대(.fill)가 겹쳐 있는 구조 */
-  .bar { position: relative; display: block; width: 30px; height: 4px; background: #5B7590; overflow: hidden; }
+  .bar { position: relative; display: block; width: 30px; height: 4px; background: rgba(255, 255, 255, 0.3); overflow: hidden; }
   .fill { position: absolute; inset: 0; background: #FFFFFF; transform: scaleX(0); transform-origin: left center; }
   /* 지금 보이는 슬라이드의 점은 흰색으로 꽉 채움 */
   [aria-current='true'] .fill { transform: scaleX(1); }
@@ -97,7 +118,6 @@ const btn = 'width: 44px; height: 44px; border: 1px solid #5B7590; background: t
   const root = document.querySelector<HTMLElement>('section.hero');
   if (root) {
     const slides = [...root.querySelectorAll<HTMLElement>('[data-slide]')];
-    const bgs = [...root.querySelectorAll<HTMLElement>('[data-bg]')];
     const dots = [...root.querySelectorAll<HTMLButtonElement>('[data-dot]')];
     const counter = root.querySelector('[data-counter]');
     const area = root.querySelector<HTMLElement>('[data-slides]');
@@ -109,7 +129,7 @@ const btn = 'width: 44px; height: 44px; border: 1px solid #5B7590; background: t
     const show = (i: number) => {
       cur = (i + slides.length) % slides.length;
       slides.forEach((s, k) => s.toggleAttribute('data-active', k === cur));
-      bgs.forEach((b) => (b.hidden = Number(b.dataset.bg) !== cur));   // 배경 이미지도 같이 바꿈
+      root.style.setProperty('--tone', slides[cur].dataset.tone ?? '');   // 배너 바탕색도 그 슬라이드 색으로
       dots.forEach((d, k) => {
         if (k === cur) d.setAttribute('aria-current', 'true'); else d.removeAttribute('aria-current');
       });
