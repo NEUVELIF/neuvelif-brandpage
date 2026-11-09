@@ -1,0 +1,38 @@
+---
+// 404 페이지: 없는 주소로 들어왔을 때 보여 주는 화면입니다. (GitHub Pages 가 404.html 을 자동으로 씁니다)
+// neuvelif.com 이 예전에 카페24 쇼핑몰이었기 때문에, 예전 쇼핑몰 주소로 들어오는 분이 있을 수 있습니다.
+// 그래서 주소 안에 제품 이름이 보이면 해당 제품 페이지로 바로 보내고, 아니면 아래 안내를 보여 줍니다.
+import Base from '../layouts/Base.astro';
+import { PATHS } from '../site';
+const btn = 'display: inline-flex; align-items: center; min-height: 52px; padding: 0 24px; text-decoration: none; font-weight: 700';
+---
+<Base title="페이지를 찾을 수 없습니다" description="찾으시는 페이지가 없거나 주소가 바뀌었습니다." noindex>
+{/* ── 안내 ── */}
+<section style="padding: clamp(64px, 9vw, 128px) 0">
+<div style="max-width: 820px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); box-sizing: border-box; display: flex; flex-direction: column; gap: 18px">
+<p style="margin: 0; font-family: 'Barlow Condensed', 'Noto Sans KR', sans-serif; font-size: 16px; font-weight: 600; letter-spacing: 0.12em; color: #1170AE">404</p>
+<h1 style="margin: 0; font-size: clamp(28px, 3.4vw, 42px); line-height: 1.3; color: #12324F">페이지를 찾을 수 없습니다</h1>
+<p style="margin: 0; font-size: 18px; color: #3C4752">뉴베리프 사이트가 새롭게 바뀌었습니다. 찾으시던 페이지의 주소가 바뀌었거나 더 이상 제공되지 않습니다. 제품 구매는 각 제품 페이지의 공식 판매처에서 하실 수 있습니다.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px">
+<a href="/" style={`${btn}; background: #12324F; color: #FFFFFF`}>홈으로</a>
+<a href={PATHS.sunscreen} data-go="sunscreen" style={`${btn}; border: 1px solid #12324F; color: #12324F`}>백합 리커버리 선크림</a>
+<a href={PATHS.cleansing} data-go="cleansing" style={`${btn}; border: 1px solid #12324F; color: #12324F`}>말차 디퍼핑 클렌징 밀크</a>
+</div>
+</div>
+</section>
+</Base>
+
+<script>
+  // 예전 카페24 제품 주소(예: /product/백합-리커버리-선크림/12/...)에 제품 이름이 들어 있으면 새 제품 페이지로 보냅니다.
+  // decodeURIComponent: 주소 속 %EB%B0%B1... 같은 글자를 한글로 되돌리는 함수
+  // location.replace: 뒤로 가기를 눌러도 이 404 화면으로 돌아오지 않게 이동
+  let path = location.pathname + location.search;
+  try { path = decodeURIComponent(path); } catch {}
+  path = path.toLowerCase();
+  const go = (key: string) => {
+    const a = document.querySelector<HTMLAnchorElement>(`[data-go="${key}"]`);
+    if (a) location.replace(a.href);
+  };
+  if (/백합|선크림|sunscreen|backhap/.test(path)) go('sunscreen');
+  else if (/말차|클렌징|matcha|cleansing/.test(path)) go('cleansing');
+</script>
