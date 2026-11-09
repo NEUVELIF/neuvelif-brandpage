@@ -10,11 +10,21 @@ const btn = 'width: 44px; height: 44px; border: 1px solid #5B7590; background: t
 {/* --dur 값을 CSS가 받아서 진행 막대가 채워지는 시간으로 씁니다. */}
 <section class="hero" aria-roledescription="carousel" aria-label="뉴베리프 업데이트 소식" style={`--dur: ${INTERVAL_MS}ms; position: relative; background: #12324F; color: #FFFFFF; overflow: hidden`}>
 <h1 class="sr-only">뉴베리프 NEUVELIF, 시술 전후의 피부를 위한 더마 스킨케어</h1>
+{/* ── 배경 이미지 ── 이미지가 있는 슬라이드만 만들고, 그 슬라이드가 보일 때만 함께 보입니다.
+     <picture>: 화면이 좁으면(760px 이하) 휴대폰용(-mo-), 넓으면 PC용(-pc-) 파일을 브라우저가 골라 받습니다.
+     srcset의 1280w·2048w 처럼 크기를 여러 개 주면 화면에 맞는 크기만 내려받아 빠릅니다.
+     alt="" : 글자 없는 장식용 배경이라 화면낭독기가 읽지 않게 비워 둡니다. */}
+{SLIDES.map((s, i) => s.img && (
+  <picture class="bg" data-bg={i} hidden={i !== 0}>
+    <source media="(max-width: 760px)" srcset={`/images/hero/${s.img}-mo-800.webp 800w, /images/hero/${s.img}-mo-1448.webp 1448w`} sizes="100vw" width="1448" height="1086" />
+    <img src={`/images/hero/${s.img}-pc-2048.webp`} srcset={`/images/hero/${s.img}-pc-1280.webp 1280w, /images/hero/${s.img}-pc-2048.webp 2048w`} sizes="100vw" width="2048" height="768" alt="" loading={i === 0 ? 'eager' : 'lazy'} fetchpriority={i === 0 ? 'high' : undefined} decoding="async" />
+  </picture>
+))}
 <div style="position: relative; max-width: 1240px; margin: 0 auto; padding: clamp(48px, 7vw, 104px) clamp(20px, 4vw, 48px) clamp(28px, 3.5vw, 44px); box-sizing: border-box; min-height: clamp(480px, 40vw, 600px); display: flex; flex-direction: column; justify-content: space-between; gap: 40px">
-{/* ── 슬라이드 ── 모든 장을 HTML로 만들고, 첫 장 말고는 hidden(숨김)으로 둡니다. */}
-<div data-slides aria-live="polite">
+{/* ── 슬라이드 ── 모든 장을 HTML로 만들어 같은 자리에 겹쳐 두고, data-active 가 붙은 장만 보이게 합니다. */}
+<div class="slides" data-slides aria-live="polite">
 {SLIDES.map((s, i) => (
-  <div data-slide={i} role="group" aria-roledescription="slide" aria-label={`${i + 1} / ${n}: ${s.kind}`} hidden={i !== 0} style="max-width: 100%; display: flex; flex-direction: column; gap: 22px">
+  <div data-slide={i} role="group" aria-roledescription="slide" aria-label={`${i + 1} / ${n}: ${s.kind}`} data-active={i === 0 ? 'true' : undefined} style="max-width: 100%; display: flex; flex-direction: column; gap: 22px">
   <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px">
   <span style="border: 1px solid #8FD3F2; color: #8FD3F2; padding: 4px 12px; font-size: 13px; font-weight: 700; letter-spacing: 0.06em">{s.kind}</span>
   {s.date && <span style="font-size: 14px; color: #C9D6E2; font-variant-numeric: tabular-nums">{s.date}</span>}
@@ -49,6 +59,16 @@ const btn = 'width: 44px; height: 44px; border: 1px solid #5B7590; background: t
 </section>
 
 <style>
+  /* 배경 이미지: 배너 전체를 덮고(position: absolute; inset: 0) 글자 뒤에 깔립니다.
+     object-fit: cover → 화면 비율이 달라도 찌그러지지 않고, 넘치는 가장자리만 잘립니다. */
+  .bg { position: absolute; inset: 0; display: block; }
+  .bg img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+  /* 슬라이드를 모두 같은 칸(grid-area: 1 / 1)에 겹쳐 둡니다.
+     그러면 배너 높이가 가장 긴 슬라이드에 맞춰 고정되어, 넘어갈 때 아래 내용이 들썩이지 않습니다.
+     지금 장이 아닌 슬라이드는 visibility: hidden 으로 안 보이게(자리만 차지) 합니다. */
+  .slides { display: grid; }
+  .slides > [data-slide] { grid-area: 1 / 1; }
+  .slides > [data-slide]:not([data-active]) { visibility: hidden; }
   /* 조작 버튼 줄. 휴대폰처럼 좁은 화면(480px 이하)에서는 간격과 점 크기를 줄여 한 줄에 들어가게 합니다. */
   .ctrl { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; }
   .dot { width: 44px; height: 44px; padding: 0; border: 0; background: transparent; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; }
@@ -77,6 +97,7 @@ const btn = 'width: 44px; height: 44px; border: 1px solid #5B7590; background: t
   const root = document.querySelector<HTMLElement>('section.hero');
   if (root) {
     const slides = [...root.querySelectorAll<HTMLElement>('[data-slide]')];
+    const bgs = [...root.querySelectorAll<HTMLElement>('[data-bg]')];
     const dots = [...root.querySelectorAll<HTMLButtonElement>('[data-dot]')];
     const counter = root.querySelector('[data-counter]');
     const area = root.querySelector<HTMLElement>('[data-slides]');
@@ -87,7 +108,8 @@ const btn = 'width: 44px; height: 44px; border: 1px solid #5B7590; background: t
     // (i + 개수) % 개수 → 마지막에서 '다음'으로 가면 처음으로 돌아가게 하는 계산
     const show = (i: number) => {
       cur = (i + slides.length) % slides.length;
-      slides.forEach((s, k) => (s.hidden = k !== cur));
+      slides.forEach((s, k) => s.toggleAttribute('data-active', k === cur));
+      bgs.forEach((b) => (b.hidden = Number(b.dataset.bg) !== cur));   // 배경 이미지도 같이 바꿈
       dots.forEach((d, k) => {
         if (k === cur) d.setAttribute('aria-current', 'true'); else d.removeAttribute('aria-current');
       });
