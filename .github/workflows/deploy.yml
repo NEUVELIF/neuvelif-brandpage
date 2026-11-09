@@ -24,12 +24,12 @@ jobs:
       - uses: actions/checkout@v4      # ① 저장소의 코드를 내려받기
       - uses: withastro/action@v3      # ② Astro로 사이트 만들기
         env:
-          # 임시 주소 기간: 검색엔진 수집을 막아 둡니다. 정식 오픈 때 false로 바꿉니다.
-          PUBLIC_STAGING: 'true'
-          # 임시 주소 neuvelif.github.io/neuvelif-brandpage/
-          # 정식 오픈 때 SITE_URL은 https://neuvelif.com, BASE_PATH는 / 로 바꿉니다.
-          SITE_URL: 'https://neuvelif.github.io'
-          BASE_PATH: '/neuvelif-brandpage'
+          # 정식 공개: 'false' 면 검색엔진 수집을 허용합니다. ('true' 로 바꾸면 다시 검색 차단)
+          PUBLIC_STAGING: 'false'
+          # 사이트 주소. canonical·사이트맵·공유 미리보기 주소가 모두 이 값을 기준으로 만들어집니다.
+          SITE_URL: 'https://neuvelif.com'
+          # 주소 뒤에 붙는 폴더. 자체 도메인에서는 맨 앞(/)이므로 '/' 입니다.
+          BASE_PATH: '/'
   deploy:
     needs: build
     runs-on: ubuntu-latest
