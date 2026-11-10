@@ -39,3 +39,19 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4  # ③ 만든 사이트를 인터넷에 올리기
+  # ④ 배포가 끝나면 빙·네이버 등에 "페이지가 바뀌었어요"라고 알리기 (IndexNow)
+  #    실패해도 사이트 배포에는 영향이 없습니다.
+  notify:
+    needs: deploy
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    env:
+      KEY: 4ec3edc866360f185362d3554db47f4a
+    steps:
+      - run: |
+          sleep 30
+          urls=$(curl -fsS https://neuvelif.com/sitemap-0.xml | grep -o '<loc>[^<]*' | sed 's/<loc>//' | jq -R . | jq -sc .)
+          body="{\"host\":\"neuvelif.com\",\"key\":\"$KEY\",\"keyLocation\":\"https://neuvelif.com/$KEY.txt\",\"urlList\":$urls}"
+          for api in https://api.indexnow.org/indexnow https://searchadvisor.naver.com/indexnow; do
+            curl -sS -o /dev/null -w "$api %{http_code}\n" -X POST "$api" -H 'Content-Type: application/json; charset=utf-8' -d "$body" || true
+          done

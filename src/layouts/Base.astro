@@ -9,7 +9,7 @@
 // ────────────────────────────────────────────────────────────────
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import { STAGING, BRAND } from '../site';
+import { STAGING, BRAND, VERIFY } from '../site';
 import '../styles/global.css';
 
 // Props: 이 틀을 쓰는 페이지가 넘겨줄 수 있는 값들의 목록입니다.
@@ -38,9 +38,11 @@ const fullTitle = title.includes(BRAND.name) ? title : `${title} | ${BRAND.name}
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{fullTitle}</title>
 <meta name="description" content={description}>
-<link rel="canonical" href={canonical}>
+{!noindex && <link rel="canonical" href={canonical}>}
 {/* 임시 주소 모드일 때만 '검색 결과에 넣지 말라'는 표시를 넣습니다. {조건 && 내용} = 조건이 참일 때만 내용 표시 */}
 {(STAGING || noindex) && <meta name="robots" content="noindex, nofollow">}
+{!STAGING && VERIFY.bing && <meta name="msvalidate.01" content={VERIFY.bing}>}
+{!STAGING && VERIFY.naver && <meta name="naver-site-verification" content={VERIFY.naver}>}
 {/* og: 로 시작하는 줄 = 카카오톡·SNS에 링크를 붙였을 때 보이는 미리보기 정보 */}
 <meta property="og:site_name" content="뉴베리프 NEUVELIF">
 <meta property="og:locale" content="ko_KR">

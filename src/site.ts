@@ -22,6 +22,12 @@ export const COMPANY = {
   address: '경기도 남양주시 다산지금로 202, 제4층 제비에프04-0053호 (다산동, 현대테라타워디아이엠씨)',
 };
 
+// 검색엔진 소유 확인 코드 (빙 웹마스터 도구, 네이버 서치어드바이저). 웹페이지에 공개로 넣는 값입니다.
+export const VERIFY = {
+  bing: '951ADADF004CEA8179B8AB7F54C3DA50',
+  naver: '',
+};
+
 export const SOCIAL = [
   'https://www.instagram.com/neuvelif/',
   'https://www.youtube.com/@neuvelif',
