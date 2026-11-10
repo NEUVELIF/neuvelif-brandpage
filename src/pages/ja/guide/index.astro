@@ -64,15 +64,19 @@ const th = 'text-align: left; padding: 16px 14px; border-bottom: 1px solid #D5E0
 <table style="width: 100%; min-width: 820px; border-collapse: collapse; font-size: 15px">
 <caption class="sr-only">施術グループ別 日焼け止めとクレンジングミルクの開始時期</caption>
 <thead><tr>
-<th scope="col" style={`${th}; width: 22%; color: #12324F`}>施術グループ</th>
-<th scope="col" style={`${th}; width: 30%; color: #12324F`}>代表的な施術</th>
+<th scope="col" style={`${th}; width: 30%; color: #12324F`}>施術グループ・主な悩み</th>
+<th scope="col" style={`${th}; width: 26%; color: #12324F`}>代表的な施術</th>
 <th scope="col" style={`${th}; color: #1170AE`}>日焼け止め</th>
 <th scope="col" style={`${th}; color: #2F5233`}>クレンジングミルク</th>
 </tr></thead>
 <tbody>
 {GUIDES.map((g) => (
   <tr>
-  <th scope="row" style={`${th}; background: #F5F8FA`}><a href={guideHref(g.slug)} style="color: #12324F">{g.label}</a></th>
+  <th scope="row" style={`${th}; background: #F5F8FA; vertical-align: top`}>
+  <a href={guideHref(g.slug)} style="color: #12324F">{g.label}</a>
+  <span style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px">{g.concerns.map((c) => <span style="font-size: 13px; font-weight: 500; line-height: 1.4; color: #12324F; background: #FFFFFF; border: 1px solid #C5D3DF; padding: 3px 8px">{c}</span>)}</span>
+  <span style="display: block; margin-top: 10px; font-size: 13.5px; font-weight: 400; line-height: 1.6; color: #4A5560">{g.how}</span>
+  </th>
   <td style={td}>{g.examples}</td>
   <td style={td}>{g.cards.sun[0]}</td>
   <td style={td}>{g.cards.clean[0]}</td>
@@ -81,7 +85,7 @@ const th = 'text-align: left; padding: 16px 14px; border-bottom: 1px solid #D5E0
 </tbody>
 </table>
 </div>
-<p style="margin: 0; font-size: 14px; color: #56626D">医療機関によって案内が異なる範囲をまとめた一般的な情報です。施術名の一部は各社の商標であり、NEUVELIFは該当する機器・薬剤のメーカーとは関係がありません。</p>
+<p style="margin: 0; font-size: 14px; color: #56626D">主な悩みと仕組みは、各施術が主に使われる目的をまとめた一般的な情報です。施術が合うかどうかや結果には個人差があるため、医療スタッフにご相談ください。開始時期は、医療機関によって案内が異なる範囲をまとめた一般的な情報です。施術名の一部は各社の商標であり、NEUVELIFは該当する機器・薬剤のメーカーとは関係がありません。</p>
 </div>
 </section>
 

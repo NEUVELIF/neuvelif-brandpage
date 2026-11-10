@@ -64,15 +64,19 @@ const th = 'text-align: left; padding: 16px 14px; border-bottom: 1px solid #D5E0
 <table style="width: 100%; min-width: 820px; border-collapse: collapse; font-size: 15px">
 <caption class="sr-only">When to start sunscreen and cleansing milk, by procedure group</caption>
 <thead><tr>
-<th scope="col" style={`${th}; width: 22%; color: #12324F`}>Procedure group</th>
-<th scope="col" style={`${th}; width: 30%; color: #12324F`}>Typical procedures</th>
+<th scope="col" style={`${th}; width: 30%; color: #12324F`}>Procedure group · Main concerns</th>
+<th scope="col" style={`${th}; width: 26%; color: #12324F`}>Typical procedures</th>
 <th scope="col" style={`${th}; color: #1170AE`}>Sunscreen</th>
 <th scope="col" style={`${th}; color: #2F5233`}>Cleansing milk</th>
 </tr></thead>
 <tbody>
 {GUIDES.map((g) => (
   <tr>
-  <th scope="row" style={`${th}; background: #F5F8FA`}><a href={guideHref(g.slug)} style="color: #12324F">{g.label}</a></th>
+  <th scope="row" style={`${th}; background: #F5F8FA; vertical-align: top`}>
+  <a href={guideHref(g.slug)} style="color: #12324F">{g.label}</a>
+  <span style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px">{g.concerns.map((c) => <span style="font-size: 13px; font-weight: 500; line-height: 1.4; color: #12324F; background: #FFFFFF; border: 1px solid #C5D3DF; padding: 3px 8px">{c}</span>)}</span>
+  <span style="display: block; margin-top: 10px; font-size: 13.5px; font-weight: 400; line-height: 1.6; color: #4A5560">{g.how}</span>
+  </th>
   <td style={td}>{g.examples}</td>
   <td style={td}>{g.cards.sun[0]}</td>
   <td style={td}>{g.cards.clean[0]}</td>
@@ -81,7 +85,7 @@ const th = 'text-align: left; padding: 16px 14px; border-bottom: 1px solid #D5E0
 </tbody>
 </table>
 </div>
-<p style="margin: 0; font-size: 14px; color: #56626D">General information summarizing the range of instructions given by different medical institutions. Some procedure names are trademarks of their respective companies, and NEUVELIF is not affiliated with the companies that make these devices or drugs.</p>
+<p style="margin: 0; font-size: 14px; color: #56626D">Main concerns and how it works summarize what each procedure is commonly used for. Whether a procedure suits you and the results vary from person to person, so consult a medical professional. Start times summarize the range of instructions given by different medical institutions. Some procedure names are trademarks of their respective companies, and NEUVELIF is not affiliated with the companies that make these devices or drugs.</p>
 </div>
 </section>
 

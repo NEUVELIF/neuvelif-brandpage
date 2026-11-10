@@ -13,6 +13,8 @@ export interface Guide {
   short: string;          // 카드에 쓰는 한 줄 요약
   kicker: string;
   examples: string;
+  concerns: string[];     // 대표 시술이 주로 다루는 고민
+  how: string;            // 대표 시술의 공통 원리 한 줄
   lead: string;           // 첫 문단 (<strong> 사용)
   cards: { sun: [string, string]; clean: [string, string]; keep: [string, string] };
   skin: string;
@@ -52,6 +54,8 @@ export const GUIDES: Guide[] = [
     short: 'Sunscreen from the same day',
     kicker: 'Ulthera, Thermage, laser toning and more',
     examples: 'Laser toning, IPL, Ulthera/Shurink, Thermage/InMode/Oligio, Titanium lifting, ONDA lifting, vascular lasers',
+    concerns: ['Dark spots & melasma', 'Redness', 'Firmness & sagging'],
+    how: 'Delivers heat energy from light, ultrasound, or radiofrequency into the skin, aiming to fade pigment and visible redness and to firm the skin by warming its deeper layers.',
     lead: 'After laser toning, IPL, or lifting, sunscreen is usually applied <strong>from the same day, once the warmth has subsided</strong>. Wash your face <strong>gently with lukewarm water from that evening</strong>. If your clinic\'s instructions differ, follow your clinic.',
     cards: { sun: ['From the day of the procedure', 'Once the warmth subsides, apply to the whole face before heading home.'], clean: ['From the evening of the procedure', 'Wash gently with lukewarm water.'], keep: ['Avoid heat', 'Avoid saunas, hot water, and strenuous exercise.'] },
     skin: 'There is no wound on the skin surface, but warmth and redness may last from a few hours to about a day. After IPL, dark spots may temporarily darken and then flake off like dead skin.',
@@ -93,6 +97,8 @@ export const GUIDES: Guide[] = [
     short: 'Sunscreen usually from the next day',
     kicker: 'Laser hair removal on the face, upper lip, and body',
     examples: 'Laser hair removal on the face, upper lip, and body',
+    concerns: ['Unwanted hair', 'Repeated hair removal'],
+    how: 'Laser light is absorbed by the pigment in hair and weakens the follicles it grows from, aiming to reduce regrowth.',
     lead: 'After laser hair removal, sunscreen is usually applied <strong>from the next day</strong>. On the day of the procedure, cover up with clothing, a hat, or a mask, and wash <strong>with lukewarm water only that day, or as your clinic advises</strong>. If your clinic\'s instructions differ, follow your clinic.',
     cards: { sun: ['Usually from the next day', 'Do not apply on the day; cover up with clothing, a hat, or a mask.'], clean: ['From the next day', 'On the day, rinse with lukewarm water only or follow your clinic\'s instructions.'], keep: ['Avoid heat and friction', 'Avoid hot showers and exercise that makes you sweat.'] },
     skin: 'The skin around the follicles may turn red or swell slightly. Since this procedure is done over several sessions, care between sessions matters too.',
@@ -136,6 +142,8 @@ export const GUIDES: Guide[] = [
     short: 'Sunscreen from the same day',
     kicker: 'AquaPeel, Lalapeel, LDM, LED',
     examples: 'AquaPeel, Lalapeel / LHA peel / Cerapeel, LDM, LED',
+    concerns: ['Built-up dead skin', 'Pores & sebum', 'Dull tone & rough texture'],
+    how: 'Uses water, mild acids, or ultrasound to clear dead skin and sebum built up on the surface, aiming for smoother texture and a clearer tone.',
     lead: 'After AquaPeel or a peel, applying sunscreen <strong>from the day of the procedure</strong> is the most important aftercare. Wash your face <strong>gently with lukewarm water from that evening</strong>. If your clinic\'s instructions differ, follow your clinic.',
     cards: { sun: ['From the day of the procedure', 'The most important aftercare for these procedures. Reapply daily.'], clean: ['From the evening of the procedure', 'Use lukewarm water; spread on without foaming and rinse.'], keep: ['Leave flaking skin alone', 'Don\'t peel off flakes by hand, and pause acids, retinol, and scrubs.'] },
     skin: 'The outer skin layer becomes thinner, so stinging, tightness, and light flaking may occur for a few days. LDM and LED usually cause almost no irritation.',
@@ -199,6 +207,8 @@ export const GUIDES: Guide[] = [
     short: 'After your clinic allows face washing',
     kicker: 'Botox, fillers, Rejuran, Juvelook and more',
     examples: 'Botox, fillers, skin boosters such as Rejuran and Juvelook, contouring and fat-dissolving injections, acne inflammation injections',
+    concerns: ['Expression lines', 'Lost volume & contour', 'Hydration & elasticity'],
+    how: 'Injections that relax the muscles that cause wrinkles (Botox), fill hollow areas (fillers), or add hydration and elasticity within the skin (skin boosters).',
     lead: 'After injections, start sunscreen and face washing <strong>once your clinic allows you to wash your face</strong>. This is usually between a few hours and the next day, and it varies by clinic. The most important thing is <strong>not to rub or press the injection sites</strong>.',
     cards: { sun: ['After your clinic allows face washing', 'Pat it on gently with your fingertips.'], clean: ['After your clinic allows face washing', 'Spread it on lightly without the rolling massage and rinse right away.'], keep: ['No rubbing', 'Do not rub or press the injection sites.'] },
     skin: 'Injection marks, bruising, swelling, and small bumps (skin boosters) may last a few days. The most important thing is not to rub or press the injection sites so the product or filler does not spread from where it was placed.',
@@ -284,6 +294,8 @@ export const GUIDES: Guide[] = [
     short: 'Sunscreen usually after 24 hours',
     kicker: 'Potenza, MTS, Fraxel, spicule peels and more',
     examples: 'Potenza, MTS, Fraxel/Pico Fraxel, scar subcision, spicule peels',
+    concerns: ['Acne scars', 'Pores', 'Rough texture'],
+    how: 'Creates microscopic channels or heat zones invisible to the eye, prompting the skin to produce new collagen on its own.',
     lead: 'After Potenza, MTS, or Fraxel, sunscreen is usually applied <strong>after 24 hours, once your doctor confirms</strong>. Many clinics advise applying nothing other than the products they provide for the first 24 hours, and you should <strong>hold off on washing until your clinic says so</strong>.',
     cards: { sun: ['Usually after 24 hours', 'For the first 24 hours, do not apply; stay in the shade and wear a hat. Your doctor\'s confirmation comes first.'], clean: ['Usually after 24 hours', 'Hold off on washing until your clinic says so; once you start, use it without rolling.'], keep: ['Rest from irritants', 'Avoid makeup, exercise, and sweating, and pause retinol, acids, and vitamin C for at least 3 days.'] },
     skin: 'Microscopic channels invisible to the eye remain, and redness may last 1–3 days. Many clinics advise applying nothing to the skin for the first 24 hours.',
@@ -370,6 +382,8 @@ export const GUIDES: Guide[] = [
     short: 'Sunscreen once the wound has healed',
     kicker: 'Removal of moles, milia, and lentigines; ablative lasers and more',
     examples: 'Removal of moles, milia, and skin tags, CO2 laser, lentigo and freckle lasers, ablative Fraxel, semi-permanent eyebrows',
+    concerns: ['Moles, skin tags & milia', 'Stubborn dark spots', 'Deep scars & wrinkles'],
+    how: 'Removes moles, raised growths, or dense pigment directly with a laser; ablative Fraxel is also used for deep scars and wrinkles.',
     lead: 'After procedures that leave wounds and scabs, such as mole removal or CO2 laser, <strong>do not apply sunscreen to the wound</strong>. Apply only to the surrounding skin and cover with tape or a hat, then <strong>once the wound has healed</strong> (usually about 1–2 weeks, confirmed by your doctor), apply carefully over the treated area as well.',
     cards: { sun: ['Once the wound has healed', 'Until then, avoid the wound, apply only to the surrounding skin, and cover with tape or a hat.'], clean: ['As your clinic advises', 'Wash while avoiding the wound and tape.'], keep: ['Leave scabs alone', 'Don\'t pick off scabs; if there is a lot of oozing, contact your clinic.'] },
     skin: 'Small wounds and scabs form, and hydrocolloid (moist-healing) patches are often worn for anywhere from a few days to about 2 weeks.',
@@ -454,6 +468,8 @@ export const GUIDES: Guide[] = [
     short: 'Every day from 48 hours',
     kicker: 'Acne photodynamic therapy (PDT)',
     examples: 'Acne PDT (photodynamic therapy)',
+    concerns: ['Inflammatory acne', 'Excess sebum'],
+    how: 'A light-sensitive medication is applied and then activated with light, aiming to reduce oil-gland activity and acne bacteria.',
     lead: 'For about <strong>48 hours after acne PDT (photodynamic therapy), sunscreen alone cannot protect your skin</strong>. Stay indoors, avoid sunlight and bright windows, and apply sunscreen every day <strong>from 48 hours onward</strong>.',
     cards: { sun: ['Every day from 48 hours', 'For 48 hours after treatment, sunscreen alone is not enough. Stay indoors and avoid sunlight.'], clean: ['As your clinic advises', 'After 48 hours, use as usual.'], keep: ['Avoid light', 'If you must go out, cover up with a hat and clothing.'] },
     skin: 'In this treatment a light-sensitive medication is applied and then activated with light, so for about 48 hours afterward your skin is extremely sensitive to sunlight and bright lighting. Flaking and redness may last about a week.',

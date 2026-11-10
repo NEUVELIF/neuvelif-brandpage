@@ -64,15 +64,19 @@ const th = 'text-align: left; padding: 16px 14px; border-bottom: 1px solid #D5E0
 <table style="width: 100%; min-width: 820px; border-collapse: collapse; font-size: 15px">
 <caption class="sr-only">시술 그룹별 선크림과 클렌징 밀크 시작 시점</caption>
 <thead><tr>
-<th scope="col" style={`${th}; width: 22%; color: #12324F`}>시술 그룹</th>
-<th scope="col" style={`${th}; width: 30%; color: #12324F`}>대표 시술</th>
+<th scope="col" style={`${th}; width: 30%; color: #12324F`}>시술 그룹 · 주요 고민</th>
+<th scope="col" style={`${th}; width: 26%; color: #12324F`}>대표 시술</th>
 <th scope="col" style={`${th}; color: #1170AE`}>선크림</th>
 <th scope="col" style={`${th}; color: #2F5233`}>클렌징 밀크</th>
 </tr></thead>
 <tbody>
 {GUIDES.map((g) => (
   <tr>
-  <th scope="row" style={`${th}; background: #F5F8FA`}><a href={guideHref(g.slug)} style="color: #12324F">{g.label}</a></th>
+  <th scope="row" style={`${th}; background: #F5F8FA; vertical-align: top`}>
+  <a href={guideHref(g.slug)} style="color: #12324F">{g.label}</a>
+  <span style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px">{g.concerns.map((c) => <span style="font-size: 13px; font-weight: 500; line-height: 1.4; color: #12324F; background: #FFFFFF; border: 1px solid #C5D3DF; padding: 3px 8px">{c}</span>)}</span>
+  <span style="display: block; margin-top: 10px; font-size: 13.5px; font-weight: 400; line-height: 1.6; color: #4A5560">{g.how}</span>
+  </th>
   <td style={td}>{g.examples}</td>
   <td style={td}>{g.cards.sun[0]}</td>
   <td style={td}>{g.cards.clean[0]}</td>
@@ -81,7 +85,7 @@ const th = 'text-align: left; padding: 16px 14px; border-bottom: 1px solid #D5E0
 </tbody>
 </table>
 </div>
-<p style="margin: 0; font-size: 14px; color: #56626D">의료기관마다 다르게 안내하는 범위를 정리한 일반 정보입니다. 시술 이름 중 일부는 각 회사의 상표이며, 뉴베리프는 해당 장비·약품 회사와 관계가 없습니다.</p>
+<p style="margin: 0; font-size: 14px; color: #56626D">주요 고민과 원리는 각 시술이 주로 쓰이는 목적을 정리한 일반 정보로, 시술이 맞는지와 결과는 사람마다 다르니 의료진과 상담하세요. 시작 시점은 의료기관마다 다르게 안내하는 범위를 정리한 일반 정보입니다. 시술 이름 중 일부는 각 회사의 상표이며, 뉴베리프는 해당 장비·약품 회사와 관계가 없습니다.</p>
 </div>
 </section>
 
