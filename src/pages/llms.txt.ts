@@ -51,6 +51,11 @@ export const GET: APIRoute = ({ site }) => {
     link('자주 묻는 질문', PATHS.faq, '시술 후 선크림·세안 시점, 제품 성분·사용법·사용기한, 구매와 문의.'),
     link('문의', PATHS.contact, `이메일 ${BRAND.email}`),
     '',
+    '## Other languages',
+    '',
+    link('English', '/en/', 'English version of this site.'),
+    link('日本語', '/ja/', 'Japanese version of this site.'),
+    '',
   ].join('\n');
 
   return new Response(body, { headers: { 'Content-Type': 'text/plain; charset=utf-8' } });

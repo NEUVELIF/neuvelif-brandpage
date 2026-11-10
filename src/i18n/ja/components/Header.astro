@@ -1,0 +1,135 @@
+---
+// 사이트 맨 위 안내 줄 + 머리 부분 (로고, 메뉴, 언어 선택)
+import { PATHS } from '../site';
+interface Props { current?: 'brand' | 'products' | 'guide' | 'research' | 'news' | '' }
+const { current = '' } = Astro.props;
+// 가운데 메뉴 목록. 메뉴를 더하거나 순서를 바꾸려면 이 목록만 고치면 됩니다.
+// key 는 지금 보고 있는 메뉴를 파란색으로 표시할 때 씁니다.
+const nav = [
+  { key: 'brand', label: 'ブランド', href: PATHS.brand },
+  { key: 'products', label: '製品', href: PATHS.products },
+  { key: 'guide', label: '施術別ガイド', href: PATHS.guide },
+  { key: 'research', label: '臨床試験', href: PATHS.research },
+  { key: 'news', label: 'お知らせ', href: PATHS.news },
+];
+// 언어 선택 목록. 지금 보고 있는 페이지의 다른 언어판으로 연결합니다.
+const path = Astro.url.pathname;
+const lang = path.startsWith('/en/') ? 'en' : path.startsWith('/ja/') ? 'ja' : 'ko';
+const rest = path.replace(/^\/(en|ja)(?=\/)/, '');
+const langs = [
+  { code: 'ko', label: '한국어', region: 'Korea', href: rest },
+  { code: 'en', label: 'English', region: 'Global', href: `/en${rest}` },
+  { code: 'ja', label: '日本語', region: 'Japan', href: `/ja${rest}` },
+];
+---
+<div style="background: #12324F; color: #FFFFFF; font-size: 13px">
+<div style="max-width: 1240px; margin: 0 auto; padding: 10px clamp(20px, 4vw, 48px); box-sizing: border-box; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 4px 12px; text-align: center">
+<p style="margin: 0">施術に合わせた日焼け止め・洗顔のタイミングは、施術別ガイドでご確認ください</p>
+<a href={PATHS.guide} style="color: #FFFFFF; font-weight: 700; text-underline-offset: 3px">ガイドを見る</a>
+</div>
+</div>
+
+{/* ── 머리 부분: 로고 | 메뉴 | 문의·자주 묻는 질문·언어·(휴대폰) 메뉴 버튼 ──
+     display: grid 와 grid-template-columns: auto 1fr auto 로 세 칸을 나눕니다. */}
+<header style="background: #FFFFFF; border-bottom: 1px solid #D5E0E8; position: relative; z-index: 20">
+<div class="hdr" style="max-width: 1240px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); box-sizing: border-box; display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 0 24px; min-height: 76px">
+<a href="/ja/" style="display: flex; align-items: center; min-height: 64px">
+<img src="/images/logo/neuvelif-wordmark.svg" alt="NEUVELIF ホーム" width="140" height="20" style="height: 20px; width: auto; display: block">
+</a>
+<nav class="nav-desktop" aria-label="メインメニュー" style="justify-self: center; display: flex; gap: 0 clamp(16px, 2.4vw, 36px); font-size: 16px; font-weight: 500">
+{/* .map() 은 목록의 항목마다 같은 모양을 반복해 만드는 방법입니다. 지금 메뉴는 파란색·굵게(aria-current) */}
+{nav.map((n) => (
+  current === n.key
+    ? <a href={n.href} aria-current="page" style="color: #1170AE; text-decoration: none; padding: 12px 0; font-weight: 700; white-space: nowrap">{n.label}</a>
+    : <a href={n.href} style="color: #1A1F24; text-decoration: none; padding: 12px 0; white-space: nowrap">{n.label}</a>
+))}
+</nav>
+<div style="grid-column: 3; display: flex; align-items: center; justify-content: flex-end; gap: 2px; font-size: 14px">
+<a class="tool-link" href={PATHS.contact}>お問い合わせ</a>
+<a class="tool-link" href={PATHS.faq}>よくあるご質問</a>
+{/* <details>/<summary>: 누르면 열리고 다시 누르면 닫히는 HTML 기본 부품. 자바스크립트 없이도 동작합니다. */}
+<details class="lang">
+<summary aria-label="言語を選択（現在：日本語）" title="言語を選択">
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18"></path><path d="M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"></path></svg>
+</summary>
+<div class="lang-panel" role="menu" aria-label="言語">
+<p class="lang-title">Language</p>
+<ul>
+{langs.map((l) => (
+  <li>
+    <a href={l.href} lang={l.code} hreflang={l.code} aria-current={l.code === lang ? 'true' : undefined} role="menuitem">
+      <span class="lang-label">{l.label}</span><span class="lang-region">{l.region}</span>
+    </a>
+  </li>
+))}
+</ul>
+</div>
+</details>
+<button type="button" class="menu-btn" aria-expanded="false" aria-controls="mobile-menu" aria-label="メニューを開く"><span></span><span></span><span></span></button>
+</div>
+</div>
+{/* 휴대폰 메뉴: 처음에는 hidden(숨김)이고, 메뉴 버튼을 누르면 아래 script가 보이게 바꿉니다 */}
+<nav id="mobile-menu" class="mobile-menu" aria-label="モバイルメニュー" hidden>
+<ul>
+{nav.map((n) => <li><a href={n.href} aria-current={current === n.key ? 'page' : undefined}>{n.label}</a></li>)}
+</ul>
+<div class="mobile-sub"><a href={PATHS.faq}>よくあるご質問</a><a href={PATHS.contact}>お問い合わせ</a></div>
+</nav>
+</header>
+
+{/* <style> 안의 모양은 이 파일(머리 부분)에만 적용됩니다. @media (max-width: 1000px) = 화면 폭이 1000px 이하일 때 */}
+<style>
+  .tool-link { color: #56626D; text-decoration: none; padding: 10px 10px; white-space: nowrap; }
+  .tool-link:hover { color: #12324F; }
+  .menu-btn { display: none; width: 48px; height: 48px; border: 1px solid #D5E0E8; background: #FFFFFF; cursor: pointer; flex-direction: column; align-items: center; justify-content: center; gap: 5px; padding: 0; }
+  .menu-btn span { display: block; width: 20px; height: 2px; background: #12324F; transition: transform 0.2s, opacity 0.2s; }
+  .menu-btn[aria-expanded='true'] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .menu-btn[aria-expanded='true'] span:nth-child(2) { opacity: 0; }
+  .menu-btn[aria-expanded='true'] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .mobile-menu { border-top: 1px solid #D5E0E8; background: #FFFFFF; padding: 8px clamp(20px, 4vw, 48px) 20px; }
+  .mobile-menu ul { list-style: none; margin: 0; padding: 0; }
+  .mobile-menu li a { display: block; padding: 16px 0; border-bottom: 1px solid #EEF2F5; color: #12324F; text-decoration: none; font-size: 18px; font-weight: 700; }
+  .mobile-menu li a[aria-current='page'] { color: #1170AE; }
+  .mobile-sub { display: flex; gap: 20px; padding-top: 16px; }
+  .mobile-sub a { color: #56626D; text-decoration: none; font-size: 15px; }
+  @media (max-width: 1000px) {
+    .tool-link { display: none; }
+    .menu-btn { display: inline-flex; margin-left: 6px; }
+    .nav-desktop { display: none !important; }
+  }
+  @media (min-width: 1001px) { .mobile-menu { display: none !important; } }
+  .lang { position: relative; }
+  .lang summary { list-style: none; display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; color: #3C4752; cursor: pointer; }
+  .lang summary::-webkit-details-marker { display: none; }
+  .lang summary:hover, .lang[open] summary { background: #EEF2F5; color: #12324F; }
+  .lang-panel { position: absolute; right: 0; top: calc(100% + 4px); min-width: 220px; background: #FFFFFF; border: 1px solid #D5E0E8; box-shadow: 0 12px 32px rgba(18, 50, 79, 0.12); padding: 16px; z-index: 30; }
+  .lang-title { margin: 0 0 8px; font-family: 'Barlow Condensed', 'Noto Sans JP', sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 0.12em; color: #56626D; }
+  .lang-panel ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 2px; }
+  .lang-panel a, .lang-off { display: flex; flex-direction: column; gap: 2px; padding: 10px 12px; text-decoration: none; }
+  .lang-panel a { color: #12324F; }
+  .lang-panel a:hover { background: #F4F7FA; }
+  .lang-panel a[aria-current='true'] { background: #F4F7FA; }
+  .lang-label { font-size: 15px; font-weight: 700; }
+  .lang-region { font-size: 13px; color: #56626D; }
+  .lang-off { color: #8FA3B5; cursor: default; }
+  .lang-off .lang-region { color: #8FA3B5; }
+</style>
+
+{/* <script> 는 방문자의 브라우저에서 실행되는 코드입니다 (버튼 누르기 같은 동작) */}
+<script>
+  // 휴대폰 메뉴 열고 닫기
+  const btn = document.querySelector<HTMLButtonElement>('.menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  btn?.addEventListener('click', () => {
+    const open = btn.getAttribute('aria-expanded') !== 'true';
+    btn.setAttribute('aria-expanded', String(open));
+    btn.setAttribute('aria-label', open ? 'メニューを閉じる' : 'メニューを開く');
+    if (menu) menu.hidden = !open;
+  });
+  // 바깥을 누르거나 Esc를 누르면 언어 창을 닫습니다.
+  const d = document.querySelector<HTMLDetailsElement>('details.lang');
+  if (d) {
+    document.addEventListener('click', (e) => { if (d.open && !d.contains(e.target as Node)) d.open = false; });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && d.open) { d.open = false; d.querySelector('summary')?.focus(); } });
+  }
+</script>

@@ -1,0 +1,301 @@
+[
+ {
+  "key": "procedure",
+  "label": "Using after a procedure",
+  "items": [
+   {
+    "id": "p-01",
+    "q": "When can I start applying sunscreen after a procedure?",
+    "a": "It depends on the procedure. After laser toning, IPL, or lifting, which leave the skin surface intact, you can usually apply it the same day. After procedures that leave tiny channels in the skin, usually after 24 hours. After procedures that leave scabs, once the wound has healed. If your clinic's instructions differ, follow your clinic."
+   },
+   {
+    "id": "p-02",
+    "q": "When can I start using the cleansing milk after a procedure?",
+    "a": "Start once your clinic says you may wash your face. After laser toning, IPL, or lifting, you can usually wash gently with lukewarm water from the evening of the same day. After injections, use it without massaging once the time advised by your clinic has passed."
+   },
+   {
+    "id": "p-03",
+    "q": "Can I do the rolling massage after injections (Botox, fillers, skin boosters)?",
+    "a": "No. Rubbing or pressing the injection site may cause the product or filler to spread, so clinics advise avoiding massage. After injections, spread the cleansing milk lightly with your palms and rinse right away."
+   },
+   {
+    "id": "p-04",
+    "q": "Can I apply sunscreen where a mole was removed?",
+    "a": "Do not apply it until the wound has healed. The labels of both products say, “Avoid use on areas with wounds.” While the wound is taped, apply only to the skin around it, and once it has healed, apply carefully over the treated area as well."
+   },
+   {
+    "id": "p-05",
+    "q": "My dermatologist told me to use a mineral sunscreen. Can I use the NEUVELIF sunscreen?",
+    "a": "Please follow your doctor's advice. NEUVELIF Backhap Recovery Sunscreen uses chemical (organic) filters. Some clinics recommend a mineral sunscreen for a while after procedures that leave tiny channels in the skin."
+   },
+   {
+    "id": "p-06",
+    "q": "After photodynamic therapy (PDT), is sunscreen alone enough?",
+    "a": "No. For about 48 hours after treatment your skin is extremely sensitive to light, and sunscreen alone cannot protect it. Stay indoors during this time, and apply sunscreen every day from 48 hours onward."
+   },
+   {
+    "id": "p-07",
+    "q": "Should I use sunscreen before a procedure too?",
+    "a": "Yes. Tanned skin has a higher risk of pigmentation after procedures, so many doctors advise avoiding UV exposure even before the procedure. Many clinics also ask you to arrive without makeup or sunscreen on the day, which makes the cleansing milk a good choice that morning."
+   },
+   {
+    "id": "p-08",
+    "q": "Will the cleansing milk reduce swelling after a procedure?",
+    "a": "We cannot say that it reduces swelling caused by a procedure. The cleansing milk's depuffing test was measured on untreated skin right after a single wash. Manage post-procedure swelling as your clinic advises."
+   }
+  ]
+ },
+ {
+  "key": "sunscreen",
+  "label": "Backhap Recovery Sunscreen",
+  "items": [
+   {
+    "id": "s-01",
+    "q": "Is it a chemical or a mineral sunscreen?",
+    "a": "It is a chemical (organic) sunscreen. It contains four UV filters: Diethylamino Hydroxybenzoyl Hexyl Benzoate, Ethylhexyl Triazone, Methylene Bis-Benzotriazolyl Tetramethylbutylphenol, and Diethylhexyl Butamido Triazone."
+   },
+   {
+    "id": "s-02",
+    "q": "Has its UV protection been tested?",
+    "a": "Yes. A clinical test by the Korea Institute of Dermatological Sciences (2025, 10 participants) measured SPF 53.9 and UVAPF 18.6 (PA++++)."
+   },
+   {
+    "id": "s-03",
+    "q": "Is it a functional cosmetic?",
+    "a": "Yes. It was reported to Korea's Ministry of Food and Drug Safety (MFDS) in June 2025 as a triple-function cosmetic for UV protection, brightening, and wrinkle improvement. The brightening ingredient is niacinamide and the anti-wrinkle ingredient is adenosine."
+   },
+   {
+    "id": "s-04",
+    "q": "Does it sting the eyes?",
+    "a": "It was made to minimize eye stinging, but sensitivity varies from person to person. After 21 women who usually feel eye stinging with cosmetics used it for 2 weeks, their eye stinging score fell by 80.27%. If it gets directly into your eyes, rinse with water."
+   },
+   {
+    "id": "s-05",
+    "q": "Can people with sensitive skin use it?",
+    "a": "In a 24-hour patch test (34 participants) it scored 0.00 for skin irritation and was classified as non-irritating. Skin reactions vary, though, so try it first on a small area such as behind the ear or along the jawline. If you notice any problem, stop using it and consult a dermatologist."
+   },
+   {
+    "id": "s-06",
+    "q": "Is it okay for oily skin?",
+    "a": "It is a moist lotion texture, so oily skin or hot days may feel a little greasy. In Hwahae reviews, “moisturizing” is the most common comment, though some say it feels heavy on oily skin. Apply thin layers in two passes and add powder on top if needed."
+   },
+   {
+    "id": "s-07",
+    "q": "What about dry skin?",
+    "a": "“Moisturizing” is the most frequently mentioned strength in Hwahae reviews. In dry environments, such as under air conditioning, apply a moisturizer first."
+   },
+   {
+    "id": "s-08",
+    "q": "Does it leave a white cast?",
+    "a": "Hardly at all. In a survey right after use, 21 of 22 participants (95.5%) said it finished clean with no white cast. Applying a lot at once can make it sit on the skin, so apply it in two passes."
+   },
+   {
+    "id": "s-09",
+    "q": "Can I use it before makeup? Does it pill?",
+    "a": "Apply it as the last step of your skincare and put on base makeup once it has absorbed. In the survey, all 22 participants said it layered with other products without pilling, but it may pill if you apply a lot or layer immediately."
+   },
+   {
+    "id": "s-10",
+    "q": "How much should I apply?",
+    "a": "Apply enough to cover your whole face. SPF is measured with 2 mg of product per 1 cm² of skin. A thinner layer may not give the labeled protection, so we recommend applying it in two passes."
+   },
+   {
+    "id": "s-11",
+    "q": "Do I need to reapply?",
+    "a": "Yes. Apply 30 minutes before going outdoors and reapply every 2–3 hours. Also reapply after sweating heavily or towel drying."
+   },
+   {
+    "id": "s-12",
+    "q": "Does it have a tone-up effect?",
+    "a": "No. It contains no tinting tone-up ingredients. “Brightening function” means it helps brighten the skin with continued use, which is different from a tone-up that makes skin look brighter immediately."
+   },
+   {
+    "id": "s-13",
+    "q": "How do I remove the sunscreen?",
+    "a": "Remove it with the cleansing milk or your usual cleanser. If you wore makeup over it, remove with the cleansing milk first and then wash your face."
+   },
+   {
+    "id": "s-14",
+    "q": "Does it have a fragrance?",
+    "a": "No fragrance is added. The raw materials may have a faint natural scent, so Hwahae reviews include both “almost no scent” and “it has a slight distinctive smell.”"
+   },
+   {
+    "id": "s-15",
+    "q": "Does it contain alcohol (ethanol)?",
+    "a": "Yes. Ethanol is the 32nd of 42 ingredients. If you are sensitive to ethanol, try it on a small area first."
+   },
+   {
+    "id": "s-16",
+    "q": "Can I use it on my body as well as my face?",
+    "a": "Yes. The directions also say to apply it to the face, neck, and other areas exposed to UV rays."
+   },
+   {
+    "id": "s-17",
+    "q": "Can men use it?",
+    "a": "Yes, anyone can use it. Male participants were included in the clinical testing (UV protection test)."
+   },
+   {
+    "id": "s-18",
+    "q": "Can children use it?",
+    "a": "This product has not been tested or labeled for children. For children, we recommend a sunscreen labeled for children."
+   },
+   {
+    "id": "s-19",
+    "q": "Can I use it during pregnancy?",
+    "a": "It has not been specifically tested for use during pregnancy. Please review the full ingredient list with your healthcare provider before use."
+   },
+   {
+    "id": "s-20",
+    "q": "Is it okay for acne-prone skin?",
+    "a": "We have not run suitability tests for acne-prone skin (such as non-comedogenic testing). Many Hwahae reviews report no breakouts, but some reviewers had minor breakouts. Watch how your skin reacts when you first use it."
+   },
+   {
+    "id": "s-21",
+    "q": "What is the difference between the blue tube and the white tube?",
+    "a": "The formula is the same; only the packaging design changed. We improved the container after many users found the old one inconvenient."
+   },
+   {
+    "id": "s-22",
+    "q": "A lot comes out when I first open it.",
+    "a": "It is a light lotion texture, so pressing hard can push out a lot at once. Squeeze the tube gently to control the amount."
+   },
+   {
+    "id": "s-23",
+    "q": "What is the shelf life?",
+    "a": "Use within 36 months of manufacture and within 12 months of opening. If the expiration date printed on the container comes first, use it only until that date."
+   },
+   {
+    "id": "s-25",
+    "q": "What are the Hwahae Awards?",
+    "a": "It won No. 1 in the Soothing category of the Sun Care (Sunscreen/Lotion) section at the 2025 H2 Hwahae Awards. The Hwahae Awards are selected based on consumer review and rating data."
+   }
+  ]
+ },
+ {
+  "key": "cleansing",
+  "label": "Matcha Depuffing Cleansing Milk",
+  "items": [
+   {
+    "id": "c-01",
+    "q": "How do I use it?",
+    "a": "Dispense an appropriate amount onto dry hands and spread it over a dry face. With your fingertips, massage in light rolling motions from the center of the face outward and from bottom to top, then rinse thoroughly with water. Finishing with a light splash of cold water may help relieve temporary puffiness."
+   },
+   {
+    "id": "c-02",
+    "q": "How many pumps should I use?",
+    "a": "Use 3–4 pumps at a time and spread over your whole face. You can use a little more when removing heavy makeup."
+   },
+   {
+    "id": "c-03",
+    "q": "Do I need to double cleanse?",
+    "a": "Sunscreen and light makeup come off with one wash of the cleansing milk. If you wore heavy makeup or waterproof products, remove them first with a dedicated remover or wash once more after the cleansing milk."
+   },
+   {
+    "id": "c-04",
+    "q": "Does it remove waterproof mascara?",
+    "a": "It is hard to remove completely in one go. This is also the most common drawback mentioned in Hwahae reviews. Remove waterproof eye and lip makeup first with a point makeup remover."
+   },
+   {
+    "id": "c-05",
+    "q": "It doesn't foam.",
+    "a": "That is normal. It is a milk-type cleanser that you spread on without foaming to dissolve makeup and impurities. It contains mild cleansing ingredients such as decyl glucoside."
+   },
+   {
+    "id": "c-06",
+    "q": "My skin still feels slippery after rinsing.",
+    "a": "That may be the moisturizing ingredients remaining on your skin. Rinse thoroughly with lukewarm water. If you prefer a squeaky-clean finish, you can wash again with a gentle foam cleanser."
+   },
+   {
+    "id": "c-07",
+    "q": "I don't really notice the depuffing effect.",
+    "a": "The depuffing effect is temporary, and how much you notice it varies from person to person. In a test by the Korea Institute of Dermatological Sciences, facial volume in 22 women decreased by an average of 0.47 cc right after one use (measured by 3D imaging). Try finishing with a cold-water rinse as well."
+   },
+   {
+    "id": "c-08",
+    "q": "Does it work on blackheads and whiteheads?",
+    "a": "Right after one use, blackhead area on the sides of the nose decreased by 43.92% and whitehead area on the chin or forehead decreased by 51.97% (22 women). This test measured cleansing effect; it does not mean the product reduces pore size."
+   },
+   {
+    "id": "c-09",
+    "q": "How well does it remove makeup?",
+    "a": "In a test cleansing makeup applied to the inner forearm once, the cleansing improvement rate was 96.68% (measured by skin brightness, 22 women). For heavy makeup and waterproof products, see C-03."
+   },
+   {
+    "id": "c-10",
+    "q": "Does it contain matcha? Does it smell like matcha?",
+    "a": "It contains a PDRN ingredient (sodium DNA) derived from matcha. No fragrance is added, so it does not smell like matcha."
+   },
+   {
+    "id": "c-11",
+    "q": "Does it contain PDRN?",
+    "a": "Yes. It contains 0.01 ppm of matcha-derived PDRN (sodium DNA)."
+   },
+   {
+    "id": "c-12",
+    "q": "Does it sting if it gets in my eyes?",
+    "a": "It may sting if it gets directly into your eyes, so rinse with water right away. In an eye irritation test (in vitro) using a cell model of the human cornea, it was classified as non-irritating."
+   },
+   {
+    "id": "c-13",
+    "q": "Can people with sensitive skin use it?",
+    "a": "In a 24-hour patch test (31 participants) the skin reaction score was 0.00 and it was classified as non-irritating. If you have a skin condition such as atopic dermatitis or seborrheic dermatitis, try it on a small area first and consult a dermatologist if you have symptoms."
+   },
+   {
+    "id": "c-14",
+    "q": "Can I use it for my morning wash?",
+    "a": "Yes. Our product details also describe using it in the morning. Apply to a dry face, massage lightly, and rinse with water."
+   },
+   {
+    "id": "c-15",
+    "q": "Does my skin feel tight after washing?",
+    "a": "In the survey, all 22 participants said their skin did not feel tight and stayed moisturized (right after one use). It contains ceramide NP and low-molecular hyaluronic acid."
+   },
+   {
+    "id": "c-16",
+    "q": "Is it okay for oily skin?",
+    "a": "It leaves a moist finish, so oily skin may find it less refreshing. In that case, use it together with a gentle foam cleanser."
+   },
+   {
+    "id": "c-18",
+    "q": "What are the shelf life and storage instructions?",
+    "a": "Use within 30 months of manufacture and within 12 months of opening. Store away from direct sunlight and out of the reach of children."
+   }
+  ]
+ },
+ {
+  "key": "brand",
+  "label": "Brand, purchase & contact",
+  "items": [
+   {
+    "id": "b-01",
+    "q": "What kind of brand is NEUVELIF?",
+    "a": "NEUVELIF is a dermocosmetic brand that designs products around skin before and after procedures, tailored to timing and skin condition. It launched on July 31, 2025 with the Backhap Recovery Sunscreen and is operated by Leaders Associates Co., Ltd."
+   },
+   {
+    "id": "b-02",
+    "q": "What does the name mean?",
+    "a": "It combines NEU (new), REVIVE (renewed vitality), and RELIEF (comfort)."
+   },
+   {
+    "id": "b-03",
+    "q": "Where is it made?",
+    "a": "It is manufactured in the Republic of Korea by Kolmar Korea Co., Ltd."
+   },
+   {
+    "id": "b-04",
+    "q": "Where can I buy it?",
+    "a": "See “Where to buy” on each product page. In Korea, it is available at the Naver Brand Store, Coupang, Gmarket, Hwahae, and the KakaoTalk Store; in Japan, at Qoo10 Japan. It is also available at partner pharmacies across Korea."
+   },
+   {
+    "id": "b-05",
+    "q": "Can I see the original clinical reports?",
+    "a": "The testing institutions' reports cannot be published, so this site summarizes the institution, period, participants, and results."
+   },
+   {
+    "id": "b-06",
+    "q": "How do I contact you?",
+    "a": "Please email contact@neuvelif.com and we will get back to you as soon as possible."
+   }
+  ]
+ }
+]

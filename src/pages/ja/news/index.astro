@@ -1,0 +1,80 @@
+---
+// 소식 (주소: /news/) — 기사 목록은 src/data/news.ts 에서 가져옵니다.
+import Base from '../../../i18n/ja/layouts/Base.astro';
+import { PRESS } from '../../../i18n/ja/data/news';
+import { breadcrumbs } from '../../../i18n/ja/schema';
+import { PATHS } from '../../../i18n/ja/site';
+
+const title = 'お知らせ';
+const description = 'NEUVELIFの受賞ニュースと報道をまとめました。2025年下半期 ファへアワード サンケア部門 鎮静カテゴリー1位、抹茶PDRN デパフィング クレンジング発売など。';
+const jsonLd = [breadcrumbs(Astro.site!, [['ホーム', '/ja/'], ['お知らせ', PATHS.news]])];
+const LBL = "margin: 0; font-family: 'Barlow Condensed', 'Noto Sans JP', sans-serif; font-size: 16px; font-weight: 600; letter-spacing: 0.12em; color: #1170AE";
+const WRAP = 'max-width: 1240px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); box-sizing: border-box';
+const years = [...new Set(PRESS.map((p) => p.date.slice(0, 4)))];
+const arrow = '<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: none"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg>';
+---
+<Base title={title} description={description} current="news" jsonLd={jsonLd}>
+<nav aria-label="現在地" style="max-width: 1240px; margin: 0 auto; padding: 16px clamp(20px, 4vw, 48px) 0; box-sizing: border-box; font-size: 13px; color: #56626D">
+<a href="/ja/" style="color: #56626D; text-decoration: none; padding: 8px 0">ホーム</a>
+<span aria-hidden="true" style="padding: 0 8px">›</span>
+<span aria-current="page" style="color: #12324F; font-weight: 500">お知らせ</span>
+</nav>
+
+{/* ── 소식 ── */}
+<section aria-labelledby="news-page-title" style="padding: clamp(24px, 3vw, 40px) 0 clamp(20px, 2.5vw, 32px)">
+<div style={`${WRAP}; display: flex; flex-direction: column; gap: 14px; max-width: 1240px`}>
+<p style={LBL}>NEWS</p>
+<h1 id="news-page-title" style="margin: 0; font-size: clamp(30px, 3.4vw, 44px); line-height: 1.25; letter-spacing: -0.02em; color: #12324F">お知らせ</h1>
+</div>
+</section>
+
+{/* ── 언론 보도 ── 페이지 제목 바로 아래에 둡니다. */}
+<section aria-labelledby="press-title" style="padding: 0 0 clamp(48px, 6vw, 80px)">
+<div style={`${WRAP}; display: flex; flex-direction: column; gap: 28px`}>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px 24px">
+<h2 id="press-title" style="margin: 0; font-size: clamp(22px, 2.4vw, 30px); line-height: 1.3; color: #12324F">報道</h2>
+<p style="margin: 0; color: #56626D">全{PRESS.length}件</p>
+</div>
+{years.map((y) => (
+  <div style="display: flex; flex-wrap: wrap; gap: 12px 48px">
+  <h3 style="flex: 0 0 120px; margin: 0; padding-top: 18px; font-family: 'Barlow Condensed', 'Noto Sans JP', sans-serif; font-size: 28px; font-weight: 600; color: #1170AE">{y}</h3>
+  <ul style="flex: 1 1 560px; min-width: 0; list-style: none; margin: 0; padding: 0; border-top: 2px solid #12324F">
+  {PRESS.filter((p) => p.date.startsWith(y)).map((p) => (
+    <li style="border-bottom: 1px solid #D5E0E8">
+    <a href={p.url} target="_blank" rel="noopener" class="press-row">
+    <span style="flex: 0 0 auto; min-width: 150px; font-size: 14px; color: #56626D; font-variant-numeric: tabular-nums">{p.date} · {p.outlet}</span>
+    <span style="flex: 1 1 240px; font-size: 17px; font-weight: 700; line-height: 1.5; color: #12324F">{p.title}<span class="sr-only"> （新しいウィンドウで開きます）</span></span>
+    <Fragment set:html={arrow} />
+    </a>
+    </li>
+  ))}
+  </ul>
+  </div>
+))}
+<p style="margin: 0; font-size: 14px; color: #56626D">記事の内容は各メディアの表現であり、製品の効能・効果を示すものではありません。ブランドのあゆみは<a href={`${PATHS.brand}`} style="color: #1170AE">ブランドストーリー</a>でご覧いただけます。</p>
+</div>
+</section>
+{/* ── 수상 소식 ── 언론 보도 아래에 둡니다. */}
+<section aria-labelledby="award-title" style="background: #EEF3F7; color: #12324F; padding: clamp(48px, 6vw, 80px) 0">
+<div style={`${WRAP}; display: flex; flex-wrap: wrap; align-items: center; gap: 28px 64px`}>
+<div style="flex: 1 1 400px; display: flex; flex-direction: column; gap: 12px">
+<p style={LBL}>AWARD · 2025.11</p>
+<h2 id="award-title" style="margin: 0; font-size: clamp(24px, 2.8vw, 36px); line-height: 1.35">2025年下半期 ファへアワード<br>サンケア部門（日焼け止め／ローション）<br>鎮静カテゴリー1位</h2>
+</div>
+<div style="flex: 1 1 480px; display: flex; flex-direction: column; gap: 16px">
+<p style="margin: 0; font-size: 17px; color: #3C4752">リリーリカバリーサンクリームが、ファへユーザーのレビューと評価をもとに選ばれる2025年下半期 ファへアワードで、サンケア部門（日焼け止め／ローション）鎮静カテゴリー1位に選ばれました。</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<a href={PATHS.sunscreen} style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 24px; background: #12324F; color: #FFFFFF; text-decoration: none; font-weight: 700">リリーリカバリーサンクリームを見る</a>
+<a href="https://www.mydaily.co.kr/page/view/2025112015485021661" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; min-height: 52px; padding: 0 24px; border: 1px solid #12324F; color: #12324F; text-decoration: none; font-weight: 700">関連記事<span class="sr-only"> （MyDaily、新しいウィンドウ）</span><Fragment set:html={arrow} /></a>
+</div>
+</div>
+</div>
+</section>
+
+</Base>
+
+<style>
+  .press-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 24px; padding: 20px 4px; color: #12324F; text-decoration: none; }
+  .press-row:hover { background: #F4F7FA; }
+  .press-row:hover span { text-decoration: underline; text-underline-offset: 3px; }
+</style>

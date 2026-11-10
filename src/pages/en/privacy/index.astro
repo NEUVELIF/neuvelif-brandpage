@@ -1,0 +1,24 @@
+---
+// 개인정보처리방침 (주소: /privacy/)
+import Base from '../../../i18n/en/layouts/Base.astro';
+import { COMPANY, BRAND } from '../../../i18n/en/site';
+const p = 'margin: 0; color: #3C4752; line-height: 1.8';
+const h = 'margin: 24px 0 0; font-size: 19px; color: #12324F';
+---
+<Base title="Privacy Policy" description="Privacy policy for the NEUVELIF (Leaders Associates Co., Ltd.) website">
+{/* ── 개인정보처리방침 ── */}
+<section style="padding: clamp(48px, 6vw, 88px) 0">
+<div style="max-width: 820px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); box-sizing: border-box; display: flex; flex-direction: column; gap: 12px">
+<h1 style="margin: 0; font-size: clamp(26px, 3vw, 36px); color: #12324F">Privacy Policy</h1>
+<p style="margin: 0; font-size: 14px; color: #56626D">Effective November 10, 2026</p>
+<h2 style={h}>1. Personal information collected on this site</h2>
+<p style={p}>This site has no membership sign-up, ordering, or input forms and does not ask visitors to enter personal information directly. Products are purchased through each official retailer, and personal information in the purchase process is governed by that retailer's privacy policy.</p>
+<h2 style={h}>2. Email inquiries</h2>
+<p style={p}>{BRAND.email} — if you send an inquiry to this address, we use the email address and inquiry details you send only to reply to you. After we reply, we delete them without delay unless relevant laws require us to keep them.</p>
+<h2 style={h}>3. Privacy officer and contact</h2>
+<p style={p}>{COMPANY.name} · CEO {COMPANY.ceo} · {BRAND.email}</p>
+<h2 style={h}>4. Effective date</h2>
+<p style={p}>This privacy policy takes effect on November 10, 2026. If it changes, we will post the change on this page together with its effective date. This English version is a translation; if there is any discrepancy, the Korean version prevails.</p>
+</div>
+</section>
+</Base>

@@ -1,0 +1,143 @@
+---
+// 임상 연구 (주소: /research/) — 시험 내용은 src/data/research.ts 에서 가져옵니다.
+import Base from '../../../i18n/en/layouts/Base.astro';
+import { TESTS } from '../../../i18n/en/data/research';
+import { breadcrumbs } from '../../../i18n/en/schema';
+import { PATHS } from '../../../i18n/en/site';
+
+const title = 'Clinical research: clinical test results and conditions';
+const description = 'Results of 8 tests (7 clinical tests, 1 non-human test) on NEUVELIF Backhap Recovery Sunscreen and Matcha Depuffing Cleansing Milk, published with testing institution, period, participants, and method. Including SPF 53.9, UVAPF 18.6, and a 24-hour patch skin irritation score of 0.00.';
+const jsonLd = [breadcrumbs(Astro.site!, [['Home', '/en/'], ['Clinical Studies', PATHS.research]])];
+const LBL = "margin: 0; font-family: 'Barlow Condensed', 'Noto Sans KR', sans-serif; font-size: 16px; font-weight: 600; letter-spacing: 0.12em; color: #1170AE";
+const WRAP = 'max-width: 1240px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); box-sizing: border-box';
+const td = 'padding: 14px 12px; border-bottom: 1px solid #D5E0E8; vertical-align: top';
+const th = 'text-align: left; padding: 14px 12px; border-bottom: 1px solid #D5E0E8; font-weight: 700; color: #12324F';
+const groups = [
+  { key: 'sunscreen', name: 'Backhap Recovery Sunscreen', color: '#1170AE', page: PATHS.sunscreen },
+  { key: 'cleansing', name: 'Matcha Depuffing Cleansing Milk', color: '#2F5233', page: PATHS.cleansing },
+] as const;
+const total = TESTS.length;
+const human = TESTS.filter((t) => t.human).length;
+const sunCount = TESTS.filter((t) => t.product === 'sunscreen').length;
+const cleanCount = TESTS.filter((t) => t.product === 'cleansing').length;
+const surveys = {
+  sunscreen: { who: '22 women in the skin-soothing test, right after application, ‘somewhat agree’ or higher on a 6-point scale', rows: [['Skin texture feels smooth and refined', '100%'], ['Spreads smoothly without irritation', '100%'], ['Feels moisturized from within', '100%'], ['Layers with other cosmetics without pilling', '100%'], ['Absorbs naturally without greasiness', '100%'], ['Clean finish with no white cast', '95.5%']] },
+  cleansing: { who: '22 women in the efficacy test, right after one use, ‘agree’ or higher', rows: [['Stays moist without tightness after washing', '100%'], ['Clean finish with no residue', '100%'], ['Satisfied with cleansing power', '100%'], ['Satisfied with moisture', '100%']] },
+};
+---
+<Base title={title} description={description} current="research" jsonLd={jsonLd}>
+<nav aria-label="Breadcrumb" style="max-width: 1240px; margin: 0 auto; padding: 16px clamp(20px, 4vw, 48px) 0; box-sizing: border-box; font-size: 13px; color: #56626D">
+<a href="/en/" style="color: #56626D; text-decoration: none; padding: 8px 0">Home</a>
+<span aria-hidden="true" style="padding: 0 8px">›</span>
+<span aria-current="page" style="color: #12324F; font-weight: 500">Clinical Studies</span>
+</nav>
+
+{/* ── 시험 결과를 조건과 함께 공개합니다 ── */}
+<section aria-labelledby="research-page-title" style="padding: clamp(24px, 3vw, 40px) 0 clamp(40px, 5vw, 64px)">
+<div style={`${WRAP}; display: flex; flex-direction: column; gap: 28px`}>
+<div style="display: flex; flex-direction: column; gap: 14px; max-width: 860px">
+<p style={LBL}>CLINICAL RESEARCH</p>
+<h1 id="research-page-title" style="margin: 0; font-size: clamp(30px, 3.4vw, 44px); line-height: 1.25; letter-spacing: -0.02em; color: #12324F">We publish test results with their conditions</h1>
+<p style="margin: 0; font-size: 18px; color: #3C4752">NEUVELIF commissions external testing institutions to test each product, and lists the testing institution, number of participants, and measurement time next to each number. Clinical tests, non-human tests, and usage surveys are clearly distinguished.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: 16px">
+<div style="background: #12324F; color: #FFFFFF; padding: 26px; display: flex; flex-direction: column; gap: 6px">
+<p style="margin: 0; font-size: 48px; font-weight: 700; line-height: 1.15">{total}</p>
+<p style="margin: 0; color: #C9D6E2">Total tests on NEUVELIF products<br>Backhap Recovery Sunscreen: {sunCount} · Matcha Depuffing Cleansing Milk: {cleanCount}</p>
+</div>
+<div style="border: 1px solid #D5E0E8; padding: 26px; display: flex; flex-direction: column; gap: 6px">
+<p style="margin: 0; font-size: 48px; font-weight: 700; line-height: 1.15; color: #12324F">{human}</p>
+<p style="margin: 0; color: #3C4752">Clinical tests (on people)</p>
+</div>
+<div style="border: 1px solid #D5E0E8; padding: 26px; display: flex; flex-direction: column; gap: 6px">
+<p style="margin: 0; font-size: 48px; font-weight: 700; line-height: 1.15; color: #12324F">{total - human}</p>
+<p style="margin: 0; color: #3C4752">Non-human test (reconstructed cornea model)</p>
+</div>
+<div style="border: 1px solid #D5E0E8; padding: 26px; display: flex; flex-direction: column; gap: 6px">
+<p style="margin: 0; font-size: 48px; font-weight: 700; line-height: 1.15; color: #12324F">0</p>
+<p style="margin: 0; color: #3C4752">Reported adverse reactions</p>
+</div>
+</div>
+</div>
+</section>
+
+{/* ── 시험 건 한눈에 보기 ── */}
+<section aria-labelledby="summary-title" style="border-top: 1px solid #D5E0E8; padding: clamp(48px, 6vw, 80px) 0">
+<div style={`${WRAP}; display: flex; flex-direction: column; gap: 24px`}>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<p style={LBL}>AT A GLANCE</p>
+<h2 id="summary-title" style="margin: 0; font-size: clamp(22px, 2.4vw, 30px); line-height: 1.3; color: #12324F">All {total} tests at a glance</h2>
+</div>
+<div style="overflow-x: auto; border-top: 2px solid #12324F">
+<table style="width: 100%; min-width: 860px; border-collapse: collapse; font-size: 15px">
+<caption class="sr-only">Summary of NEUVELIF product test results</caption>
+<thead><tr>
+<th scope="col" style={th}>Products</th><th scope="col" style={th}>Test</th><th scope="col" style={th}>Result</th><th scope="col" style={th}>Testing institutions</th><th scope="col" style={th}>Participants · period</th>
+</tr></thead>
+<tbody>
+{TESTS.map((t) => (
+  <tr>
+  <td style={`${td}; white-space: nowrap; color: ${t.product === 'sunscreen' ? '#1170AE' : '#2F5233'}; font-weight: 700`}>{t.product === 'sunscreen' ? 'Sunscreen' : 'Cleansing milk'}</td>
+  <th scope="row" style={`${th}; background: #F5F8FA; font-weight: 500`}>{t.name}</th>
+  <td style={`${td}; font-weight: 700; color: #12324F`}>{t.results ? t.results.map(([l, v]) => <span style="display: block; font-weight: 500"><span style="color: #56626D">{l}</span> {v}</span>) : t.result}</td>
+  <td style={td}>{t.org}</td>
+  <td style={td}>{t.subjects} · {t.period}</td>
+  </tr>
+))}
+</tbody>
+</table>
+</div>
+</div>
+</section>
+
+{groups.map((gr) => (
+<section id={gr.key} aria-labelledby={`${gr.key}-title`} style="border-top: 1px solid #D5E0E8; padding: clamp(48px, 6vw, 80px) 0">
+<div style={`${WRAP}; display: flex; flex-direction: column; gap: 24px`}>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 12px 32px">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<p style={`${LBL}; color: ${gr.color}`}>{gr.key === 'sunscreen' ? 'SUNSCREEN' : 'CLEANSING MILK'}</p>
+<h2 id={`${gr.key}-title`} style="margin: 0; font-size: clamp(22px, 2.4vw, 30px); line-height: 1.3; color: #12324F">{gr.name}</h2>
+</div>
+<a href={`${gr.page}#tests`} style={`display: inline-flex; align-items: center; min-height: 44px; color: ${gr.color}; font-weight: 700; text-decoration: none`}>View as charts on the product page →</a>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(360px, 100%), 1fr)); gap: 16px">
+{TESTS.filter((t) => t.product === gr.key).map((t) => (
+  <article style={`border: 1px solid #D5E0E8; border-top: 3px solid ${t.human ? gr.color : '#8FA3B5'}; ${t.human ? '' : 'border-style: dashed; border-top-style: solid;'} padding: 24px; display: flex; flex-direction: column; gap: 10px`}>
+  <p style="margin: 0; font-size: 14px; font-weight: 700; color: #56626D">{t.human ? 'Clinical tests' : 'Non-human test'}</p>
+  <h3 style="margin: 0; font-size: 18px; color: #12324F">{t.name}</h3>
+  {t.results
+    ? <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 6px">{t.results.map(([l, v]) => <li style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 12px; padding: 8px 0; border-bottom: 1px solid #EEF2F5"><span style="color: #3C4752">{l}</span><strong style="color: #12324F">{v}</strong></li>)}</ul>
+    : <p style={`margin: 0; font-size: 36px; font-weight: 700; line-height: 1.2; color: ${gr.color}`}>{t.result}</p>}
+  <p style="margin: 0; color: #3C4752">{t.detail}</p>
+  <dl style="margin: 4px 0 0; display: grid; grid-template-columns: auto 1fr; gap: 4px 12px; font-size: 14px; color: #56626D">
+  <dt style="font-weight: 700">Institution</dt><dd style="margin: 0">{t.org}</dd>
+  <dt style="font-weight: 700">Stage</dt><dd style="margin: 0">{t.period}</dd>
+  <dt style="font-weight: 700">Participants</dt><dd style="margin: 0">{t.subjects}</dd>
+  <dt style="font-weight: 700">Method</dt><dd style="margin: 0">{t.method}</dd>
+  </dl>
+  </article>
+))}
+</div>
+<div style="border: 1px solid #D5E0E8; padding: 22px; display: flex; flex-direction: column; gap: 10px">
+<h3 style="margin: 0; font-size: 17px; color: #12324F">Usage survey <span style="font-size: 14px; font-weight: 500; color: #56626D">· Participants' own impressions, not instrument measurements ({surveys[gr.key].who})</span></h3>
+<ul style="margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr)); gap: 4px 24px">
+{surveys[gr.key].rows.map(([q, v]) => <li style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #EEF2F5"><span style="color: #3C4752">{q}</span><strong style="color: #12324F">{v}</strong></li>)}
+</ul>
+</div>
+</div>
+</section>
+))}
+
+{/* ── 결과를 읽을 때 알아 두세요 ── */}
+<section aria-labelledby="note-title" style="background: #F4F7FA; padding: clamp(40px, 5vw, 64px) 0">
+<div style={`${WRAP}; display: flex; flex-direction: column; gap: 12px`}>
+<h2 id="note-title" style="margin: 0; font-size: 20px; color: #12324F">Keep in mind when reading the results</h2>
+<ul style="margin: 0; padding-left: 20px; color: #3C4752; display: flex; flex-direction: column; gap: 6px">
+<li>Results were obtained under test conditions and may vary from person to person.</li>
+<li>These tests were not performed on skin right after a procedure. For when to use products after a procedure, follow the procedure guides and your clinic's instructions.</li>
+<li>The eye irritation test used a cell model rather than people, so it is shown separately from the clinical tests.</li>
+<li>We do not publish the testing institutions' original reports; we summarize the institution, period, participants, method, and results.</li>
+</ul>
+</div>
+</section>
+</Base>

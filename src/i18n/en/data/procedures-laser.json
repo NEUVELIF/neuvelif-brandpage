@@ -1,0 +1,164 @@
+[
+  {
+    "name": "Ulthera & Shurink",
+    "alias": "High-intensity focused ultrasound (HIFU) lifting · including Liftera and LinearZ",
+    "skin": "Ultrasound heat reaches the deep layers of the skin, leaving almost no wound on the surface. Redness usually settles within a few hours, and the jawline and cheeks may feel tender or slightly swollen for a few days.",
+    "sunWhen": "From the day of the procedure",
+    "sunHow": [
+      "Once the warmth settles, apply to your whole face before heading home.",
+      "Don't rub tender areas along the jawline and cheeks; spread it on gently with your palms, pressing lightly.",
+      "Apply 30 minutes before going out and reapply every 2–3 hours."
+    ],
+    "cleanWhen": "From the evening of the procedure",
+    "cleanHow": [
+      "Wash gently with lukewarm water.",
+      "Many clinics advise avoiding facial massage for a while after lifting. Until your clinic says it's okay, spread it on without the rolling massage and rinse right away."
+    ],
+    "avoid": [
+      "Avoid saunas, alcohol, and strenuous exercise for a few days.",
+      "Take a short break from scrubs and peeling products."
+    ],
+    "product": [
+      "In a test where skin was warmed with infrared light, the temperature of the treated cheek dropped by 4.85℃ right after application (Elid Co., Ltd., 22 women). This test was not performed on skin right after a procedure.",
+      "SPF50+ PA++++ blocks both UVA and UVB."
+    ]
+  },
+  {
+    "name": "Thermage, InMode & Oligio",
+    "alias": "Radiofrequency (RF) lifting · including Density, TuneFace, and similar devices",
+    "skin": "These procedures heat the inside of the skin with radiofrequency energy. Redness and a burning sensation usually settle within 2–3 hours, but depending on your skin they can last up to two days. Mild swelling may also occur.",
+    "sunWhen": "From the day of the procedure in most cases",
+    "sunHow": [
+      "Apply to your whole face once the warmth has settled.",
+      "Some clinics advise washing your face and wearing makeup only from the next day. In that case, cover up with a hat or parasol on the day and start applying the next day.",
+      "If your skin feels dry, apply moisturizer first, then layer sunscreen on top."
+    ],
+    "cleanWhen": "From the day of the procedure, or when your clinic advises",
+    "cleanHow": [
+      "Some clinics recommend washing with lukewarm water instead of cold water.",
+      "So for a few days after the procedure, skip the cleansing milk's ‘cold-water finish’ tip and rinse with lukewarm water.",
+      "Don't rub; spread it on lightly and rinse."
+    ],
+    "avoid": [
+      "Avoid saunas, jjimjilbang (Korean bathhouses), swimming pools, and heavy drinking for about a week.",
+      "Take about a week off from peeling treatments and scrubs."
+    ],
+    "product": [
+      "A milk-type cleanser you spread directly onto a dry face, with no need to foam.",
+      "The cleansing milk scored 0.00 for skin irritation in a 24-hour patch test and was rated non-irritating (Korea Institute of Dermatological Sciences, 31 participants)."
+    ]
+  },
+  {
+    "name": "Titanium lifting",
+    "alias": "Laser lifting",
+    "skin": "Laser heat reaches the skin's supporting structures. Redness and a burning sensation settle quickly, but tenderness, swelling, and mild bruising may last 1–2 weeks, and skin tends to become dry.",
+    "sunWhen": "From the day of the procedure",
+    "sunHow": [
+      "Apply plenty of moisturizing cream, then layer sunscreen on top.",
+      "Don't press on bruised or tender areas; lay it on gently."
+    ],
+    "cleanWhen": "From the day of the procedure, gently",
+    "cleanHow": [
+      "Wash with lukewarm water.",
+      "Many clinics advise avoiding facial meridian massage and other massage for about 2 weeks. During this time, spread it on without the rolling massage and rinse right away."
+    ],
+    "avoid": [
+      "Avoid alcohol, smoking, saunas, jjimjilbang, and excessive exercise for about a week.",
+      "Avoid scrubs, peels, and facial meridian massage for about 2 weeks."
+    ],
+    "product": [
+      "In a usage survey, all 22 respondents said their skin ‘felt moisturized from within’ (right after application, self-assessment).",
+      "SPF50+ PA++++; skin irritation score of 0.00 in a 24-hour patch test (Elid Co., Ltd., 34 participants)."
+    ]
+  },
+  {
+    "name": "ONDA lifting",
+    "alias": "Microwave lifting",
+    "skin": "Microwave heat is delivered into the skin. Redness, warmth, and slight swelling may last a few hours, and the treated area may feel tender.",
+    "sunWhen": "From the day of the procedure",
+    "sunHow": [
+      "Once the warmth settles, apply a moisturizing cream, then apply sunscreen generously.",
+      "Apply 30 minutes before going out and reapply every 2–3 hours."
+    ],
+    "cleanWhen": "From the day of the procedure",
+    "cleanHow": [
+      "Wash gently with lukewarm water.",
+      "On tender areas, don't roll; spread it on and rinse right away."
+    ],
+    "avoid": [
+      "Avoid saunas, jjimjilbang, strenuous exercise, and alcohol for a week."
+    ],
+    "product": [
+      "In a test on skin warmed with infrared light, the temperature of the treated cheek dropped by 4.85℃ right after application (Elid Co., Ltd., 22 women). This test was not performed on skin right after a procedure."
+    ]
+  },
+  {
+    "name": "Laser toning",
+    "alias": "Including pico toning and Genesis",
+    "skin": "A low-power laser, so there is almost no surface wound. Slight redness and a burning sensation settle within a few hours, and occasionally tiny scabs or dryness may occur.",
+    "sunWhen": "From the day of the procedure",
+    "sunHow": [
+      "Toning is often done over several sessions. Daily application between sessions is the basic rule.",
+      "Apply 30 minutes before going out and reapply every 2–3 hours."
+    ],
+    "cleanWhen": "From the day of the procedure",
+    "cleanHow": [
+      "Don't rub; spread it on lightly, rinse, and pat dry with a towel.",
+      "If tiny scabs form, don't pick them off; let them fall off on their own."
+    ],
+    "avoid": [
+      "Avoid heavy drinking, saunas, and strenuous exercise.",
+      "Space out exfoliation and peels."
+    ],
+    "product": [
+      "A triple-function sunscreen for UV protection, brightening, and anti-wrinkle care (niacinamide, adenosine).",
+      "Some clinics advise taking a break from brightening and anti-wrinkle functional cosmetics right after the procedure. If you were given that advice, follow your clinic during that period."
+    ]
+  },
+  {
+    "name": "IPL",
+    "alias": "Light-based procedures",
+    "skin": "Redness may occur, and blemishes may darken temporarily before flaking off.",
+    "sunWhen": "From the day of the procedure",
+    "sunHow": [
+      "Apply thoroughly, including over darkened blemishes.",
+      "Don't rub over darkened blemishes; lay it on gently."
+    ],
+    "cleanWhen": "From the evening of the procedure",
+    "cleanHow": [
+      "Use lukewarm water.",
+      "Until the darkened blemishes flake off, spread it on lightly without the rolling massage and rinse."
+    ],
+    "avoid": [
+      "Don't pick at darkened blemishes.",
+      "Take a short break from exfoliants, scrubs, and retinol."
+    ],
+    "product": [
+      "SPF50+ PA++++ protects against both UVA and UVB (SPF 53.9, UVAPF 18.6).",
+      "Skin irritation score of 0.00 in a 24-hour patch test, rated non-irritating (Elid Co., Ltd., 34 participants)."
+    ]
+  },
+  {
+    "name": "Vascular lasers",
+    "alias": "Redness lasers · Vbeam, Excel V, and more",
+    "skin": "Redness may temporarily deepen with slight swelling (a few hours to 1–2 days). In some cases purple bruising may appear and last from a few days to about 2 weeks.",
+    "sunWhen": "From the day of the procedure",
+    "sunHow": [
+      "Don't rub bruised areas; pat it on with your fingertips.",
+      "Skin treated with a laser may be sensitive to sunlight for a while, so the habit of applying every day matters."
+    ],
+    "cleanWhen": "From the evening of the procedure",
+    "cleanHow": [
+      "Use lukewarm water instead of hot water.",
+      "Spread it on lightly without the rolling massage and rinse.",
+      "If scabs form, leave them alone; don't pick them off."
+    ],
+    "avoid": [
+      "Avoid saunas, heavy drinking, and exercise that makes you sweat a lot for a few days."
+    ],
+    "product": [
+      "Skin irritation score of 0.00 in a 24-hour patch test, rated non-irritating (Elid Co., Ltd., 34 participants).",
+      "No fragrance added."
+    ]
+  }
+]

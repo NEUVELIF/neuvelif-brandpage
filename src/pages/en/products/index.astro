@@ -1,0 +1,75 @@
+---
+// 제품 목록 (주소: /products/)
+import Base from '../../../i18n/en/layouts/Base.astro';
+import ProductCards from '../../../i18n/en/components/ProductCards.astro';
+import { breadcrumbs, productLd } from '../../../i18n/en/schema';
+import { PATHS } from '../../../i18n/en/site';
+
+const title = 'Products';
+const description = 'NEUVELIF Backhap Recovery Sunscreen (SPF50+ PA++++, 75 mL) and Matcha Depuffing Cleansing Milk (300 mL): a sunscreen and a cleanser made with sensitive skin before and after skin procedures in mind.';
+const jsonLd = [
+  breadcrumbs(Astro.site!, [['Home', '/en/'], ['Products', PATHS.products]]),
+  {
+    '@context': 'https://schema.org', '@type': 'ItemList', name: 'NEUVELIF products',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, url: new URL(import.meta.env.BASE_URL.replace(/\/$/, '') + PATHS.sunscreen, Astro.site).href, name: 'Backhap Recovery Sunscreen' },
+      { '@type': 'ListItem', position: 2, url: new URL(import.meta.env.BASE_URL.replace(/\/$/, '') + PATHS.cleansing, Astro.site).href, name: 'Matcha Depuffing Cleansing Milk' },
+    ],
+  },
+];
+const LBL = "margin: 0; font-family: 'Barlow Condensed', 'Noto Sans KR', sans-serif; font-size: 16px; font-weight: 600; letter-spacing: 0.12em; color: #1170AE";
+const WRAP = 'max-width: 1240px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); box-sizing: border-box';
+const td = 'padding: 16px 14px; border-bottom: 1px solid #D5E0E8; vertical-align: top';
+const th = 'text-align: left; padding: 16px 14px; border-bottom: 1px solid #D5E0E8; font-weight: 700; color: #12324F';
+---
+<Base title={title} description={description} current="products" jsonLd={jsonLd}>
+<nav aria-label="Breadcrumb" style="max-width: 1240px; margin: 0 auto; padding: 16px clamp(20px, 4vw, 48px) 0; box-sizing: border-box; font-size: 13px; color: #56626D">
+<a href="/en/" style="color: #56626D; text-decoration: none; padding: 8px 0">Home</a>
+<span aria-hidden="true" style="padding: 0 8px">›</span>
+<span aria-current="page" style="color: #12324F; font-weight: 500">Products</span>
+</nav>
+
+{/* ── 자외선 차단과 순한 세안, 가장 기본부터 ── */}
+<section aria-labelledby="products-page-title" style="padding: clamp(24px, 3vw, 40px) 0 clamp(48px, 6vw, 88px)">
+<div style={`${WRAP}; display: flex; flex-direction: column; gap: 32px`}>
+<div style="display: flex; flex-direction: column; gap: 14px; max-width: 820px">
+<p style={LBL}>PRODUCTS</p>
+<h1 id="products-page-title" style="margin: 0; font-size: clamp(30px, 3.4vw, 44px); line-height: 1.25; letter-spacing: -0.02em; color: #12324F">Sun protection and gentle cleansing,<br>the basics first</h1>
+<p style="margin: 0; font-size: 18px; color: #3C4752">A sunscreen and a cleansing milk made with sensitive skin before and after skin procedures in mind. All figures are clinical test results, listed with the testing institution and conditions.</p>
+</div>
+<ProductCards />
+</div>
+</section>
+
+{/* ── 두 제품 한눈에 보기 ── */}
+<section aria-labelledby="compare-title" style="border-top: 1px solid #D5E0E8; padding: clamp(48px, 6vw, 80px) 0">
+<div style={`${WRAP}; display: flex; flex-direction: column; gap: 24px`}>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<p style={LBL}>AT A GLANCE</p>
+<h2 id="compare-title" style="margin: 0; font-size: clamp(22px, 2.4vw, 30px); line-height: 1.3; color: #12324F">Both products at a glance</h2>
+</div>
+<div style="overflow-x: auto; border-top: 2px solid #12324F">
+<table style="width: 100%; min-width: 720px; border-collapse: collapse; font-size: 15px">
+<caption class="sr-only">Backhap Recovery Sunscreen vs. Matcha Depuffing Cleansing Milk</caption>
+<thead><tr>
+<th scope="col" style={`${th}; width: 18%`}>Item</th>
+<th scope="col" style={`${th}; color: #1170AE`}>Backhap Recovery Sunscreen</th>
+<th scope="col" style={`${th}; color: #2F5233`}>Matcha Depuffing Cleansing Milk</th>
+</tr></thead>
+<tbody>
+<tr><th scope="row" style={`${th}; background: #F5F8FA`}>Type</th><td style={td}>Sunscreen (chemical filters)</td><td style={td}>Milk cleanser (rinse-off)</td></tr>
+<tr><th scope="row" style={`${th}; background: #F5F8FA`}>Volume</th><td style={td}>75mL</td><td style={td}>300mL</td></tr>
+<tr><th scope="row" style={`${th}; background: #F5F8FA`}>Functional</th><td style={td}>Triple-function: UV protection, brightening, anti-wrinkle (SPF50+ PA++++)</td><td style={td}>—</td></tr>
+<tr><th scope="row" style={`${th}; background: #F5F8FA`}>How to use</th><td style={td}>Spread over the face, neck, and other areas as the last step of skincare. Apply 30 minutes before going out; reapplying every 2–3 hours is recommended</td><td style={td}>3–4 pumps onto a dry face, loosen with a rolling massage, then rinse with water</td></tr>
+<tr><th scope="row" style={`${th}; background: #F5F8FA`}>Skin irritation test</th><td style={td}>24-hour patch, mean skin irritation score 0.00, non-irritating (Elid Co., Ltd., 34 participants)</td><td style={td}>24-hour patch, mean skin reaction score 0.00, non-irritating (Korea Institute of Dermatological Sciences, 31 participants)</td></tr>
+</tbody>
+</table>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<a href={PATHS.guide} style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 24px; background: #12324F; color: #FFFFFF; text-decoration: none; font-weight: 700">See timing for my procedure</a>
+<a href={PATHS.research} style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 24px; border: 1px solid #12324F; color: #12324F; text-decoration: none; font-weight: 700">View all test results</a>
+</div>
+<p style="margin: 0; font-size: 14px; color: #56626D">See ‘Where to buy’ on each product page. They are also available at partner pharmacies across Korea.</p>
+</div>
+</section>
+</Base>

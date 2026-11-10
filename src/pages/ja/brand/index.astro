@@ -1,0 +1,215 @@
+---
+// 브랜드 이야기 (주소: /brand/)
+import Base from '../../../i18n/ja/layouts/Base.astro';
+import { org, website, founder, aboutPage, breadcrumbs, productLd, articleLd, faqLd as makeFaq } from '../../../i18n/ja/schema';
+const title = "ブランドストーリー";
+const description = "NEUVELIFを始めた理由と、ブランド哲学「自分を大切にする心は、肌から始まる」、3つの原則とこれまでの歩みをご紹介します。";
+const crumbs = breadcrumbs(Astro.site!, [["ホーム", "/ja/"], ["ブランドストーリー", "/ja/brand/"]]);
+const faqLd = makeFaq([]);
+const jsonLd = [aboutPage, founder, crumbs];
+---
+<Base title={title} description={description} current="brand" jsonLd={jsonLd}>
+{/* ── 나를 아끼는 마음은 피부에서 시작된다 ── */}
+<section aria-labelledby="brand-title" style="padding: clamp(56px, 7vw, 104px) 0 clamp(40px, 5vw, 64px)">
+<div style="max-width: 1240px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); box-sizing: border-box; display: flex; flex-direction: column; gap: 20px; max-width: 1240px">
+<p style="margin: 0; font-family: 'Barlow Condensed', 'Noto Sans JP', sans-serif; font-size: 16px; font-weight: 600; letter-spacing: 0.12em; color: #1170AE">ABOUT NEUVELIF</p>
+<h1 id="brand-title" style="margin: 0; font-size: clamp(34px, 4.4vw, 60px); line-height: 1.2; letter-spacing: -0.02em; color: #12324F">自分を大切にする心は、<br>肌から始まる</h1>
+<p lang="en" style="margin: 0; font-family: 'Barlow Condensed', 'Noto Sans JP', sans-serif; font-size: clamp(18px, 1.8vw, 22px); font-weight: 600; letter-spacing: 0.08em; color: #56626D">SELF-CARE BEGINS WITH YOUR SKIN.</p>
+<p style="margin: 0; max-width: 720px; font-size: 18px; color: #3C4752">NEUVELIFは、皮膚施術の前後のスキンケアに特化したダーマコスメブランドです。施術後に敏感になった肌にも毎日使える基本、紫外線対策と洗顔からつくっています。</p>
+</div>
+</section>
+
+{/* ── NEUVELIF라는 이름 ── */}
+<section aria-labelledby="name-title" style="border-top: 1px solid #D5E0E8; padding: clamp(48px, 6vw, 80px) 0">
+<div style="max-width: 1240px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); box-sizing: border-box; display: flex; flex-direction: column; gap: 28px">
+<div style="display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0; font-family: 'Barlow Condensed', 'Noto Sans JP', sans-serif; font-size: 16px; font-weight: 600; letter-spacing: 0.12em; color: #1170AE">OUR NAME</p>
+<h2 id="name-title" style="margin: 0; font-size: clamp(24px, 2.6vw, 34px); line-height: 1.3; color: #12324F">NEUVELIFという名前</h2>
+</div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 24px">
+<div style="flex: 1 1 220px; border-top: 3px solid #12324F; padding-top: 18px; display: flex; flex-direction: column; gap: 4px">
+<p lang="en" style="margin: 0; font-family: 'Barlow Condensed', 'Noto Sans JP', sans-serif; font-size: 40px; font-weight: 600; letter-spacing: 0.04em; line-height: 1; color: #12324F">NEU</p>
+<p style="margin: 0; color: #3C4752">新しさ</p>
+</div>
+<span aria-hidden="true" style="font-size: 32px; color: #8FA3B5">+</span>
+<div style="flex: 1 1 220px; border-top: 3px solid #12324F; padding-top: 18px; display: flex; flex-direction: column; gap: 4px">
+<p lang="en" style="margin: 0; font-family: 'Barlow Condensed', 'Noto Sans JP', sans-serif; font-size: 40px; font-weight: 600; letter-spacing: 0.04em; line-height: 1; color: #12324F">REVIVE</p>
+<p style="margin: 0; color: #3C4752">よみがえる、いきいき感</p>
+</div>
+<span aria-hidden="true" style="font-size: 32px; color: #8FA3B5">+</span>
+<div style="flex: 1 1 220px; border-top: 3px solid #12324F; padding-top: 18px; display: flex; flex-direction: column; gap: 4px">
+<p lang="en" style="margin: 0; font-family: 'Barlow Condensed', 'Noto Sans JP', sans-serif; font-size: 40px; font-weight: 600; letter-spacing: 0.04em; line-height: 1; color: #12324F">RELIEF</p>
+<p style="margin: 0; color: #3C4752">心地よさ</p>
+</div>
+</div>
+</div>
+</section>
+
+{/* ── 뉴베리프를 시작한 이유 ── */}
+<section aria-labelledby="letter-title">
+<div style="background: #12324F; color: #FFFFFF; padding: clamp(56px, 7vw, 104px) 0">
+<div style="max-width: 1240px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); box-sizing: border-box; display: flex; flex-direction: column; gap: 16px">
+<p style="margin: 0; font-family: 'Barlow Condensed', 'Noto Sans JP', sans-serif; font-size: 16px; font-weight: 600; letter-spacing: 0.12em; color: #8FD3F2">FOUNDER'S NOTE</p>
+<h2 id="letter-title" style="margin: 0; font-size: clamp(24px, 2.6vw, 34px); line-height: 1.35">NEUVELIFを始めた理由</h2>
+<p style="margin: 20px 0 0; font-size: clamp(17px, 1.6vw, 19px); color: #C9D6E2">皮膚施術を受けるたびに、いつも同じ悩みが残りました。</p>
+<blockquote style="margin: 0; padding-left: clamp(18px, 2vw, 28px); border-left: 4px solid #8FD3F2; font-size: clamp(26px, 3.2vw, 42px); font-weight: 700; line-height: 1.45; letter-spacing: -0.01em; color: #FFFFFF">施術はうまくいった。<br>でも、これから何でどうケアすればいいのだろう？</blockquote>
+</div>
+</div>
+<div style="padding: clamp(48px, 6vw, 96px) 0">
+<article aria-label="代表メッセージ" style="max-width: 860px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); box-sizing: border-box; display: flex; flex-direction: column; gap: 20px">
+<div style="display: flex; align-items: baseline; gap: 14px; border-top: 1px solid #D5E0E8; padding-top: 24px; margin-top: 12px"><span aria-hidden="true" style="font-family: 'Barlow Condensed', 'Noto Sans JP', sans-serif; font-size: 16px; font-weight: 600; letter-spacing: 0.12em; font-size: 20px; letter-spacing: 0.04em; color: #1170AE">01</span><h3 style="margin: 0; font-size: 21px; line-height: 1.4; color: #12324F">方法を探しても、答えはばらばらでした</h3></div>
+<p style="margin: 0; font-size: 17px; line-height: 1.9; color: #1A1F24">皮膚施術はクリニックで終わりますが、スキンケアはその日から家で始まります。けれども、施術の後いつから、何で、どうケアすればいいのか、知るのは難しいことでした。</p>
+<p style="margin: 0; font-size: 17px; line-height: 1.9; color: #1A1F24">方法を調べても、情報はばらばらでした。当日から塗ってもいいというところもあれば、数日は何も塗らないようにというところもありました。何を信じればいいのかわからず、結局いつもの製品をそのまま使ってしまうことがよくありました。</p>
+<div style="display: flex; align-items: baseline; gap: 14px; border-top: 1px solid #D5E0E8; padding-top: 24px; margin-top: 12px"><span aria-hidden="true" style="font-family: 'Barlow Condensed', 'Noto Sans JP', sans-serif; font-size: 16px; font-weight: 600; letter-spacing: 0.12em; font-size: 20px; letter-spacing: 0.04em; color: #1170AE">02</span><h3 style="margin: 0; font-size: 21px; line-height: 1.4; color: #12324F">ふだんの肌を基準につくられた製品</h3></div>
+<p style="margin: 0; font-size: 17px; line-height: 1.9; color: #1A1F24">ところが、ほとんどのスキンケア製品はふだんの肌を基準につくられています。そのため、施術の後はいつも使っている製品さえ使いにくくなります。</p>
+<ul aria-label="皮膚施術の後のスキンケアが難しい理由" style="margin: 4px 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 12px">
+<li style="border-top: 3px solid #12324F; background: #F4F7FA; padding: 18px 20px 20px; display: flex; flex-direction: column; gap: 6px"><span aria-hidden="true" style="font-family: 'Barlow Condensed', 'Noto Sans JP', sans-serif; font-size: 16px; font-weight: 600; letter-spacing: 0.12em; font-size: 22px; letter-spacing: 0.04em; line-height: 1; color: #1170AE">01</span><p style="margin: 0; font-size: 16px; font-weight: 700; color: #12324F">しみたり、ほてったりする製品</p><p style="margin: 0; font-size: 15px; line-height: 1.7; color: #3C4752">敏感になった肌に塗ると、しみたりほてったりする製品が多くあります。</p></li>
+<li style="border-top: 3px solid #12324F; background: #F4F7FA; padding: 18px 20px 20px; display: flex; flex-direction: column; gap: 6px"><span aria-hidden="true" style="font-family: 'Barlow Condensed', 'Noto Sans JP', sans-serif; font-size: 16px; font-weight: 600; letter-spacing: 0.12em; font-size: 22px; letter-spacing: 0.04em; line-height: 1; color: #1170AE">02</span><p style="margin: 0; font-size: 16px; font-weight: 700; color: #12324F">こすって泡立てる使い方</p><p style="margin: 0; font-size: 15px; line-height: 1.7; color: #3C4752">こする、泡立てる、マッサージするように使う方法は、施術の後には避けるべき場合が多くあります。</p></li>
+<li style="border-top: 3px solid #12324F; background: #F4F7FA; padding: 18px 20px 20px; display: flex; flex-direction: column; gap: 6px"><span aria-hidden="true" style="font-family: 'Barlow Condensed', 'Noto Sans JP', sans-serif; font-size: 16px; font-weight: 600; letter-spacing: 0.12em; font-size: 22px; letter-spacing: 0.04em; line-height: 1; color: #1170AE">03</span><p style="margin: 0; font-size: 16px; font-weight: 700; color: #12324F">しばらくお休みすべき成分</p><p style="margin: 0; font-size: 15px; line-height: 1.7; color: #3C4752">角質除去剤やレチノールのように、施術の後しばらくお休みすべき成分が入った製品もあります。</p></li>
+<li style="border-top: 3px solid #12324F; background: #F4F7FA; padding: 18px 20px 20px; display: flex; flex-direction: column; gap: 6px"><span aria-hidden="true" style="font-family: 'Barlow Condensed', 'Noto Sans JP', sans-serif; font-size: 16px; font-weight: 600; letter-spacing: 0.12em; font-size: 22px; letter-spacing: 0.04em; line-height: 1; color: #1170AE">04</span><p style="margin: 0; font-size: 16px; font-weight: 700; color: #12324F">使うタイミングの案内がない</p><p style="margin: 0; font-size: 15px; line-height: 1.7; color: #3C4752">施術の後いつから、どう使えばいいかを教えてくれる製品は、なかなか見つかりません。</p></li>
+</ul>
+<div style="display: flex; align-items: baseline; gap: 14px; border-top: 1px solid #D5E0E8; padding-top: 24px; margin-top: 12px"><span aria-hidden="true" style="font-family: 'Barlow Condensed', 'Noto Sans JP', sans-serif; font-size: 16px; font-weight: 600; letter-spacing: 0.12em; font-size: 20px; letter-spacing: 0.04em; color: #1170AE">03</span><h3 style="margin: 0; font-size: 21px; line-height: 1.4; color: #12324F">だから、自分でつくることにしました</h3></div>
+<p style="margin: 0; font-size: 17px; line-height: 1.9; color: #1A1F24">探しても答えがなかったので、自分でつくることにしました。</p>
+<p style="margin: 4px 0; padding: 4px 0 4px 24px; border-left: 4px solid #1170AE; font-size: clamp(19px, 1.9vw, 23px); font-weight: 700; line-height: 1.65; color: #12324F">NEUVELIFは、この悩みと問題を解決するために生まれました。皮膚施術の前後で敏感になった肌を基準に、いつから、どう使えばいいかまで一緒にご案内するスキンケアをつくっています。</p>
+<p style="margin: 0; font-size: 17px; line-height: 1.9; color: #1A1F24">良い成分が実際にどんな効果をもたらすかは、時間をかけてこそわかるものだと考えています。だからNEUVELIFは、成分の名前よりも試験結果を条件とともに公開し、施術ごとにいつから、どう使えばいいかをご案内することから始めています。</p>
+<p style="margin: 0; font-size: 17px; line-height: 1.9; color: #1A1F24">この過程を通して気づいたことはシンプルでした。結局は「自分を大切にしたい」という気持ちでした。そこで、NEUVELIFの哲学をこう決めました。</p>
+<div style="margin-top: 16px; padding: clamp(28px, 3.4vw, 40px) 0; border-top: 1px solid #12324F; border-bottom: 1px solid #12324F; display: flex; flex-direction: column; gap: 8px; text-align: center">
+<p style="margin: 0; font-size: clamp(24px, 2.8vw, 34px); font-weight: 700; line-height: 1.4; color: #12324F">自分を大切にする心は、肌から始まる</p>
+<p lang="en" style="margin: 0; font-family: 'Barlow Condensed', 'Noto Sans JP', sans-serif; font-size: 16px; font-weight: 600; letter-spacing: 0.12em; font-size: 15px; color: #56626D">SELF-CARE BEGINS WITH YOUR SKIN.</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: center; gap: 12px 20px; margin-top: 12px">
+<p style="margin: 0; font-size: 16px; color: #3C4752">NEUVELIF 代表</p>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="53 23 736 337" width="210" height="96" style="display: block; width: 210px; height: auto; max-width: 100%" role="img" aria-label="Jaehoon Lee"><path fill="#16202A" fill-rule="evenodd" d="M528.8 79.5 L518.4 83.4 L510.6 85.6 L507.6 87.6 L505.9 90.1 L505.3 93.3 L505.8 96.2 L507.5 98.7 L510.1 100.5 L513.0 101.0 L518.1 100.0 L583.6 94.0 L566.8 103.0 L549.9 110.4 L542.9 114.5 L539.0 118.1 L535.7 122.5 L532.4 129.2 L530.0 136.6 L528.6 145.8 L528.9 153.0 L530.2 158.3 L533.3 163.9 L538.9 170.2 L546.1 175.4 L552.7 178.6 L560.6 180.2 L565.5 179.7 L571.8 177.8 L577.9 175.0 L584.9 170.9 L591.4 166.0 L595.1 162.4 L598.4 158.2 L600.4 154.0 L601.8 148.0 L602.0 139.6 L601.1 132.6 L598.7 124.7 L595.5 118.6 L592.5 115.5 L587.9 112.9 L582.1 111.4 L602.0 101.4 L634.6 89.9 L638.5 86.7 L639.8 82.2 L639.3 79.3 L637.7 76.9 L635.2 75.3 L632.4 74.7 L626.4 76.6 L599.0 81.0 L548.2 86.2 L555.3 82.8 L558.9 80.0 L562.5 75.0 L563.8 70.4 L563.4 62.4 L558.3 45.0 L557.0 35.5 L555.8 33.8 L554.3 33.3 L552.8 33.8 L551.7 35.5 L552.7 45.6 L552.6 50.4 L551.2 59.4 L549.2 65.8 L546.8 69.4 L544.2 71.8ZM563.7 167.9 L559.4 166.0 L554.6 162.8 L550.4 158.7 L547.8 155.1 L546.8 152.0 L546.5 148.6 L547.9 138.6 L551.4 129.4 L555.0 125.0 L560.6 121.4 L578.0 113.6 L587.9 118.2 L590.8 120.7 L592.2 123.0 L594.7 130.6 L596.1 138.5 L596.3 144.4 L595.6 149.4 L594.3 152.2 L591.0 156.0 L581.7 162.7 L571.5 167.4 L567.0 168.3ZM87.3 132.9 L81.2 140.1 L76.8 146.6 L71.9 156.3 L68.2 165.6 L65.6 175.4 L64.1 185.5 L63.3 197.2 L63.9 205.7 L65.0 210.8 L67.6 217.9 L71.2 224.4 L76.8 231.2 L82.1 235.6 L87.7 238.7 L93.4 240.3 L99.3 240.3 L106.8 238.1 L115.0 234.0 L122.6 228.9 L129.1 223.3 L134.7 217.1 L137.7 212.7 L141.7 205.2 L145.1 197.3 L150.4 179.5 L151.9 171.3 L152.6 163.2 L151.9 157.2 L150.2 151.1 L142.0 131.6 L141.4 128.5 L141.9 126.8 L144.2 125.5 L156.3 121.7 L161.2 119.0 L165.7 115.6 L203.9 73.7 L212.5 63.2 L210.5 81.6 L204.1 124.9 L195.9 175.0 L186.6 226.0 L170.4 303.8 L170.2 310.8 L172.7 316.5 L175.8 319.7 L177.8 320.8 L182.3 321.7 L186.7 320.8 L188.7 319.7 L191.8 316.5 L193.8 313.1 L200.4 280.2 L208.2 260.1 L244.2 174.5 L253.1 156.0 L261.1 142.6 L263.2 141.0 L278.1 136.8 L313.9 132.5 L324.2 130.7 L344.0 124.1 L314.9 161.1 L293.7 194.3 L285.7 210.0 L260.2 267.9 L249.6 287.2 L249.6 288.8 L250.4 289.8 L251.6 290.1 L253.3 289.2 L265.2 270.5 L305.1 219.2 L312.1 240.8 L317.7 253.2 L325.2 276.8 L329.0 285.2 L332.0 288.7 L335.8 291.1 L339.0 291.7 L341.3 291.5 L344.1 290.3 L347.0 286.9 L347.6 283.8 L353.5 268.7 L379.7 185.2 L368.6 251.1 L367.4 261.8 L367.0 274.2 L368.3 292.0 L367.9 302.0 L368.7 303.5 L370.4 303.7 L371.4 302.7 L374.4 293.2 L381.7 277.1 L386.1 263.6 L388.1 254.9 L395.7 210.3 L432.5 204.1 L425.1 252.0 L412.3 321.6 L409.7 338.4 L410.6 342.6 L412.1 345.7 L414.9 348.5 L418.7 350.2 L422.2 350.2 L426.1 348.5 L428.9 345.7 L430.8 342.6 L440.7 288.5 L443.4 280.6 L448.0 268.6 L455.7 252.3 L465.0 234.9 L475.3 217.1 L478.6 216.5 L481.2 214.7 L486.9 213.7 L551.3 206.7 L542.3 243.8 L542.1 246.4 L543.0 250.4 L545.0 253.4 L547.5 255.0 L551.8 255.4 L555.1 254.1 L556.9 252.6 L558.4 250.5 L559.7 247.3 L564.1 230.7 L567.8 212.6 L567.7 208.1 L566.4 204.7 L585.4 202.0 L598.1 199.5 L628.1 191.6 L640.8 189.1 L641.7 188.2 L641.5 187.4 L640.6 186.8 L627.8 187.9 L592.7 188.8 L481.1 201.6 L476.8 199.4 L471.6 199.9 L468.7 201.9 L466.2 206.4 L466.7 211.6 L468.7 214.6 L456.6 236.0 L446.7 255.7 L469.1 103.8 L469.9 86.9 L468.9 60.9 L470.3 46.0 L469.8 44.2 L467.7 42.8 L465.8 43.0 L464.0 44.7 L460.8 60.1 L452.6 83.5 L448.3 99.6 L433.8 195.0 L427.4 195.1 L397.4 199.9 L406.8 141.4 L409.6 118.0 L408.8 114.2 L407.4 111.7 L404.9 109.1 L401.5 107.8 L397.8 107.8 L396.1 108.3 L393.0 110.3 L390.5 114.2 L386.3 143.8 L350.5 258.1 L344.9 273.8 L337.2 249.7 L332.1 239.1 L325.1 229.7 L313.1 218.2 L309.1 213.7 L336.0 171.5 L364.3 135.5 L370.8 126.4 L372.6 123.0 L373.6 119.4 L373.5 113.7 L371.8 109.4 L368.1 105.7 L364.0 104.0 L359.3 103.9 L357.3 104.5 L353.5 107.2 L351.0 108.3 L329.7 115.7 L321.5 117.3 L294.8 120.2 L281.4 122.4 L271.0 125.6 L263.6 128.7 L259.4 131.3 L257.3 133.8 L253.8 139.9 L242.6 161.6 L209.0 240.3 L224.7 153.8 L236.2 76.6 L237.7 60.3 L237.4 51.7 L236.0 46.5 L232.7 41.8 L228.9 39.3 L224.1 38.2 L219.9 39.1 L216.4 41.4 L214.0 45.0 L212.9 49.8 L203.1 61.9 L171.5 97.0 L165.6 103.1 L160.7 107.0 L144.2 113.4 L140.3 115.9 L137.6 119.0 L128.6 115.8 L123.0 114.5 L117.3 114.2 L112.5 115.2 L105.3 118.6 L99.6 122.2 L92.9 127.5ZM130.6 209.2 L124.5 215.1 L115.6 221.1 L108.7 224.0 L105.2 224.8 L102.8 224.7 L97.9 221.0 L93.4 215.6 L89.9 208.6 L88.5 202.1 L88.4 195.0 L89.2 185.3 L92.7 160.2 L95.8 147.8 L100.1 138.4 L107.0 128.5 L114.3 121.3 L117.1 119.6 L120.1 118.9 L127.5 119.6 L136.1 122.4 L135.2 128.4 L136.2 134.6 L144.9 155.4 L146.4 161.8 L145.6 172.1 L142.1 186.3 L136.2 200.6ZM491.8 267.0 L487.9 288.7 L487.3 297.4 L487.8 301.8 L489.1 305.9 L491.1 309.6 L495.4 315.4 L499.1 318.7 L502.4 320.7 L510.9 323.5 L525.3 324.8 L542.7 324.2 L579.5 320.3 L616.4 314.6 L652.0 307.0 L683.9 298.1 L710.7 288.1 L743.8 272.1 L758.1 263.6 L771.4 253.8 L779.3 248.8 L779.7 248.0 L779.3 247.2 L778.4 247.1 L754.2 256.4 L721.3 272.0 L703.2 279.8 L686.3 285.6 L670.4 290.4 L642.8 297.2 L614.1 302.7 L581.4 307.6 L549.9 310.8 L533.1 311.4 L520.4 310.1 L516.9 309.1 L513.6 307.2 L509.7 301.9 L508.4 298.9 L508.3 293.6 L511.7 275.5 L512.7 265.8 L512.2 259.0 L510.2 245.5 L511.4 236.0 L510.9 234.3 L509.5 233.1 L507.1 233.1 L505.4 234.8 L502.9 244.0 L494.5 258.8Z"/></svg>
+</div>
+</article>
+</div>
+</section>
+
+{/* ── 세 가지 원칙 ── */}
+<section aria-labelledby="vision-title" style="padding: clamp(48px, 6vw, 88px) 0">
+<div style="max-width: 1240px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); box-sizing: border-box; display: flex; flex-direction: column; gap: 28px">
+<div style="display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0; font-family: 'Barlow Condensed', 'Noto Sans JP', sans-serif; font-size: 16px; font-weight: 600; letter-spacing: 0.12em; color: #1170AE">OUR VISION</p>
+<h2 id="vision-title" style="margin: 0; font-size: clamp(24px, 2.6vw, 34px); line-height: 1.3; color: #12324F">3つの原則</h2>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 24px">
+<div style="flex: 1 1 300px; border-top: 3px solid #12324F; padding-top: 20px; display: flex; flex-direction: column; gap: 8px">
+<p lang="en" style="margin: 0; font-family: 'Barlow Condensed', 'Noto Sans JP', sans-serif; font-size: 24px; font-weight: 600; letter-spacing: 0.06em; color: #12324F">DERMATOLOGY</p>
+<p style="margin: 0; color: #3C4752">皮膚施術の前後の肌状態の変化を基準に、使うタイミングとコンディションに合わせて設計します。</p>
+</div>
+<div style="flex: 1 1 300px; border-top: 3px solid #12324F; padding-top: 20px; display: flex; flex-direction: column; gap: 8px">
+<p lang="en" style="margin: 0; font-family: 'Barlow Condensed', 'Noto Sans JP', sans-serif; font-size: 24px; font-weight: 600; letter-spacing: 0.06em; color: #12324F">INNOVATION</p>
+<p style="margin: 0; color: #3C4752">お客様が感じる不便を徹底的に解決し、製品の基準をつくり直します。</p>
+</div>
+<div style="flex: 1 1 300px; border-top: 3px solid #12324F; padding-top: 20px; display: flex; flex-direction: column; gap: 8px">
+<p lang="en" style="margin: 0; font-family: 'Barlow Condensed', 'Noto Sans JP', sans-serif; font-size: 24px; font-weight: 600; letter-spacing: 0.06em; color: #12324F">A.I.</p>
+<p style="margin: 0; color: #3C4752">実際の使用データをA.I.で分析し、課題を解決するフォーミュラをつくります。</p>
+</div>
+</div>
+</div>
+</section>
+
+{/* ── 뉴베리프가 걸어온 길 ── */}
+<section aria-labelledby="ms-title" style="border-top: 1px solid #D5E0E8; padding: clamp(48px, 6vw, 88px) 0">
+<div style="max-width: 1240px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); box-sizing: border-box; display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0; font-family: 'Barlow Condensed', 'Noto Sans JP', sans-serif; font-size: 16px; font-weight: 600; letter-spacing: 0.12em; color: #1170AE">MILESTONES</p>
+<h2 id="ms-title" style="margin: 0; font-size: clamp(24px, 2.6vw, 34px); line-height: 1.3; color: #12324F">NEUVELIFのあゆみ</h2>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 32px 64px">
+<div style="flex: 1 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<p lang="en" style="margin: 0; font-family: 'Barlow Condensed', 'Noto Sans JP', sans-serif; font-size: 48px; font-weight: 600; line-height: 1; color: #D5E0E8">2025</p>
+<ol style="margin: 0 0 0 6px; padding: 4px 0 0 27px; list-style: none; border-left: 2px solid #D5E0E8">
+<li style="position: relative; padding: 0 0 26px 0">
+<span aria-hidden="true" style="position: absolute; left: -33px; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: #FFFFFF; border: 3px solid #1170AE; box-sizing: border-box"></span>
+<div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 18px">
+<span style="flex: none; width: 76px; font-family: 'Barlow Condensed', 'Noto Sans JP', sans-serif; font-size: 20px; font-weight: 600; letter-spacing: 0.04em; color: #1170AE; font-variant-numeric: tabular-nums">2025.06</span>
+<div style="flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 3px; ">
+<p style="margin: 0; font-size: 17px; font-weight: 700; color: #12324F">リリーリカバリーサンクリーム 機能性化粧品の報告</p>
+<p style="margin: 0; font-size: 14px; color: #56626D">紫外線カット・美白・シワ改善の3つの機能</p>
+</div>
+</div>
+</li><li style="position: relative; padding: 0 0 26px 0">
+<span aria-hidden="true" style="position: absolute; left: -33px; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: #FFFFFF; border: 3px solid #1170AE; box-sizing: border-box"></span>
+<div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 18px">
+<span style="flex: none; width: 76px; font-family: 'Barlow Condensed', 'Noto Sans JP', sans-serif; font-size: 20px; font-weight: 600; letter-spacing: 0.04em; color: #1170AE; font-variant-numeric: tabular-nums">2025.07</span>
+<div style="flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 3px; ">
+<p style="margin: 0; font-size: 17px; font-weight: 700; color: #12324F">ブランド発売、リリーリカバリーサンクリーム発売</p>
+<a href="https://www.livesnews.com/news/article.html?no=52895" style="display: inline-flex; align-items: center; gap: 4px; font-size: 13px; color: #56626D; text-underline-offset: 3px">Live News <svg aria-hidden="true" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex: none"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg></a>
+</div>
+</div>
+</li><li style="position: relative; padding: 0 0 26px 0">
+<span aria-hidden="true" style="position: absolute; left: -33px; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: #FFFFFF; border: 3px solid #1170AE; box-sizing: border-box"></span>
+<div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 18px">
+<span style="flex: none; width: 76px; font-family: 'Barlow Condensed', 'Noto Sans JP', sans-serif; font-size: 20px; font-weight: 600; letter-spacing: 0.04em; color: #1170AE; font-variant-numeric: tabular-nums">2025.09</span>
+<div style="flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 3px; ">
+<p style="margin: 0; font-size: 17px; font-weight: 700; color: #12324F">ソウル江南エリアの皮膚科で取り扱い開始</p>
+<a href="https://www.thepublic.kr/news/articleView.html?idxno=275000" style="display: inline-flex; align-items: center; gap: 4px; font-size: 13px; color: #56626D; text-underline-offset: 3px">The Public <svg aria-hidden="true" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex: none"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg></a>
+</div>
+</div>
+</li><li style="position: relative; padding: 0 0 26px 0">
+<span aria-hidden="true" style="position: absolute; left: -33px; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: #FFFFFF; border: 3px solid #1170AE; box-sizing: border-box"></span>
+<div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 18px">
+<span style="flex: none; width: 76px; font-family: 'Barlow Condensed', 'Noto Sans JP', sans-serif; font-size: 20px; font-weight: 600; letter-spacing: 0.04em; color: #1170AE; font-variant-numeric: tabular-nums">2025.10</span>
+<div style="flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 3px; ">
+<p style="margin: 0; font-size: 17px; font-weight: 700; color: #12324F">薬局で取り扱い開始</p>
+<p style="margin: 0; font-size: 14px; color: #56626D">韓国全国の提携薬局 約1,500か所</p>
+</div>
+</div>
+</li><li style="position: relative; padding: 0 0 26px 0">
+<span aria-hidden="true" style="position: absolute; left: -33px; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: #1170AE; border: 3px solid #1170AE; box-sizing: border-box"></span>
+<div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 18px">
+<span style="flex: none; width: 76px; font-family: 'Barlow Condensed', 'Noto Sans JP', sans-serif; font-size: 20px; font-weight: 600; letter-spacing: 0.04em; color: #1170AE; font-variant-numeric: tabular-nums">2025.11</span>
+<div style="flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 3px; border: 1px solid #12324F; border-left: 4px solid #1170AE; padding: 14px 16px; margin-left: -4px">
+<p style="margin: 0; font-size: 17px; font-weight: 700; color: #12324F">2025年下半期 ファへアワード サンケア部門（日焼け止め／ローション）鎮静カテゴリー1位</p>
+<p style="margin: 0; font-size: 14px; color: #56626D">発売から3か月での受賞</p><a href="https://www.mydaily.co.kr/page/view/2025112015485021661" style="display: inline-flex; align-items: center; gap: 4px; font-size: 13px; color: #56626D; text-underline-offset: 3px">MyDaily <svg aria-hidden="true" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex: none"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg></a>
+</div>
+</div>
+</li>
+</ol>
+</div><div style="flex: 1 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<p lang="en" style="margin: 0; font-family: 'Barlow Condensed', 'Noto Sans JP', sans-serif; font-size: 48px; font-weight: 600; line-height: 1; color: #D5E0E8">2026</p>
+<ol style="margin: 0 0 0 6px; padding: 4px 0 0 27px; list-style: none; border-left: 2px solid #D5E0E8">
+<li style="position: relative; padding: 0 0 26px 0">
+<span aria-hidden="true" style="position: absolute; left: -33px; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: #FFFFFF; border: 3px solid #1170AE; box-sizing: border-box"></span>
+<div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 18px">
+<span style="flex: none; width: 76px; font-family: 'Barlow Condensed', 'Noto Sans JP', sans-serif; font-size: 20px; font-weight: 600; letter-spacing: 0.04em; color: #1170AE; font-variant-numeric: tabular-nums">2026.01</span>
+<div style="flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 3px; ">
+<p style="margin: 0; font-size: 17px; font-weight: 700; color: #12324F">NAVERファッションビューティーに出店、公式ブランドストアを運営</p>
+<a href="https://www.mydaily.co.kr/page/view/2026013009490418606" style="display: inline-flex; align-items: center; gap: 4px; font-size: 13px; color: #56626D; text-underline-offset: 3px">MyDaily <svg aria-hidden="true" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex: none"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg></a>
+</div>
+</div>
+</li><li style="position: relative; padding: 0 0 26px 0">
+<span aria-hidden="true" style="position: absolute; left: -33px; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: #FFFFFF; border: 3px solid #1170AE; box-sizing: border-box"></span>
+<div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 18px">
+<span style="flex: none; width: 76px; font-family: 'Barlow Condensed', 'Noto Sans JP', sans-serif; font-size: 20px; font-weight: 600; letter-spacing: 0.04em; color: #1170AE; font-variant-numeric: tabular-nums">2026.05</span>
+<div style="flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 3px; ">
+<p style="margin: 0; font-size: 17px; font-weight: 700; color: #12324F">産婦人科で取り扱い開始、清潭（チョンダム）のメイクアップショップで採用</p>
+<a href="https://www.edaily.co.kr/News/Read?newsId=06999526645446624&amp;mediaCodeNo=257" style="display: inline-flex; align-items: center; gap: 4px; font-size: 13px; color: #56626D; text-underline-offset: 3px">Edaily <svg aria-hidden="true" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex: none"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg></a>
+</div>
+</div>
+</li><li style="position: relative; padding: 0 0 26px 0">
+<span aria-hidden="true" style="position: absolute; left: -33px; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: #FFFFFF; border: 3px solid #1170AE; box-sizing: border-box"></span>
+<div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 18px">
+<span style="flex: none; width: 76px; font-family: 'Barlow Condensed', 'Noto Sans JP', sans-serif; font-size: 20px; font-weight: 600; letter-spacing: 0.04em; color: #1170AE; font-variant-numeric: tabular-nums">2026.06</span>
+<div style="flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 3px; ">
+<p style="margin: 0; font-size: 17px; font-weight: 700; color: #12324F">美容施術プラットフォーム「女神チケット」とマーケティング提携</p>
+<a href="https://www.datanet.co.kr/news/articleView.html?idxno=212180" style="display: inline-flex; align-items: center; gap: 4px; font-size: 13px; color: #56626D; text-underline-offset: 3px">Datanet <svg aria-hidden="true" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex: none"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg></a>
+</div>
+</div>
+</li><li style="position: relative; padding: 0 0 26px 0">
+<span aria-hidden="true" style="position: absolute; left: -33px; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: #FFFFFF; border: 3px solid #1170AE; box-sizing: border-box"></span>
+<div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 18px">
+<span style="flex: none; width: 76px; font-family: 'Barlow Condensed', 'Noto Sans JP', sans-serif; font-size: 20px; font-weight: 600; letter-spacing: 0.04em; color: #1170AE; font-variant-numeric: tabular-nums">2026.09</span>
+<div style="flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 3px; ">
+<p style="margin: 0; font-size: 17px; font-weight: 700; color: #12324F">抹茶PDRN デパフィング クレンジング発売、皮膚科・薬局・産婦人科で取り扱い開始</p>
+<a href="https://www.edaily.co.kr/News/Read?newsId=02551846645577824&amp;mediaCodeNo=257" style="display: inline-flex; align-items: center; gap: 4px; font-size: 13px; color: #56626D; text-underline-offset: 3px">Edaily <svg aria-hidden="true" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex: none"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg></a>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+</Base>

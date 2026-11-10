@@ -1,0 +1,154 @@
+---
+// 홈 화면 (주소: /)
+// 아래로 내려가며: 소식 슬라이드 → 브랜드 소개 → 제품 → 임상 연구 요약 → 시술 그룹 → 소식 → 자주 묻는 질문
+// <HeroSlider /> 처럼 대문자로 시작하는 태그는 src/components/ 의 부품을 불러온 것입니다.
+import Base from '../../i18n/ja/layouts/Base.astro';
+import HeroSlider from '../../i18n/ja/components/HeroSlider.astro';
+import GroupPicker from '../../i18n/ja/components/GroupPicker.astro';
+import ProductCards from '../../i18n/ja/components/ProductCards.astro';
+import { org, website, founder, aboutPage, breadcrumbs, productLd, articleLd, faqLd as makeFaq } from '../../i18n/ja/schema';
+const title = "NEUVELIF | 皮膚施術前後のダーマスキンケア";
+const description = "レーザー・リフティング・注射など、皮膚施術の前後に使うダーマスキンケアブランドNEUVELIF。施術別の日焼け止め・洗顔のタイミングガイドと、ヒト試験の結果を条件とともに公開しています。";
+const faqLd = makeFaq([["施術後、日焼け止めはいつから塗れますか？", "施術の種類によって異なります。レーザートーニング・IPL・リフティングは通常当日から、微細な穴が残る施術は通常24時間後から、かさぶたができる施術は傷がふさがってから塗ります。施術を受けたクリニックの案内と異なる場合は、クリニックの指示に従ってください。"], ["紫外線吸収剤タイプですか、散乱剤タイプですか？", "紫外線吸収剤タイプです。紫外線カット成分を4種配合しています。"], ["クレンジングミルクは何プッシュ使えばいいですか？", "1回に3〜4プッシュを顔全体に広げてください。濃いメイクを落とすときは、量を少し増やしても構いません。"]]);
+const jsonLd = [org, website, ...faqLd];
+---
+<Base title={title} description={description} current="" jsonLd={jsonLd}>
+<HeroSlider />
+
+
+
+{/* ── 나를 아끼는 마음은 피부에서 시작된다 ── */}
+<section id="brand" aria-labelledby="brand-title" style="padding: clamp(56px, 7vw, 104px) 0">
+<div style="max-width: 1240px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); box-sizing: border-box; display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 20px 48px">
+<div style="flex: 1 1 520px; display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0; font-family: 'Barlow Condensed', 'Noto Sans JP', sans-serif; font-size: 16px; font-weight: 600; letter-spacing: 0.12em; color: #1170AE">ABOUT NEUVELIF</p>
+<h2 id="brand-title" style="margin: 0; font-size: clamp(26px, 3vw, 38px); line-height: 1.3; letter-spacing: -0.01em; color: #12324F">自分を大切にする心は、<br>肌から始まる</h2>
+<p style="margin: 0; color: #3C4752; max-width: 640px">NEUVELIFは、皮膚施術の前後のスキンケアに特化したダーマコスメブランドです。2025年7月に最初の製品、リリーリカバリーサンクリームを発売しました。</p>
+</div>
+<a href="/ja/brand/" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 26px; border: 1px solid #12324F; color: #12324F; text-decoration: none; font-weight: 700; letter-spacing: 0.04em">ブランドストーリー</a>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 24px">
+<div style="flex: 1 1 300px; border-top: 3px solid #12324F; padding-top: 20px; display: flex; flex-direction: column; gap: 8px">
+<p style="margin: 0; font-family: 'Barlow Condensed', 'Noto Sans JP', sans-serif; font-size: 24px; font-weight: 600; letter-spacing: 0.06em; color: #12324F">DERMATOLOGY</p>
+<p style="margin: 0; color: #3C4752">皮膚施術の前後の肌状態の変化を基準に、使うタイミングとコンディションに合わせて設計します。</p>
+</div>
+<div style="flex: 1 1 300px; border-top: 3px solid #12324F; padding-top: 20px; display: flex; flex-direction: column; gap: 8px">
+<p style="margin: 0; font-family: 'Barlow Condensed', 'Noto Sans JP', sans-serif; font-size: 24px; font-weight: 600; letter-spacing: 0.06em; color: #12324F">INNOVATION</p>
+<p style="margin: 0; color: #3C4752">お客様が感じる不便を徹底的に解決し、製品の基準をつくり直します。</p>
+</div>
+<div style="flex: 1 1 300px; border-top: 3px solid #12324F; padding-top: 20px; display: flex; flex-direction: column; gap: 8px">
+<p style="margin: 0; font-family: 'Barlow Condensed', 'Noto Sans JP', sans-serif; font-size: 24px; font-weight: 600; letter-spacing: 0.06em; color: #12324F">A.I.</p>
+<p style="margin: 0; color: #3C4752">実際の使用データをA.I.で分析し、課題を解決するフォーミュラをつくります。</p>
+</div>
+</div>
+</div>
+</section>
+
+{/* ── 자외선 차단과 순한 세안, 가장 기본부터 ── */}
+<section id="products" aria-labelledby="products-title" style="border-top: 1px solid #D5E0E8; padding: clamp(56px, 7vw, 104px) 0">
+<div style="max-width: 1240px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); box-sizing: border-box; display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 12px 32px">
+<div style="display: flex; flex-direction: column; gap: 12px; max-width: 760px">
+<p style="margin: 0; font-family: 'Barlow Condensed', 'Noto Sans JP', sans-serif; font-size: 16px; font-weight: 600; letter-spacing: 0.12em; color: #1170AE">PRODUCTS</p>
+<h2 id="products-title" style="margin: 0; font-size: clamp(26px, 3vw, 38px); line-height: 1.3; letter-spacing: -0.01em; color: #12324F">紫外線対策とやさしい洗顔、いちばん基本から</h2>
+<p style="margin: 0; color: #3C4752">すべての数値はヒト試験の結果で、試験機関と条件を併記しています。</p>
+</div>
+<a href="/ja/products/" style="display: inline-flex; align-items: center; min-height: 44px; color: #1170AE; font-weight: 700; text-decoration: none; letter-spacing: 0.04em">すべての製品を見る →</a>
+</div>
+<ProductCards />
+<p style="margin: 0; font-size: 13px; color: #56626D">ヒト試験の結果は試験条件で得られた値であり、個人差があります。</p>
+</div>
+</section>
+
+{/* ── 시험 결과를 조건과 함께 공개합니다 ── */}
+<section id="research" aria-labelledby="research-title" style="background: #12324F; color: #FFFFFF; padding: clamp(56px, 7vw, 96px) 0">
+<div style="max-width: 1240px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); box-sizing: border-box; display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 20px 48px">
+<div style="flex: 1 1 420px; display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0; font-family: 'Barlow Condensed', 'Noto Sans JP', sans-serif; font-size: 16px; font-weight: 600; letter-spacing: 0.12em; color: #8FD3F2">CLINICAL RESEARCH</p>
+<h2 id="research-title" style="margin: 0; font-size: clamp(26px, 3vw, 38px); line-height: 1.3; letter-spacing: -0.01em">試験結果を条件とともに公開します</h2>
+<p style="margin: 0; color: #C9D6E2">試験機関、人数、測定時点を数値の横に併記しています。ヒト試験・非ヒト試験・使用感アンケートは区別して表示しています。</p>
+</div>
+<a href="/ja/research/" style="display: inline-flex; align-items: center; min-height: 44px; color: #8FD3F2; font-weight: 700; text-decoration: none; letter-spacing: 0.04em">臨床研究をすべて見る →</a>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 16px">
+<div style="flex: 1 1 260px; border: 1px solid #36506A; padding: 24px; display: flex; flex-direction: column; gap: 6px; background: #1A4266; border-color: #8FD3F2">
+<p style="margin: 0; font-size: 44px; font-weight: 700; line-height: 1.2; font-variant-numeric: tabular-nums">8件</p>
+<p style="margin: 0; color: #C9D6E2">NEUVELIF製品が受けた試験の合計<br>リリーリカバリーサンクリーム 5件・抹茶PDRN デパフィング クレンジング 3件</p>
+</div>
+<div style="flex: 1 1 260px; border: 1px solid #36506A; padding: 24px; display: flex; flex-direction: column; gap: 6px">
+<p style="margin: 0; font-size: 44px; font-weight: 700; line-height: 1.2; font-variant-numeric: tabular-nums">7件</p>
+<p style="margin: 0; color: #C9D6E2">ヒト試験（人を対象）</p>
+</div>
+<div style="flex: 1 1 260px; border: 1px solid #36506A; padding: 24px; display: flex; flex-direction: column; gap: 6px">
+<p style="margin: 0; font-size: 44px; font-weight: 700; line-height: 1.2; font-variant-numeric: tabular-nums">1件</p>
+<p style="margin: 0; color: #C9D6E2">非ヒト試験（再生角膜モデルによる眼刺激）</p>
+</div>
+</div>
+</div>
+</section>
+
+<GroupPicker />
+
+
+
+
+
+{/* ── 소식 ── */}
+<section id="news" aria-labelledby="news-title" style="background: #FFFFFF; border-top: 1px solid #D5E0E8; padding: clamp(56px, 7vw, 96px) 0">
+<div style="max-width: 1240px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); box-sizing: border-box; display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 12px 32px">
+<div style="display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0; font-family: 'Barlow Condensed', 'Noto Sans JP', sans-serif; font-size: 16px; font-weight: 600; letter-spacing: 0.12em; color: #1170AE">NEWS</p>
+<h2 id="news-title" style="margin: 0; font-size: clamp(26px, 3vw, 38px); line-height: 1.3; letter-spacing: -0.01em; color: #12324F">お知らせ</h2>
+</div>
+<a href="/ja/news/" style="display: inline-flex; align-items: center; min-height: 44px; color: #1170AE; font-weight: 700; text-decoration: none; letter-spacing: 0.04em">ニュースをすべて見る →</a>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 16px">
+<a href="https://www.datanet.co.kr/news/articleView.html?idxno=212180" style="flex: 1 1 300px; min-width: 0; background: #FFFFFF; border: 1px solid #D5E0E8; padding: 24px; display: flex; flex-direction: column; gap: 10px; color: #1A1F24; text-decoration: none">
+<p style="margin: 0; font-size: 13px; color: #56626D">Datanet · 2026.06.08</p>
+<p style="margin: 0; font-size: 17px; font-weight: 700; line-height: 1.5; color: #12324F">ダーマコスメ『NEUVELIF』、美容施術プラットフォーム『女神チケット』とマーケティング提携</p>
+</a>
+<a href="https://www.mydaily.co.kr/page/view/2026013009490418606" style="flex: 1 1 300px; min-width: 0; background: #FFFFFF; border: 1px solid #D5E0E8; padding: 24px; display: flex; flex-direction: column; gap: 10px; color: #1A1F24; text-decoration: none">
+<p style="margin: 0; font-size: 13px; color: #56626D">MyDaily · 2026.01.30</p>
+<p style="margin: 0; font-size: 17px; font-weight: 700; line-height: 1.5; color: #12324F">NEUVELIF、NAVERファッションビューティーに公式出店</p>
+</a>
+<a href="https://www.livesnews.com/news/article.html?no=52895" style="flex: 1 1 300px; min-width: 0; background: #FFFFFF; border: 1px solid #D5E0E8; padding: 24px; display: flex; flex-direction: column; gap: 10px; color: #1A1F24; text-decoration: none">
+<p style="margin: 0; font-size: 13px; color: #56626D">Live News · 2025.07.31</p>
+<p style="margin: 0; font-size: 17px; font-weight: 700; line-height: 1.5; color: #12324F">ウェルネスの始まりを告げる、NEUVELIF初のリリーリカバリーサンクリームがローンチ</p>
+</a>
+</div>
+</div>
+</section>
+
+{/* ── 궁금한 점이 있으신가요? ── */}
+<section id="faq" aria-labelledby="faq-title" style="background: #FFFFFF; border-top: 1px solid #D5E0E8; padding: clamp(56px, 7vw, 96px) 0">
+<div style="max-width: 1240px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 32px 64px">
+<div style="flex: 1 1 300px; display: flex; flex-direction: column; gap: 14px">
+<p style="margin: 0; font-family: 'Barlow Condensed', 'Noto Sans JP', sans-serif; font-size: 16px; font-weight: 600; letter-spacing: 0.12em; color: #1170AE">FAQ</p>
+<h2 id="faq-title" style="margin: 0; font-size: clamp(26px, 3vw, 38px); line-height: 1.3; letter-spacing: -0.01em; color: #12324F">ご不明な点はありますか？</h2>
+<p style="margin: 0; color: #3C4752">施術後の使い方から成分、使用期限まで、よくある質問をまとめました。</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px">
+
+<a href="/ja/faq/" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; border: 1px solid #12324F; color: #12324F; text-decoration: none; font-weight: 700; letter-spacing: 0.04em">よくある質問をすべて見る</a>
+</div>
+</div>
+<div style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; border-top: 2px solid #12324F">
+<div style="padding: 22px 0; border-bottom: 1px solid #D5E0E8; display: flex; flex-direction: column; gap: 8px">
+<h3 style="margin: 0; font-size: 18px; color: #12324F">施術後、日焼け止めはいつから塗れますか？</h3>
+<p style="margin: 0; color: #3C4752">施術の種類によって異なります。レーザートーニング・IPL・リフティングは通常当日から、微細な穴が残る施術は通常24時間後から、かさぶたができる施術は傷がふさがってから塗ります。施術を受けたクリニックの案内と異なる場合は、クリニックの指示に従ってください。</p>
+</div>
+<div style="padding: 22px 0; border-bottom: 1px solid #D5E0E8; display: flex; flex-direction: column; gap: 8px">
+<h3 style="margin: 0; font-size: 18px; color: #12324F">紫外線吸収剤タイプですか、散乱剤タイプですか？</h3>
+<p style="margin: 0; color: #3C4752">紫外線吸収剤タイプです。紫外線カット成分を4種配合しています。</p>
+</div>
+<div style="padding: 22px 0; border-bottom: 1px solid #D5E0E8; display: flex; flex-direction: column; gap: 8px">
+<h3 style="margin: 0; font-size: 18px; color: #12324F">クレンジングミルクは何プッシュ使えばいいですか？</h3>
+<p style="margin: 0; color: #3C4752">1回に3〜4プッシュを顔全体に広げてください。濃いメイクを落とすときは、量を少し増やしても構いません。</p>
+</div>
+</div>
+</div>
+</section>
+
+</Base>

@@ -1,0 +1,46 @@
+---
+// 바닥 부분: 메뉴 링크, 안내 문구, 회사 정보. 회사 정보는 src/site.ts 의 COMPANY 에서 가져옵니다.
+import { COMPANY, BRAND, PATHS } from '../site';
+---
+<footer style="background: #12324F; color: #C9D6E2; padding: 56px 0 40px">
+<div style="max-width: 1240px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); box-sizing: border-box; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; flex-wrap: wrap; gap: 32px 48px">
+<div style="flex: 1 1 200px; display: flex; flex-direction: column; gap: 6px">
+<p style="margin: 0 0 4px; font-weight: 700; color: #FFFFFF">Products</p>
+<a href={PATHS.products} style="color: #C9D6E2; text-decoration: none; padding: 4px 0">All products</a>
+<a href={PATHS.sunscreen} style="color: #C9D6E2; text-decoration: none; padding: 4px 0">Backhap Recovery Sunscreen</a>
+<a href={PATHS.cleansing} style="color: #C9D6E2; text-decoration: none; padding: 4px 0">Matcha Depuffing Cleansing Milk</a>
+</div>
+<div style="flex: 1 1 200px; display: flex; flex-direction: column; gap: 6px">
+<p style="margin: 0 0 4px; font-weight: 700; color: #FFFFFF">Procedure Guides</p>
+<a href={PATHS.guide} style="color: #C9D6E2; text-decoration: none; padding: 4px 0">Guides by procedure group</a>
+<a href={`${PATHS.guide}#pre-care`} style="color: #C9D6E2; text-decoration: none; padding: 4px 0">Before your procedure</a>
+</div>
+<div style="flex: 1 1 200px; display: flex; flex-direction: column; gap: 6px">
+<p style="margin: 0 0 4px; font-weight: 700; color: #FFFFFF">Brand</p>
+<a href={PATHS.brand} style="color: #C9D6E2; text-decoration: none; padding: 4px 0">Our story</a>
+<a href={PATHS.research} style="color: #C9D6E2; text-decoration: none; padding: 4px 0">Clinical Studies</a>
+<a href={PATHS.news} style="color: #C9D6E2; text-decoration: none; padding: 4px 0">News</a>
+</div>
+<div id="contact" style="flex: 1 1 240px; display: flex; flex-direction: column; gap: 6px">
+<p style="margin: 0 0 4px; font-weight: 700; color: #FFFFFF">Support</p>
+<a href={PATHS.faq} style="color: #C9D6E2; text-decoration: none; padding: 4px 0">FAQ</a>
+<a href={PATHS.contact} style="color: #C9D6E2; text-decoration: none; padding: 4px 0">Contact</a>
+<a href={`mailto:${BRAND.email}`} style="color: #FFFFFF; padding: 4px 0">{BRAND.email}</a>
+</div>
+</div>
+<p style="margin: 0; font-size: 13px; color: #A9BACB; border-top: 1px solid #36506A; padding-top: 24px">NEUVELIF products are cosmetics, not medicines intended to prevent or treat disease. After a procedure, always follow the aftercare instructions of the clinic that performed it first.</p>
+<div style="display: flex; flex-direction: column; gap: 4px; font-size: 13px; color: #A9BACB">
+<p style="margin: 0; color: #FFFFFF; font-weight: 700">{COMPANY.name}</p>
+<p style="margin: 0">CEO {COMPANY.ceo} · Business Registration No. {COMPANY.bizNo} · Mail-Order Business Report No. {COMPANY.mailOrderNo}</p>
+<p style="margin: 0">{COMPANY.address}</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px 24px; font-size: 13px">
+<img src="/images/logo/neuvelif-wordmark-white.svg" alt="NEUVELIF" width="98" height="14" style="height: 14px; width: auto; display: block">
+<div style="display: flex; flex-wrap: wrap; gap: 4px 20px">
+<a href={PATHS.privacy} style="color: #FFFFFF">Privacy Policy</a>
+<p style="margin: 0">© 2026 {COMPANY.nameEn}</p>
+</div>
+</div>
+</div>
+</footer>

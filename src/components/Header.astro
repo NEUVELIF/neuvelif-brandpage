@@ -12,11 +12,14 @@ const nav = [
   { key: 'research', label: '임상 연구', href: PATHS.research },
   { key: 'news', label: '소식', href: PATHS.news },
 ];
-// 언어 선택 목록. ready 가 false 인 언어는 '준비 중'으로 흐리게 보입니다.
+// 언어 선택 목록. 지금 보고 있는 페이지의 다른 언어판으로 연결합니다.
+const path = Astro.url.pathname;
+const lang = path.startsWith('/en/') ? 'en' : path.startsWith('/ja/') ? 'ja' : 'ko';
+const rest = path.replace(/^\/(en|ja)(?=\/)/, '');
 const langs = [
-  { code: 'ko', label: '한국어', region: '대한민국', href: '/', ready: true, note: '' },
-  { code: 'en', label: 'English', region: 'Global', href: '', ready: false, note: 'Coming soon' },
-  { code: 'ja', label: '日本語', region: '日本', href: '', ready: false, note: '準備中' },
+  { code: 'ko', label: '한국어', region: 'Korea', href: rest },
+  { code: 'en', label: 'English', region: 'Global', href: `/en${rest}` },
+  { code: 'ja', label: '日本語', region: 'Japan', href: `/ja${rest}` },
 ];
 ---
 <div style="background: #12324F; color: #FFFFFF; font-size: 13px">
@@ -54,15 +57,9 @@ const langs = [
 <ul>
 {langs.map((l) => (
   <li>
-    {l.ready ? (
-      <a href={l.href} lang={l.code} hreflang={l.code} aria-current={l.code === 'ko' ? 'true' : undefined} role="menuitem">
-        <span class="lang-label">{l.label}</span><span class="lang-region">{l.region}</span>
-      </a>
-    ) : (
-      <span class="lang-off" lang={l.code} aria-disabled="true" role="menuitem">
-        <span class="lang-label">{l.label}</span><span class="lang-region">{l.region} · {l.note}</span>
-      </span>
-    )}
+    <a href={l.href} lang={l.code} hreflang={l.code} aria-current={l.code === lang ? 'true' : undefined} role="menuitem">
+      <span class="lang-label">{l.label}</span><span class="lang-region">{l.region}</span>
+    </a>
   </li>
 ))}
 </ul>

@@ -1,0 +1,46 @@
+---
+// 바닥 부분: 메뉴 링크, 안내 문구, 회사 정보. 회사 정보는 src/site.ts 의 COMPANY 에서 가져옵니다.
+import { COMPANY, BRAND, PATHS } from '../site';
+---
+<footer style="background: #12324F; color: #C9D6E2; padding: 56px 0 40px">
+<div style="max-width: 1240px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); box-sizing: border-box; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; flex-wrap: wrap; gap: 32px 48px">
+<div style="flex: 1 1 200px; display: flex; flex-direction: column; gap: 6px">
+<p style="margin: 0 0 4px; font-weight: 700; color: #FFFFFF">製品</p>
+<a href={PATHS.products} style="color: #C9D6E2; text-decoration: none; padding: 4px 0">すべての製品</a>
+<a href={PATHS.sunscreen} style="color: #C9D6E2; text-decoration: none; padding: 4px 0">リリーリカバリーサンクリーム</a>
+<a href={PATHS.cleansing} style="color: #C9D6E2; text-decoration: none; padding: 4px 0">抹茶PDRN デパフィング クレンジング</a>
+</div>
+<div style="flex: 1 1 200px; display: flex; flex-direction: column; gap: 6px">
+<p style="margin: 0 0 4px; font-weight: 700; color: #FFFFFF">施術別ガイド</p>
+<a href={PATHS.guide} style="color: #C9D6E2; text-decoration: none; padding: 4px 0">施術グループ別ガイド</a>
+<a href={`${PATHS.guide}#pre-care`} style="color: #C9D6E2; text-decoration: none; padding: 4px 0">施術前のケア</a>
+</div>
+<div style="flex: 1 1 200px; display: flex; flex-direction: column; gap: 6px">
+<p style="margin: 0 0 4px; font-weight: 700; color: #FFFFFF">ブランド</p>
+<a href={PATHS.brand} style="color: #C9D6E2; text-decoration: none; padding: 4px 0">ブランドストーリー</a>
+<a href={PATHS.research} style="color: #C9D6E2; text-decoration: none; padding: 4px 0">臨床試験</a>
+<a href={PATHS.news} style="color: #C9D6E2; text-decoration: none; padding: 4px 0">お知らせ</a>
+</div>
+<div id="contact" style="flex: 1 1 240px; display: flex; flex-direction: column; gap: 6px">
+<p style="margin: 0 0 4px; font-weight: 700; color: #FFFFFF">サポート</p>
+<a href={PATHS.faq} style="color: #C9D6E2; text-decoration: none; padding: 4px 0">よくあるご質問</a>
+<a href={PATHS.contact} style="color: #C9D6E2; text-decoration: none; padding: 4px 0">お問い合わせ</a>
+<a href={`mailto:${BRAND.email}`} style="color: #FFFFFF; padding: 4px 0">{BRAND.email}</a>
+</div>
+</div>
+<p style="margin: 0; font-size: 13px; color: #A9BACB; border-top: 1px solid #36506A; padding-top: 24px">NEUVELIFの製品は化粧品であり、病気の予防や治療を目的とした医薬品ではありません。施術後のケアは、まず施術を受けた医療機関の指示に従ってください。</p>
+<div style="display: flex; flex-direction: column; gap: 4px; font-size: 13px; color: #A9BACB">
+<p style="margin: 0; color: #FFFFFF; font-weight: 700">{COMPANY.name}</p>
+<p style="margin: 0">代表者 {COMPANY.ceo} · 事業者登録番号 {COMPANY.bizNo} · 通信販売業申告番号 {COMPANY.mailOrderNo}</p>
+<p style="margin: 0">{COMPANY.address}</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px 24px; font-size: 13px">
+<img src="/images/logo/neuvelif-wordmark-white.svg" alt="NEUVELIF" width="98" height="14" style="height: 14px; width: auto; display: block">
+<div style="display: flex; flex-wrap: wrap; gap: 4px 20px">
+<a href={PATHS.privacy} style="color: #FFFFFF">プライバシーポリシー</a>
+<p style="margin: 0">© 2026 {COMPANY.nameEn}</p>
+</div>
+</div>
+</div>
+</footer>

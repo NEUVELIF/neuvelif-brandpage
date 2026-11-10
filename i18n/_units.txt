@@ -1,0 +1,1230 @@
+## src/components/Footer.astro	제품
+## src/components/Footer.astro	전체 제품
+## src/components/Footer.astro	백합 리커버리 선크림
+## src/components/Footer.astro	말차 디퍼핑 클렌징 밀크
+## src/components/Footer.astro	시술별 가이드
+## src/components/Footer.astro	시술 그룹별 가이드
+## src/components/Footer.astro	시술 전 관리
+## src/components/Footer.astro	브랜드
+## src/components/Footer.astro	브랜드 이야기
+## src/components/Footer.astro	임상 연구
+## src/components/Footer.astro	소식
+## src/components/Footer.astro	고객 지원
+## src/components/Footer.astro	자주 묻는 질문
+## src/components/Footer.astro	문의
+## src/components/Footer.astro	뉴베리프 제품은 화장품이며 질병의 예방이나 치료를 위한 의약품이 아닙니다. 시술 후 관리는 시술한 의료기관의 안내를 먼저 따라 주세요.
+## src/components/Footer.astro	대표자 {COMPANY.ceo} · 사업자등록번호 {COMPANY.bizNo} · 통신판매업 신고번호 {COMPANY.mailOrderNo}
+## src/components/Footer.astro	개인정보처리방침
+## src/components/GroupPicker.astro	어떤 시술을 받으셨나요?
+## src/components/GroupPicker.astro	시술 뒤 피부 상태에 따라 묶었습니다. 시술을 고르면 선크림과 클렌징 밀크를 언제부터 쓰면 되는지 보여 드립니다.
+## src/components/GroupPicker.astro	시술 종류
+## src/components/GroupPicker.astro	예:
+## src/components/GroupPicker.astro	함께 지킬 것
+## src/components/GroupPicker.astro	시술한 병원의 안내가 다르면 병원 안내를 따르세요.
+## src/components/GroupPicker.astro	이 시술 가이드 자세히 보기
+## src/components/GroupPicker.astro	이 그룹의 자세한 가이드는 준비 중입니다.
+## src/components/Header.astro	한국어
+## src/components/Header.astro	내 시술에 맞는 선크림·세안 시점, 시술별 가이드에서 확인하세요
+## src/components/Header.astro	가이드 보기
+## src/components/Header.astro	NEUVELIF 홈
+## src/components/Header.astro	주 메뉴
+## src/components/Header.astro	언어 선택, 현재 한국어
+## src/components/Header.astro	언어 선택
+## src/components/Header.astro	언어
+## src/components/Header.astro	메뉴 열기
+## src/components/Header.astro	휴대폰 메뉴
+## src/components/Header.astro	메뉴 닫기
+## src/components/HeroSlider.astro	뉴베리프 업데이트 소식
+## src/components/HeroSlider.astro	뉴베리프 NEUVELIF, 시술 전후의 피부를 위한 더마 스킨케어
+## src/components/HeroSlider.astro	이전 소식
+## src/components/HeroSlider.astro	${i + 1}번째 소식: ${s.kind}
+## src/components/HeroSlider.astro	다음 소식
+## src/components/HeroSlider.astro	자동 넘김 멈추기
+## src/components/HeroSlider.astro	자동 넘김 시작
+## src/components/ProcedurePicker.astro	시술 선택
+## src/components/ProcedurePicker.astro	시술 뒤 피부
+## src/components/ProcedurePicker.astro	뉴베리프 제품에서 알아둘 점
+## src/components/ProcedurePicker.astro	시술한 병원의 안내와 다르면 병원 안내를 따르세요. 상처나 딱지가 생긴 곳에는 바르지 마세요.
+## src/components/ProductCards.astro	백합 리커버리 선크림과 2025 하반기 화해 어워드 배지
+## src/components/ProductCards.astro	자외선 차단·미백·주름개선 3중 기능성
+## src/components/ProductCards.astro	75mL · SPF50+ PA++++ · 유기자차
+## src/components/ProductCards.astro	바른 직후 피부 온도 변화
+## src/components/ProductCards.astro	적외선으로 데운 피부, ㈜엘리드 인체적용시험, 여성 22명
+## src/components/ProductCards.astro	2주 사용 후 눈시림 자가 평가 점수
+## src/components/ProductCards.astro	눈시림을 느끼던 여성 21명, ㈜엘리드
+## src/components/ProductCards.astro	24시간 첩포 시험 평균 피부자극도, 무자극 판정
+## src/components/ProductCards.astro	㈜엘리드, 34명
+## src/components/ProductCards.astro	제품 보기
+## src/components/ProductCards.astro	구매처
+## src/components/ProductCards.astro	더마 클렌징
+## src/components/ProductCards.astro	300mL · 3~4번 펌핑, 롤링 마사지 후 헹굼
+## src/components/ProductCards.astro	1회 사용 직후 얼굴 부피, 일시적 붓기 완화에 도움
+## src/components/ProductCards.astro	한국피부과학연구원 인체적용시험, 여성 22명
+## src/components/ProductCards.astro	메이크업 세정률
+## src/components/ProductCards.astro	팔 안쪽에 바른 메이크업 기준, 같은 시험
+## src/components/ProductCards.astro	콧방울 블랙헤드 면적
+## src/components/ProductCards.astro	같은 시험, 화이트헤드 면적은 −51.97%
+## src/components/WhereToBuy.astro	공식 구매처
+## src/components/WhereToBuy.astro	한국
+## src/components/WhereToBuy.astro	일본
+## src/components/WhereToBuy.astro	전국 제휴 약국에서도 만나실 수 있습니다.
+## src/components/WhereToBuy.astro	(새 창)
+## src/data/faq.json	시술 후 사용
+## src/data/faq.json	시술 후 선크림은 언제부터 바르나요?
+## src/data/faq.json	시술 종류에 따라 다릅니다. 피부 표면이 열리지 않는 레이저 토닝·IPL·리프팅은 보통 당일부터, 미세한 구멍이 남는 시술은 보통 24시간 뒤부터, 딱지가 생기는 시술은 상처가 아문 뒤부터 바릅니다. 시술한 병원의 안내가 다르면 병원 안내를 따르세요.
+## src/data/faq.json	시술 후 세안은 언제부터 클렌징 밀크로 하나요?
+## src/data/faq.json	병원이 세안을 허락한 시점부터 씁니다. 레이저 토닝·IPL·리프팅은 보통 당일 저녁부터 미온수로 가볍게, 주사 시술은 병원이 안내한 시간이 지난 뒤 마사지 없이 씁니다.
+## src/data/faq.json	주사 시술(보톡스·필러·스킨부스터) 후에도 롤링 마사지를 해도 되나요?
+## src/data/faq.json	아니요. 주사 부위를 문지르거나 누르면 약물이나 필러가 퍼질 수 있어, 의료기관들은 마사지를 피하라고 안내합니다. 주사 시술 뒤에는 클렌징 밀크를 손바닥으로 가볍게 펴 바르고 바로 헹구세요.
+## src/data/faq.json	점을 뺀 자리에 선크림을 발라도 되나요?
+## src/data/faq.json	상처가 아물기 전에는 바르지 마세요. 두 제품 모두 표시사항에 '상처가 있는 부위 등에는 사용을 자제할 것'이 있습니다. 상처에 테이프를 붙인 동안에는 상처 주변 피부에만 바르고, 상처가 아문 뒤부터 시술 부위까지 꼼꼼히 바르세요.
+## src/data/faq.json	피부과에서 무기자차를 쓰라고 했어요. 뉴베리프 선크림을 써도 되나요?
+## src/data/faq.json	의료진의 안내를 따르세요. 뉴베리프 백합 리커버리 선크림은 유기자차입니다. 일부 의료기관은 미세한 구멍이 남는 시술 뒤 일정 기간 무기자차를 권합니다.
+## src/data/faq.json	광역동치료(PDT) 후에는 선크림만 바르면 되나요?
+## src/data/faq.json	아니요. 치료 후 약 48시간은 피부가 빛에 매우 예민해 선크림만으로는 보호할 수 없습니다. 이 기간에는 실내에 머물고, 48시간 뒤부터 선크림을 매일 바르세요.
+## src/data/faq.json	시술 전에도 써야 하나요?
+## src/data/faq.json	네. 그을린 피부는 시술 뒤 색소침착 위험이 높아, 시술 전부터 자외선을 피하라고 안내하는 의료진이 많습니다. 시술 당일 아침에는 메이크업과 선크림을 지우고 오라는 병원이 많아 클렌징 밀크를 쓰기 좋습니다.
+## src/data/faq.json	시술 후 붓기도 클렌징 밀크로 빠지나요?
+## src/data/faq.json	시술로 생긴 부기를 줄인다고 말할 수 없습니다. 클렌징 밀크의 붓기 완화 시험은 시술하지 않은 피부에서 1회 세안 직후 측정한 결과입니다. 시술 후 부기는 병원 안내에 따라 관리하세요.
+## src/data/faq.json	유기자차인가요, 무기자차인가요?
+## src/data/faq.json	유기자차입니다. 자외선 차단 성분 4종(디에칠아미노하이드록시벤조일헥실벤조에이트, 에칠헥실트리아존, 메칠렌비스-벤조트리아졸릴테트라메칠부틸페놀, 디에칠헥실부타미도트리아존)이 들어 있습니다.
+## src/data/faq.json	자외선 차단 효과는 시험했나요?
+## src/data/faq.json	네. 한국피부과학연구원 인체적용시험(2025년, 10명)에서 SPF 53.9, UVAPF 18.6(PA++++)이 나왔습니다.
+## src/data/faq.json	기능성 화장품인가요?
+## src/data/faq.json	네. 자외선 차단, 미백, 주름개선 3중 기능성 화장품으로 2025년 6월 식약처 보고를 마쳤습니다. 미백 성분은 나이아신아마이드, 주름개선 성분은 아데노신입니다.
+## src/data/faq.json	눈이 시리지 않나요?
+## src/data/faq.json	눈시림이 적도록 만든 제품이지만, 느끼는 정도는 사람마다 다릅니다. 평소 화장품을 쓸 때 눈시림을 느끼는 여성 21명이 2주 사용한 뒤 눈시림 점수가 80.27% 줄었습니다. 눈에 직접 들어가면 물로 씻어내세요.
+## src/data/faq.json	민감한 피부도 쓸 수 있나요?
+## src/data/faq.json	24시간 첩포 시험(34명)에서 피부 자극도 0.00으로 무자극 판정을 받았습니다. 다만 피부 반응은 사람마다 달라, 처음에는 귀 뒤나 턱선처럼 작은 부위에 먼저 발라 보세요. 이상이 있으면 사용을 멈추고 전문의와 상담하세요.
+## src/data/faq.json	지성 피부도 괜찮나요?
+## src/data/faq.json	촉촉한 로션 제형이라 지성 피부나 더운 날에는 유분감을 느낄 수 있습니다. 화해 리뷰에서도 촉촉하다는 의견이 가장 많고, 지성 피부에는 무겁다는 의견도 있습니다. 양을 나눠 얇게 바르고, 필요하면 위에 파우더를 더하세요.
+## src/data/faq.json	건성 피부는 어떤가요?
+## src/data/faq.json	화해 리뷰에서 가장 많이 언급된 장점이 '촉촉함'입니다. 에어컨 아래처럼 건조한 환경에서는 보습제를 먼저 바르는 것이 좋습니다.
+## src/data/faq.json	백탁이 있나요?
+## src/data/faq.json	거의 없습니다. 사용 직후 설문에서 22명 중 21명(95.5%)이 백탁 없이 깨끗하게 마무리된다고 답했습니다. 한 번에 많이 바르면 겉돌 수 있으니 두 번에 나눠 바르세요.
+## src/data/faq.json	메이크업 전에 써도 되나요? 밀림은 없나요?
+## src/data/faq.json	스킨케어의 마지막 단계에 바르고, 흡수된 뒤 베이스 메이크업을 올리세요. 설문에서 22명 전원이 다른 화장품과 밀림 없이 어우러진다고 답했지만, 많이 바르거나 바로 덧바르면 밀릴 수 있습니다.
+## src/data/faq.json	얼마나 발라야 하나요?
+## src/data/faq.json	얼굴 전체가 충분히 덮일 만큼 바르세요. 자외선 차단지수는 피부 1cm²당 2mg을 바른 조건에서 측정합니다. 이보다 얇게 바르면 표시된 만큼 차단되지 않을 수 있어, 두 번에 나눠 바르는 것을 권합니다.
+## src/data/faq.json	덧발라야 하나요?
+## src/data/faq.json	네. 외출 30분 전에 바르고, 2~3시간 간격으로 덧바르세요. 땀을 많이 흘리거나 수건으로 닦은 뒤에도 덧바르세요.
+## src/data/faq.json	톤업 효과가 있나요?
+## src/data/faq.json	아니요. 색을 입히는 톤업 성분은 들어 있지 않습니다. '미백 기능성'은 꾸준히 사용할 때 피부 미백에 도움을 준다는 뜻으로, 바르자마자 피부가 밝아 보이는 톤업과는 다릅니다.
+## src/data/faq.json	선크림은 어떻게 지우나요?
+## src/data/faq.json	클렌징 밀크나 평소 쓰는 세안제로 지우세요. 선크림 위에 메이크업을 했다면 클렌징 밀크로 먼저 지운 뒤 세안하세요.
+## src/data/faq.json	향이 있나요?
+## src/data/faq.json	향료는 넣지 않았습니다. 다만 원료 자체의 냄새가 약하게 날 수 있어, 화해 리뷰에서도 '향이 거의 없다'와 '특유의 냄새가 있다'는 의견이 함께 있습니다.
+## src/data/faq.json	알코올(에탄올)이 들어 있나요?
+## src/data/faq.json	네. 전성분 42가지 중 32번째에 에탄올이 들어 있습니다. 에탄올에 민감하다면 작은 부위에 먼저 써 보세요.
+## src/data/faq.json	얼굴 말고 몸에도 써도 되나요?
+## src/data/faq.json	네. 사용방법에도 얼굴과 목 등 자외선에 노출되는 부위에 바르도록 안내하고 있습니다.
+## src/data/faq.json	남성도 쓸 수 있나요?
+## src/data/faq.json	네. 성별과 관계없이 쓸 수 있습니다. 인체적용시험에도 남성 참여자가 포함됐습니다(자외선 차단 시험).
+## src/data/faq.json	아이가 써도 되나요?
+## src/data/faq.json	이 제품은 어린이용으로 시험하거나 표시한 제품이 아닙니다. 어린이에게는 어린이용으로 표시된 자외선 차단제를 권합니다.
+## src/data/faq.json	임신 중에도 쓸 수 있나요?
+## src/data/faq.json	임신 중 사용에 대해서는 따로 시험하지 않았습니다. 전성분을 담당 의료진과 함께 확인한 뒤 사용하세요.
+## src/data/faq.json	여드름이 잘 나는 피부도 괜찮나요?
+## src/data/faq.json	여드름성 피부 사용 적합성 시험(논코메도제닉 등)은 하지 않았습니다. 화해 리뷰에서는 트러블이 없었다는 의견이 많지만, 일부는 작은 트러블을 경험했습니다. 처음 쓸 때는 피부 반응을 지켜보세요.
+## src/data/faq.json	파란 튜브와 흰 튜브는 어떤 차이가 있나요?
+## src/data/faq.json	내용물은 같고 용기 디자인만 바뀌었습니다. 사용하면서 불편하다는 의견이 많았던 용기를 개선했습니다.
+## src/data/faq.json	처음 열 때 내용물이 많이 나와요.
+## src/data/faq.json	묽은 로션 제형이라 세게 누르면 한 번에 많이 나올 수 있습니다. 튜브를 가볍게 눌러 양을 조절하세요.
+## src/data/faq.json	사용기한은 어떻게 되나요?
+## src/data/faq.json	제조일로부터 36개월, 개봉 후에는 12개월 안에 쓰세요. 용기에 표시된 사용기한이 먼저 지나면 그 날짜까지만 씁니다.
+## src/data/faq.json	화해 어워드는 어떤 상인가요?
+## src/data/faq.json	2025 하반기 화해 어워드 선케어 부문(선크림/로션) 진정 카테고리에서 1위를 받았습니다. 화해 어워드는 소비자 리뷰와 평점 데이터를 바탕으로 선정됩니다.
+## src/data/faq.json	어떻게 쓰나요?
+## src/data/faq.json	마른 손에 적당량을 덜어 마른 얼굴에 펴 바르고, 손끝으로 얼굴 안쪽에서 바깥쪽으로, 아래에서 위로 가볍게 롤링한 뒤 물로 깨끗이 헹구세요. 마지막에 차가운 물로 가볍게 마무리하면 일시적인 붓기 완화에 도움을 줄 수 있습니다.
+## src/data/faq.json	몇 번 펌핑하나요?
+## src/data/faq.json	한 번에 3~4번 펌핑해 얼굴 전체에 펴 바르세요. 짙은 메이크업을 지울 때는 양을 조금 늘려도 됩니다.
+## src/data/faq.json	이중 세안이 필요한가요?
+## src/data/faq.json	선크림과 가벼운 메이크업은 클렌징 밀크 한 번으로 지울 수 있습니다. 짙은 메이크업이나 워터프루프 제품을 썼다면 전용 리무버로 먼저 지우거나, 클렌징 밀크 뒤에 한 번 더 세안하세요.
+## src/data/faq.json	워터프루프 마스카라도 지워지나요?
+## src/data/faq.json	한 번에 완전히 지우기는 어렵습니다. 화해 리뷰에서도 가장 많이 나온 아쉬운 점입니다. 눈과 입술의 워터프루프 메이크업은 포인트 리무버로 먼저 지우세요.
+## src/data/faq.json	거품이 나지 않아요.
+## src/data/faq.json	정상입니다. 거품을 내지 않고 펴 발라 메이크업과 노폐물을 녹여 내는 밀크 타입입니다. 데실글루코사이드 같은 순한 세정 성분이 들어 있습니다.
+## src/data/faq.json	헹군 뒤에도 미끌거리는 느낌이 있어요.
+## src/data/faq.json	보습 성분이 피부에 남으며 나는 느낌일 수 있습니다. 미온수로 충분히 헹구세요. 뽀득한 마무리를 좋아한다면 순한 폼클렌저로 한 번 더 씻어도 됩니다.
+## src/data/faq.json	붓기 완화 효과가 잘 느껴지지 않아요.
+## src/data/faq.json	붓기 완화는 일시적인 효과이고, 느끼는 정도는 사람마다 다릅니다. 한국피부과학연구원 시험에서 여성 22명이 1회 사용한 직후 얼굴 부피가 평균 0.47cc 줄었습니다(3D 촬영 측정). 마지막에 찬물로 헹구는 방법을 함께 써 보세요.
+## src/data/faq.json	블랙헤드·화이트헤드에도 효과가 있나요?
+## src/data/faq.json	1회 사용 직후 콧방울의 블랙헤드 면적이 43.92%, 턱이나 이마의 화이트헤드 면적이 51.97% 줄었습니다(여성 22명). 세정 효과를 잰 시험이며, 모공 크기를 줄인다는 뜻은 아닙니다.
+## src/data/faq.json	메이크업 세정력은 얼마나 되나요?
+## src/data/faq.json	팔 안쪽에 바른 메이크업을 1회 세정한 시험에서 세정 개선율이 96.68%였습니다(피부 밝기 측정, 여성 22명). 짙은 메이크업과 워터프루프 제품은 C-03을 참고하세요.
+## src/data/faq.json	말차가 들어 있나요? 말차 향이 나나요?
+## src/data/faq.json	말차에서 얻은 PDRN 성분(소듐디엔에이)이 들어 있습니다. 향료를 넣지 않아 말차 향은 나지 않습니다.
+## src/data/faq.json	PDRN이 들어 있나요?
+## src/data/faq.json	네. 말차에서 얻은 PDRN(소듐디엔에이)을 0.01ppm 담았습니다.
+## src/data/faq.json	눈에 들어가면 따가운가요?
+## src/data/faq.json	눈에 직접 들어가면 따가울 수 있으니 바로 물로 헹구세요. 사람 각막을 본뜬 세포 모델로 한 안자극 시험(in vitro)에서는 비자극 판정을 받았습니다.
+## src/data/faq.json	24시간 첩포 시험(31명)에서 피부 반응도 0.00으로 무자극 판정을 받았습니다. 아토피나 지루성 피부염처럼 피부 질환이 있다면 작은 부위에 먼저 써 보고, 증상이 있으면 전문의와 상담하세요.
+## src/data/faq.json	아침 세안에도 쓸 수 있나요?
+## src/data/faq.json	네. 상세페이지에서도 아침 세안에 쓰는 방법을 안내합니다. 마른 얼굴에 바르고 가볍게 문지른 뒤 물로 헹구면 됩니다.
+## src/data/faq.json	세안 후 당기지 않나요?
+## src/data/faq.json	설문에서 22명 전원이 피부가 당기지 않고 촉촉하게 유지된다고 답했습니다(1회 사용 직후). 세라마이드엔피와 저분자 히알루론산이 들어 있습니다.
+## src/data/faq.json	촉촉하게 마무리되는 제형이라, 지성 피부는 개운함이 덜하다고 느낄 수 있습니다. 이 경우 순한 폼클렌저와 함께 쓰세요.
+## src/data/faq.json	사용기한과 보관 방법은요?
+## src/data/faq.json	제조일로부터 30개월, 개봉 후에는 12개월 안에 쓰세요. 직사광선을 피하고, 어린이의 손이 닿지 않는 곳에 보관하세요.
+## src/data/faq.json	브랜드·구매·문의
+## src/data/faq.json	뉴베리프는 어떤 브랜드인가요?
+## src/data/faq.json	피부 시술 전후의 피부를 기준으로, 사용 시기와 피부 상태에 맞춘 제품을 만드는 더마코스메틱 브랜드입니다. 2025년 7월 31일 백합 리커버리 선크림으로 출시했고, 리더스어소시에이츠 주식회사가 운영합니다.
+## src/data/faq.json	이름은 무슨 뜻인가요?
+## src/data/faq.json	NEU(새로운), REVIVE(되살아나는 생기), RELIEF(편안함)를 합친 이름입니다.
+## src/data/faq.json	어디서 만드나요?
+## src/data/faq.json	한국콜마㈜가 대한민국에서 제조합니다.
+## src/data/faq.json	어디서 살 수 있나요?
+## src/data/faq.json	각 제품 페이지의 ‘구매처’에서 확인하세요. 한국에서는 네이버 브랜드스토어, 쿠팡, G마켓, 화해, 카카오톡 스토어에서, 일본에서는 큐텐 재팬(Qoo10)에서 구매하실 수 있습니다. 전국 제휴 약국에서도 만나실 수 있습니다.
+## src/data/faq.json	임상 결과 원본을 볼 수 있나요?
+## src/data/faq.json	시험기관의 보고서는 공개할 수 없어, 사이트에는 시험기관·기간·대상·결과를 요약해 싣습니다.
+## src/data/faq.json	문의는 어디로 하나요?
+## src/data/faq.json	contact@neuvelif.com으로 이메일을 보내 주시면 신속하게 답변을 드리겠습니다.
+## src/data/guides.ts	SPF50+ PA++++로 자외선 A와 B를 함께 차단합니다.
+## src/data/guides.ts	인체적용시험 SPF 53.9, UVAPF 18.6 (한국피부과학연구원, 10명)
+## src/data/guides.ts	24시간 첩포 시험에서 평균 피부자극도 0.00, 무자극 판정을 받았습니다.
+## src/data/guides.ts	(㈜엘리드, 34명)
+## src/data/guides.ts	24시간 첩포 시험에서 피부 자극도 0.00(무자극 판정)을 받았습니다.
+## src/data/guides.ts	(한국피부과학연구원, 31명)
+## src/data/guides.ts	거품을 낼 필요 없이 바로 펴 바르고 헹구는 밀크 타입입니다.
+## src/data/guides.ts	무기자차를 권받았다면
+## src/data/guides.ts	뉴베리프 백합 리커버리 선크림은 유기자차입니다. 시술한 병원이 무기자차(징크옥사이드·티타늄디옥사이드)를 권했다면 병원 안내를 따르세요.
+## src/data/guides.ts	상처에는 바르지 않습니다
+## src/data/guides.ts	두 제품 모두 표시사항에 ‘상처가 있는 부위 등에는 사용을 자제할 것’이 적혀 있습니다. 딱지·진물·테이프가 있는 부위는 아문 뒤부터 쓰세요.
+## src/data/guides.ts	레이저·빛 시술이나 필링 뒤의 피부는 자외선에 더 예민해, 붉은기나 색소침착(시술 뒤 생기는 갈색 자국)이 생기기 쉽습니다.
+## src/data/guides.ts	햇볕에 그을린 피부는 시술 뒤 색소침착 위험이 더 높아, 시술 전부터 자외선 노출을 줄이라고 안내하는 의료진이 많습니다.
+## src/data/guides.ts	자외선 차단 전반에 대한 설명이며, 특정 제품의 효과를 뜻하지 않습니다.
+## src/data/guides.ts	Lee KWA 외, Importance of Using Sunscreen After Light or Laser Facial Treatment: A Literature Review, Life (2025)
+## src/data/guides.ts	국내 의료기관이 공개한 시술 후 주의사항 (2026년 11월 확인)
+## src/data/guides.ts	레이저 토닝·IPL·리프팅
+## src/data/guides.ts	선크림 시술 당일부터
+## src/data/guides.ts	울쎄라·써마지·레이저 토닝 등
+## src/data/guides.ts	레이저 토닝, IPL, 울쎄라·슈링크, 써마지·인모드·올리지오, 티타늄 리프팅, 온다 리프팅, 혈관 레이저
+## src/data/guides.ts	레이저 토닝·IPL·리프팅 뒤 선크림은 대부분 <strong>시술 당일, 열감이 가라앉은 뒤부터</strong> 바릅니다. 세안은 <strong>당일 저녁부터 미온수로 가볍게</strong> 합니다. 시술한 병원의 안내와 다르면 병원 안내를 따르세요.
+## src/data/guides.ts	시술 당일부터
+## src/data/guides.ts	열감이 가라앉은 뒤 얼굴 전체에 바르고 귀가합니다.
+## src/data/guides.ts	시술 당일 저녁부터
+## src/data/guides.ts	미온수로 가볍게 세안합니다.
+## src/data/guides.ts	열을 피하기
+## src/data/guides.ts	사우나, 뜨거운 물, 격한 운동은 피하세요.
+## src/data/guides.ts	피부 표면에 상처는 없지만, 열감과 붉은기가 몇 시간에서 하루 정도 이어질 수 있습니다. IPL 뒤에는 잡티가 잠시 진해졌다가 각질처럼 떨어지기도 합니다.
+## src/data/guides.ts	시술 당일
+## src/data/guides.ts	열감이 가라앉으면 얼굴 전체에 바르고 귀가
+## src/data/guides.ts	저녁에 미온수로 가볍게 세안
+## src/data/guides.ts	사우나·뜨거운 물·격한 운동 피하기
+## src/data/guides.ts	1~3일
+## src/data/guides.ts	외출 30분 전 바르고 2~3시간마다 덧바르기
+## src/data/guides.ts	아침·저녁 세안
+## src/data/guides.ts	각질 제거제·스크럽·레티놀 쉬기
+## src/data/guides.ts	4일~2주
+## src/data/guides.ts	계속 꼼꼼히
+## src/data/guides.ts	평소대로
+## src/data/guides.ts	진해진 잡티를 손으로 떼지 않기
+## src/data/guides.ts	2주 이후
+## src/data/guides.ts	매일 습관으로
+## src/data/guides.ts	다음 시술 전까지 그을리지 않기
+## src/data/guides.ts	시술 부위를 세게 문지르기
+## src/data/guides.ts	뜨거운 물, 사우나
+## src/data/guides.ts	각질 제거
+## src/data/guides.ts	얼굴 전체에 바르는 시술이라 눈가까지 바르게 됩니다. 평소 눈시림을 느끼는 여성 21명이 2주 쓴 뒤 눈시림 점수가 80.27% 줄었습니다.
+## src/data/guides.ts	(㈜엘리드)
+## src/data/guides.ts	적외선으로 피부 온도를 높인 시험에서, 바른 쪽 볼의 온도가 바로 4.85℃ 내려갔습니다.
+## src/data/guides.ts	(㈜엘리드, 여성 22명. 시술 직후 피부에서 시험한 결과는 아닙니다.)
+## src/data/guides.ts	자외선 차단·미백·주름개선 3중 기능성 화장품입니다.
+## src/data/guides.ts	마지막에 찬물로 가볍게 헹구는 방법을 표시사항에 안내하고 있습니다. 고주파 리프팅 뒤 며칠은 미온수로 헹구세요.
+## src/data/guides.ts	시술 뒤 자외선 차단,<br>왜 더 중요할까요?
+## src/data/guides.ts	비박피성 레이저 뒤에도 꾸준한 자외선 차단이 권장됩니다.
+## src/data/guides.ts	MDedge, Tips for avoiding, taming most postlaser complications (AAD 2018 발표)
+## src/data/guides.ts	레이저 제모
+## src/data/guides.ts	선크림 보통 다음 날부터
+## src/data/guides.ts	얼굴·인중·바디 레이저 제모
+## src/data/guides.ts	레이저 제모 뒤 선크림은 보통 <strong>다음 날부터</strong> 바릅니다. 시술 당일에는 옷·모자·마스크로 가리고, 세안은 <strong>당일 미온수 물세안 또는 병원 안내대로</strong> 합니다. 시술한 병원의 안내와 다르면 병원 안내를 따르세요.
+## src/data/guides.ts	보통 다음 날부터
+## src/data/guides.ts	시술 당일에는 바르지 않고 옷·모자·마스크로 가립니다.
+## src/data/guides.ts	다음 날부터
+## src/data/guides.ts	당일에는 미온수 물세안 또는 병원 안내를 따릅니다.
+## src/data/guides.ts	열과 마찰 피하기
+## src/data/guides.ts	뜨거운 샤워와 땀나는 운동은 피하세요.
+## src/data/guides.ts	모공 주변이 붉어지거나 살짝 부을 수 있습니다. 여러 번 나눠 받는 시술이라 회차 사이 관리도 중요합니다.
+## src/data/guides.ts	바르지 않고 옷·모자·마스크로 가림
+## src/data/guides.ts	미온수 물세안 또는 병원 안내
+## src/data/guides.ts	뜨거운 샤워·땀나는 운동 피하기
+## src/data/guides.ts	얼굴·팔 등 햇빛에 드러나는 부위에 꼼꼼히
+## src/data/guides.ts	왁싱·족집게 제모 하지 않기
+## src/data/guides.ts	회차 사이
+## src/data/guides.ts	매일
+## src/data/guides.ts	태닝 피하기
+## src/data/guides.ts	뜨거운 샤워, 사우나
+## src/data/guides.ts	왁싱·족집게 제모
+## src/data/guides.ts	태닝
+## src/data/guides.ts	얼굴과 목 등 자외선에 드러나는 부위에 쓰는 제품입니다. 팔·다리처럼 햇빛에 드러나는 제모 부위에도 다음 날부터 바를 수 있습니다.
+## src/data/guides.ts	제모 기간 내내<br>자외선을 피하는 이유
+## src/data/guides.ts	레이저 제모 전후로 자외선을 피하라고 안내하는 의료진이 많습니다. 그을린 피부는 레이저 제모 뒤 붉은기나 색소 변화가 생기기 쉽기 때문입니다.
+## src/data/guides.ts	여러 번 나눠 받는 시술이라, 회차 사이에도 매일 자외선 차단을 이어 가는 것이 좋습니다.
+## src/data/guides.ts	레이저 제모 당일 선크림을 발라도 되나요?
+## src/data/guides.ts	보통 시술 당일에는 바르지 않고 옷·모자·마스크로 가리며, 다음 날부터 바르도록 안내하는 의료기관이 많습니다. 시술한 병원의 안내를 따르세요.
+## src/data/guides.ts	바디 제모 부위에도 선크림을 발라도 되나요?
+## src/data/guides.ts	백합 리커버리 선크림은 얼굴과 목 등 자외선에 드러나는 부위에 쓰는 제품입니다. 팔·다리처럼 햇빛에 드러나는 제모 부위에도 다음 날부터 바를 수 있습니다. 피부가 예민하면 작은 부위에 먼저 써 보세요.
+## src/data/guides.ts	제모 회차 사이에는 어떻게 관리하나요?
+## src/data/guides.ts	매일 자외선 차단을 하고, 태닝과 왁싱·족집게 제모는 피하세요. 다음 회차 전 관리는 시술한 병원의 안내를 따르세요.
+## src/data/guides.ts	코메디닷컴, 제모·보톡스·박피·레이저 피부과 시술 후 관리 (피부과 전문의 도움말)
+## src/data/guides.ts	모공 주변이 붉어지거나 살짝 부을 수 있어요.
+## src/data/guides.ts	시술 당일에는 바르지 말고 옷·모자·마스크로 가려 주세요.
+## src/data/guides.ts	다음 날부터 얼굴뿐 아니라 팔·다리처럼 햇빛에 드러나는 제모 부위에도 발라 주세요.
+## src/data/guides.ts	회차 사이에도 매일 바르는 습관이 중요합니다.
+## src/data/guides.ts	다음 날부터 평소처럼
+## src/data/guides.ts	시술 당일에는 미온수로 물세안만 하거나 병원 안내를 따르세요.
+## src/data/guides.ts	다음 날부터 평소처럼 롤링 마사지로 세안하면 됩니다. 붉은기가 남아 있으면 가볍게 펴 바르고 헹구세요.
+## src/data/guides.ts	뜨거운 샤워와 땀나는 운동을 피하세요.
+## src/data/guides.ts	회차 사이 왁싱·족집게 제모와 태닝은 피하세요.
+## src/data/guides.ts	SPF50+ PA++++, 24시간 첩포 시험 피부자극도 0.00 (㈜엘리드, 34명).
+## src/data/guides.ts	클렌징 밀크는 거품 없이 펴 바르는 밀크 타입입니다.
+## src/data/guides.ts	아쿠아필·LDM·필링
+## src/data/guides.ts	아쿠아필·라라필·LDM·LED
+## src/data/guides.ts	아쿠아필, 라라필·LHA 필링·쎄라필, LDM, LED
+## src/data/guides.ts	아쿠아필·필링 뒤 선크림은 <strong>시술 당일부터</strong> 바르는 것이 가장 중요한 관리입니다. 세안은 <strong>당일 저녁부터 미온수로 가볍게</strong> 합니다. 시술한 병원의 안내와 다르면 병원 안내를 따르세요.
+## src/data/guides.ts	이 시술 뒤에 가장 중요한 관리입니다. 매일 덧바릅니다.
+## src/data/guides.ts	미온수로, 거품 없이 펴 바르고 헹굽니다.
+## src/data/guides.ts	각질은 그대로
+## src/data/guides.ts	각질을 손으로 떼지 말고, 산·레티놀·스크럽은 쉬세요.
+## src/data/guides.ts	각질층이 얇아져 따가움, 당김, 가벼운 각질이 며칠 생길 수 있습니다. LDM·LED는 대부분 자극이 거의 없습니다.
+## src/data/guides.ts	바로 (이 그룹에서 가장 중요한 관리)
+## src/data/guides.ts	저녁에 미온수로 가볍게
+## src/data/guides.ts	각질을 손으로 떼지 않기
+## src/data/guides.ts	1~7일
+## src/data/guides.ts	매일, 2~3시간마다 덧바르기
+## src/data/guides.ts	아침·저녁
+## src/data/guides.ts	산(AHA·BHA)·레티놀·스크럽 쉬기
+## src/data/guides.ts	이후
+## src/data/guides.ts	각질을 손으로 떼기
+## src/data/guides.ts	산(AHA·BHA)·레티놀·스크럽
+## src/data/guides.ts	세게 문지르는 세안
+## src/data/guides.ts	각질이 일어난 피부에 거품을 내지 않고 펴 바르는 방식입니다.
+## src/data/guides.ts	세안 뒤 ‘당기지 않고 촉촉하게 유지된다’는 설문 응답 100%.
+## src/data/guides.ts	(여성 22명, 1회 사용 직후 본인 평가)
+## src/data/guides.ts	필링 뒤 자외선 차단이<br>가장 중요한 이유
+## src/data/guides.ts	필링 뒤에는 각질층이 얇아져 피부가 자외선에 더 예민해질 수 있습니다.
+## src/data/guides.ts	가벼운 필링 뒤에도 꾸준한 자외선 차단이 권장됩니다.
+## src/data/guides.ts	아쿠아필 받은 날 선크림을 발라도 되나요?
+## src/data/guides.ts	네, 보통 시술 당일부터 바르도록 안내합니다. 각질층이 얇아진 상태라 자외선 차단이 특히 중요합니다. 따가움이 심하면 시술한 병원에 먼저 문의하세요.
+## src/data/guides.ts	필링 뒤 각질이 일어나요. 클렌징 밀크 롤링 마사지를 해도 되나요?
+## src/data/guides.ts	각질이 일어난 동안에는 롤링을 짧고 가볍게 하고, 각질을 손으로 떼지 마세요. 거품을 내지 않고 펴 바른 뒤 미온수로 헹구면 됩니다.
+## src/data/guides.ts	LDM이나 LED만 받았어요. 따로 주의할 점이 있나요?
+## src/data/guides.ts	대부분 자극이 거의 없어 평소처럼 선크림과 클렌징 밀크를 쓰면 됩니다. 다른 시술과 함께 받았다면 그 시술의 기준을 따르세요.
+## src/data/guides.ts	미국피부과학회(AAD), Chemical peels: FAQs
+## src/data/guides.ts	아쿠아필
+## src/data/guides.ts	수분 박피
+## src/data/guides.ts	각질층이 얇아져 따가움·당김이 있을 수 있어요.
+## src/data/guides.ts	시술 당일 바로 바르세요. 이 그룹에서 가장 중요한 관리입니다.
+## src/data/guides.ts	외출 30분 전에 바르고 2~3시간마다 덧발라 주세요.
+## src/data/guides.ts	미온수로 가볍게 씻어 주세요.
+## src/data/guides.ts	거품을 내지 않고 펴 바른 뒤 헹구면 됩니다.
+## src/data/guides.ts	1주 정도는 산(AHA·BHA)·레티놀·스크럽을 쉬세요.
+## src/data/guides.ts	선크림 24시간 첩포 시험 피부자극도 0.00 (㈜엘리드, 34명).
+## src/data/guides.ts	클렌징 밀크 설문 ‘당기지 않고 촉촉하게 유지’ 100% (여성 22명, 1회 사용 직후 본인 평가).
+## src/data/guides.ts	라라필·LHA 필링·쎄라필
+## src/data/guides.ts	표피 필링
+## src/data/guides.ts	따가움·당김과 가벼운 각질이 며칠 생길 수 있어요.
+## src/data/guides.ts	당일부터 매일 바르세요.
+## src/data/guides.ts	각질 위는 문지르지 말고 손바닥으로 얹듯이 펴 주세요.
+## src/data/guides.ts	각질이 일어난 동안은 롤링을 짧고 가볍게 해 주세요.
+## src/data/guides.ts	각질을 손으로 떼지 마세요.
+## src/data/guides.ts	산·레티놀·스크럽을 쉬세요.
+## src/data/guides.ts	거품을 내지 않고 펴 바르는 밀크 타입입니다.
+## src/data/guides.ts	초음파 관리 · 빛 관리
+## src/data/guides.ts	대부분 자극이 거의 없습니다.
+## src/data/guides.ts	시술 당일부터 평소처럼
+## src/data/guides.ts	평소처럼 바르면 됩니다.
+## src/data/guides.ts	평소처럼
+## src/data/guides.ts	평소처럼 롤링 마사지로 세안하면 됩니다.
+## src/data/guides.ts	다른 시술과 함께 받았다면 그 시술의 기준을 따르세요.
+## src/data/guides.ts	평소 쓰던 순서 그대로 쓰면 됩니다.
+## src/data/guides.ts	보톡스·필러·스킨부스터
+## src/data/guides.ts	병원이 세안을 허락한 뒤
+## src/data/guides.ts	보톡스·필러·리쥬란·쥬베룩 등
+## src/data/guides.ts	보톡스, 필러, 리쥬란·쥬베룩 등 스킨부스터, 윤곽·지방분해 주사, 여드름 염증주사
+## src/data/guides.ts	주사 시술 뒤 선크림과 세안은 <strong>병원이 세안을 허락한 뒤부터</strong> 시작합니다. 보통 몇 시간에서 다음 날 사이이며 병원마다 다릅니다. 가장 중요한 것은 <strong>주사 부위를 문지르거나 누르지 않는 것</strong>입니다.
+## src/data/guides.ts	손가락으로 톡톡 얹듯이 바릅니다.
+## src/data/guides.ts	롤링 마사지 없이 가볍게 펴 바르고 바로 헹굽니다.
+## src/data/guides.ts	문지르지 않기
+## src/data/guides.ts	주사 부위를 문지르거나 누르지 마세요.
+## src/data/guides.ts	주사 자국, 멍, 부기, 오돌토돌한 자국(스킨부스터)이 며칠 이어질 수 있습니다. 약물이나 필러가 원래 자리에서 퍼지지 않도록 주사 부위를 문지르거나 누르지 않는 것이 가장 중요합니다.
+## src/data/guides.ts	시술 직후
+## src/data/guides.ts	바르지 않음
+## src/data/guides.ts	세안하지 않음
+## src/data/guides.ts	시술 부위 만지지 않기
+## src/data/guides.ts	병원이 세안을 허락한 뒤 (보통 몇 시간~다음 날)
+## src/data/guides.ts	손가락으로 톡톡 얹듯이
+## src/data/guides.ts	손바닥으로 가볍게 펴 바르고 롤링 마사지 없이 바로 헹굼
+## src/data/guides.ts	문지르기·마사지·얼굴 누르기 피하기
+## src/data/guides.ts	1~2주
+## src/data/guides.ts	평소대로 (주사 부위 마사지는 계속 피함)
+## src/data/guides.ts	사우나·음주·피부 관리 마사지 피하기
+## src/data/guides.ts	주사 부위를 문지르거나 누르기
+## src/data/guides.ts	얼굴 마사지, 롤링 마사지
+## src/data/guides.ts	사우나, 음주
+## src/data/guides.ts	클렌징 밀크는 롤링 없이
+## src/data/guides.ts	말차 디퍼핑 클렌징 밀크의 기본 사용법은 롤링 마사지입니다. 주사 시술 뒤에는 롤링을 빼고, 손바닥으로 가볍게 펴 바른 뒤 바로 헹구세요.
+## src/data/guides.ts	손끝으로 톡톡 얹어 얇게 펴 바르기 쉬운 로션 제형입니다.
+## src/data/guides.ts	‘유분감 없이 자연스럽게 흡수된다’는 설문 응답 100%.
+## src/data/guides.ts	(여성 22명, 바른 직후 본인 평가)
+## src/data/guides.ts	거품을 내거나 문지르지 않고 펴 바른 뒤 헹굴 수 있는 밀크 타입입니다.
+## src/data/guides.ts	주사 부위를<br>왜 문지르면 안 될까요?
+## src/data/guides.ts	주사한 약물이나 필러가 원래 자리에서 퍼지거나 움직일 수 있어, 시술 뒤 한동안 문지르거나 누르지 말라고 안내하는 의료기관이 많습니다.
+## src/data/guides.ts	세안 시작 시점은 병원마다 ‘몇 시간 뒤’, ‘다음 날부터’ 등 차이가 큽니다. 반드시 시술한 병원의 안내를 따르세요.
+## src/data/guides.ts	멍이나 붉은기가 있는 동안에도 외출할 때는 평소처럼 자외선을 가려 주세요.
+## src/data/guides.ts	보톡스 맞은 날 세안해도 되나요?
+## src/data/guides.ts	병원이 안내한 시간이 지난 뒤 세안하세요. 의료기관마다 몇 시간 뒤부터, 다음 날부터 등 안내가 다릅니다. 세안할 때는 주사 부위를 문지르거나 누르지 마세요.
+## src/data/guides.ts	스킨부스터(리쥬란 등) 뒤 클렌징 밀크를 써도 되나요?
+## src/data/guides.ts	병원이 세안을 허락한 뒤 쓸 수 있습니다. 롤링 마사지 없이 손바닥으로 가볍게 펴 바르고 바로 헹구세요. 오돌토돌한 자국은 누르거나 짜지 마세요.
+## src/data/guides.ts	윤곽주사 뒤 마사지를 하라고 하던데요?
+## src/data/guides.ts	윤곽·지방분해 주사는 병원마다 마사지 안내가 다릅니다. 병원이 마사지를 권하지 않았다면 클렌징 밀크도 롤링 없이 쓰세요.
+## src/data/guides.ts	미국성형외과학회(ASPS), What not to do after getting facial filler
+## src/data/guides.ts	닥터나우, 스킨부스터 시술 후 주의사항
+## src/data/guides.ts	보톡스
+## src/data/guides.ts	주름·사각턱·스킨보톡스
+## src/data/guides.ts	주사 자국, 가벼운 멍·부기가 생길 수 있어요. 약이 퍼지지 않도록 시술 부위를 문지르지 않는 것이 가장 중요합니다.
+## src/data/guides.ts	손끝으로 톡톡 얹듯이 바르세요.
+## src/data/guides.ts	주사 부위는 문지르지 마세요.
+## src/data/guides.ts	손바닥으로 가볍게 펴 바르고 롤링 없이 바로 헹구세요.
+## src/data/guides.ts	사각턱 보톡스는 턱 부위 마사지를 특히 피하세요.
+## src/data/guides.ts	몇 시간은 눕지 말라는 병원 안내가 있으면 따르세요.
+## src/data/guides.ts	사우나·음주·얼굴 마사지를 피하세요.
+## src/data/guides.ts	문지르지 않고 쓸 수 있는 밀크 타입입니다.
+## src/data/guides.ts	선크림은 ‘유분감 없이 자연스럽게 흡수’ 설문 응답 100% (여성 22명, 본인 평가).
+## src/data/guides.ts	필러
+## src/data/guides.ts	히알루론산 필러 등
+## src/data/guides.ts	부기·멍·누르면 아픈 느낌이 며칠 있을 수 있어요. 필러가 움직이지 않도록 누르거나 문지르지 마세요.
+## src/data/guides.ts	롤링 없이 펴 바르고 바로 헹구세요.
+## src/data/guides.ts	세안 뒤 수건으로 누르지 말고 가볍게 닦아 주세요.
+## src/data/guides.ts	1~2주는 사우나·음주·피부 관리 마사지를 피하세요.
+## src/data/guides.ts	엎드려 자지 말라는 병원 안내가 있으면 따르세요.
+## src/data/guides.ts	선크림은 얇게 펴 바르기 쉬운 로션 제형입니다.
+## src/data/guides.ts	스킨부스터
+## src/data/guides.ts	리쥬란·쥬베룩·물광주사·연어주사 등
+## src/data/guides.ts	주사 자국이 오돌토돌하게 1~2일 이어질 수 있어요.
+## src/data/guides.ts	병원마다 ‘2~3시간 뒤’, ‘다음 날부터’, ‘당일 가능’으로 안내가 크게 다릅니다. 반드시 시술 병원의 안내를 따르세요.
+## src/data/guides.ts	허락 뒤 손끝으로 톡톡 얹듯이 바르세요.
+## src/data/guides.ts	오돌토돌한 자국을 누르거나 짜지 마세요.
+## src/data/guides.ts	사우나·음주를 피하세요.
+## src/data/guides.ts	클렌징 밀크에 든 말차 PDRN은 씻어 내는 세안제의 성분으로, 스킨부스터 주사와는 다릅니다.
+## src/data/guides.ts	24시간 첩포 시험 피부 자극도 0.00 (한국피부과학연구원, 31명).
+## src/data/guides.ts	윤곽주사·지방분해주사
+## src/data/guides.ts	윤곽 주사
+## src/data/guides.ts	부기·멍이 생길 수 있어요.
+## src/data/guides.ts	세안 허락 뒤 평소처럼 바르세요.
+## src/data/guides.ts	병원 안내에 따라 (2~3시간 뒤부터 가능하다는 곳도 있음)
+## src/data/guides.ts	병원마다 마사지 안내가 정반대입니다. 가벼운 마사지를 권하는 곳도, 3~5일 마사지를 피하라는 곳도 있어요.
+## src/data/guides.ts	병원이 마사지를 권하지 않았다면 롤링 없이 쓰세요.
+## src/data/guides.ts	사우나를 피하세요.
+## src/data/guides.ts	롤링 없이 펴 바르고 헹굴 수 있는 밀크 타입입니다.
+## src/data/guides.ts	여드름 염증주사
+## src/data/guides.ts	여드름 주사
+## src/data/guides.ts	주사한 여드름 부위가 며칠 붉을 수 있어요.
+## src/data/guides.ts	병원 안내 뒤
+## src/data/guides.ts	주사 부위는 문지르지 말고 얹듯이 바르세요.
+## src/data/guides.ts	주사 부위는 문지르거나 짜지 말고 가볍게 펴 바른 뒤 헹구세요.
+## src/data/guides.ts	여드름을 짜거나 손으로 만지지 마세요.
+## src/data/guides.ts	클렌징 밀크 24시간 첩포 시험 피부 자극도 0.00 (한국피부과학연구원, 31명).
+## src/data/guides.ts	포텐자·MTS·프락셀
+## src/data/guides.ts	선크림 보통 24시간 뒤부터
+## src/data/guides.ts	포텐자·MTS·프락셀·스피큘 필링 등
+## src/data/guides.ts	포텐자, MTS, 프락셀·피코프락셀, 흉터 서브시전, 스피큘 필링
+## src/data/guides.ts	포텐자·MTS·프락셀 뒤 선크림은 보통 <strong>24시간 뒤부터, 의료진 확인 후</strong> 바릅니다. 첫 24시간은 병원이 준 제품 외에는 바르지 않도록 안내하는 곳이 많고, 세안도 <strong>병원 안내 전까지는 자제</strong>합니다.
+## src/data/guides.ts	보통 24시간 뒤부터
+## src/data/guides.ts	첫 24시간은 바르지 않고 그늘·모자로 가립니다. 의료진 확인이 우선입니다.
+## src/data/guides.ts	병원 안내 전까지는 세안을 자제하고, 시작 후 롤링 없이 씁니다.
+## src/data/guides.ts	자극 쉬기
+## src/data/guides.ts	화장·운동·땀을 피하고 레티놀·산·비타민C는 최소 3일 쉬세요.
+## src/data/guides.ts	눈에 보이지 않는 미세한 통로가 남고, 붉은기가 1~3일 이어질 수 있습니다. 첫 24시간은 피부에 아무것도 바르지 않도록 안내하는 의료기관이 많습니다.
+## src/data/guides.ts	첫 24시간
+## src/data/guides.ts	바르지 않고 그늘·모자로 가림 (병원이 준 제품만)
+## src/data/guides.ts	병원 안내 전까지 세안 자제
+## src/data/guides.ts	화장·운동·땀 피하기
+## src/data/guides.ts	24시간 뒤 (의료진 확인)
+## src/data/guides.ts	바르기 시작, 2주간 특히 꼼꼼히
+## src/data/guides.ts	미온수로 가볍게, 롤링 없이
+## src/data/guides.ts	레티놀·산·비타민C는 최소 3일 이상 쉬기
+## src/data/guides.ts	1주 이후
+## src/data/guides.ts	각질 제거는 의료진 확인 후
+## src/data/guides.ts	첫 24시간 동안 화장·운동·땀
+## src/data/guides.ts	잔 각질을 손으로 떼기
+## src/data/guides.ts	레티놀·산·비타민C (최소 3일)
+## src/data/guides.ts	유기자차입니다. 무기자차를 권받았다면 병원 안내를 따르세요.
+## src/data/guides.ts	거품을 내거나 문지르지 않고 펴 바른 뒤 바로 헹굴 수 있는 밀크 타입입니다.
+## src/data/guides.ts	미세한 구멍이 남는 시술 뒤<br>자외선 차단
+## src/data/guides.ts	첫 24시간이 지나 바르기 시작한 뒤에도 2주 정도는 특히 꼼꼼한 자외선 차단을 권하는 의료기관이 많습니다.
+## src/data/guides.ts	MTS 받고 언제부터 선크림을 바르나요?
+## src/data/guides.ts	보통 24시간 뒤부터, 의료진 확인 후 바릅니다. 첫 24시간은 병원이 준 제품 외에는 바르지 말고 그늘과 모자로 가리세요.
+## src/data/guides.ts	프락셀 뒤 잔 각질이 생겼어요. 어떻게 세안하나요?
+## src/data/guides.ts	각질을 손으로 떼지 말고, 클렌징 밀크를 롤링 없이 펴 바른 뒤 미온수로 바로 헹구세요. 각질 제거는 의료진이 괜찮다고 할 때까지 미뤄 주세요.
+## src/data/guides.ts	마이크로니들링
+## src/data/guides.ts	눈에 안 보이는 미세한 통로가 남고, 붉은기가 1~3일 이어질 수 있어요.
+## src/data/guides.ts	보통 24시간 뒤부터 (의료진 확인)
+## src/data/guides.ts	첫 24시간은 바르지 말고 그늘·모자로 가려 주세요. 병원이 준 제품만 쓰세요.
+## src/data/guides.ts	24시간 뒤 의료진 확인 후 바르기 시작하고, 2주간 특히 꼼꼼히 발라 주세요.
+## src/data/guides.ts	병원 안내 뒤 (보통 24시간 뒤부터)
+## src/data/guides.ts	병원 안내 전까지는 세안을 자제하세요.
+## src/data/guides.ts	시작 후에는 미온수로, 롤링 없이 펴 바르고 바로 헹구세요. 약 2주는 마사지를 피하세요.
+## src/data/guides.ts	화장·운동·땀을 피하세요.
+## src/data/guides.ts	레티놀·산·비타민C는 최소 3일 이상 쉬세요.
+## src/data/guides.ts	포텐자
+## src/data/guides.ts	고주파 마이크로니들 · 버츄RF 등
+## src/data/guides.ts	MTS와 비슷하며, 고주파 열이 더해져 붉은기·열감이 조금 더 있을 수 있어요.
+## src/data/guides.ts	MTS와 같은 기준으로 첫 24시간은 바르지 말고 가려 주세요.
+## src/data/guides.ts	바르기 시작한 뒤 2주간 특히 꼼꼼히 발라 주세요.
+## src/data/guides.ts	롤링 없이 펴 바르고 미온수로 바로 헹구세요.
+## src/data/guides.ts	클렌징 밀크의 ‘찬물로 마무리’ 팁은 며칠 건너뛰세요.
+## src/data/guides.ts	거품 없이 펴 바르는 밀크 타입, 24시간 첩포 시험 피부 자극도 0.00 (한국피부과학연구원, 31명).
+## src/data/guides.ts	프락셀·피코프락셀
+## src/data/guides.ts	비박피 프락셔널 레이저
+## src/data/guides.ts	미세한 점 모양 자국과 붉은기가 생기고, 며칠 뒤 잔 각질이 생길 수 있어요.
+## src/data/guides.ts	MTS와 같은 기준으로 시작하세요.
+## src/data/guides.ts	잔 각질 위는 문지르지 말고 얹듯이 바르세요.
+## src/data/guides.ts	잔 각질은 떼지 마세요.
+## src/data/guides.ts	각질 제거는 의료진 확인 후에 하세요.
+## src/data/guides.ts	흉터 서브시전
+## src/data/guides.ts	흉터 치료
+## src/data/guides.ts	멍·부기가 1~2주 이어질 수 있어요(주사 시술과 비슷해요).
+## src/data/guides.ts	멍 부위는 누르지 말고 톡톡 얹듯이 바르세요.
+## src/data/guides.ts	멍 부위를 누르지 마세요.
+## src/data/guides.ts	스피큘 필링
+## src/data/guides.ts	해초 필링
+## src/data/guides.ts	미세한 침 성분이 피부에 남아 1~3일 따끔거림·붉은기·건조·잔 각질이 생길 수 있어요.
+## src/data/guides.ts	병원 안내 뒤 바르기 시작하세요.
+## src/data/guides.ts	무기자차를 권하는 곳이 있으니 그런 경우 병원 안내를 따르세요.
+## src/data/guides.ts	병원 안내 뒤 (첫 24시간은 세안하지 않도록 안내하는 곳이 있음)
+## src/data/guides.ts	시작 후에는 롤링 없이 펴 바르고 바로 헹구세요.
+## src/data/guides.ts	절대 문지르지 마세요.
+## src/data/guides.ts	각질을 떼지 마세요.
+## src/data/guides.ts	레티놀·산을 쉬세요.
+## src/data/guides.ts	점 제거·CO2 레이저
+## src/data/guides.ts	선크림 상처가 아문 뒤부터
+## src/data/guides.ts	점·비립종·흑자 제거, 박피성 레이저 등
+## src/data/guides.ts	점·비립종·쥐젖 제거, CO2 레이저, 흑자·주근깨 레이저, 박피성 프락셀, 눈썹 반영구
+## src/data/guides.ts	점 제거·CO2 레이저처럼 상처와 딱지가 생기는 시술 뒤에는 <strong>상처 부위에 선크림을 바르지 않습니다</strong>. 상처 주변 피부에만 바르고 테이프·모자로 가린 뒤, <strong>상처가 아문 뒤부터</strong>(보통 약 1~2주, 의료진 확인) 시술 부위까지 꼼꼼히 바릅니다.
+## src/data/guides.ts	상처가 아문 뒤부터
+## src/data/guides.ts	그전에는 상처 부위를 피해 주변 피부에만 바르고 테이프·모자로 가립니다.
+## src/data/guides.ts	병원 안내에 따라
+## src/data/guides.ts	상처·테이프 부위를 피해 세안합니다.
+## src/data/guides.ts	딱지는 그대로
+## src/data/guides.ts	딱지를 떼지 말고, 진물이 많으면 병원에 문의하세요.
+## src/data/guides.ts	작은 상처와 딱지가 생기고, 하이드로콜로이드 밴드(습윤 밴드)를 며칠에서 2주가량 붙이는 경우가 많습니다.
+## src/data/guides.ts	테이프·딱지가 있는 동안
+## src/data/guides.ts	상처 부위에는 바르지 않음. 상처 주변 피부에만 바르고 테이프·모자로 가림
+## src/data/guides.ts	상처 부위를 피해 병원 안내대로
+## src/data/guides.ts	딱지 떼지 않기, 진물이 많으면 병원 문의
+## src/data/guides.ts	상처가 아문 뒤 (보통 1~2주, 의료진 확인)
+## src/data/guides.ts	시술 부위까지 꼼꼼히, 최소 2달 이상
+## src/data/guides.ts	새살이 분홍빛인 동안 자외선 특히 주의
+## src/data/guides.ts	상처·딱지·테이프 위에 제품 바르기
+## src/data/guides.ts	딱지를 손으로 떼기
+## src/data/guides.ts	분홍빛 새살을 햇빛에 그대로 드러내기
+## src/data/guides.ts	상처가 아문 뒤 매일 쓰는 자외선 차단제로서 SPF50+ PA++++입니다.
+## src/data/guides.ts	‘백탁 없이 깨끗하게 마무리된다’는 설문 응답 95.5%.
+## src/data/guides.ts	(여성 22명 중 21명, 바른 직후 본인 평가)
+## src/data/guides.ts	상처가 아문 뒤 평소처럼 쓸 수 있는 밀크 타입입니다. 상처가 있는 동안은 상처 부위를 피해 주세요.
+## src/data/guides.ts	아문 뒤 분홍빛 새살,<br>왜 자외선을 피해야 할까요?
+## src/data/guides.ts	상처가 아문 뒤 분홍빛 새살은 자외선에 예민해, 최소 2달 정도 꼼꼼한 자외선 차단을 권하는 의료진이 많습니다.
+## src/data/guides.ts	박피성 레이저 뒤 자외선 차단제를 바로 쓰기 시작한 그룹에서 색소침착이 덜 생겼다는 연구가 있습니다.
+## src/data/guides.ts	미국피부과학회는 깊은 필링 뒤 피부가 아물 때까지 햇빛을 완전히 피하고, 아문 뒤에는 매일 자외선 차단제를 바르도록 안내합니다.
+## src/data/guides.ts	점 빼고 언제부터 선크림을 바르나요?
+## src/data/guides.ts	상처가 아문 뒤부터(보통 약 1~2주, 의료진 확인) 시술 부위까지 바릅니다. 그전에는 상처 부위를 피해 주변 피부에만 바르고, 테이프나 모자로 가리세요.
+## src/data/guides.ts	테이프 위에 선크림을 발라도 되나요?
+## src/data/guides.ts	테이프 위나 상처 부위에는 바르지 마세요. 테이프 주변 피부에만 바르고, 모자나 마스크로 햇빛을 가리세요.
+## src/data/guides.ts	딱지가 떨어진 뒤 분홍빛 피부는 어떻게 관리하나요?
+## src/data/guides.ts	새살이 분홍빛인 동안은 자외선에 특히 주의하세요. 시술 부위까지 꼼꼼히 바르고 2~3시간마다 덧바르며, 최소 2달 정도 이어 가세요.
+## src/data/guides.ts	Manuskiatti W 외, The use of sunscreen starting on the first day after ablative fractional skin resurfacing, JEADV
+## src/data/guides.ts	미국성형외과학회(ASPS), Laser skin resurfacing recovery
+## src/data/guides.ts	점·비립종·쥐젖·사마귀 제거
+## src/data/guides.ts	CO2 레이저
+## src/data/guides.ts	작은 상처와 딱지가 생기고, 테이프를 며칠 붙여요.
+## src/data/guides.ts	상처가 아문 뒤부터 (보통 약 1주, 의료진 확인)
+## src/data/guides.ts	상처 부위에는 바르지 마세요. 상처 주변 피부에만 바르고 테이프·모자로 가리세요.
+## src/data/guides.ts	아문 뒤부터 시술 부위까지, 최소 2달 꼼꼼히 발라 주세요.
+## src/data/guides.ts	상처·테이프 부위를 피해 세안하세요.
+## src/data/guides.ts	아문 뒤에는 평소처럼 쓰면 됩니다.
+## src/data/guides.ts	딱지를 떼지 마세요. 진물이 많으면 병원에 문의하세요.
+## src/data/guides.ts	새살이 분홍빛인 동안은 자외선에 특히 주의하세요.
+## src/data/guides.ts	아문 뒤 매일 쓰는 자외선 차단제로서 SPF50+ PA++++, 24시간 첩포 시험 피부자극도 0.00 (㈜엘리드, 34명).
+## src/data/guides.ts	‘백탁 없이 깨끗한 마무리’ 설문 응답 95.5% (여성 22명 중 21명, 본인 평가).
+## src/data/guides.ts	흑자·주근깨 레이저
+## src/data/guides.ts	딱지가 생기는 색소 시술
+## src/data/guides.ts	점 제거와 비슷하게 딱지가 생겼다가 떨어져요.
+## src/data/guides.ts	딱지가 떨어지고 아문 뒤부터
+## src/data/guides.ts	점 제거와 같은 기준으로 바르세요.
+## src/data/guides.ts	딱지가 떨어진 뒤 분홍빛 새살 부위에 특히 꼼꼼히 발라 주세요.
+## src/data/guides.ts	딱지가 있는 동안은 그 부위를 피해 세안하세요.
+## src/data/guides.ts	딱지를 떼지 마세요.
+## src/data/guides.ts	박피성 프락셀
+## src/data/guides.ts	박피성 프락셔널 레이저
+## src/data/guides.ts	상처가 아무는 기간이 더 길어요.
+## src/data/guides.ts	아문 뒤부터 매일
+## src/data/guides.ts	아물 때까지는 상처 부위를 제외하고, 햇빛 자체를 피하세요.
+## src/data/guides.ts	아문 뒤에는 매일 꼼꼼히 바르세요.
+## src/data/guides.ts	병원이 정한 세안 방법에 따라
+## src/data/guides.ts	병원이 정한 세안 방법을 먼저 따르세요.
+## src/data/guides.ts	아물 때까지 햇빛을 피하세요.
+## src/data/guides.ts	상처가 있는 동안에는 바르지 마세요.
+## src/data/guides.ts	중간 깊이 이상의 필링
+## src/data/guides.ts	깊은 필링
+## src/data/guides.ts	피부가 벗겨지며 아무는 데 시간이 걸려요.
+## src/data/guides.ts	미국피부과학회는 아물 때까지 햇빛을 완전히 피하고, 아문 뒤 매일 자외선 차단제를 바르도록 안내합니다.
+## src/data/guides.ts	병원이 정한 세안 방법을 따르세요.
+## src/data/guides.ts	벗겨지는 피부를 떼지 마세요.
+## src/data/guides.ts	눈썹 반영구
+## src/data/guides.ts	반영구 화장
+## src/data/guides.ts	부기·붉은기·가려움이 있고 딱지가 생겨요.
+## src/data/guides.ts	눈썹 부위를 피해서, 아문 뒤 눈썹 주변까지
+## src/data/guides.ts	눈썹 부위를 피해 바르세요.
+## src/data/guides.ts	아문 뒤에는 눈썹 주변까지 발라 주세요.
+## src/data/guides.ts	약 1주는 눈썹 부위를 피해서
+## src/data/guides.ts	약 1주는 눈썹 부위를 피해서 세안하세요.
+## src/data/guides.ts	1주는 술·고온 사우나·격한 운동을 피하세요.
+## src/data/guides.ts	딱지를 떼지 마세요. 리터치는 보통 한 달 뒤에 합니다.
+## src/data/guides.ts	선크림은 눈시림 점수가 2주 사용 뒤 80.27% 줄었습니다 (평소 눈시림을 느끼는 여성 21명, ㈜엘리드).
+## src/data/guides.ts	여드름 PDT
+## src/data/guides.ts	48시간 뒤부터 매일
+## src/data/guides.ts	여드름 광역동치료(PDT)
+## src/data/guides.ts	여드름 PDT(광역동치료)
+## src/data/guides.ts	여드름 PDT(광역동치료) 뒤 약 <strong>48시간 동안은 선크림만으로 피부를 보호할 수 없습니다</strong>. 실내에 머물며 햇빛과 밝은 창가를 피하고, <strong>48시간 뒤부터</strong> 선크림을 매일 바릅니다.
+## src/data/guides.ts	치료 뒤 48시간은 선크림만으로 부족합니다. 실내에 머물고 햇빛을 피합니다.
+## src/data/guides.ts	48시간 이후에는 평소대로 씁니다.
+## src/data/guides.ts	빛 피하기
+## src/data/guides.ts	외출이 꼭 필요하면 모자와 옷으로 가리세요.
+## src/data/guides.ts	빛에 반응하는 약을 바른 뒤 빛을 쬐는 치료라, 치료 뒤 약 48시간 동안 피부가 햇빛과 밝은 조명에 매우 예민합니다. 각질과 붉은기가 1주일가량 이어질 수 있습니다.
+## src/data/guides.ts	치료 후 48시간
+## src/data/guides.ts	선크림만으로는 부족. 실내에 머물고 햇빛·밝은 창가 피하기
+## src/data/guides.ts	병원 안내대로
+## src/data/guides.ts	외출이 꼭 필요하면 모자·옷으로 가리기
+## src/data/guides.ts	48시간 이후
+## src/data/guides.ts	매일 꼼꼼히
+## src/data/guides.ts	각질·붉은기가 1주일가량 이어질 수 있음
+## src/data/guides.ts	치료 뒤 48시간 동안 햇빛·밝은 창가
+## src/data/guides.ts	48시간 동안은 선크림으로 대신할 수 없습니다
+## src/data/guides.ts	치료 뒤 48시간은 어떤 선크림도 빛을 피하는 것을 대신하지 못합니다. 이 기간에는 실내에 머무는 것이 가장 중요합니다.
+## src/data/guides.ts	48시간이 지난 뒤 매일 쓰는 자외선 차단제로서 SPF50+ PA++++입니다.
+## src/data/guides.ts	치료 받으러 갈 때 메이크업과 선크림을 지우고 오라고 안내하는 병원이 있습니다. 이때 클렌징 밀크로 지우면 됩니다.
+## src/data/guides.ts	PDT 뒤 48시간,<br>왜 빛을 피해야 할까요?
+## src/data/guides.ts	치료에 쓴 약이 빛에 반응하기 때문에, 치료 뒤 약 48시간은 햇빛과 밝은 실내 조명에도 피부가 예민합니다.
+## src/data/guides.ts	해외 의료기관과 여드름 정보 사이트는 이 기간에는 자외선 차단제만으로 피부를 보호할 수 없으니 빛 자체를 피하라고 안내합니다.
+## src/data/guides.ts	48시간이 지난 뒤에는 매일 자외선 차단을 이어 가세요.
+## src/data/guides.ts	PDT 받은 날 선크림을 바르면 외출해도 되나요?
+## src/data/guides.ts	아니요. 치료 뒤 약 48시간은 선크림만으로는 부족합니다. 실내에 머물고, 꼭 외출해야 하면 모자와 옷으로 가리세요.
+## src/data/guides.ts	PDT 받으러 갈 때 선크림을 바르고 가도 되나요?
+## src/data/guides.ts	메이크업과 선크림 없이 오라고 안내하는 의료기관이 있습니다. 병원 안내를 따르고, 필요하면 클렌징 밀크로 지우고 가세요.
+## src/data/guides.ts	48시간이 지나면 평소처럼 써도 되나요?
+## src/data/guides.ts	네, 48시간 뒤부터는 선크림을 매일 바르고 클렌징 밀크도 평소처럼 쓰면 됩니다. 각질과 붉은기가 1주일가량 이어질 수 있으니 각질은 떼지 마세요.
+## src/data/guides.ts	광역동치료
+## src/data/guides.ts	빛에 반응하는 약 때문에 약 48시간 동안 햇빛과 밝은 조명에 매우 예민합니다.
+## src/data/guides.ts	48시간 동안은 선크림만으로 부족합니다. 실내에 머물고 창가·햇빛을 피하세요.
+## src/data/guides.ts	48시간 뒤부터 매일 꼼꼼히 바르세요.
+## src/data/guides.ts	48시간 뒤부터 평소처럼 쓰면 됩니다.
+## src/data/guides.ts	외출이 꼭 필요하면 모자·옷으로 가리세요.
+## src/data/guides.ts	각질·붉은기가 1주일가량 이어질 수 있어요. 각질은 떼지 마세요.
+## src/data/guides.ts	48시간 이전에는 어떤 제품으로도 빛 차단을 대신할 수 없습니다.
+## src/data/guides.ts	48시간 뒤에는 SPF50+ PA++++로 매일 자외선을 차단하세요.
+## src/data/guides.ts	시술 2주 전부터
+## src/data/guides.ts	피부가 그을리지 않도록 자외선을 피하세요.
+## src/data/guides.ts	선크림을 매일, 2~3시간마다 덧바르기
+## src/data/guides.ts	시술 당일 아침
+## src/data/guides.ts	메이크업과 선크림을 지우고 오라는 병원이 많습니다.
+## src/data/guides.ts	클렌징 밀크로 메이크업과 선크림 세안
+## src/data/home.ts	피부 표면이 열리지 않는 레이저·빛·에너지 시술입니다. 열감과 붉은기가 생길 수 있습니다.
+## src/data/home.ts	레이저 토닝, IPL, 울쎄라·슈링크, 써마지·인모드·올리지오, 티타늄 리프팅
+## src/data/home.ts	모공 주변이 붉어지거나 살짝 부을 수 있는 시술입니다.
+## src/data/home.ts	각질층이 얇아져 피부가 예민해지는 시술입니다.
+## src/data/home.ts	아쿠아필, 라라필·쎄라필, LDM, LED
+## src/data/home.ts	바늘 자국이 남고 멍이나 부기가 생길 수 있는 시술입니다.
+## src/data/home.ts	보톡스, 필러, 리쥬란·쥬베룩 등 스킨부스터
+## src/data/home.ts	눈에 보이지 않는 미세한 통로가 남는 시술입니다. 붉은기가 1~3일 이어질 수 있습니다.
+## src/data/home.ts	포텐자, MTS, 프락셀·피코프락셀
+## src/data/home.ts	병원 안내 전까지는 세안을 자제합니다.
+## src/data/home.ts	화장, 운동, 땀은 피하세요.
+## src/data/home.ts	상처와 딱지가 생겨 보호 테이프를 붙이는 경우가 많은 시술입니다.
+## src/data/home.ts	점·비립종·쥐젖 제거, CO2 레이저, 박피성 프락셀
+## src/data/home.ts	상처 부위를 피해 세안합니다.
+## src/data/home.ts	빛에 반응하는 약을 쓰는 여드름 치료로, 치료 뒤 약 48시간 동안 빛에 매우 예민합니다.
+## src/data/home.ts	시술 전후의 피부를 위한
+## src/data/home.ts	더마 스킨케어
+## src/data/home.ts	레이저, 리프팅, 주사 시술 뒤 언제 선크림을 바르고 언제 세안할지 시술별로 정리했습니다. 나를 아끼는 마음은 피부에서 시작됩니다.
+## src/data/home.ts	내 시술 가이드 찾기
+## src/data/home.ts	신제품
+## src/data/home.ts	말차 디퍼핑 클렌징 밀크 출시
+## src/data/home.ts	롤링 마사지로 쓰는 300mL 밀크 클렌저입니다. 인체적용시험에서 메이크업 세정률 96.68%를 확인했습니다.
+## src/data/home.ts	한국피부과학연구원 인체적용시험, 여성 22명, 팔 안쪽에 바른 메이크업 기준
+## src/data/home.ts	수상
+## src/data/home.ts	2025 하반기 화해 어워드
+## src/data/home.ts	선케어 부문(선크림/로션) 진정 카테고리 1위
+## src/data/home.ts	백합 리커버리 선크림이 화해 사용자의 리뷰와 평점을 바탕으로 선정되는 화해 어워드에서 수상했습니다.
+## src/data/home.ts	선크림 보기
+## src/data/home.ts	소식 보기
+## src/data/news.ts	이데일리
+## src/data/news.ts	뉴베리프, '말차 디퍼핑 클렌징 밀크' 피부과·약국·산부인과 입점
+## src/data/news.ts	데이터넷
+## src/data/news.ts	더마코스메틱 '뉴베리프', 피부시술 플랫폼 '여신티켓'과 마케팅 협력
+## src/data/news.ts	뉴베리프, 산부인과 입점과 청담 메이크업샵 채택으로 더마 케어 신뢰도 상승
+## src/data/news.ts	마이데일리
+## src/data/news.ts	뉴베리프, 네이버 패션뷰티에 공식 입점
+## src/data/news.ts	뉴베리프, 론칭 3개월 만에 '화해 어워드' 선크림 부문 1위
+## src/data/news.ts	더퍼블릭
+## src/data/news.ts	뉴베리프, 서울 강남권 피부과 전문 병원 공식 입점
+## src/data/news.ts	라이브뉴스
+## src/data/news.ts	웰니스의 시작을 알리는 뉴베리프 첫 백합 리커버리 선크림 런칭
+## src/data/procedures-laser.json	울쎄라·슈링크
+## src/data/procedures-laser.json	고강도 집속 초음파(HIFU) 리프팅 · 리프테라·리니어지 포함
+## src/data/procedures-laser.json	초음파 열이 피부 깊은 층에 전달되고, 겉면에는 상처가 거의 남지 않습니다. 붉은기는 보통 몇 시간 안에 가라앉고, 턱선과 볼이 며칠 뻐근하거나 살짝 부을 수 있어요.
+## src/data/procedures-laser.json	열감이 가라앉으면 얼굴 전체에 바르고 귀가하세요.
+## src/data/procedures-laser.json	뻐근한 턱선과 볼은 문지르지 말고 손바닥으로 지그시 얹듯이 펴 주세요.
+## src/data/procedures-laser.json	외출 30분 전에 바르고, 2~3시간마다 덧발라 주세요.
+## src/data/procedures-laser.json	리프팅 뒤에는 한동안 얼굴 마사지를 피하라고 안내하는 병원이 많아요. 병원이 괜찮다고 할 때까지는 롤링 마사지 없이 펴 바르고 바로 헹구세요.
+## src/data/procedures-laser.json	며칠은 사우나, 음주, 격한 운동을 피하세요.
+## src/data/procedures-laser.json	스크럽과 필링제는 잠시 쉬세요.
+## src/data/procedures-laser.json	적외선으로 피부를 데운 시험에서 바른 쪽 볼 온도가 바로 4.85℃ 내려갔습니다 (㈜엘리드, 여성 22명). 시술 직후 피부에서 한 시험은 아닙니다.
+## src/data/procedures-laser.json	써마지·인모드·올리지오
+## src/data/procedures-laser.json	고주파(RF) 리프팅 · 덴서티·튠페이스·써펙트 포함
+## src/data/procedures-laser.json	고주파 열로 피부 속을 데우는 시술입니다. 붉은기와 화끈거림은 보통 2~3시간 안에 가라앉지만, 피부에 따라 이틀까지 갈 수 있어요. 가벼운 부기도 생길 수 있습니다.
+## src/data/procedures-laser.json	대부분 시술 당일부터
+## src/data/procedures-laser.json	열감이 가라앉은 뒤 얼굴 전체에 바르세요.
+## src/data/procedures-laser.json	세안과 화장을 다음 날부터 하라고 안내하는 병원도 있어요. 그렇다면 당일에는 모자나 양산으로 가리고 다음 날부터 바르세요.
+## src/data/procedures-laser.json	피부가 건조하면 보습제를 먼저 바른 뒤 선크림을 올리세요.
+## src/data/procedures-laser.json	시술 당일 또는 병원이 안내한 때부터
+## src/data/procedures-laser.json	찬물 대신 미온수로 씻으라고 권하는 병원이 있어요.
+## src/data/procedures-laser.json	그래서 클렌징 밀크의 ‘찬물로 마무리’ 팁은 시술 뒤 며칠은 건너뛰고 미온수로 헹구세요.
+## src/data/procedures-laser.json	문지르지 말고 가볍게 펴 바른 뒤 헹구세요.
+## src/data/procedures-laser.json	약 1주는 사우나, 찜질방, 수영장, 과음을 피하세요.
+## src/data/procedures-laser.json	1주 정도는 필링 시술과 스크럽제를 쉬세요.
+## src/data/procedures-laser.json	거품을 낼 필요 없이 마른 얼굴에 바로 펴 바르는 밀크 타입입니다.
+## src/data/procedures-laser.json	클렌징 밀크는 24시간 첩포 시험에서 피부 자극도 0.00, 무자극 판정을 받았습니다 (한국피부과학연구원, 31명).
+## src/data/procedures-laser.json	티타늄 리프팅
+## src/data/procedures-laser.json	레이저 리프팅
+## src/data/procedures-laser.json	레이저 열이 피부 속 지지 구조까지 전달됩니다. 붉은기와 화끈거림은 곧 가라앉지만, 뻐근함과 부기, 가벼운 멍이 1~2주 이어질 수 있고 피부가 건조해지기 쉬워요.
+## src/data/procedures-laser.json	수분 크림을 충분히 바른 뒤 선크림을 올려 주세요.
+## src/data/procedures-laser.json	멍이나 뻐근한 부위는 누르지 말고 얹듯이 바르세요.
+## src/data/procedures-laser.json	시술 당일부터, 가볍게
+## src/data/procedures-laser.json	미온수로 세안하세요.
+## src/data/procedures-laser.json	약 2주는 경락과 마사지를 피하라는 안내가 많아요. 이 기간에는 롤링 마사지 없이 펴 바르고 바로 헹구세요.
+## src/data/procedures-laser.json	약 1주는 음주, 흡연, 사우나, 찜질방, 과한 운동을 피하세요.
+## src/data/procedures-laser.json	약 2주는 스크럽, 필링, 경락을 피하세요.
+## src/data/procedures-laser.json	사용감 설문에서 22명 모두 ‘속부터 촉촉해진 느낌’이라고 답했습니다 (바른 직후, 본인 평가).
+## src/data/procedures-laser.json	SPF50+ PA++++, 24시간 첩포 시험 피부 자극도 0.00 (㈜엘리드, 34명).
+## src/data/procedures-laser.json	온다 리프팅
+## src/data/procedures-laser.json	마이크로웨이브 리프팅
+## src/data/procedures-laser.json	마이크로웨이브 열이 피부 속에 전달됩니다. 몇 시간 동안 붉은기, 열감, 미세한 부기가 있을 수 있고 시술 부위가 뻐근할 수 있어요.
+## src/data/procedures-laser.json	열감이 가라앉으면 보습 크림을 바른 뒤 선크림을 충분히 발라 주세요.
+## src/data/procedures-laser.json	미온수로 가볍게 세안하세요.
+## src/data/procedures-laser.json	뻐근한 부위는 롤링하지 말고 펴 바른 뒤 바로 헹구세요.
+## src/data/procedures-laser.json	1주간 사우나, 찜질방, 격한 운동, 음주를 피하세요.
+## src/data/procedures-laser.json	적외선으로 데운 피부에서 바른 쪽 볼 온도가 바로 4.85℃ 내려간 시험 결과가 있습니다 (㈜엘리드, 여성 22명). 시술 직후 피부에서 한 시험은 아닙니다.
+## src/data/procedures-laser.json	레이저 토닝
+## src/data/procedures-laser.json	피코토닝·제네시스 포함
+## src/data/procedures-laser.json	약한 출력의 레이저라 겉면 상처가 거의 없습니다. 미세한 붉은기와 화끈거림은 몇 시간 안에 가라앉고, 간혹 아주 작은 딱지가 생기거나 건조해질 수 있어요.
+## src/data/procedures-laser.json	토닝은 여러 번 나눠 받는 경우가 많아요. 회차 사이에도 매일 바르는 것이 기본입니다.
+## src/data/procedures-laser.json	문지르지 말고 가볍게 펴 바른 뒤 헹구고, 수건으로 톡톡 눌러 물기를 닦으세요.
+## src/data/procedures-laser.json	작은 딱지가 생겼다면 떼지 말고 저절로 떨어지게 두세요.
+## src/data/procedures-laser.json	과음, 사우나, 격한 운동은 피하세요.
+## src/data/procedures-laser.json	각질 제거와 필링은 간격을 두세요.
+## src/data/procedures-laser.json	자외선 차단·미백·주름개선 3중 기능성 선크림입니다 (나이아신아마이드, 아데노신).
+## src/data/procedures-laser.json	일부 병원은 시술 직후 미백·주름개선 기능성 화장품을 잠시 쉬라고 안내합니다. 그런 안내를 받았다면 그 기간에는 병원 안내를 따르세요.
+## src/data/procedures-laser.json	빛(광선) 시술
+## src/data/procedures-laser.json	붉은기가 생길 수 있고, 잡티가 잠시 진해졌다가 각질처럼 떨어지기도 합니다.
+## src/data/procedures-laser.json	진해진 잡티 부위까지 빠짐없이 바르세요.
+## src/data/procedures-laser.json	진해진 잡티 위는 문지르지 말고 얹듯이 바르세요.
+## src/data/procedures-laser.json	미온수를 쓰세요.
+## src/data/procedures-laser.json	진해진 잡티가 떨어질 때까지는 롤링 마사지 없이 가볍게 펴 바르고 헹구세요.
+## src/data/procedures-laser.json	진해진 잡티를 손으로 떼지 마세요.
+## src/data/procedures-laser.json	각질 제거제, 스크럽, 레티놀은 잠시 쉬세요.
+## src/data/procedures-laser.json	SPF50+ PA++++로 자외선 A와 B를 함께 차단합니다 (SPF 53.9, UVAPF 18.6).
+## src/data/procedures-laser.json	24시간 첩포 시험 피부 자극도 0.00, 무자극 판정 (㈜엘리드, 34명).
+## src/data/procedures-laser.json	혈관 레이저
+## src/data/procedures-laser.json	홍조 레이저 · 브이빔·엑셀브이 등
+## src/data/procedures-laser.json	붉은기가 잠시 더 짙어지고 살짝 부을 수 있어요(몇 시간~1~2일). 경우에 따라 보라색 멍이 생겨 며칠에서 2주 정도 갈 수 있습니다.
+## src/data/procedures-laser.json	멍이 든 부위는 문지르지 말고 손끝으로 톡톡 얹으세요.
+## src/data/procedures-laser.json	레이저를 받은 피부는 한동안 햇빛에 예민할 수 있어, 매일 바르는 습관이 중요해요.
+## src/data/procedures-laser.json	뜨거운 물 대신 미온수를 쓰세요.
+## src/data/procedures-laser.json	롤링 마사지 없이 가볍게 펴 바른 뒤 헹구세요.
+## src/data/procedures-laser.json	딱지가 생기면 떼지 말고 그대로 두세요.
+## src/data/procedures-laser.json	며칠은 사우나, 과음, 땀이 많이 나는 운동을 피하세요.
+## src/data/procedures-laser.json	향료를 넣지 않았습니다.
+## src/data/research.ts	자외선B 차단 · SPF
+## src/data/research.ts	SPF50+ 표시 기준인 50을 넘었습니다.
+## src/data/research.ts	한국피부과학연구원
+## src/data/research.ts	건강한 성인 10명
+## src/data/research.ts	2mg/cm² 바른 뒤 자외선을 쬐고 16~24시간 뒤 홍반 판정 (ISO 24444)
+## src/data/research.ts	자외선A 차단 · UVAPF
+## src/data/research.ts	가장 높은 등급인 PA++++ 기준(16 이상)에 해당합니다.
+## src/data/research.ts	2mg/cm² 바른 뒤 자외선A를 쬐고 2~24시간 뒤 색소 침착 판정 (ISO 24442)
+## src/data/research.ts	피부 자극 · 24시간 첩포
+## src/data/research.ts	평균 피부자극도 0.00으로 ‘무자극’ 판정을 받았습니다.
+## src/data/research.ts	㈜엘리드
+## src/data/research.ts	성인 34명
+## src/data/research.ts	등 부위에 24시간 붙였다 뗀 뒤 30분, 24시간 후 홍반·부종 판정
+## src/data/research.ts	열 자극 진정 · 피부 온도
+## src/data/research.ts	적외선으로 데운 피부에서 바른 쪽 볼 온도가 33.99℃에서 29.13℃로 내려갔습니다(감소율 14.27%). 바르지 않은 쪽은 34.10℃에서 33.13℃였습니다.
+## src/data/research.ts	여성 22명
+## src/data/research.ts	얼굴에 적외선을 10분 쬔 뒤 한쪽 볼에만 바르고 열화상 카메라로 측정. 시술 직후 피부에서 한 시험은 아닙니다.
+## src/data/research.ts	눈시림 · 2주 사용
+## src/data/research.ts	눈시림 자가 평가 점수가 7.51점에서 1.43점으로 줄었습니다(10점 만점).
+## src/data/research.ts	평소 눈시림을 느끼는 여성 21명
+## src/data/research.ts	하루 2번 얼굴 전체에 2주 사용, 본인이 점수로 평가
+## src/data/research.ts	효능 시험 · 붓기와 세정 4가지
+## src/data/research.ts	4가지 평가
+## src/data/research.ts	한 번의 시험에서 네 가지를 함께 평가했습니다. 모두 1회 사용 직후 결과입니다.
+## src/data/research.ts	얼굴 한쪽 사용 후 3D 촬영(VECTRA-XT), 팔 안쪽 메이크업 세정 후 피부 밝기 측정(ANTERA 3D), 콧방울·턱·이마 확대 촬영
+## src/data/research.ts	일시적 붓기 · 얼굴 부피
+## src/data/research.ts	−0.47cc (사용하지 않은 쪽 +0.02cc)
+## src/data/research.ts	메이크업 세정 · 팔 안쪽
+## src/data/research.ts	개선율 96.68%
+## src/data/research.ts	블랙헤드 면적 · 콧방울
+## src/data/research.ts	화이트헤드 면적 · 턱·이마
+## src/data/research.ts	평균 피부반응도 0.00으로 ‘무자극’ 판정을 받았습니다.
+## src/data/research.ts	성인 31명
+## src/data/research.ts	씻어내는 제품 기준에 맞춰 1%로 희석해 등 부위에 24시간 첩포, 30분·24시간·48시간 판정
+## src/data/research.ts	눈 자극 · 비인체 시험(in vitro)
+## src/data/research.ts	비자극
+## src/data/research.ts	사람 각막을 본뜬 세포 모델에서 세포 생존율 106.4%로, 기준(35% 초과)을 넘어 비자극으로 판정됐습니다.
+## src/data/research.ts	사람 대상 시험이 아닙니다
+## src/data/research.ts	인공 각막 모델 (OECD TG 492)
+## src/data/stores.ts	네이버 브랜드스토어
+## src/data/stores.ts	쿠팡
+## src/data/stores.ts	G마켓
+## src/data/stores.ts	화해
+## src/data/stores.ts	카카오톡 스토어
+## src/data/stores.ts	큐텐 재팬 (Qoo10)
+## src/data/stores.ts	선크림
+## src/data/stores.ts	클렌징 밀크
+## src/layouts/Base.astro	본문으로 건너뛰기
+## src/pages/brand/index.astro	뉴베리프를 시작한 이유와 브랜드 철학 ‘나를 아끼는 마음은 피부에서 시작된다’, 세 가지 원칙과 걸어온 길을 소개합니다.
+## src/pages/brand/index.astro	홈
+## src/pages/brand/index.astro	나를 아끼는 마음은<br>피부에서 시작된다
+## src/pages/brand/index.astro	뉴베리프는 피부 시술 전·후 스킨케어에 집중하는 더마코스메틱 브랜드입니다. 피부 시술 뒤 예민해진 피부에도 매일 쓸 수 있는 기본, 자외선 차단과 세안부터 만듭니다.
+## src/pages/brand/index.astro	NEUVELIF라는 이름
+## src/pages/brand/index.astro	새로운
+## src/pages/brand/index.astro	되살아나는 생기
+## src/pages/brand/index.astro	편안함
+## src/pages/brand/index.astro	뉴베리프를 시작한 이유
+## src/pages/brand/index.astro	피부 시술을 받고 나면 늘 같은 고민이 남았습니다.
+## src/pages/brand/index.astro	피부 시술은 잘 받았는데,<br>이제 무엇으로 어떻게 관리해야 하지?
+## src/pages/brand/index.astro	대표의 글
+## src/pages/brand/index.astro	방법을 찾아도, 답은 제각각이었습니다
+## src/pages/brand/index.astro	피부 시술은 병원에서 끝나지만, 피부 관리는 그날부터 집에서 시작됩니다. 하지만 피부 시술 뒤에 언제부터, 무엇으로, 어떻게 관리해야 하는지 알기 어려웠습니다.
+## src/pages/brand/index.astro	방법을 찾아봐도 정보가 제각각이었습니다. 어떤 곳은 당일부터 발라도 된다고 하고, 어떤 곳은 며칠은 아무것도 바르지 말라고 했습니다. 무엇을 믿어야 할지 몰라, 결국 평소 쓰던 제품을 그대로 쓰게 되곤 했습니다.
+## src/pages/brand/index.astro	평소의 피부를 기준으로 만든 제품들
+## src/pages/brand/index.astro	그런데 대부분의 스킨케어 제품은 평소의 피부를 기준으로 만들어져 있습니다. 그래서 피부 시술 뒤에는 늘 쓰던 제품도 쓰기가 어려워집니다.
+## src/pages/brand/index.astro	피부 시술 뒤 스킨케어가 어려운 이유
+## src/pages/brand/index.astro	따갑거나 화끈거리는 제품
+## src/pages/brand/index.astro	예민해진 피부에 바르면 따갑거나 화끈거리는 제품이 많습니다.
+## src/pages/brand/index.astro	문지르고 거품 내는 사용법
+## src/pages/brand/index.astro	문지르고, 거품을 내고, 마사지하듯 쓰는 사용법은 피부 시술 뒤에는 피해야 할 때가 많습니다.
+## src/pages/brand/index.astro	한동안 쉬어야 하는 성분
+## src/pages/brand/index.astro	각질 제거제나 레티놀처럼 피부 시술 뒤 한동안 쉬어야 하는 성분이 든 제품도 있습니다.
+## src/pages/brand/index.astro	사용 시점 안내 부족
+## src/pages/brand/index.astro	피부 시술 뒤 언제부터, 어떻게 써도 되는지 알려 주는 제품은 찾기 어렵습니다.
+## src/pages/brand/index.astro	그래서, 직접 만들기로 했습니다
+## src/pages/brand/index.astro	찾아봐도 답이 없어서, 직접 만들기로 했습니다.
+## src/pages/brand/index.astro	뉴베리프는 이 고민과 문제를 해결하기 위해 만들어졌습니다. 피부 시술 전후의 예민해진 피부를 기준으로, 언제부터 어떻게 쓰면 되는지까지 함께 안내하는 스킨케어를 만듭니다.
+## src/pages/brand/index.astro	좋은 성분이 실제로 어떤 효과를 줄지는 시간이 지나야 알 수 있다고 생각합니다. 그래서 뉴베리프는 성분 이름보다 시험 결과를 조건과 함께 공개하고, 피부 시술마다 언제부터 어떻게 쓰면 되는지 안내하는 일부터 하고 있습니다.
+## src/pages/brand/index.astro	이 과정을 거치며 깨달은 것은 단순했습니다. 결국 ‘나를 아끼고 싶다’는 마음이었습니다. 그래서 뉴베리프의 철학을 이렇게 정했습니다.
+## src/pages/brand/index.astro	나를 아끼는 마음은 피부에서 시작된다
+## src/pages/brand/index.astro	뉴베리프 대표
+## src/pages/brand/index.astro	이재훈
+## src/pages/brand/index.astro	세 가지 원칙
+## src/pages/brand/index.astro	피부 시술 전·후의 피부 상태 변화를 기준으로, 사용 타이밍과 컨디션에 맞춰 설계합니다.
+## src/pages/brand/index.astro	고객이 느끼는 불편을 집요하게 해결해 제품의 기준을 다시 만듭니다.
+## src/pages/brand/index.astro	실사용 데이터를 A.I.로 분석해 문제를 해결하는 포뮬러를 만듭니다.
+## src/pages/brand/index.astro	뉴베리프가 걸어온 길
+## src/pages/brand/index.astro	백합 리커버리 선크림 기능성화장품 보고
+## src/pages/brand/index.astro	브랜드 출시, 백합 리커버리 선크림 출시
+## src/pages/brand/index.astro	서울 강남권 피부과 입점
+## src/pages/brand/index.astro	약국 입점
+## src/pages/brand/index.astro	전국 제휴 약국 1,500여 곳
+## src/pages/brand/index.astro	2025 하반기 화해 어워드 선케어 부문(선크림/로션) 진정 카테고리 1위
+## src/pages/brand/index.astro	출시 3개월 만의 수상
+## src/pages/brand/index.astro	네이버 패션뷰티 입점, 공식 브랜드스토어 운영
+## src/pages/brand/index.astro	산부인과 입점, 청담 메이크업샵 채택
+## src/pages/brand/index.astro	피부시술 플랫폼 여신티켓과 마케팅 협력
+## src/pages/brand/index.astro	말차 디퍼핑 클렌징 밀크 출시, 피부과·약국·산부인과 입점
+## src/pages/contact/index.astro	뉴베리프 문의: ${BRAND.email}로 이메일을 보내 주시면 신속하게 답변을 드리겠습니다.
+## src/pages/contact/index.astro	뉴베리프 문의
+## src/pages/contact/index.astro	제품에 관한 문의
+## src/pages/contact/index.astro	제품 이름과 궁금한 점을 적어 주세요. 사용 중 불편한 점이 있다면 사용한 기간과 증상을 함께 알려 주시면 더 정확하게 답변드릴 수 있습니다.
+## src/pages/contact/index.astro	피부 시술 후 사용에 관한 문의
+## src/pages/contact/index.astro	받으신 시술 이름과 시술 날짜를 함께 알려 주세요. 시술 부위의 상처나 증상에 관한 의학적인 판단은 시술한 병원에 먼저 문의해 주세요.
+## src/pages/contact/index.astro	입점·제휴 문의
+## src/pages/contact/index.astro	회사 이름, 담당자 연락처, 제안 내용을 적어 주세요.
+## src/pages/contact/index.astro	현재 위치
+## src/pages/contact/index.astro	로 이메일을 보내 주시면<br>신속하게 답변을 드리겠습니다.
+## src/pages/contact/index.astro	이메일 보내기
+## src/pages/contact/index.astro	주소 복사
+## src/pages/contact/index.astro	이렇게 보내 주시면 더 빨리 도와드릴 수 있습니다
+## src/pages/contact/index.astro	대표자 {COMPANY.ceo} · 사업자등록번호 {COMPANY.bizNo}
+## src/pages/contact/index.astro	이메일 주소를 복사했습니다.
+## src/pages/faq/index.astro	피부 시술 후 선크림·세안 시점, 백합 리커버리 선크림과 말차 디퍼핑 클렌징 밀크의 성분·사용법·사용기한, 구매와 문의까지 뉴베리프에 자주 묻는 질문을 모았습니다.
+## src/pages/faq/index.astro	시술 후 사용법부터 성분, 사용기한까지 {total}가지 질문에 답했습니다. 답은 시험 결과와 제품 표시사항을 근거로 썼습니다.
+## src/pages/faq/index.astro	질문 분류
+## src/pages/faq/index.astro	개 질문
+## src/pages/faq/index.astro	찾는 답이 없나요?
+## src/pages/faq/index.astro	이메일로 문의해 주시면 신속하게 답변을 드리겠습니다.
+## src/pages/faq/index.astro	문의하기
+## src/pages/guide/[slug]/index.astro	${g.label} 후 선크림·세안 가이드
+## src/pages/guide/[slug]/index.astro	시술 그룹
+## src/pages/guide/[slug]/index.astro	후<br>선크림과 세안, 언제부터?
+## src/pages/guide/[slug]/index.astro	작성 {g.modified.replaceAll('-', '.')} · 의료기관 공개 자료와 학술 문헌을 바탕으로 정리한 일반 정보입니다.
+## src/pages/guide/[slug]/index.astro	받으신 시술을 골라 보세요
+## src/pages/guide/[slug]/index.astro	시술별 자세한 안내
+## src/pages/guide/[slug]/index.astro	같은 그룹이라도 시술마다 피부 반응이 조금씩 다릅니다. 시술별로 선크림과 클렌징 밀크를 언제, 어떻게 쓰면 좋은지 정리했습니다.
+## src/pages/guide/[slug]/index.astro	선크림과 클렌징 밀크를 언제, 어떻게 쓰면 좋은지 정리했습니다.
+## src/pages/guide/[slug]/index.astro	시술 이름 중 일부는 각 회사의 상표이며, 시술을 찾기 쉽도록 흔히 부르는 이름으로 적었습니다. 뉴베리프는 해당 장비·약품 회사와 관계가 없습니다.
+## src/pages/guide/[slug]/index.astro	시술 뒤 피부와 시기별 관리
+## src/pages/guide/[slug]/index.astro	후 시기별 선크림, 클렌징 밀크, 함께 지킬 것
+## src/pages/guide/[slug]/index.astro	시기
+## src/pages/guide/[slug]/index.astro	피해야 할 것
+## src/pages/guide/[slug]/index.astro	시험으로 확인한 사실만 적었습니다. 시험 조건에서 얻은 값이며 개인에 따라 차이가 있을 수 있습니다.
+## src/pages/guide/[slug]/index.astro	세안
+## src/pages/guide/[slug]/index.astro	참고 자료
+## src/pages/guide/[slug]/index.astro	이 내용은 일반적인 정보입니다. 시술한 병원의 안내와 다르면 병원 안내를 따르세요.
+## src/pages/guide/[slug]/index.astro	다른 시술 가이드
+## src/pages/guide/[slug]/index.astro	시술 2주 전부터 그을리지 않기
+## src/pages/guide/index.astro	시술별 가이드: 피부 시술 후 선크림·세안은 언제부터?
+## src/pages/guide/index.astro	레이저 토닝·리프팅, 레이저 제모, 아쿠아필·필링, 보톡스·필러·스킨부스터, 포텐자·MTS·프락셀, 점 제거·CO2 레이저, 여드름 PDT까지 7개 시술 그룹별로 선크림과 세안을 언제부터 어떻게 하면 좋은지 정리했습니다.
+## src/pages/guide/index.astro	뉴베리프 시술별 가이드
+## src/pages/guide/index.astro	피부 시술 뒤 선크림과 세안을 언제부터 해도 되는지는 시술마다 다릅니다. 시술 뒤 피부 상태에 따라 7개 그룹으로 묶고, 그룹마다 시술별로 자세히 정리했습니다. 시술한 병원의 안내와 다르면 병원 안내를 따르세요.
+## src/pages/guide/index.astro	자세히 보기 →
+## src/pages/guide/index.astro	시술 그룹별 시작 시점 한눈에 보기
+## src/pages/guide/index.astro	시술 그룹별 선크림과 클렌징 밀크 시작 시점
+## src/pages/guide/index.astro	대표 시술
+## src/pages/guide/index.astro	의료기관마다 다르게 안내하는 범위를 정리한 일반 정보입니다. 시술 이름 중 일부는 각 회사의 상표이며, 뉴베리프는 해당 장비·약품 회사와 관계가 없습니다.
+## src/pages/guide/index.astro	박피성 레이저 뒤 자외선 차단제를 바로 쓰기 시작한 그룹에서 색소침착이 덜 생겼다는 연구가 있고, 비박피성 레이저와 가벼운 필링 뒤에도 꾸준한 자외선 차단이 권장됩니다.
+## src/pages/guide/index.astro	상처나 딱지가 있는 부위에는 어떤 제품도 바르지 말고, 아문 뒤부터 바르세요.
+## src/pages/guide/index.astro	안내
+## src/pages/index.astro	뉴베리프 NEUVELIF | 피부 시술 전후 더마 스킨케어
+## src/pages/index.astro	레이저·리프팅·주사 등 피부 시술 전후에 쓰는 더마 스킨케어 브랜드 뉴베리프. 시술별 선크림·세안 시점 가이드와 인체적용시험 결과를 조건과 함께 공개합니다.
+## src/pages/index.astro	시술 종류에 따라 다릅니다. 레이저 토닝·IPL·리프팅은 보통 당일부터, 미세한 구멍이 남는 시술은 보통 24시간 뒤부터, 딱지가 생기는 시술은 상처가 아문 뒤부터 바릅니다. 시술한 병원의 안내가 다르면 병원 안내를 따르세요.
+## src/pages/index.astro	유기자차입니다. 자외선 차단 성분 4종이 들어 있습니다.
+## src/pages/index.astro	클렌징 밀크는 몇 번 펌핑하나요?
+## src/pages/index.astro	뉴베리프는 피부 시술 전·후 스킨케어에 집중하는 더마코스메틱 브랜드입니다. 2025년 7월 백합 리커버리 선크림을 처음 선보였습니다.
+## src/pages/index.astro	피부 시술 전·후의 피부 상태 변화를 기준으로 사용 타이밍과 컨디션에 맞춰 설계합니다.
+## src/pages/index.astro	자외선 차단과 순한 세안, 가장 기본부터
+## src/pages/index.astro	모든 수치는 인체적용시험 결과이며, 시험 기관과 조건을 함께 적었습니다.
+## src/pages/index.astro	전체 제품 보기 →
+## src/pages/index.astro	인체적용시험 결과는 시험 조건에서 얻은 값이며, 개인에 따라 차이가 있을 수 있습니다.
+## src/pages/index.astro	시험 결과를 조건과 함께 공개합니다
+## src/pages/index.astro	시험 기관, 인원, 측정 시점을 숫자 옆에 함께 적습니다. 인체적용시험과 비인체 시험, 사용감 설문은 서로 구분해 표시합니다.
+## src/pages/index.astro	임상 연구 전체 보기 →
+## src/pages/index.astro	8건
+## src/pages/index.astro	뉴베리프 제품이 받은 시험 합계<br>백합 리커버리 선크림 5건 · 말차 디퍼핑 클렌징 밀크 3건
+## src/pages/index.astro	7건
+## src/pages/index.astro	인체적용시험 (사람 대상)
+## src/pages/index.astro	1건
+## src/pages/index.astro	비인체 시험 (인공 각막 모델 안자극)
+## src/pages/index.astro	소식 전체 보기 →
+## src/pages/index.astro	데이터넷 · 2026.06.08
+## src/pages/index.astro	마이데일리 · 2026.01.30
+## src/pages/index.astro	라이브뉴스 · 2025.07.31
+## src/pages/index.astro	궁금한 점이 있으신가요?
+## src/pages/index.astro	시술 후 사용법부터 성분, 사용기한까지 자주 묻는 질문을 모았습니다.
+## src/pages/index.astro	자주 묻는 질문 전체 보기
+## src/pages/news/index.astro	뉴베리프의 수상 소식과 언론 보도를 모았습니다. 2025 하반기 화해 어워드 선케어 부문 진정 카테고리 1위, 말차 디퍼핑 클렌징 밀크 출시 등.
+## src/pages/news/index.astro	언론 보도
+## src/pages/news/index.astro	총 {PRESS.length}건
+## src/pages/news/index.astro	기사 내용은 각 언론사의 표현이며, 제품의 효능·효과를 뜻하지 않습니다. 브랜드가 걸어온 길은
+## src/pages/news/index.astro	에서 보실 수 있습니다.
+## src/pages/news/index.astro	2025 하반기 화해 어워드<br>선케어 부문(선크림/로션)<br>진정 카테고리 1위
+## src/pages/news/index.astro	백합 리커버리 선크림이 화해 사용자의 리뷰와 평점을 바탕으로 선정되는 2025 하반기 화해 어워드에서 선케어 부문(선크림/로션) 진정 카테고리 1위에 올랐습니다.
+## src/pages/news/index.astro	백합 리커버리 선크림 보기
+## src/pages/news/index.astro	관련 기사
+## src/pages/news/index.astro	(마이데일리, 새 창)
+## src/pages/privacy/index.astro	뉴베리프(리더스어소시에이츠 주식회사) 웹사이트 개인정보처리방침
+## src/pages/privacy/index.astro	시행일 2026년 11월 10일
+## src/pages/privacy/index.astro	1. 이 사이트에서 받는 개인정보
+## src/pages/privacy/index.astro	이 사이트는 회원가입, 주문, 입력 양식을 두지 않으며 방문자에게 개인정보를 직접 입력받지 않습니다. 제품 구매는 각 공식 판매처에서 이루어지며, 구매 과정의 개인정보는 해당 판매처의 개인정보처리방침을 따릅니다.
+## src/pages/privacy/index.astro	2. 이메일 문의
+## src/pages/privacy/index.astro	로 문의를 보내 주시면, 보내 주신 이메일 주소와 문의 내용을 답변에만 사용합니다. 답변을 마친 뒤 관련 법령에서 보관을 정한 경우가 아니면 지체 없이 삭제합니다.
+## src/pages/privacy/index.astro	3. 개인정보 보호책임자와 문의처
+## src/pages/privacy/index.astro	· 대표 {COMPANY.ceo} · {BRAND.email}
+## src/pages/privacy/index.astro	4. 시행일
+## src/pages/privacy/index.astro	이 개인정보처리방침은 2026년 11월 10일부터 시행합니다. 내용이 바뀌면 이 페이지에 시행일과 함께 알립니다.
+## src/pages/products/backhap-recovery-sunscreen/index.astro	백합 리커버리 선크림 SPF50+ PA++++ 75mL
+## src/pages/products/backhap-recovery-sunscreen/index.astro	자외선 차단·미백·주름개선 3중 기능성 선크림. 2025 하반기 화해 어워드 선케어 부문 진정 카테고리 1위. 피부 시술 뒤 사용 시점, 성분, 인체적용시험 결과와 조건을 확인하세요.
+## src/pages/products/backhap-recovery-sunscreen/index.astro	느끼는 정도는 사람마다 다릅니다. 평소 화장품을 쓸 때 눈시림을 느끼는 여성 21명이 2주 사용한 뒤 눈시림 점수가 80.27% 줄었습니다. 눈에 직접 들어가면 물로 씻어내세요.
+## src/pages/products/backhap-recovery-sunscreen/index.astro	피부과에서 무기자차를 쓰라고 했어요. 써도 되나요?
+## src/pages/products/backhap-recovery-sunscreen/index.astro	자외선 차단·미백·주름개선 3중 기능성 선크림 (SPF50+ PA++++, 75mL). 피부 시술 전후의 예민한 피부를 기준으로 만들었습니다.
+## src/pages/products/backhap-recovery-sunscreen/index.astro	백합 리커버리 선크림 75mL와 2025 하반기 화해 어워드 배지
+## src/pages/products/backhap-recovery-sunscreen/index.astro	리뷰 453개
+## src/pages/products/backhap-recovery-sunscreen/index.astro	네이버
+## src/pages/products/backhap-recovery-sunscreen/index.astro	리뷰 2,122개
+## src/pages/products/backhap-recovery-sunscreen/index.astro	별점 5개 표시
+## src/pages/products/backhap-recovery-sunscreen/index.astro	상품평 61개
+## src/pages/products/backhap-recovery-sunscreen/index.astro	2026년 11월 기준
+## src/pages/products/backhap-recovery-sunscreen/index.astro	수상·입점
+## src/pages/products/backhap-recovery-sunscreen/index.astro	피부과 입점
+## src/pages/products/backhap-recovery-sunscreen/index.astro	· 전국 제휴 약국 1,500여 곳
+## src/pages/products/backhap-recovery-sunscreen/index.astro	산부인과 입점
+## src/pages/products/backhap-recovery-sunscreen/index.astro	시술 후에는 언제부터?
+## src/pages/products/backhap-recovery-sunscreen/index.astro	레이저 토닝·IPL·리프팅 뒤에는 보통 시술 당일, 열감이 가라앉은 뒤부터 바릅니다. 시술한 병원의 안내가 다르면 병원 안내를 따르세요.
+## src/pages/products/backhap-recovery-sunscreen/index.astro	구매처 보기
+## src/pages/products/backhap-recovery-sunscreen/index.astro	시술 후 사용 시점 보기
+## src/pages/products/backhap-recovery-sunscreen/index.astro	페이지 내용
+## src/pages/products/backhap-recovery-sunscreen/index.astro	효능·성분
+## src/pages/products/backhap-recovery-sunscreen/index.astro	사용법
+## src/pages/products/backhap-recovery-sunscreen/index.astro	시험 결과
+## src/pages/products/backhap-recovery-sunscreen/index.astro	전성분
+## src/pages/products/backhap-recovery-sunscreen/index.astro	효능 성분과<br>핵심 성분
+## src/pages/products/backhap-recovery-sunscreen/index.astro	기능마다 표시사항의 효능·효과 문구와 그 기능을 맡은 성분을 함께 적었습니다. 2025년 6월 식약처 보고를 마쳤습니다.
+## src/pages/products/backhap-recovery-sunscreen/index.astro	자외선 차단
+## src/pages/products/backhap-recovery-sunscreen/index.astro	자외선으로부터 피부를 보호한다.
+## src/pages/products/backhap-recovery-sunscreen/index.astro	담당 성분 4종 (유기자차)
+## src/pages/products/backhap-recovery-sunscreen/index.astro	디에칠아미노하이드록시벤조일헥실벤조에이트
+## src/pages/products/backhap-recovery-sunscreen/index.astro	에칠헥실트리아존
+## src/pages/products/backhap-recovery-sunscreen/index.astro	메칠렌비스-벤조트리아졸릴테트라메칠부틸페놀
+## src/pages/products/backhap-recovery-sunscreen/index.astro	디에칠헥실부타미도트리아존
+## src/pages/products/backhap-recovery-sunscreen/index.astro	미백
+## src/pages/products/backhap-recovery-sunscreen/index.astro	피부의 미백에 도움을 준다.
+## src/pages/products/backhap-recovery-sunscreen/index.astro	담당 성분
+## src/pages/products/backhap-recovery-sunscreen/index.astro	나이아신아마이드
+## src/pages/products/backhap-recovery-sunscreen/index.astro	주름개선
+## src/pages/products/backhap-recovery-sunscreen/index.astro	피부의 주름개선에 도움을 준다.
+## src/pages/products/backhap-recovery-sunscreen/index.astro	아데노신
+## src/pages/products/backhap-recovery-sunscreen/index.astro	핵심 성분
+## src/pages/products/backhap-recovery-sunscreen/index.astro	패키지 앞면에 표기한 성분입니다. 위의 효능 성분(기능성 고시 성분)과는 구분해 적었습니다.
+## src/pages/products/backhap-recovery-sunscreen/index.astro	아래 ‘연구로 알려진 내용’은 각 원료에 대한 연구를 정리한 것입니다. 뉴베리프 제품으로 한 시험이 아니며, 연구에 쓰인 함량과 제형도 이 제품과 다릅니다. 이 제품의 효능·효과는 위의 자외선 차단·미백·주름개선입니다.
+## src/pages/products/backhap-recovery-sunscreen/index.astro	우리 피부에도 있는 단백질 신호 물질(성장인자)을 본떠 만든 펩타이드 성분들입니다.
+## src/pages/products/backhap-recovery-sunscreen/index.astro	표피 성장인자
+## src/pages/products/backhap-recovery-sunscreen/index.astro	피부 겉면인 표피 세포와 관련된 성장인자를 본뜬 펩타이드 성분입니다.
+## src/pages/products/backhap-recovery-sunscreen/index.astro	연구로 알려진 내용
+## src/pages/products/backhap-recovery-sunscreen/index.astro	EGF를 담은 세럼을 하루 2번, 3개월 동안 바른 여성 29명(39~75세)에게서 잔주름, 피부결, 모공, 색소 얼룩의 겉모습이 좋아졌다는 연구가 있습니다.
+## src/pages/products/backhap-recovery-sunscreen/index.astro	Schouest JM 외, Journal of Drugs in Dermatology, 2012
+## src/pages/products/backhap-recovery-sunscreen/index.astro	인슐린 유사 성장인자
+## src/pages/products/backhap-recovery-sunscreen/index.astro	인슐린과 구조가 닮은 성장인자를 본뜬 펩타이드 성분입니다.
+## src/pages/products/backhap-recovery-sunscreen/index.astro	피부 노화 연구에서 세포의 성장과 분열에 관여하는 성장인자로 정리돼 있습니다. 화장품으로 사람 피부에 바른 연구는 아직 많지 않습니다.
+## src/pages/products/backhap-recovery-sunscreen/index.astro	섬유아세포 성장인자
+## src/pages/products/backhap-recovery-sunscreen/index.astro	피부 속 진피에서 콜라겐을 만드는 섬유아세포와 관련된 성장인자를 본뜬 펩타이드 성분입니다.
+## src/pages/products/backhap-recovery-sunscreen/index.astro	피부 노화 연구에서 섬유아세포의 활동과 피부 구조 단백질(피브로넥틴) 생성에 관여하는 성장인자로 정리돼 있습니다.
+## src/pages/products/backhap-recovery-sunscreen/index.astro	성장인자를 바르는 화장품 연구는 이어지고 있지만, 근거 수준은 아직 중간 단계라는 평가가 있습니다 (Fabi·Sundaram, 2014).
+## src/pages/products/backhap-recovery-sunscreen/index.astro	판테놀
+## src/pages/products/backhap-recovery-sunscreen/index.astro	비타민 B5가 되기 전 단계의 성분(프로비타민 B5)입니다.
+## src/pages/products/backhap-recovery-sunscreen/index.astro	보습과 피부 장벽에 관한 연구가 많은 성분입니다. 자극을 받은 피부에 판테놀 크림을 7일간 하루 2번 바르자 피부 수분과 장벽 기능 지표가 좋아졌다는 연구를 포함해, 보습과 장벽 개선 효과를 정리한 리뷰가 있습니다.
+## src/pages/products/backhap-recovery-sunscreen/index.astro	Proksch E 외, Journal of Dermatological Treatment, 2017
+## src/pages/products/backhap-recovery-sunscreen/index.astro	이 제품의 미백 기능성 성분
+## src/pages/products/backhap-recovery-sunscreen/index.astro	비타민 B3의 한 형태입니다.
+## src/pages/products/backhap-recovery-sunscreen/index.astro	멜라닌이 피부 겉면 세포로 옮겨 가는 과정을 줄이는 원리가 밝혀졌고, 5% 나이아신아마이드 보습제를 바른 사람 시험에서 4주 만에 색소 침착이 줄고 피부가 밝아졌습니다.
+## src/pages/products/backhap-recovery-sunscreen/index.astro	Hakozaki T 외, British Journal of Dermatology, 2002
+## src/pages/products/backhap-recovery-sunscreen/index.astro	마돈나 백합꽃 추출물
+## src/pages/products/backhap-recovery-sunscreen/index.astro	흰 백합(마돈나 릴리) 꽃에서 얻은 추출물로, 제품 이름 ‘백합’의 바탕이 된 성분입니다.
+## src/pages/products/backhap-recovery-sunscreen/index.astro	예로부터 여러 지역의 민간요법과 화장품에 쓰여 온 꽃이며, 꽃에 든 캠페롤 등 여러 식물 성분은 항산화 작용이 알려져 있습니다. 이 제품에는 이름을 상징하는 성분으로 0.001ppm 담았습니다.
+## src/pages/products/backhap-recovery-sunscreen/index.astro	Zaccai M 외, Plants, 2020
+## src/pages/products/backhap-recovery-sunscreen/index.astro	스킨케어의 마지막 단계에서 적당량을 덜어냅니다.
+## src/pages/products/backhap-recovery-sunscreen/index.astro	얼굴과 목 등 자외선 노출 부위에 부드럽게 펴 발라줍니다.
+## src/pages/products/backhap-recovery-sunscreen/index.astro	외출 30분 전 사용을 권장하며, 2~3시간 간격으로 덧바르는 것을 추천합니다.
+## src/pages/products/backhap-recovery-sunscreen/index.astro	자외선 차단지수는 피부 1cm²당 2mg을 바른 조건에서 측정합니다. 얇게 바르면 표시된 만큼 차단되지 않을 수 있어 두 번에 나눠 바르기를 권합니다.
+## src/pages/products/backhap-recovery-sunscreen/index.astro	인체적용시험 결과 한눈에 보기
+## src/pages/products/backhap-recovery-sunscreen/index.astro	5가지 인체적용시험의 결과와 조건을 함께 적었습니다. 모든 시험에서 이상반응은 보고되지 않았습니다.
+## src/pages/products/backhap-recovery-sunscreen/index.astro	5건
+## src/pages/products/backhap-recovery-sunscreen/index.astro	인체적용시험
+## src/pages/products/backhap-recovery-sunscreen/index.astro	2곳
+## src/pages/products/backhap-recovery-sunscreen/index.astro	시험 기관
+## src/pages/products/backhap-recovery-sunscreen/index.astro	0건
+## src/pages/products/backhap-recovery-sunscreen/index.astro	이상반응
+## src/pages/products/backhap-recovery-sunscreen/index.astro	50+ 기준
+## src/pages/products/backhap-recovery-sunscreen/index.astro	한국피부과학연구원 · 2025.06~07 · 건강한 성인 10명 · 2mg/cm² 바른 뒤 자외선을 쬐고 16~24시간 뒤 홍반 판정 (ISO 24444)
+## src/pages/products/backhap-recovery-sunscreen/index.astro	16 이상
+## src/pages/products/backhap-recovery-sunscreen/index.astro	한국피부과학연구원 · 2025.06~07 · 건강한 성인 10명 · 2mg/cm² 바른 뒤 자외선A를 쬐고 2~24시간 뒤 색소 침착 판정 (ISO 24442)
+## src/pages/products/backhap-recovery-sunscreen/index.astro	무자극
+## src/pages/products/backhap-recovery-sunscreen/index.astro	경자극
+## src/pages/products/backhap-recovery-sunscreen/index.astro	중등도
+## src/pages/products/backhap-recovery-sunscreen/index.astro	강자극
+## src/pages/products/backhap-recovery-sunscreen/index.astro	㈜엘리드 · 2025.05 · 성인 34명 · 등 부위에 24시간 붙였다 뗀 뒤 30분, 24시간 후 홍반·부종 판정
+## src/pages/products/backhap-recovery-sunscreen/index.astro	바른 쪽 볼
+## src/pages/products/backhap-recovery-sunscreen/index.astro	바르기 전
+## src/pages/products/backhap-recovery-sunscreen/index.astro	바른 직후
+## src/pages/products/backhap-recovery-sunscreen/index.astro	바르지 않은 쪽 볼
+## src/pages/products/backhap-recovery-sunscreen/index.astro	처음
+## src/pages/products/backhap-recovery-sunscreen/index.astro	같은 시점
+## src/pages/products/backhap-recovery-sunscreen/index.astro	㈜엘리드 · 2025.05 · 여성 22명 · 얼굴에 적외선을 10분 쬔 뒤 한쪽 볼에만 바르고 열화상 카메라로 측정 (감소율 14.27%)
+## src/pages/products/backhap-recovery-sunscreen/index.astro	사용 전
+## src/pages/products/backhap-recovery-sunscreen/index.astro	7.51점
+## src/pages/products/backhap-recovery-sunscreen/index.astro	2주 사용 후
+## src/pages/products/backhap-recovery-sunscreen/index.astro	1.43점
+## src/pages/products/backhap-recovery-sunscreen/index.astro	10점 만점, 점수가 높을수록 눈이 시림
+## src/pages/products/backhap-recovery-sunscreen/index.astro	㈜엘리드 · 2025.05 · 평소 눈시림을 느끼는 여성 21명 · 하루 2번 얼굴 전체에 2주 사용, 본인이 점수로 평가
+## src/pages/products/backhap-recovery-sunscreen/index.astro	결과는 시험 조건에서 얻은 값이며 개인에 따라 차이가 있을 수 있습니다.
+## src/pages/products/backhap-recovery-sunscreen/index.astro	사용감 설문
+## src/pages/products/backhap-recovery-sunscreen/index.astro	기기 측정이 아니라 참여자 본인의 느낌입니다. 피부 진정 시험에 참여한 여성 22명이 제품을 바른 직후 답했고, 6단계 중 ‘그런 편이다’ 이상으로 답한 비율입니다.
+## src/pages/products/backhap-recovery-sunscreen/index.astro	피부결이 매끄럽게 정돈된 느낌
+## src/pages/products/backhap-recovery-sunscreen/index.astro	자극 없이 부드럽게 퍼지는 느낌
+## src/pages/products/backhap-recovery-sunscreen/index.astro	탄탄하게 채워지는 보습감
+## src/pages/products/backhap-recovery-sunscreen/index.astro	속부터 촉촉해진 느낌
+## src/pages/products/backhap-recovery-sunscreen/index.astro	다른 화장품과 밀림 없이 어우러짐
+## src/pages/products/backhap-recovery-sunscreen/index.astro	피부가 편안해진 느낌
+## src/pages/products/backhap-recovery-sunscreen/index.astro	백탁 없이 깨끗한 마무리
+## src/pages/products/backhap-recovery-sunscreen/index.astro	유분감 없이 자연스럽게 흡수
+## src/pages/products/backhap-recovery-sunscreen/index.astro	눈시림 시험에 참여한 여성 21명도 2주 사용 후 같은 문항에 답했으며, 문항별 긍정 응답은 95.2~100%였습니다.
+## src/pages/products/backhap-recovery-sunscreen/index.astro	시술 후에는 언제부터 바를까요?
+## src/pages/products/backhap-recovery-sunscreen/index.astro	유기자차 선크림입니다. 시술한 병원이 무기자차를 권하거나 안내가 다르면 병원 안내를 따르세요.
+## src/pages/products/backhap-recovery-sunscreen/index.astro	시술별 가이드 전체 보기
+## src/pages/products/backhap-recovery-sunscreen/index.astro	시술
+## src/pages/products/backhap-recovery-sunscreen/index.astro	선크림 시작
+## src/pages/products/backhap-recovery-sunscreen/index.astro	시술 당일부터 (열감이 가라앉은 뒤)
+## src/pages/products/backhap-recovery-sunscreen/index.astro	상처가 아문 뒤부터 (상처 부위 제외)
+## src/pages/products/backhap-recovery-sunscreen/index.astro	48시간 뒤부터 (그전엔 빛 자체를 피함)
+## src/pages/products/backhap-recovery-sunscreen/index.astro	전성분과 기본 정보
+## src/pages/products/backhap-recovery-sunscreen/index.astro	전성분 (42종)
+## src/pages/products/backhap-recovery-sunscreen/index.astro	정제수, 프로판다이올, 다이부틸아디페이트, 디에칠아미노하이드록시벤조일헥실벤조에이트, 부틸옥틸살리실레이트, 폴리메틸실세스퀴옥세인, 에칠헥실트리아존, 나이아신아마이드, 다이아이소프로필세바케이트, 메칠렌비스-벤조트리아졸릴테트라메칠부틸페놀, 카프릴릴메티콘, 1,2-헥산다이올, 디에칠헥실부타미도트리아존, 글리세린, 펜틸렌글라이콜, 베헤닐알코올, 판테놀, 폴리글리세릴-3메틸글루코오스다이스테아레이트, 폴리C10-30알킬아크릴레이트, 데실글루코사이드, 트로메타민, 카보머, 아크릴레이트/C10-30알킬아크릴레이트크로스폴리머, 에틸헥실글리세린, 소듐스테아로일글루타메이트, 폴리아크릴레이트크로스폴리머-6, 이눌린라우릴카바메이트, 아데노신, 잔탄검, 레시틴, 부틸렌글라이콜, 에탄올, 폴리솔베이트20, 토코페롤, 소듐아스코빌포스페이트, 에스에이치-올리고펩타이드-1, 폴릭애씨드, 마돈나백합꽃추출물(0.001ppm), 에스에이치-올리고펩타이드-2, 에스에이치-폴리펩타이드-1, 에스에이치-폴리펩타이드-11, 에스에이치-폴리펩타이드-9
+## src/pages/products/backhap-recovery-sunscreen/index.astro	용량
+## src/pages/products/backhap-recovery-sunscreen/index.astro	사용기한
+## src/pages/products/backhap-recovery-sunscreen/index.astro	제조일로부터 36개월, 개봉 후 12개월
+## src/pages/products/backhap-recovery-sunscreen/index.astro	기능성화장품
+## src/pages/products/backhap-recovery-sunscreen/index.astro	자외선 차단·미백·주름개선, 2025.06 식약처 보고
+## src/pages/products/backhap-recovery-sunscreen/index.astro	화장품제조업자
+## src/pages/products/backhap-recovery-sunscreen/index.astro	한국콜마㈜
+## src/pages/products/backhap-recovery-sunscreen/index.astro	화장품책임판매업자
+## src/pages/products/backhap-recovery-sunscreen/index.astro	리더스어소시에이츠 주식회사
+## src/pages/products/backhap-recovery-sunscreen/index.astro	출시
+## src/pages/products/backhap-recovery-sunscreen/index.astro	2025년 7월
+## src/pages/products/backhap-recovery-sunscreen/index.astro	사용할 때의 주의사항
+## src/pages/products/backhap-recovery-sunscreen/index.astro	화장품 사용 시 또는 사용 후 직사광선에 의하여 사용부위가 붉은 반점, 부어오름 또는 가려움증 등의 이상 증상이나 부작용이 있는 경우에는 전문의 등과 상담할 것
+## src/pages/products/backhap-recovery-sunscreen/index.astro	상처가 있는 부위 등에는 사용을 자제할 것
+## src/pages/products/backhap-recovery-sunscreen/index.astro	보관 및 취급 시 주의사항: 어린이의 손이 닿지 않는 곳에 보관할 것, 직사광선을 피해서 보관할 것
+## src/pages/products/backhap-recovery-sunscreen/index.astro	선크림에 대해 자주 묻는 질문
+## src/pages/products/backhap-recovery-sunscreen/index.astro	질문 전체 보기 →
+## src/pages/products/backhap-recovery-sunscreen/index.astro	백합 리커버리 선크림 구매처
+## src/pages/products/index.astro	뉴베리프 백합 리커버리 선크림(SPF50+ PA++++, 75mL)과 말차 디퍼핑 클렌징 밀크(300mL). 피부 시술 전후의 예민한 피부를 기준으로 만든 자외선 차단제와 세안제입니다.
+## src/pages/products/index.astro	뉴베리프 제품
+## src/pages/products/index.astro	자외선 차단과 순한 세안,<br>가장 기본부터
+## src/pages/products/index.astro	피부 시술 전후의 예민한 피부를 기준으로 만든 선크림과 클렌징 밀크입니다. 모든 수치는 인체적용시험 결과이며, 시험 기관과 조건을 함께 적었습니다.
+## src/pages/products/index.astro	두 제품 한눈에 보기
+## src/pages/products/index.astro	백합 리커버리 선크림과 말차 디퍼핑 클렌징 밀크 비교
+## src/pages/products/index.astro	항목
+## src/pages/products/index.astro	종류
+## src/pages/products/index.astro	선크림 (유기자차)
+## src/pages/products/index.astro	밀크 클렌저 (씻어 내는 세안제)
+## src/pages/products/index.astro	기능성
+## src/pages/products/index.astro	자외선 차단·미백·주름개선 3중 기능성 (SPF50+ PA++++)
+## src/pages/products/index.astro	쓰는 법
+## src/pages/products/index.astro	스킨케어 마지막 단계에 얼굴과 목 등에 펴 바름. 외출 30분 전, 2~3시간마다 덧바르기 권장
+## src/pages/products/index.astro	마른 얼굴에 3~4번 펌핑, 롤링 마사지로 풀어낸 뒤 물로 헹굼
+## src/pages/products/index.astro	피부 자극 시험
+## src/pages/products/index.astro	24시간 첩포 평균 피부자극도 0.00, 무자극 (㈜엘리드, 34명)
+## src/pages/products/index.astro	24시간 첩포 평균 피부반응도 0.00, 무자극 (한국피부과학연구원, 31명)
+## src/pages/products/index.astro	내 시술에 맞는 사용 시점 보기
+## src/pages/products/index.astro	시험 결과 전체 보기
+## src/pages/products/index.astro	구매처는 각 제품 페이지의 ‘구매처’에서 확인하실 수 있습니다. 전국 제휴 약국에서도 만나실 수 있습니다.
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	말차 디퍼핑 클렌징 밀크 300mL
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	마른 얼굴에 바로 펴 바르는 300mL 밀크 클렌저. 인체적용시험 결과와 시험 조건, 피부 시술 뒤 사용 시점과 성분을 확인하세요.
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	한 번에 완전히 지우기는 어렵습니다. 눈과 입술의 워터프루프 메이크업은 포인트 리무버로 먼저 지우세요.
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	24시간 첩포 시험(31명)에서 피부 반응도 0.00으로 무자극 판정을 받았습니다. 피부 질환이 있다면 작은 부위에 먼저 써 보고, 증상이 있으면 전문의와 상담하세요.
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	마른 얼굴에 바로 펴 바르는 300mL 밀크 클렌저. 피부 시술 전후의 예민한 피부를 기준으로 만들었습니다.
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	더마 클렌징 · 마른 얼굴에 펴 바르는 밀크
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	300mL · 1회 3~4펌프 · 거품 없이 롤링 후 헹굼
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	리뷰 380개
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	리뷰 31개
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	상품평 1개
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	출시·입점
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	피부과·약국·산부인과 입점
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	시술 후에는?
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	리프팅·주사·미세침 시술 뒤에는 롤링 마사지 없이 가볍게 펴 바르고 바로 헹구세요. 시작 시점은 시술한 병원의 안내를 따르세요.
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	패키지 앞면에 표기한 성분입니다. 기능성 화장품이 아닌 일반 화장품입니다.
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	아래 ‘연구로 알려진 내용’은 각 원료에 대한 연구를 정리한 것입니다. 뉴베리프 제품으로 한 시험이 아니며, 연구는 대부분 바르고 두는 제품이나 다른 형태로 진행됐습니다. 이 제품은 씻어내는 클렌저라 성분이 피부에 머무는 시간이 짧습니다.
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	말차 유래 PDRN (소듐디엔에이)
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	말차에서 얻은 DNA 조각(폴리디옥시리보뉴클레오타이드) 성분입니다. 0.01ppm 담았습니다.
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	PDRN 연구는 대부분 연어에서 얻은 PDRN을 주사로 쓴 연구입니다. 식물에서 얻은 PDRN을 피부에 바르는 연구는 아직 초기 단계라는 정리가 있습니다.
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	식물 유래 PN/PDRN 리뷰, Journal of Functional Biomaterials, 2026
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	카페인
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	커피와 차에 들어 있는 성분으로, 피부에 잘 스며드는 성분으로 알려져 있습니다.
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	미세 혈류와 항산화 작용에 관한 연구가 있어 화장품에 널리 쓰입니다. 다만 상당수는 세포·동물 연구라는 평가도 함께 있습니다.
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	에스신
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	서양칠엽수(마로니에) 씨앗에서 얻는 사포닌 성분입니다.
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	다리 정맥 순환이 약한 사람들이 서양칠엽수 씨앗 추출물(주성분 에스신)을 캡슐로 먹은 연구들에서 다리 부기가 줄었다고 정리돼 있습니다. 바르거나 씻어내는 제품으로 한 연구는 아닙니다.
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	저분자 히알루론산
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	피부에 수분을 붙잡아 두는 대표 보습 성분을 작게 쪼갠 형태입니다.
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	0.1% 히알루론산 크림을 60일 바른 연구에서 피부 수분과 탄력이 좋아졌고, 분자가 작을수록 피부에 더 잘 스며드는 것으로 설명됩니다.
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	Pavicic T 외, Journal of Drugs in Dermatology, 2011
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	세라마이드엔피
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	피부 각질층 사이를 채우는 지질 성분입니다.
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	세라마이드는 피부 장벽 기능에 중요한 표피 지질이며, 이를 보충하는 목적으로 스킨케어 제품에 쓰인다고 정리돼 있습니다.
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	마른 손에 3~4펌프를 덜어 마른 얼굴에 부드럽게 펴 발라 주세요.
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	손끝으로 얼굴 안쪽에서 바깥쪽으로, 아래에서 위로 가볍게 롤링합니다.
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	턱선과 볼을 따라 부드럽게 풀어내듯 클렌징한 뒤 물로 깨끗이 헹궈 주세요.
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	마지막에 차가운 물로 가볍게 마무리하면 일시적인 붓기를 완화하는 데 도움을 줄 수 있습니다.
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	시술 뒤에는 이렇게
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	리프팅·주사·미세침 시술 뒤에는 롤링 없이 펴 바르고 바로 헹구세요. 고주파 시술 뒤 며칠은 찬물 대신 미온수로 헹구세요.
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	시험 결과 한눈에 보기
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	모든 시험은 한국피부과학연구원에서 진행했고, 이상반응은 보고되지 않았습니다. 눈 자극 시험은 사람이 아닌 세포 모델로 한 시험이라 따로 표시했습니다.
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	2건
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	비인체 시험
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	사용한 쪽
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	사용하지 않은 쪽
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	얼굴 한쪽에만 사용하고 3D 촬영으로 부피 변화를 비교했습니다.
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	한국피부과학연구원 · 2026.04 · 여성 22명 · 1회 사용 직후 · 3D 촬영(VECTRA-XT)
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	세정 뒤 피부 밝기 회복
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	팔 안쪽에 바른 메이크업을 한 번 세정한 뒤 피부 밝기가 돌아온 정도입니다.
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	한국피부과학연구원 · 2026.04 · 여성 22명 · 1회 사용 직후 · 피부 밝기 측정(ANTERA 3D)
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	블랙헤드 세정 · 콧방울
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	사용 전 면적
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	사용 직후 면적
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	한국피부과학연구원 · 2026.04 · 여성 22명 · 1회 사용 직후 · 콧방울 확대 촬영. 세정 효과를 잰 시험이며, 모공 크기를 줄인다는 뜻은 아닙니다.
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	화이트헤드 세정 · 턱·이마
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	한국피부과학연구원 · 2026.04 · 여성 22명 · 1회 사용 직후 · 턱 또는 이마 확대 촬영
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	한국피부과학연구원 · 2026.05 · 성인 31명 · 씻어내는 제품 기준에 맞춰 1%로 희석해 등 부위에 24시간 첩포, 30분·24시간·48시간 판정
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	35% 기준
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	한국피부과학연구원 · 2026.04 · 사람 대상 시험이 아닙니다 (OECD TG 492)
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	기기 측정이 아니라 참여자 본인의 느낌입니다. 효능 시험에 참여한 여성 22명이 1회 사용 직후 답했고, ‘그렇다’ 이상으로 답한 비율입니다. ‘당기지 않고 촉촉하게 유지’는 22명 모두 ‘매우 그렇다’로 답했습니다.
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	세안 후 당기지 않고 촉촉하게 유지
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	잔여감 없이 말끔한 마무리
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	세정력에 만족
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	촉촉함에 만족
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	얼굴 붓기가 줄어든 느낌
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	블랙헤드 피지가 줄어든 느낌
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	화이트헤드 피지가 줄어든 느낌
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	전체 사용감에 만족
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	시술 후에는 언제부터 쓸까요?
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	상처나 딱지가 있는 부위에는 쓰지 마세요. 시술한 병원의 안내가 다르면 병원 안내를 따르세요.
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	클렌징 밀크 시작
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	시술 당일 저녁부터, 미온수로 가볍게
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	다음 날부터 (당일은 물세안 또는 병원 안내)
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	시술 당일 저녁부터, 각질은 떼지 않기
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	병원이 세안을 허락한 뒤, 롤링 없이
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	보통 24시간 뒤부터, 롤링 없이
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	전성분 (33종)
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	정제수, 세틸에틸헥사노에이트, 해바라기씨오일, 글리세린, 아이소펜틸다이올, 메틸프로판다이올, 펜틸렌글라이콜, 글리세릴스테아레이트에스이, 세테아릴올리베이트, C14-22알코올, 솔비탄올리베이트, 1,2-헥산다이올, 하이드록시아세토페논, 데실글루코사이드, 비닐다이메티콘, 카보머, 알지닌, C12-20알킬글루코사이드, 부틸렌글라이콜, 카페인, 에틸헥실글리세린, 하이드로제네이티드레시틴, 에스신, 락토바실러스발효물, 병풀추출물, 무화과추출물, 모란뿌리추출물, 커피콩추출물, 세라마이드엔피, 당호박추출물, 토코페롤, 하이드롤라이즈드소듐하이알루로네이트, *소듐디엔에이(0.01ppm)
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	* 말차 유래 PDRN
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	1회 사용량
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	3~4펌프
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	제조일로부터 30개월, 개봉 후 12개월
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	구분
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	일반 화장품 (기능성 해당 없음)
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	클렌징 밀크에 대해 자주 묻는 질문
+## src/pages/products/matcha-depuffing-cleansing-milk/index.astro	말차 디퍼핑 클렌징 밀크 구매처
+## src/pages/research/index.astro	임상 연구: 인체적용시험 결과와 조건
+## src/pages/research/index.astro	뉴베리프 백합 리커버리 선크림과 말차 디퍼핑 클렌징 밀크가 받은 시험 8건(인체적용시험 7건, 비인체 시험 1건)의 결과를 시험 기관, 기간, 대상, 방법과 함께 공개합니다. SPF 53.9, UVAPF 18.6, 24시간 첩포 피부자극도 0.00 등.
+## src/pages/research/index.astro	피부 진정 시험에 참여한 여성 22명, 바른 직후, 6단계 중 ‘그런 편이다’ 이상
+## src/pages/research/index.astro	효능 시험에 참여한 여성 22명, 1회 사용 직후, ‘그렇다’ 이상
+## src/pages/research/index.astro	뉴베리프는 제품마다 외부 시험기관에 시험을 맡기고, 숫자 옆에 시험 기관과 인원, 측정 시점을 함께 적습니다. 인체적용시험과 비인체 시험, 사용감 설문은 서로 구분해 표시합니다.
+## src/pages/research/index.astro	건
+## src/pages/research/index.astro	뉴베리프 제품이 받은 시험 합계<br>백합 리커버리 선크림 {sunCount}건 · 말차 디퍼핑 클렌징 밀크 {cleanCount}건
+## src/pages/research/index.astro	비인체 시험 (인공 각막 모델)
+## src/pages/research/index.astro	보고된 이상반응
+## src/pages/research/index.astro	시험 {total}건 한눈에 보기
+## src/pages/research/index.astro	뉴베리프 제품 시험 결과 요약
+## src/pages/research/index.astro	시험
+## src/pages/research/index.astro	결과
+## src/pages/research/index.astro	대상 · 시기
+## src/pages/research/index.astro	제품 페이지에서 그래프로 보기 →
+## src/pages/research/index.astro	기관
+## src/pages/research/index.astro	대상
+## src/pages/research/index.astro	방법
+## src/pages/research/index.astro	· 기기 측정이 아니라 참여자 본인의 느낌입니다 (
+## src/pages/research/index.astro	결과를 읽을 때 알아 두세요
+## src/pages/research/index.astro	결과는 시험 조건에서 얻은 값이며, 개인에 따라 차이가 있을 수 있습니다.
+## src/pages/research/index.astro	시술 직후 피부에서 한 시험이 아닙니다. 시술 뒤 사용 시점은 시술별 가이드와 병원 안내를 따르세요.
+## src/pages/research/index.astro	눈 자극 시험은 사람이 아닌 세포 모델로 한 시험이라 인체적용시험과 구분해 표시했습니다.
+## src/pages/research/index.astro	시험기관의 결과보고서 원문은 공개하지 않고, 기관·기간·대상·방법·결과를 요약해 싣습니다.
+## src/schema.ts	피부 시술 전후 스킨케어에 집중하는 더마코스메틱 브랜드
+## src/schema.ts	경기도
+## src/schema.ts	남양주시
+## src/schema.ts	다산지금로 202
+## src/schema.ts	뉴베리프 NEUVELIF
+## src/schema.ts	대표
+## src/schema.ts	뉴베리프 브랜드 이야기
+## src/site.ts	뉴베리프
+## src/site.ts	2024-다산-0589
+## src/site.ts	경기도 남양주시 다산지금로 202, 제4층 제비에프04-0053호 (다산동, 현대테라타워디아이엠씨)

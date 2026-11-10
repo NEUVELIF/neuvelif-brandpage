@@ -1,6 +1,8 @@
 /* 사이트 공통 기본값 — 대부분의 모양은 각 요소에 직접 적혀 있습니다. */
 /* body: 페이지 전체. word-break: keep-all = 한글 단어 중간에서 줄이 바뀌지 않게 함 */
 body { margin: 0; word-break: keep-all; overflow-wrap: break-word; }
+/* 일본어는 단어 사이에 띄어쓰기가 없어서, 글자 단위로 줄을 바꿉니다 */
+:lang(ja) body, body:lang(ja) { word-break: normal; line-break: strict; }
 img, svg { max-width: 100%; }
 a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px solid #1170AE; outline-offset: 2px; }
 /* .skip: 키보드 사용자를 위한 '본문으로 건너뛰기' 링크. 평소엔 화면 밖에 숨어 있음 */

@@ -1,0 +1,222 @@
+---
+// 시술 그룹 가이드 7개를 찍어 내는 틀 (주소: /guide/그룹이름/)
+// 시술 그룹 가이드 — src/data/guides.ts 의 그룹마다 페이지 하나씩 만들어집니다.
+import Base from '../../../../i18n/en/layouts/Base.astro';
+import ProcedurePicker from '../../../../i18n/en/components/ProcedurePicker.astro';
+import { GUIDES, guideHref, type Guide } from '../../../../i18n/en/data/guides';
+import { PATHS } from '../../../../i18n/en/site';
+import { breadcrumbs, articleLd, faqLd } from '../../../../i18n/en/schema';
+
+// [slug] 처럼 대괄호가 들어간 폴더 이름 = '여러 페이지를 찍어 내는 틀'
+// getStaticPaths() 가 돌려주는 목록만큼 페이지가 만들어집니다.
+//   GUIDES 에 그룹이 7개 → /guide/laser-ipl-lifting/ ... /guide/acne-pdt/ 7개 페이지
+// 각 페이지에는 props 로 그 그룹의 내용(g)이 전달됩니다.
+export function getStaticPaths() {
+  return GUIDES.map((g) => ({ params: { slug: g.slug }, props: { g } }));
+}
+const { g } = Astro.props as { g: Guide };
+const path = guideHref(g.slug);
+const title = `Sunscreen and face-washing guide after ${g.label}`;
+const plain = g.lead.replace(/<[^>]+>/g, '');
+const description = plain.length > 150 ? plain.slice(0, 148) + '…' : plain;
+const jsonLd = [
+  articleLd(Astro.site!, { headline: title, description, path, modified: g.modified }),
+  breadcrumbs(Astro.site!, [['Home', '/en/'], ['Procedure Guides', PATHS.guide], [g.label, path]]),
+  ...faqLd(g.faq),
+];
+// 페이지 아래 '다른 시술 가이드'에 보여 줄, 지금 그룹을 뺀 나머지
+const others = GUIDES.filter((x) => x.slug !== g.slug);
+// 아래는 여러 번 쓰는 모양(스타일)을 이름으로 묶어 둔 것입니다.
+const LBL = "margin: 0; font-family: 'Barlow Condensed', 'Noto Sans KR', sans-serif; font-size: 16px; font-weight: 600; letter-spacing: 0.12em; color: #1170AE";
+const H2 = 'margin: 0; font-size: clamp(22px, 2.4vw, 30px); line-height: 1.3; color: #12324F';
+const WRAP = 'max-width: 1240px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); box-sizing: border-box';
+const chipOn = 'display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border-radius: 999px; border: 1px solid #12324F; background: #12324F; color: #FFFFFF; text-decoration: none; font-size: 15px; font-weight: 700';
+const chipOff = 'display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border-radius: 999px; border: 1px solid #B9C9D6; color: #12324F; text-decoration: none; font-size: 15px; font-weight: 500';
+const td = 'padding: 16px 14px; border-bottom: 1px solid #D5E0E8';
+const th = 'text-align: left; padding: 16px 14px; border-bottom: 1px solid #D5E0E8; font-weight: 700';
+const cards = [
+  { key: 'sun', name: 'Sunscreen', color: '#1170AE', label: '#12324F' },
+  { key: 'clean', name: 'Cleansing milk', color: '#2F5233', label: '#2F5233' },
+  { key: 'keep', name: 'Also keep in mind', color: '#56626D', label: '#56626D' },
+] as const;
+const btnDark = 'display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; background: #12324F; color: #FFFFFF; text-decoration: none; font-weight: 700; letter-spacing: 0.04em';
+const btnLine = 'display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; border: 1px solid #12324F; color: #12324F; text-decoration: none; font-weight: 700; letter-spacing: 0.04em';
+const li = 'padding: 12px 0; border-bottom: 1px solid #D5E0E8';
+const src = 'color: #56626D; font-size: 14px';
+---
+<Base title={title} description={description} current="guide" jsonLd={jsonLd}>
+<nav aria-label="Breadcrumb" style="max-width: 1240px; margin: 0 auto; padding: 16px clamp(20px, 4vw, 48px) 0; box-sizing: border-box; font-size: 13px; color: #56626D">
+<a href="/en/" style="color: #56626D; text-decoration: none; padding: 8px 0">Home</a>
+<span aria-hidden="true" style="padding: 0 8px">›</span>
+<a href={PATHS.guide} style="color: #56626D; text-decoration: none; padding: 8px 0">Procedure Guides</a>
+<span aria-hidden="true" style="padding: 0 8px">›</span>
+<span aria-current="page" style="color: #12324F; font-weight: 500">{g.label}</span>
+</nav>
+
+{/* ── 후 선크림과 세안, 언제부터? ── */}
+<section aria-labelledby="guide-title" style="padding: clamp(24px, 3vw, 40px) 0 clamp(40px, 5vw, 64px)">
+<div style={`${WRAP}; display: flex; flex-direction: column; gap: 28px`}>
+<nav aria-label="Procedure group" style="display: flex; flex-wrap: wrap; gap: 10px">
+{GUIDES.map((x) => x.slug === g.slug
+  ? <a href={guideHref(x.slug)} aria-current="page" style={chipOn}>{x.label}</a>
+  : <a href={guideHref(x.slug)} style={chipOff}>{x.label}</a>)}
+</nav>
+<div style="display: flex; flex-direction: column; gap: 14px; max-width: 880px">
+<p style={LBL}>PROCEDURE GUIDE · {g.kicker}</p>
+<h1 id="guide-title" style="margin: 0; font-size: clamp(30px, 3.4vw, 44px); line-height: 1.25; letter-spacing: -0.02em; color: #12324F">{g.label}  aftercare:<br>When can I start sunscreen and face washing?</h1>
+<p style="margin: 0; font-size: 18px; color: #3C4752" set:html={g.lead.replaceAll('<strong>', '<strong style="color: #12324F">')}></p>
+<p style="margin: 0; font-size: 13px; color: #56626D">Written {g.modified.replaceAll('-', '.')} · General information compiled from materials published by medical institutions and from scientific literature.</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 16px">
+{cards.map((c) => (
+  <div style={`flex: 1 1 300px; min-width: 0; border: 1px solid #D5E0E8; border-top: 3px solid ${c.color}; padding: 24px; display: flex; flex-direction: column; gap: 6px`}>
+  <p style={`margin: 0; font-size: 14px; font-weight: 700; color: ${c.label}`}>{c.name}</p>
+  <p style="margin: 0; font-size: clamp(22px, 2.2vw, 28px); font-weight: 700; line-height: 1.35">{g.cards[c.key][0]}</p>
+  <p style="margin: 0; color: #3C4752">{g.cards[c.key][1]}</p>
+  </div>
+))}
+</div>
+</div>
+</section>
+
+{/* ── 섹션 ── */}
+<section aria-labelledby="targets-title" style="border-top: 1px solid #D5E0E8; padding: clamp(48px, 6vw, 80px) 0">
+<div style={`${WRAP}; display: flex; flex-direction: column; gap: 24px`}>
+<div style="display: flex; flex-direction: column; gap: 12px; max-width: 820px">
+<p style={LBL}>BY PROCEDURE</p>
+<h2 id="targets-title" style={H2}>{g.procs.length > 1 ? 'Choose the procedure you had' : 'Detailed guidance by procedure'}</h2>
+<p style="margin: 0; color: #3C4752">{g.procs.length > 1 ? 'Even within the same group, skin reacts a little differently to each procedure. We\'ve summarized when and how to use the sunscreen and cleansing milk after each one.' : 'We\'ve summarized when and how to use the sunscreen and cleansing milk.'}</p>
+</div>
+<ProcedurePicker procs={g.procs} />
+<p style="margin: 0; font-size: 13px; color: #56626D">Some procedure names are trademarks of their respective companies; we use the names people commonly use to make procedures easy to find. NEUVELIF is not affiliated with the companies that make these devices or drugs.</p>
+</div>
+</section>
+
+{/* ── 시술 뒤 피부와 시기별 관리 ── */}
+<section aria-labelledby="timeline-title" style="border-top: 1px solid #D5E0E8; padding: clamp(48px, 6vw, 80px) 0">
+<div style={`${WRAP}; display: flex; flex-direction: column; gap: 28px`}>
+<div style="display: flex; flex-direction: column; gap: 12px; max-width: 820px">
+<p style={LBL}>TIMELINE</p>
+<h2 id="timeline-title" style={H2}>Your skin after the procedure, and care by stage</h2>
+<p style="margin: 0; color: #3C4752">{g.skin}</p>
+</div>
+<div style="overflow-x: auto; border-top: 2px solid #12324F">
+<table style="width: 100%; min-width: 760px; border-collapse: collapse; font-size: 15px">
+<caption class="sr-only">{g.label}  aftercare by stage: sunscreen, cleansing milk, and things to observe</caption>
+<thead><tr>
+<th scope="col" style={`width: 16%; ${th}; color: #12324F`}>Stage</th>
+<th scope="col" style={`width: 30%; ${th}; color: #1170AE`}>Sunscreen</th>
+<th scope="col" style={`width: 26%; ${th}; color: #2F5233`}>Cleansing milk</th>
+<th scope="col" style={`width: 28%; ${th}; color: #12324F`}>Also keep in mind</th>
+</tr></thead>
+<tbody>
+{g.timeline.map((r) => (
+  <tr>
+  <th scope="row" style={`${th}; background: #F5F8FA`}>{r[0]}</th>
+  <td style={td}>{r[1]}</td><td style={td}>{r[2]}</td><td style={td}>{r[3]}</td>
+  </tr>
+))}
+</tbody>
+</table>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 16px">
+<div style="flex: 1 1 420px; min-width: 0; border: 1px solid #D5E0E8; padding: 22px; display: flex; flex-direction: column; gap: 8px">
+<p style="margin: 0; font-weight: 700; color: #12324F">What to avoid</p>
+<ul style="margin: 0; padding-left: 20px; color: #3C4752; display: flex; flex-direction: column; gap: 4px">{g.avoid.map((t) => <li>{t}</li>)}</ul>
+</div>
+{g.notes.map((n) => (
+  <div style="flex: 1 1 420px; min-width: 0; border: 1px solid #D5E0E8; border-left: 3px solid #1170AE; padding: 22px; display: flex; flex-direction: column; gap: 8px">
+  <p style="margin: 0; font-weight: 700; color: #12324F">{n.title}</p>
+  <p style="margin: 0; color: #3C4752">{n.text}</p>
+  </div>
+))}
+</div>
+</div>
+</section>
+
+{/* ── 뉴베리프 제품에서 알아둘 점 ── */}
+<section aria-labelledby="products-title" style="border-top: 1px solid #D5E0E8; padding: clamp(48px, 6vw, 80px) 0">
+<div style={`${WRAP}; display: flex; flex-direction: column; gap: 28px`}>
+<div style="display: flex; flex-direction: column; gap: 12px; max-width: 820px">
+<p style={LBL}>NEUVELIF</p>
+<h2 id="products-title" style={H2}>What to know about NEUVELIF products</h2>
+<p style="margin: 0; color: #3C4752">We've included only facts confirmed by testing. Values were obtained under test conditions and may vary from person to person.</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 16px">
+{[
+  { tag: 'Sunscreen', color: '#1170AE', name: 'Backhap Recovery Sunscreen', points: g.sunPoints, page: PATHS.sunscreen },
+  { tag: 'Face washing', color: '#2F5233', name: 'Matcha Depuffing Cleansing Milk', points: g.cleanPoints, page: PATHS.cleansing },
+].map((pr) => (
+  <article style={`flex: 1 1 460px; min-width: 0; border: 1px solid #D5E0E8; border-top: 3px solid ${pr.color}; padding: clamp(20px, 2.5vw, 32px); display: flex; flex-direction: column; gap: 16px`}>
+  <div style="display: flex; flex-direction: column; gap: 4px">
+  <p style={`margin: 0; font-size: 14px; font-weight: 700; color: ${pr.color}`}>{pr.tag}</p>
+  <h3 style="margin: 0; font-size: 22px; color: #12324F">{pr.name}</h3>
+  </div>
+  <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; border-top: 1px solid #D5E0E8">
+  {pr.points.map((pt) => <li style={li}>{pt.text}{pt.src && <> <span style={src}>{pt.src}</span></>}</li>)}
+  </ul>
+  <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: auto">
+  <a href={pr.page} style={btnDark}>View product</a>
+  <a href={`${pr.page}#buy`} style={btnLine}>Where to buy</a>
+  </div>
+  </article>
+))}
+</div>
+</div>
+</section>
+
+{/* ── 섹션 ── */}
+<section aria-labelledby="why-title" style="background: #12324F; color: #FFFFFF; padding: clamp(48px, 6vw, 80px) 0">
+<div style={`${WRAP}; display: flex; flex-wrap: wrap; gap: 28px 64px`}>
+<div style="flex: 1 1 320px; display: flex; flex-direction: column; gap: 12px">
+<p style={`${LBL}; color: #8FD3F2`}>{g.why.label}</p>
+<h2 id="why-title" style="margin: 0; font-size: clamp(22px, 2.4vw, 30px); line-height: 1.35" set:html={g.why.title}></h2>
+</div>
+<ul style="flex: 999 1 560px; min-width: 0; margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; border-top: 1px solid #36506A">
+{g.why.bullets.map((b) => <li style="padding: 16px 0; border-bottom: 1px solid #36506A; color: #E3ECF3">{b}</li>)}
+</ul>
+</div>
+</section>
+
+{/* ── 자주 묻는 질문 ── */}
+<section id="faq" aria-labelledby="faq-title" style="padding: clamp(48px, 6vw, 80px) 0">
+<div style={`${WRAP}; display: flex; flex-wrap: wrap; gap: 32px 64px`}>
+<div style="flex: 1 1 300px; display: flex; flex-direction: column; gap: 12px">
+<p style={LBL}>FAQ</p>
+<h2 id="faq-title" style={H2}>FAQ</h2>
+</div>
+<div style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; border-top: 2px solid #12324F">
+{g.faq.map(([q, a]) => (
+  <div style="padding: 20px 0; border-bottom: 1px solid #D5E0E8; display: flex; flex-direction: column; gap: 6px">
+  <h3 style="margin: 0; font-size: 17px; color: #12324F">{q}</h3>
+  <p style="margin: 0; color: #3C4752">{a}</p>
+  </div>
+))}
+</div>
+</div>
+</section>
+
+{/* ── 참고 자료 ── */}
+<section aria-labelledby="sources-title" style="border-top: 1px solid #D5E0E8; padding: clamp(40px, 5vw, 64px) 0">
+<div style={`${WRAP}; display: flex; flex-direction: column; gap: 20px`}>
+<h2 id="sources-title" style="margin: 0; font-size: 18px; color: #12324F">References</h2>
+<ul style="margin: 0; padding-left: 20px; font-size: 14px; color: #3C4752; display: flex; flex-direction: column; gap: 6px">
+{g.sources.map((s) => <li>{s.url ? <a href={s.url} style="color: #1170AE">{s.title}</a> : s.title}</li>)}
+</ul>
+<p style="margin: 0; border: 1px solid #D5E0E8; padding: 16px 20px; color: #12324F; font-weight: 500">This is general information. If it differs from your clinic's instructions, follow your clinic.</p>
+</div>
+</section>
+
+{/* ── 다른 시술 가이드 ── */}
+<section aria-labelledby="more-title" style="border-top: 1px solid #D5E0E8; padding: clamp(40px, 5vw, 64px) 0">
+<div style={`${WRAP}; display: flex; flex-direction: column; gap: 20px`}>
+<h2 id="more-title" style="margin: 0; font-size: clamp(20px, 2vw, 24px); color: #12324F">Other procedure guides</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(260px, 100%), 1fr)); gap: 12px">
+{others.map((x) => (
+  <a href={guideHref(x.slug)} style="display: flex; flex-direction: column; gap: 4px; padding: 18px 20px; border: 1px solid #D5E0E8; color: #1A1F24; text-decoration: none"><span style="font-weight: 700; color: #12324F">{x.label}</span><span style="font-size: 14px; color: #56626D">{x.short}</span></a>
+))}
+<a href={PATHS.guide} style="display: flex; flex-direction: column; gap: 4px; padding: 18px 20px; border: 1px solid #12324F; color: #1A1F24; text-decoration: none"><span style="font-weight: 700; color: #12324F">Before your procedure</span><span style="font-size: 14px; color: #56626D">Avoid tanning from 2 weeks before your procedure</span></a>
+</div>
+</div>
+</section>
+</Base>

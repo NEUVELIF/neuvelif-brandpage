@@ -29,23 +29,34 @@ const { title, description, current = '', image = '/images/products/backhap-reco
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
 const ogImage = new URL(import.meta.env.BASE_URL.replace(/\/$/, '') + image, Astro.site).href;
 // 브라우저 탭과 검색 결과에 보이는 제목. 페이지 제목 뒤에 브랜드 이름을 붙입니다.
-const fullTitle = title.includes(BRAND.name) ? title : `${title} | ${BRAND.name} NEUVELIF`;
+const fullTitle = title.includes(BRAND.name) || title.includes(BRAND.nameEn) ? title : BRAND.name === BRAND.nameEn ? `${title} | ${BRAND.nameEn}` : `${title} | ${BRAND.name} ${BRAND.nameEn}`;
+// 언어: 주소가 /en/ 으로 시작하면 영어, /ja/ 면 일본어, 나머지는 한국어
+const path = Astro.url.pathname;
+const lang = path.startsWith('/en/') ? 'en' : path.startsWith('/ja/') ? 'ja' : 'ko';
+const rest = path.replace(/^\/(en|ja)(?=\/)/, '');
+const alt = (p: string) => new URL(p, Astro.site).href;
+const locale = { ko: 'ko_KR', en: 'en_US', ja: 'ja_JP' }[lang];
+const font = lang === 'ja' ? 'Noto+Sans+JP' : 'Noto+Sans+KR';
 ---
 <!doctype html>
-<html lang="ko">
+<html lang={lang}>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{fullTitle}</title>
 <meta name="description" content={description}>
 {!noindex && <link rel="canonical" href={canonical}>}
+{!noindex && <link rel="alternate" hreflang="ko" href={alt(rest)}>}
+{!noindex && <link rel="alternate" hreflang="en" href={alt(`/en${rest}`)}>}
+{!noindex && <link rel="alternate" hreflang="ja" href={alt(`/ja${rest}`)}>}
+{!noindex && <link rel="alternate" hreflang="x-default" href={alt(rest)}>}
 {/* 임시 주소 모드일 때만 '검색 결과에 넣지 말라'는 표시를 넣습니다. {조건 && 내용} = 조건이 참일 때만 내용 표시 */}
 {(STAGING || noindex) && <meta name="robots" content="noindex, nofollow">}
 {!STAGING && VERIFY.bing && <meta name="msvalidate.01" content={VERIFY.bing}>}
 {!STAGING && VERIFY.naver && <meta name="naver-site-verification" content={VERIFY.naver}>}
 {/* og: 로 시작하는 줄 = 카카오톡·SNS에 링크를 붙였을 때 보이는 미리보기 정보 */}
-<meta property="og:site_name" content="뉴베리프 NEUVELIF">
-<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content={BRAND.name === BRAND.nameEn ? BRAND.nameEn : `${BRAND.name} ${BRAND.nameEn}`}>
+<meta property="og:locale" content={locale}>
 <meta property="og:type" content={ogType === 'product' ? 'website' : ogType}>
 <meta property="og:title" content={fullTitle}>
 <meta property="og:description" content={description}>
@@ -59,7 +70,7 @@ const fullTitle = title.includes(BRAND.name) ? title : `${title} | ${BRAND.name}
 {/* 구글 폰트(Noto Sans KR, Barlow Condensed)를 불러옵니다 */}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<link href={`https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600&family=${font}:wght@400;500;700&display=swap`} rel="stylesheet">
 {/* 구조화 데이터(JSON-LD): 검색엔진·AI가 '회사·제품·질문과 답'을 정확히 이해하도록 넣는 정보. 화면에는 보이지 않습니다. */}
 {jsonLd.map((obj) => <script type="application/ld+json" set:html={JSON.stringify(obj)} />)}
 </head>

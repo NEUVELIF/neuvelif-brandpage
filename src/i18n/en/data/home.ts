@@ -1,0 +1,30 @@
+// 홈 화면의 소식 슬라이드와 시술 그룹 요약
+// Group: 홈 '어떤 시술을 받으셨나요?'의 시술 그룹 하나
+export interface Group { label: string; desc: string; examples: string; sun: string; sunNote: string; clean: string; cleanNote: string; avoid: string; href?: string }
+// Slide: 홈 맨 위 소식 슬라이드 한 장 (kind=작은 꼬리표, title1·title2=두 줄 제목, href=버튼 주소)
+// img: 배경 이미지 이름(선택). 'hero-brand' 라고 적으면 public/images/hero/ 폴더의
+//      hero-brand-pc-1280.webp · hero-brand-pc-2048.webp (PC용, 가로:세로 = 8:3)
+//      hero-brand-mo-800.webp  · hero-brand-mo-1080.webp (휴대폰용, 4:3) 을 찾아 씁니다. 없으면 남색 배경.
+// tone: 배너 바탕색(선택). 휴대폰에서 이미지 아래 글자 칸의 색이자, 이미지가 뜨기 전 잠깐 보이는 색입니다.
+//       이미지 아래쪽 가장자리 색에 맞추면 이미지와 글자 칸이 자연스럽게 이어집니다. 없으면 남색(#12324F).
+export interface Slide { kind: string; date: string; title1: string; title2: string; desc: string; note: string; cta1: string; href1: string; cta2: string; href2: string; img?: string; tone?: string }
+
+export const GROUPS: Group[] = [
+      { label: 'Laser toning, IPL & lifting', desc: 'Laser, light, and energy procedures that don\'t open the skin\'s surface. Warmth and redness may occur.', examples: 'Laser toning, IPL, Ulthera/Shurink, Thermage/InMode/Oligio, Titanium lifting', sun: 'From the day of the procedure', sunNote: 'Once the warmth subsides, apply to the whole face before heading home.', clean: 'From the evening of the procedure', cleanNote: 'Wash gently with lukewarm water.', avoid: 'Avoid saunas, hot water, and strenuous exercise.' },
+      { label: 'Laser hair removal', desc: 'Procedures that may leave the area around pores red or slightly swollen.', examples: 'Laser hair removal on the face, upper lip, and body', sun: 'Usually from the next day', sunNote: 'Do not apply on the day; cover up with clothing, a hat, or a mask.', clean: 'From the next day', cleanNote: 'On the day, rinse with lukewarm water only or follow your clinic\'s instructions.', avoid: 'Avoid hot showers and exercise that makes you sweat.' },
+      { label: 'AquaPeel, LDM & peels', desc: 'Procedures that thin the stratum corneum and leave skin sensitive.', examples: 'AquaPeel, Lalapeel/Cerapeel, LDM, LED', sun: 'From the day of the procedure', sunNote: 'The most important aftercare for these procedures. Reapply daily.', clean: 'From the evening of the procedure', cleanNote: 'Wash gently with lukewarm water.', avoid: 'Don\'t peel off flakes by hand, and pause acids, retinol, and scrubs.' },
+      { label: 'Botox, fillers & skin boosters', desc: 'Procedures that leave needle marks and may cause bruising or swelling.', examples: 'Botox, fillers, and skin boosters such as Rejuran and Juvelook', sun: 'After your clinic allows face washing', sunNote: 'Pat it on gently with your fingertips.', clean: 'After your clinic allows face washing', cleanNote: 'Spread it on lightly without the rolling massage and rinse right away.', avoid: 'Do not rub or press the injection sites.' },
+      { label: 'Potenza, MTS & Fraxel', desc: 'Procedures that leave microscopic channels invisible to the eye. Redness may last 1–3 days.', examples: 'Potenza, MTS, Fraxel/Pico Fraxel', sun: 'Usually after 24 hours', sunNote: 'For the first 24 hours, do not apply; stay in the shade and wear a hat. Your doctor\'s confirmation comes first.', clean: 'Usually after 24 hours', cleanNote: 'Hold off on washing until your clinic says so.', avoid: 'Avoid makeup, exercise, and sweating.' },
+      { label: 'Mole removal & CO2 laser', desc: 'Procedures that leave wounds and scabs, often covered with protective tape.', examples: 'Removal of moles, milia, and skin tags; CO2 laser; ablative Fraxel', sun: 'Once the wound has healed', sunNote: 'Until then, avoid the wound, apply only to the surrounding skin, and cover with tape or a hat.', clean: 'As your clinic advises', cleanNote: 'Wash while avoiding the wound.', avoid: 'Don\'t pick off scabs; if there is a lot of oozing, contact your clinic.' },
+      { label: 'Acne PDT', desc: 'An acne treatment using a light-sensitive medication; skin is extremely sensitive to light for about 48 hours afterward.', examples: 'Acne PDT (photodynamic therapy)', sun: 'Every day from 48 hours', sunNote: 'For 48 hours after treatment, sunscreen alone is not enough. Stay indoors and avoid sunlight.', clean: 'As your clinic advises', cleanNote: 'After 48 hours, use as usual.', avoid: 'If you must go out, cover up with a hat and clothing.' }
+    ];
+
+// 그룹마다 자세한 가이드 페이지로 연결합니다 (순서는 src/data/guides.ts 와 같음).
+const SLUGS = ['laser-ipl-lifting', 'laser-hair-removal', 'aquapeel-ldm-peeling', 'botox-filler-skinbooster', 'potenza-mts-fraxel', 'mole-removal-co2-laser', 'acne-pdt'];
+GROUPS.forEach((g, i) => { g.href = `/en/guide/${SLUGS[i]}/`; });
+
+export const SLIDES: Slide[] = [
+      { kind: 'Brand', date: '', title1: 'Derma skincare', title2: 'for skin before and after procedures', desc: 'We\'ve organized, procedure by procedure, when to apply sunscreen and when to wash your face after laser, lifting, and injection procedures. Self-care begins with your skin.', note: '', cta1: 'Find my procedure guide', href1: '#guide', cta2: 'View product', href2: '/en/products/', img: 'hero-brand', tone: '#313130' },
+      { kind: 'New', date: '2026.09', title1: 'Matcha Depuffing Cleansing Milk launched', title2: '', desc: 'A 300 mL milk cleanser used with a rolling massage. A clinical test confirmed a makeup removal rate of 96.68%.', note: 'Clinical test by the Korea Institute of Dermatological Sciences, 22 women, based on makeup applied to the inner forearm', cta1: 'View product', href1: '/en/products/matcha-depuffing-cleansing-milk/', cta2: 'Where to buy', href2: '/en/products/matcha-depuffing-cleansing-milk/#buy', img: 'hero-matcha', tone: '#242a02' },
+      { kind: 'Award', date: '2025.11', title1: '2025 H2 Hwahae Awards', title2: 'No. 1 in the Soothing category, Sun Care (Sunscreen/Lotion)', desc: 'Backhap Recovery Sunscreen won at the Hwahae Awards, which are selected based on Hwahae users\' reviews and ratings.', note: '', cta1: 'View sunscreen', href1: '/en/products/backhap-recovery-sunscreen/', cta2: 'View news', href2: '/en/news/', img: 'hero-award', tone: '#4d4d4d' }
+    ];

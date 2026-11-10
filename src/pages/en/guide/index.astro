@@ -1,0 +1,131 @@
+---
+// 시술별 가이드 목록 (주소: /guide/) — 그룹 내용은 src/data/guides.ts 에서 가져옵니다.
+import Base from '../../../i18n/en/layouts/Base.astro';
+import { GUIDES, guideHref, PRE_CARE } from '../../../i18n/en/data/guides';
+import { breadcrumbs } from '../../../i18n/en/schema';
+import { PATHS } from '../../../i18n/en/site';
+
+const title = 'Procedure guides: When can I start sunscreen and face washing after a skin procedure?';
+const description = 'When and how to start sunscreen and face washing for 7 procedure groups: laser toning and lifting, laser hair removal, AquaPeel and peels, Botox, fillers and skin boosters, Potenza, MTS and Fraxel, mole removal and CO2 laser, and acne PDT.';
+const jsonLd = [
+  breadcrumbs(Astro.site!, [['Home', '/en/'], ['Procedure Guides', PATHS.guide]]),
+  {
+    '@context': 'https://schema.org', '@type': 'ItemList', name: 'NEUVELIF procedure guides',
+    itemListElement: GUIDES.map((g, i) => ({ '@type': 'ListItem', position: i + 1, name: `Sunscreen and face-washing guide after ${g.label}`, url: new URL(import.meta.env.BASE_URL.replace(/\/$/, '') + guideHref(g.slug), Astro.site).href })),
+  },
+];
+const LBL = "margin: 0; font-family: 'Barlow Condensed', 'Noto Sans KR', sans-serif; font-size: 16px; font-weight: 600; letter-spacing: 0.12em; color: #1170AE";
+const H2 = 'margin: 0; font-size: clamp(22px, 2.4vw, 30px); line-height: 1.3; color: #12324F';
+const WRAP = 'max-width: 1240px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); box-sizing: border-box';
+const td = 'padding: 16px 14px; border-bottom: 1px solid #D5E0E8; vertical-align: top';
+const th = 'text-align: left; padding: 16px 14px; border-bottom: 1px solid #D5E0E8; font-weight: 700';
+---
+<Base title={title} description={description} current="guide" jsonLd={jsonLd}>
+<nav aria-label="Breadcrumb" style="max-width: 1240px; margin: 0 auto; padding: 16px clamp(20px, 4vw, 48px) 0; box-sizing: border-box; font-size: 13px; color: #56626D">
+<a href="/en/" style="color: #56626D; text-decoration: none; padding: 8px 0">Home</a>
+<span aria-hidden="true" style="padding: 0 8px">›</span>
+<span aria-current="page" style="color: #12324F; font-weight: 500">Procedure Guides</span>
+</nav>
+
+{/* ── 어떤 시술을 받으셨나요? ── */}
+<section aria-labelledby="guide-hub-title" style="padding: clamp(24px, 3vw, 40px) 0 clamp(40px, 5vw, 64px)">
+<div style={`${WRAP}; display: flex; flex-direction: column; gap: 28px`}>
+<div style="display: flex; flex-direction: column; gap: 14px; max-width: 880px">
+<p style={LBL}>PROCEDURE GUIDE</p>
+<h1 id="guide-hub-title" style="margin: 0; font-size: clamp(30px, 3.4vw, 44px); line-height: 1.25; letter-spacing: -0.02em; color: #12324F">Which procedure did you have?</h1>
+<p style="margin: 0; font-size: 18px; color: #3C4752">When you can start sunscreen and face washing after a skin procedure differs by procedure. We've grouped procedures into 7 groups based on the skin's condition afterward, with detailed guidance for each procedure. If it differs from your clinic's instructions, follow your clinic.</p>
+</div>
+<ul style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(340px, 100%), 1fr)); gap: 16px">
+{GUIDES.map((g) => (
+  <li>
+  <a href={guideHref(g.slug)} style="height: 100%; box-sizing: border-box; border: 1px solid #D5E0E8; border-top: 3px solid #12324F; padding: 22px; display: flex; flex-direction: column; gap: 10px; color: #1A1F24; text-decoration: none">
+  <span style="font-size: 20px; font-weight: 700; color: #12324F">{g.label}</span>
+  <span style="font-size: 14px; color: #56626D">e.g. {g.examples}</span>
+  <span style="display: flex; flex-direction: column; gap: 2px; margin-top: 4px; font-size: 15px">
+  <span><strong style="color: #1170AE">Sunscreen</strong> · {g.cards.sun[0]}</span>
+  <span><strong style="color: #2F5233">Cleansing milk</strong> · {g.cards.clean[0]}</span>
+  </span>
+  <span style="margin-top: auto; padding-top: 8px; font-weight: 700; color: #1170AE">Learn more →</span>
+  </a>
+  </li>
+))}
+</ul>
+</div>
+</section>
+
+{/* ── 시술 그룹별 시작 시점 한눈에 보기 ── */}
+<section aria-labelledby="table-title" style="border-top: 1px solid #D5E0E8; padding: clamp(48px, 6vw, 80px) 0">
+<div style={`${WRAP}; display: flex; flex-direction: column; gap: 24px`}>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<p style={LBL}>AT A GLANCE</p>
+<h2 id="table-title" style={H2}>When to start, by procedure group, at a glance</h2>
+</div>
+<div style="overflow-x: auto; border-top: 2px solid #12324F">
+<table style="width: 100%; min-width: 820px; border-collapse: collapse; font-size: 15px">
+<caption class="sr-only">When to start sunscreen and cleansing milk, by procedure group</caption>
+<thead><tr>
+<th scope="col" style={`${th}; width: 22%; color: #12324F`}>Procedure group</th>
+<th scope="col" style={`${th}; width: 30%; color: #12324F`}>Typical procedures</th>
+<th scope="col" style={`${th}; color: #1170AE`}>Sunscreen</th>
+<th scope="col" style={`${th}; color: #2F5233`}>Cleansing milk</th>
+</tr></thead>
+<tbody>
+{GUIDES.map((g) => (
+  <tr>
+  <th scope="row" style={`${th}; background: #F5F8FA`}><a href={guideHref(g.slug)} style="color: #12324F">{g.label}</a></th>
+  <td style={td}>{g.examples}</td>
+  <td style={td}>{g.cards.sun[0]}</td>
+  <td style={td}>{g.cards.clean[0]}</td>
+  </tr>
+))}
+</tbody>
+</table>
+</div>
+<p style="margin: 0; font-size: 14px; color: #56626D">General information summarizing the range of instructions given by different medical institutions. Some procedure names are trademarks of their respective companies, and NEUVELIF is not affiliated with the companies that make these devices or drugs.</p>
+</div>
+</section>
+
+{/* ── 시술 전 관리 ── */}
+<section id="pre-care" aria-labelledby="pre-title" style="background: #F4F7FA; padding: clamp(48px, 6vw, 80px) 0">
+<div style={`${WRAP}; display: flex; flex-direction: column; gap: 24px`}>
+<div style="display: flex; flex-direction: column; gap: 12px; max-width: 820px">
+<p style={LBL}>BEFORE THE PROCEDURE</p>
+<h2 id="pre-title" style={H2}>Before your procedure</h2>
+<p style="margin: 0; color: #3C4752">Tanned skin has a higher risk of post-procedure pigmentation, so many doctors advise reducing UV exposure even before the procedure.</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 16px">
+{PRE_CARE.map(([when, what, product]) => (
+  <div style="flex: 1 1 360px; min-width: 0; background: #FFFFFF; border: 1px solid #D5E0E8; border-top: 3px solid #1170AE; padding: 24px; display: flex; flex-direction: column; gap: 8px">
+  <p style="margin: 0; font-size: 20px; font-weight: 700; color: #12324F">{when}</p>
+  <p style="margin: 0; color: #3C4752">{what}</p>
+  <p style="margin: 0; font-size: 15px; color: #1170AE; font-weight: 700">{product}</p>
+  </div>
+))}
+</div>
+</div>
+</section>
+
+{/* ── 시술 뒤 자외선 차단, 왜 더 중요할까요? ── */}
+<section aria-labelledby="hub-why-title" style="background: #12324F; color: #FFFFFF; padding: clamp(48px, 6vw, 80px) 0">
+<div style={`${WRAP}; display: flex; flex-wrap: wrap; gap: 28px 64px`}>
+<div style="flex: 1 1 320px; display: flex; flex-direction: column; gap: 12px">
+<p style={`${LBL}; color: #8FD3F2`}>WHY SUN PROTECTION</p>
+<h2 id="hub-why-title" style="margin: 0; font-size: clamp(22px, 2.4vw, 30px); line-height: 1.35">Why is sun protection<br>more important after a procedure?</h2>
+</div>
+<ul style="flex: 999 1 560px; min-width: 0; margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; border-top: 1px solid #36506A">
+<li style="padding: 16px 0; border-bottom: 1px solid #36506A; color: #E3ECF3">After laser or light treatments or peels, skin is more sensitive to UV, so redness and pigmentation (brown marks that appear after a procedure) develop more easily.</li>
+<li style="padding: 16px 0; border-bottom: 1px solid #36506A; color: #E3ECF3">One study found less pigmentation in the group that started using sunscreen right after ablative laser treatment, and consistent sun protection is also recommended after non-ablative lasers and light peels.</li>
+<li style="padding: 16px 0; border-bottom: 1px solid #36506A; color: #E3ECF3">Do not apply any product to areas with wounds or scabs; start applying once they have healed.</li>
+<li style="padding: 16px 0; border-bottom: 1px solid #36506A; color: #E3ECF3">This describes sun protection in general and does not refer to the effect of any specific product.</li>
+</ul>
+</div>
+</section>
+
+{/* ── 안내 ── */}
+<section aria-labelledby="hub-note-title" style="padding: clamp(40px, 5vw, 64px) 0">
+<div style={`${WRAP}; display: flex; flex-direction: column; gap: 16px`}>
+<h2 id="hub-note-title" class="sr-only">Note</h2>
+<p style="margin: 0; border: 1px solid #D5E0E8; padding: 16px 20px; color: #12324F; font-weight: 500">This is general information. If it differs from your clinic's instructions, follow your clinic.</p>
+</div>
+</section>
+</Base>

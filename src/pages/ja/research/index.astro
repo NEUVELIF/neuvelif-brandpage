@@ -1,0 +1,143 @@
+---
+// 임상 연구 (주소: /research/) — 시험 내용은 src/data/research.ts 에서 가져옵니다.
+import Base from '../../../i18n/ja/layouts/Base.astro';
+import { TESTS } from '../../../i18n/ja/data/research';
+import { breadcrumbs } from '../../../i18n/ja/schema';
+import { PATHS } from '../../../i18n/ja/site';
+
+const title = '臨床研究：ヒト試験の結果と条件';
+const description = 'NEUVELIF リリーリカバリーサンクリームと抹茶PDRN デパフィング クレンジングが受けた8件の試験（ヒト試験7件、非ヒト試験1件）の結果を、試験機関・期間・対象・方法とともに公開しています。SPF 53.9、UVAPF 18.6、24時間パッチの皮膚刺激スコア0.00など。';
+const jsonLd = [breadcrumbs(Astro.site!, [['ホーム', '/ja/'], ['臨床試験', PATHS.research]])];
+const LBL = "margin: 0; font-family: 'Barlow Condensed', 'Noto Sans JP', sans-serif; font-size: 16px; font-weight: 600; letter-spacing: 0.12em; color: #1170AE";
+const WRAP = 'max-width: 1240px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); box-sizing: border-box';
+const td = 'padding: 14px 12px; border-bottom: 1px solid #D5E0E8; vertical-align: top';
+const th = 'text-align: left; padding: 14px 12px; border-bottom: 1px solid #D5E0E8; font-weight: 700; color: #12324F';
+const groups = [
+  { key: 'sunscreen', name: 'リリーリカバリーサンクリーム', color: '#1170AE', page: PATHS.sunscreen },
+  { key: 'cleansing', name: '抹茶PDRN デパフィング クレンジング', color: '#2F5233', page: PATHS.cleansing },
+] as const;
+const total = TESTS.length;
+const human = TESTS.filter((t) => t.human).length;
+const sunCount = TESTS.filter((t) => t.product === 'sunscreen').length;
+const cleanCount = TESTS.filter((t) => t.product === 'cleansing').length;
+const surveys = {
+  sunscreen: { who: '肌の鎮静試験に参加した女性22名、塗った直後、6段階のうち「ややそう思う」以上', rows: [['肌のキメがなめらかに整った感じ', '100%'], ['刺激なくなめらかに広がる感じ', '100%'], ['内側からうるおう感じ', '100%'], ['ほかの化粧品とヨレずになじむ', '100%'], ['油分を感じず自然になじむ', '100%'], ['白浮きせずきれいな仕上がり', '95.5%']] },
+  cleansing: { who: '効能試験に参加した女性22名、1回使用直後、「そう思う」以上', rows: [['洗顔後つっぱらず、しっとり保たれる', '100%'], ['残る感じがなく、すっきりした仕上がり', '100%'], ['洗浄力に満足', '100%'], ['しっとり感に満足', '100%']] },
+};
+---
+<Base title={title} description={description} current="research" jsonLd={jsonLd}>
+<nav aria-label="現在地" style="max-width: 1240px; margin: 0 auto; padding: 16px clamp(20px, 4vw, 48px) 0; box-sizing: border-box; font-size: 13px; color: #56626D">
+<a href="/ja/" style="color: #56626D; text-decoration: none; padding: 8px 0">ホーム</a>
+<span aria-hidden="true" style="padding: 0 8px">›</span>
+<span aria-current="page" style="color: #12324F; font-weight: 500">臨床試験</span>
+</nav>
+
+{/* ── 시험 결과를 조건과 함께 공개합니다 ── */}
+<section aria-labelledby="research-page-title" style="padding: clamp(24px, 3vw, 40px) 0 clamp(40px, 5vw, 64px)">
+<div style={`${WRAP}; display: flex; flex-direction: column; gap: 28px`}>
+<div style="display: flex; flex-direction: column; gap: 14px; max-width: 860px">
+<p style={LBL}>CLINICAL RESEARCH</p>
+<h1 id="research-page-title" style="margin: 0; font-size: clamp(30px, 3.4vw, 44px); line-height: 1.25; letter-spacing: -0.02em; color: #12324F">試験結果を条件とともに公開します</h1>
+<p style="margin: 0; font-size: 18px; color: #3C4752">NEUVELIFは製品ごとに外部の試験機関へ試験を依頼し、数値の横に試験機関・人数・測定時点を併記しています。ヒト試験・非ヒト試験・使用感アンケートは区別して表示しています。</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: 16px">
+<div style="background: #12324F; color: #FFFFFF; padding: 26px; display: flex; flex-direction: column; gap: 6px">
+<p style="margin: 0; font-size: 48px; font-weight: 700; line-height: 1.15">{total}件</p>
+<p style="margin: 0; color: #C9D6E2">NEUVELIF製品が受けた試験の合計<br>リリーリカバリーサンクリーム {sunCount}件・抹茶PDRN デパフィング クレンジング {cleanCount}件</p>
+</div>
+<div style="border: 1px solid #D5E0E8; padding: 26px; display: flex; flex-direction: column; gap: 6px">
+<p style="margin: 0; font-size: 48px; font-weight: 700; line-height: 1.15; color: #12324F">{human}件</p>
+<p style="margin: 0; color: #3C4752">ヒト試験（人を対象）</p>
+</div>
+<div style="border: 1px solid #D5E0E8; padding: 26px; display: flex; flex-direction: column; gap: 6px">
+<p style="margin: 0; font-size: 48px; font-weight: 700; line-height: 1.15; color: #12324F">{total - human}件</p>
+<p style="margin: 0; color: #3C4752">非ヒト試験（再生角膜モデル）</p>
+</div>
+<div style="border: 1px solid #D5E0E8; padding: 26px; display: flex; flex-direction: column; gap: 6px">
+<p style="margin: 0; font-size: 48px; font-weight: 700; line-height: 1.15; color: #12324F">0件</p>
+<p style="margin: 0; color: #3C4752">報告された有害事象</p>
+</div>
+</div>
+</div>
+</section>
+
+{/* ── 시험 건 한눈에 보기 ── */}
+<section aria-labelledby="summary-title" style="border-top: 1px solid #D5E0E8; padding: clamp(48px, 6vw, 80px) 0">
+<div style={`${WRAP}; display: flex; flex-direction: column; gap: 24px`}>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<p style={LBL}>AT A GLANCE</p>
+<h2 id="summary-title" style="margin: 0; font-size: clamp(22px, 2.4vw, 30px); line-height: 1.3; color: #12324F">{total}件の試験をひと目で</h2>
+</div>
+<div style="overflow-x: auto; border-top: 2px solid #12324F">
+<table style="width: 100%; min-width: 860px; border-collapse: collapse; font-size: 15px">
+<caption class="sr-only">NEUVELIF製品の試験結果のまとめ</caption>
+<thead><tr>
+<th scope="col" style={th}>製品</th><th scope="col" style={th}>試験</th><th scope="col" style={th}>結果</th><th scope="col" style={th}>試験機関</th><th scope="col" style={th}>対象・時期</th>
+</tr></thead>
+<tbody>
+{TESTS.map((t) => (
+  <tr>
+  <td style={`${td}; white-space: nowrap; color: ${t.product === 'sunscreen' ? '#1170AE' : '#2F5233'}; font-weight: 700`}>{t.product === 'sunscreen' ? '日焼け止め' : 'クレンジングミルク'}</td>
+  <th scope="row" style={`${th}; background: #F5F8FA; font-weight: 500`}>{t.name}</th>
+  <td style={`${td}; font-weight: 700; color: #12324F`}>{t.results ? t.results.map(([l, v]) => <span style="display: block; font-weight: 500"><span style="color: #56626D">{l}</span> {v}</span>) : t.result}</td>
+  <td style={td}>{t.org}</td>
+  <td style={td}>{t.subjects} · {t.period}</td>
+  </tr>
+))}
+</tbody>
+</table>
+</div>
+</div>
+</section>
+
+{groups.map((gr) => (
+<section id={gr.key} aria-labelledby={`${gr.key}-title`} style="border-top: 1px solid #D5E0E8; padding: clamp(48px, 6vw, 80px) 0">
+<div style={`${WRAP}; display: flex; flex-direction: column; gap: 24px`}>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 12px 32px">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<p style={`${LBL}; color: ${gr.color}`}>{gr.key === 'sunscreen' ? 'SUNSCREEN' : 'CLEANSING MILK'}</p>
+<h2 id={`${gr.key}-title`} style="margin: 0; font-size: clamp(22px, 2.4vw, 30px); line-height: 1.3; color: #12324F">{gr.name}</h2>
+</div>
+<a href={`${gr.page}#tests`} style={`display: inline-flex; align-items: center; min-height: 44px; color: ${gr.color}; font-weight: 700; text-decoration: none`}>製品ページでグラフで見る →</a>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(360px, 100%), 1fr)); gap: 16px">
+{TESTS.filter((t) => t.product === gr.key).map((t) => (
+  <article style={`border: 1px solid #D5E0E8; border-top: 3px solid ${t.human ? gr.color : '#8FA3B5'}; ${t.human ? '' : 'border-style: dashed; border-top-style: solid;'} padding: 24px; display: flex; flex-direction: column; gap: 10px`}>
+  <p style="margin: 0; font-size: 14px; font-weight: 700; color: #56626D">{t.human ? 'ヒト試験' : '非ヒト試験'}</p>
+  <h3 style="margin: 0; font-size: 18px; color: #12324F">{t.name}</h3>
+  {t.results
+    ? <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 6px">{t.results.map(([l, v]) => <li style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 12px; padding: 8px 0; border-bottom: 1px solid #EEF2F5"><span style="color: #3C4752">{l}</span><strong style="color: #12324F">{v}</strong></li>)}</ul>
+    : <p style={`margin: 0; font-size: 36px; font-weight: 700; line-height: 1.2; color: ${gr.color}`}>{t.result}</p>}
+  <p style="margin: 0; color: #3C4752">{t.detail}</p>
+  <dl style="margin: 4px 0 0; display: grid; grid-template-columns: auto 1fr; gap: 4px 12px; font-size: 14px; color: #56626D">
+  <dt style="font-weight: 700">機関</dt><dd style="margin: 0">{t.org}</dd>
+  <dt style="font-weight: 700">時期</dt><dd style="margin: 0">{t.period}</dd>
+  <dt style="font-weight: 700">対象</dt><dd style="margin: 0">{t.subjects}</dd>
+  <dt style="font-weight: 700">方法</dt><dd style="margin: 0">{t.method}</dd>
+  </dl>
+  </article>
+))}
+</div>
+<div style="border: 1px solid #D5E0E8; padding: 22px; display: flex; flex-direction: column; gap: 10px">
+<h3 style="margin: 0; font-size: 17px; color: #12324F">使用感アンケート <span style="font-size: 14px; font-weight: 500; color: #56626D">・機器による測定ではなく、参加者本人の感じ方です ({surveys[gr.key].who})</span></h3>
+<ul style="margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr)); gap: 4px 24px">
+{surveys[gr.key].rows.map(([q, v]) => <li style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #EEF2F5"><span style="color: #3C4752">{q}</span><strong style="color: #12324F">{v}</strong></li>)}
+</ul>
+</div>
+</div>
+</section>
+))}
+
+{/* ── 결과를 읽을 때 알아 두세요 ── */}
+<section aria-labelledby="note-title" style="background: #F4F7FA; padding: clamp(40px, 5vw, 64px) 0">
+<div style={`${WRAP}; display: flex; flex-direction: column; gap: 12px`}>
+<h2 id="note-title" style="margin: 0; font-size: 20px; color: #12324F">結果を読むときに知っておいてください</h2>
+<ul style="margin: 0; padding-left: 20px; color: #3C4752; display: flex; flex-direction: column; gap: 6px">
+<li>結果は試験条件で得られた値であり、個人差があります。</li>
+<li>施術直後の肌で行った試験ではありません。施術後の使用タイミングは、施術別ガイドとクリニックの指示に従ってください。</li>
+<li>眼刺激試験は人ではなく細胞モデルで行った試験のため、ヒト試験と区別して表示しています。</li>
+<li>試験機関の結果報告書の原本は公開せず、機関・期間・対象・方法・結果を要約して掲載しています。</li>
+</ul>
+</div>
+</section>
+</Base>
