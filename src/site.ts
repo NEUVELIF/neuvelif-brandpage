@@ -25,7 +25,7 @@ export const COMPANY = {
 // 검색엔진 소유 확인 코드 (빙 웹마스터 도구, 네이버 서치어드바이저). 웹페이지에 공개로 넣는 값입니다.
 export const VERIFY = {
   bing: '951ADADF004CEA8179B8AB7F54C3DA50',
-  naver: '',
+  naver: '6f6392f3760c8d519ec43c7f1c2ab03f74009e28',
 };
 
 export const SOCIAL = [
