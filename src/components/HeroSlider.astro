@@ -22,7 +22,7 @@ const btn = 'width: 44px; height: 44px; border: 1px solid rgba(255, 255, 255, 0.
      alt="" : 이미지 속 내용은 바로 아래 글자로 이미 전달되므로, 화면낭독기가 중복해서 읽지 않게 비워 둡니다. */}
 <div class="slides" data-slides aria-live="polite">
 {SLIDES.map((s, i) => (
-  <div data-slide={i} data-tone={s.tone ?? NAVY} role="group" aria-roledescription="slide" aria-label={`${i + 1} / ${n}: ${s.kind}`} data-active={i === 0 ? 'true' : undefined} class={s.img ? 'has-img' : undefined} style="max-width: 100%; display: flex; flex-direction: column; gap: 22px">
+  <div data-slide={i} data-tone={s.tone ?? NAVY} role="group" aria-roledescription="slide" aria-label={`${i + 1} / ${n}: ${s.kind}`} data-active={i === 0 ? 'true' : undefined} class:list={['slide', { 'has-img': s.img }]} style="max-width: 100%; display: flex; flex-direction: column">
   {s.img && (
     <picture class="bg">
       <source media="(max-width: 760px)" srcset={`/images/hero/${s.img}-mo-800.webp 800w, /images/hero/${s.img}-mo-1080.webp 1080w`} sizes="100vw" width="1080" height="810" />
@@ -67,6 +67,7 @@ const btn = 'width: 44px; height: 44px; border: 1px solid rgba(255, 255, 255, 0.
   .hero { position: relative; isolation: isolate; overflow: hidden; background: var(--tone); color: #FFFFFF; transition: background-color 0.4s; }
   /* 글자가 들어가는 가운데 칸. --pt(위 여백)·--px(좌우 여백)는 휴대폰 이미지가 여백 밖까지 꽉 차게 할 때도 씁니다. */
   .inner { --pt: clamp(48px, 7vw, 104px); --px: clamp(20px, 4vw, 48px); max-width: 1240px; margin: 0 auto; padding: var(--pt) var(--px) clamp(28px, 3.5vw, 44px); box-sizing: border-box; min-height: clamp(480px, 32vw, 840px); display: flex; flex-direction: column; justify-content: space-between; gap: 40px; }
+  .slide { gap: 22px; }
   .desc { max-width: 860px; }
   /* 제목이 여러 줄이 될 때 줄 길이를 고르게 나눠, 마지막 줄에 한두 단어만 남지 않게 함 */
   .title { text-wrap: balance; }
@@ -82,7 +83,8 @@ const btn = 'width: 44px; height: 44px; border: 1px solid rgba(255, 255, 255, 0.
        위아래를 잘라야 할 때는 아래쪽을 더 잘라 오른쪽 위의 배지·제품을 지킴 */
     .bg img { object-position: right 35%; }
     /* 글자 쪽(왼쪽)만 살짝 어둡게 해 밝은 배경에서도 글자가 잘 읽히게 함. 제품이 있는 오른쪽은 그대로 */
-    .bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.25) 50%, rgba(0, 0, 0, 0) 80%); }
+    .bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.42) 58%, rgba(0, 0, 0, 0) 82%); }
+    .has-img > .title, .has-img > .desc { text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35); }
     .has-img > .title { max-width: 70%; }
     .has-img > .desc { max-width: min(860px, 62%); }
   }
@@ -94,8 +96,13 @@ const btn = 'width: 44px; height: 44px; border: 1px solid rgba(255, 255, 255, 0.
     .bg::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 18%; background: linear-gradient(to bottom, transparent, var(--tone)); }
     .inner { gap: 28px; }
   }
+  /* 휴대폰: 이미지를 3:2로 낮추고(아래쪽 바닥 부분을 주로 잘라냄) 이미지·글자·버튼 사이 간격을 줄여, 첫 화면에서 글자가 더 위에 보이게 함 */
   @media (max-width: 760px) {
-    .bg { aspect-ratio: 4 / 3; }
+    .bg { aspect-ratio: 3 / 2; margin-bottom: -6px; }
+    .bg img { object-position: center 30%; }
+    .bg::after { height: 14%; }
+    .slide { gap: 16px; }
+    .inner { gap: 20px; min-height: 0; padding-bottom: 24px; }
   }
   /* 슬라이드를 모두 같은 칸(grid-area: 1 / 1)에 겹쳐 둡니다.
      그러면 배너 높이가 가장 긴 슬라이드에 맞춰 고정되어, 넘어갈 때 아래 내용이 들썩이지 않습니다.
