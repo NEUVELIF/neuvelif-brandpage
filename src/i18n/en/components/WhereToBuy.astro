@@ -1,6 +1,7 @@
 ---
 // 공식 구매처 — 데이터는 src/data/stores.ts 한 곳에서 관리합니다.
-// 제품 페이지에서는 같은 목록을 팝업으로도 띄웁니다. '구매처' 버튼을 누르면 페이지 맨 아래로 내려가는 대신 팝업이 열립니다.
+// 제품 페이지에서는 같은 목록을 팝업으로도 띄웁니다. data-buy-popup 이 붙은 링크('구매처 보기' 버튼)만 팝업을 열고,
+// 다른 '구매처' 링크(페이지 안 목차, 다른 페이지에서 들어오는 링크)는 지금처럼 페이지 아래 구매처 칸으로 이동합니다.
 // (휴대폰에서는 화면 아래에서 올라오는 창으로 보이고, 뒤로 가기·바깥 누르기·X 버튼으로 닫힙니다.)
 import StoreList from './StoreList.astro';
 import type { ProductKey } from '../data/stores';
@@ -72,17 +73,6 @@ const { product = 'all', title = 'Official retailers', compact = false } = Astro
     window.addEventListener('popstate', () => { if (dlg.open) dlg.close(); });
     dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); });
     dlg.querySelectorAll('[data-close]').forEach((b) => b.addEventListener('click', () => dlg.close()));
-    document.addEventListener('click', (e) => {
-      const a = (e.target as Element | null)?.closest?.('a[href]') as HTMLAnchorElement | null;
-      if (!a || dlg.contains(a)) return;
-      const u = new URL(a.href, location.href);
-      if (u.hash === '#buy' && u.pathname === location.pathname) { e.preventDefault(); open(); }
-    });
-    if (location.hash === '#buy') {
-      history.replaceState(null, '', location.pathname + location.search);
-      const top = () => window.scrollTo(0, 0);
-      top(); requestAnimationFrame(top); window.addEventListener('load', top, { once: true });
-      open();
-    }
+    document.querySelectorAll('a[data-buy-popup]').forEach((a) => a.addEventListener('click', (e) => { e.preventDefault(); open(); }));
   }
 </script>
