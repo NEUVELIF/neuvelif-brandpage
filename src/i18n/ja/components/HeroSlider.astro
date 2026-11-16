@@ -83,7 +83,8 @@ const btn = 'width: 44px; height: 44px; border: 1px solid rgba(255, 255, 255, 0.
        위아래를 잘라야 할 때는 아래쪽을 더 잘라 오른쪽 위의 배지·제품을 지킴 */
     .bg img { object-position: right 35%; }
     /* 글자 쪽(왼쪽)만 살짝 어둡게 해 밝은 배경에서도 글자가 잘 읽히게 함. 제품이 있는 오른쪽은 그대로 */
-    .bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.25) 50%, rgba(0, 0, 0, 0) 80%); }
+    .bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.42) 58%, rgba(0, 0, 0, 0) 82%); }
+    .has-img > .title, .has-img > .desc { text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35); }
     .has-img > .title { max-width: 70%; }
     .has-img > .desc { max-width: min(860px, 62%); }
   }
