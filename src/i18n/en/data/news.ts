@@ -3,6 +3,7 @@
 export interface Press { date: string; outlet: string; title: string; url: string }
 
 export const PRESS: Press[] = [
+  { date: '2026.11.18', outlet: 'Edaily', title: "NEUVELIF's ‘Matcha Depuffing Cleansing Milk’ ranks No. 1 Best New Product at the Hwahae Awards", url: 'https://www.edaily.co.kr/News/Read?newsId=03876966645647032&mediaCodeNo=257' },
   { date: '2026.09.07', outlet: 'Edaily', title: "NEUVELIF's ‘Matcha Depuffing Cleansing Milk’ now stocked at dermatology clinics, pharmacies, and OB-GYN clinics", url: 'https://www.edaily.co.kr/News/Read?newsId=02551846645577824&mediaCodeNo=257' },
   { date: '2026.06.08', outlet: 'Datanet', title: "Dermocosmetic brand NEUVELIF partners with skin-procedure platform ‘Yeoshin Ticket’ on marketing", url: 'https://www.datanet.co.kr/news/articleView.html?idxno=212180' },
   { date: '2026.05.07', outlet: 'Edaily', title: 'NEUVELIF builds derma-care credibility with OB-GYN clinic placements and adoption by a Cheongdam makeup shop', url: 'https://www.edaily.co.kr/News/Read?newsId=06999526645446624&mediaCodeNo=257' },

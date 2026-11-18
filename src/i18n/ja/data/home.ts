@@ -25,6 +25,6 @@ GROUPS.forEach((g, i) => { g.href = `/ja/guide/${SLUGS[i]}/`; });
 
 export const SLIDES: Slide[] = [
       { kind: 'ブランド', date: '', title1: '施術前後の肌のための', title2: 'ダーマスキンケア', desc: 'レーザー、リフティング、注射施術の後、いつ日焼け止めを塗り、いつ洗顔するかを施術別にまとめました。自分を大切にする心は、肌から始まります。', note: '', cta1: '自分の施術ガイドを探す', href1: '#guide', cta2: '製品を見る', href2: '/ja/products/', img: 'hero-brand', tone: '#313130' },
-      { kind: '新製品', date: '2026.09', title1: '抹茶PDRN デパフィング クレンジング発売', title2: '', desc: 'くるくるマッサージで使う300mLのミルククレンザーです。ヒト試験でメイク洗浄率96.68%を確認しました。', note: '韓国皮膚科学研究院によるヒト試験、女性22名、腕の内側に塗ったメイクで評価', cta1: '製品を見る', href1: '/ja/products/matcha-depuffing-cleansing-milk/', cta2: '購入先', href2: '/ja/products/matcha-depuffing-cleansing-milk/#buy', img: 'hero-matcha', tone: '#242a02' },
+      { kind: '受賞', date: '2026.11', title1: '2026年下半期 ファへアワード', title2: 'クレンジングローション／クリーム部門 ベスト新製品1位', desc: '抹茶PDRN デパフィング クレンジングが、ファへユーザーのレビューと評価をもとに選ばれるファへアワードで、ベスト新製品1位に選ばれました。', note: '', cta1: '製品を見る', href1: '/ja/products/matcha-depuffing-cleansing-milk/', cta2: '購入先', href2: '/ja/products/matcha-depuffing-cleansing-milk/#buy', img: 'hero-matcha', tone: '#242a02' },
       { kind: '受賞', date: '2025.11', title1: '2025年下半期 ファへアワード', title2: 'サンケア部門（日焼け止め／ローション）鎮静カテゴリー1位', desc: 'リリーリカバリーサンクリームが、ファへユーザーのレビューと評価をもとに選ばれるファへアワードで受賞しました。', note: '', cta1: '日焼け止めを見る', href1: '/ja/products/backhap-recovery-sunscreen/', cta2: 'ニュースを見る', href2: '/ja/news/', img: 'hero-award', tone: '#4d4d4d' }
     ];

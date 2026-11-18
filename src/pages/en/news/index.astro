@@ -6,7 +6,7 @@ import { breadcrumbs } from '../../../i18n/en/schema';
 import { PATHS } from '../../../i18n/en/site';
 
 const title = 'News';
-const description = 'NEUVELIF awards and press coverage, including No. 1 in the Soothing category of Sun Care at the 2025 H2 Hwahae Awards and the launch of Matcha Depuffing Cleansing Milk.';
+const description = 'NEUVELIF awards and press coverage, including No. 1 Best New Product in Cleansing Lotion/Cream at the 2026 H2 Hwahae Awards and No. 1 in the Soothing category of Sun Care at the 2025 H2 Hwahae Awards.';
 const jsonLd = [breadcrumbs(Astro.site!, [['Home', '/en/'], ['News', PATHS.news]])];
 const LBL = "margin: 0; font-family: 'Barlow Condensed', 'Noto Sans KR', sans-serif; font-size: 16px; font-weight: 600; letter-spacing: 0.12em; color: #1170AE";
 const WRAP = 'max-width: 1240px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); box-sizing: border-box';
@@ -54,9 +54,24 @@ const arrow = '<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24
 <p style="margin: 0; font-size: 14px; color: #56626D">Article content reflects each outlet's own wording and does not describe product efficacy or effects. For the path our brand has taken, see <a href={`${PATHS.brand}`} style="color: #1170AE">Our story</a>.</p>
 </div>
 </section>
-{/* ── 수상 소식 ── 언론 보도 아래에 둡니다. */}
-<section aria-labelledby="award-title" style="background: #EEF3F7; color: #12324F; padding: clamp(48px, 6vw, 80px) 0">
-<div style={`${WRAP}; display: flex; flex-wrap: wrap; align-items: center; gap: 28px 64px`}>
+{/* ── 수상 소식 ── 언론 보도 아래에 둡니다. 새 수상은 맨 위에 추가합니다. */}
+<section aria-labelledby="award-matcha-title" style="background: #EEF3F7; color: #12324F; padding: clamp(48px, 6vw, 80px) 0">
+<div style={`${WRAP}; display: flex; flex-direction: column; gap: clamp(32px, 4vw, 48px)`}>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 28px 64px">
+<div style="flex: 1 1 400px; display: flex; flex-direction: column; gap: 12px">
+<p style={LBL}>AWARD · 2026.11</p>
+<h2 id="award-matcha-title" style="margin: 0; font-size: clamp(24px, 2.8vw, 36px); line-height: 1.35">2026 H2 Hwahae Awards<br>Cleansing Lotion/Cream<br>No. 1 Best New Product</h2>
+</div>
+<div style="flex: 1 1 480px; display: flex; flex-direction: column; gap: 16px">
+<p style="margin: 0; font-size: 17px; color: #3C4752">Matcha Depuffing Cleansing Milk ranked No. 1 Best New Product in the Cleansing Lotion/Cream category at the 2026 H2 Hwahae Awards, which are selected based on Hwahae users' reviews and ratings.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<a href={PATHS.cleansing} style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 24px; background: #12324F; color: #FFFFFF; text-decoration: none; font-weight: 700">View Matcha Depuffing Cleansing Milk</a>
+<a href="https://www.edaily.co.kr/News/Read?newsId=03876966645647032&mediaCodeNo=257" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; min-height: 52px; padding: 0 24px; border: 1px solid #12324F; color: #12324F; text-decoration: none; font-weight: 700">Related article<span class="sr-only"> (Edaily, opens in a new window)</span><Fragment set:html={arrow} /></a>
+</div>
+</div>
+</div>
+<hr style="margin: 0; border: 0; border-top: 1px solid #C9D6E0">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 28px 64px">
 <div style="flex: 1 1 400px; display: flex; flex-direction: column; gap: 12px">
 <p style={LBL}>AWARD · 2025.11</p>
 <h2 id="award-title" style="margin: 0; font-size: clamp(24px, 2.8vw, 36px); line-height: 1.35">2025 H2 Hwahae Awards<br>Sun Care (Sunscreen/Lotion)<br>No. 1 in the Soothing category</h2>
@@ -66,6 +81,7 @@ const arrow = '<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24
 <div style="display: flex; flex-wrap: wrap; gap: 12px">
 <a href={PATHS.sunscreen} style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 24px; background: #12324F; color: #FFFFFF; text-decoration: none; font-weight: 700">View Backhap Recovery Sunscreen</a>
 <a href="https://www.mydaily.co.kr/page/view/2025112015485021661" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; min-height: 52px; padding: 0 24px; border: 1px solid #12324F; color: #12324F; text-decoration: none; font-weight: 700">Related article<span class="sr-only"> (MyDaily, opens in a new window)</span><Fragment set:html={arrow} /></a>
+</div>
 </div>
 </div>
 </div>

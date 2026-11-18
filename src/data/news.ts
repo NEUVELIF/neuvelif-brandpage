@@ -3,6 +3,7 @@
 export interface Press { date: string; outlet: string; title: string; url: string }
 
 export const PRESS: Press[] = [
+  { date: '2026.11.18', outlet: '이데일리', title: "뉴베리프 '말차 디퍼핑 클렌징 밀크', 화해 어워드 베스트 신제품 1위", url: 'https://www.edaily.co.kr/News/Read?newsId=03876966645647032&mediaCodeNo=257' },
   { date: '2026.09.07', outlet: '이데일리', title: "뉴베리프, '말차 디퍼핑 클렌징 밀크' 피부과·약국·산부인과 입점", url: 'https://www.edaily.co.kr/News/Read?newsId=02551846645577824&mediaCodeNo=257' },
   { date: '2026.06.08', outlet: '데이터넷', title: "더마코스메틱 '뉴베리프', 피부시술 플랫폼 '여신티켓'과 마케팅 협력", url: 'https://www.datanet.co.kr/news/articleView.html?idxno=212180' },
   { date: '2026.05.07', outlet: '이데일리', title: '뉴베리프, 산부인과 입점과 청담 메이크업샵 채택으로 더마 케어 신뢰도 상승', url: 'https://www.edaily.co.kr/News/Read?newsId=06999526645446624&mediaCodeNo=257' },
